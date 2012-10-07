@@ -1,0 +1,32 @@
+\documentclass[english,german,11pt]{article}
+\usepackage{babel}
+\usepackage[latin1]{inputenc}
+\usepackage{amsmath,amsfonts,amssymb,amsthm}
+\usepackage{ModNet}
+\usepackage{FHL}
+%\usepackage{syntonly}
+%\usepackage[all]{xy}
+
+\title{$B$ strong in $A$ but not in $\ta A$}
+\author{}
+\date{}
+\begin{document}
+\maketitle
+Assume $B\in\Kl^{3}$.
+
+Remember $a$ is in any structure of the class, assume
+$$B=\gen{a,e_{1},\,e_{2},\,\dots,\,e_{6},\,\dots\,|\,R(B)}$$
+and $A=\gen{B_{1},\,u,\,v\,\mid R(B),\,[u,v,e_{1}]-[e_{1},e_{2},e_{3}],\,[u,v,e_{4}]-[e_{4},e_{5},e_{6}]}$.
+
+Clearly $B\dsu A$. If now we attempt to solve equation $[a,X]-[u,v]$ and we add say a solution $z$ to $A_{1}$,
+we get $A^{+}=\gen{A_{1},\,z\mid R(A),\,[a,z]-[u,v]}.$
+
+\medskip
+Unfortunately now $B$ is not $\delta_{3}$-strong in $A^{+}$.
+
+We have in fact $d_{2}(z\quot B_{1})=1$ but
+both $[a,z,e_{1}]-[e_{1},e_{2},e_{3}]$ and $[a,z,e_{4}]-[e_{4},e_{5},e_{6}]$ belongs to $N^{3}(B_{1},z)\non N^{3}
+(B)$.
+
+Observe that $A\quot B$ is a \emph{prealgebraic} extension which is not \emph{good} in the sense of the definition given in {\tt status.tex}.
+\end{document}

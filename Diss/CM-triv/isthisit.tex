@@ -1,0 +1,36 @@
+\documentclass[11pt,german]{article}
+\usepackage{babel}
+\usepackage[latin1]{inputenc}
+\usepackage{amsmath,amsfonts,amssymb,amsthm}
+\usepackage{ModNet}
+\usepackage{FHL}
+\linespread{1.2}
+\pagestyle{empty}
+\begin{document}
+\title{p.s.}
+\author{}
+\date{}
+\maketitle
+Maybe this is the problem: assume that $\bar a^{1}$ and $\bar a^{2}$ are in $Z$ and also that $\bar b\inn Z$
+but $\bar c\nsubseteq Z$.
+
+\medskip
+We may assume -- each $\rd(C,\bar a^{i})$ are isomorphic copies -- there are
+$$
+\tau^{1}=\alpha(\bar a^{1})+\beta(\bar a^{1}, \bar b)+\gamma(\bar c)\in\rd(C,\bar a^{1})\non\exs Z_{1}
+$$
+and
+$$
+\tau^{2}=\alpha(\bar a^{2})+\beta(\bar a^{2}, \bar b)+\gamma(\bar c)\in\rd(C,\bar a^{2})\non\exs Z_{1}
+$$
+so that
+$$
+\tau^{1}-\tau^{2}=\alpha(\bar a^{1})-\alpha(\bar a^{2})+\beta(\bar a^{1},\bar b)-\beta(\bar a^{2},\bar b)\in\exs Z_{1}
+$$
+and a legal relation inside $\rd(Y)$. This means the relations of type $\tau$ in the previous notation
+might not be independent -- already among themselves -- over $\exs Z_{1}$.
+
+\bigskip
+Can we make the Morley sequence longer, to avoid the above problem?
+
+\end{document}

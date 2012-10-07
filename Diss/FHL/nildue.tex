@@ -1,0 +1,179 @@
+%\chapter{Nilpotent class 2 Algebras}\label{Kapzwei}
+\section{definition of $\delta_{2}$}
+Let $M$ be in $\nla{n}$, with $\cle$ we denote the $\Fp$-linear closure on the vector space $M_{1}$, while
+$d_{1}$ will be the linear dimension on $M_{1}$. If $H=\gena{H_{1}}{M}$ is a subalgebra of $M$ we write $d_{1}(H)$ for $\dim_{\Fp}(H_{1})$.
+
+\medskip
+In what follows we concetrate on a subclass $\mathcal{K}_{2}$ of $\nla{2}$ and use a %$\delta_{2}$
+positive $\cle$-predimension function to build
+a limit via amalgamation of strong embeddings.
+%Let $\fpe{M}$ denote the collection of finitely generated
+%$\Fp$-vector subspaces of $M_{1}$. If $M\in\nla{2}$ and $H$ is a subalgebra of $M$, as usual we assume $H=\gena{H_{1}}{M}$ for some subspace $H_{1}$ of $M_{1}$, if moreover the latter belongs to $\fpe{M}$ then we will often and with abuse
+%find $H\in\fpe{M}$.
+
+If $A_1$ is a free $\Fp$-module with free basis $X$, then the free nilpotent algebra $\fla{2}{X}$ of $\nla{2}$, with generators from $X$, is isomorphic to
+$$A_1\oplus\exs A_1.$$
+
+For each $M\in\nla{2}$ %the quotient algebra $M\quot M^{3}$ is a $2$-nilpotent Lie algebra, as such a structure 
+we can find an ideal of the exterior square $\exs M_{1}$ such that
+$$M = M_{1}\oplus\Exs M_{1}\,\quot N^{2}(M).$$
+
+If now $H=\gena{H_{1}}{M}$ is a subalgebra of $M$, identifying $\exs H_{1}$ with a \emph{natural} subspace
+of $\exs M_{1}$ we define
+$$N^{2}(H)=N^{2}(M)\cap\Exs H_{1}.$$
+
+\medskip
+Let $M\in\nla{2}$, we denote with $\fpe{M}$ the collection of all %subalgebras $H=\gena{H_{1}}{M}$ of $M$ such that $H_{1}$ is a finite dimensional subspace of $M$.
+finite dimensional $\Fp$-subspaces of $M_1$. If $H_1\in\fpe{M}$, then with $H$ we will always denote the subalgebra $\gena{H_1}{M}$ of $M$.
+
+Now we define $\map{\delta_{2}}{\fpe{M}}{\omega}$ as
+\begin{labeq}{deltadue}
+\delta_{2}(H_1)=d_{1}(H)-\dim_{\Fp}(N^{2}(H))\quad\forall H_1\in\fpe{M}.
+\end{labeq}
+Here is to be noted that the definition of $\delta_{2}$ depends only on the linear part $H_{1}$ of $H$.
+
+\medskip
+Our first issue is to show that $\delta_{2}$ is a $\cle$-predimension on $M_1$ for each $M\in\nla{2}$.
+If $H$ and $K$ are in $\fpe{M}$ then with $H+K$ we denote the subalgebra $\gena{H_{1}+K_{1}}{M}$.
+
+\bigskip
+As in chapter one we obtain a dimensionfunction on $M_{1}$ if we set
+$$d_{2}S=\delta_{2}^{*}\cle(S)=\delta_{2}^{*}{\gen{S}}_{1}\quad\forall S\in\fp{M_{1}}.$$
+
+%Anyway, as we' re mostly working with linear objects, in this chapter the true arguments of the functions $\delta_{2}$ and $d_{2}$ will be only the vector subspaces of $M_{1}$.
+
+\medskip
+As before $H\in\fpe{M}$ will be a \emph{selfsufficient} or $2$-\emph{strong} substructure of $M$
+if for all $C\in\fpe{M}$ such that $H\inn C$, we have $\delta_{2}C\geq\delta_{2}H$.
+
+We write $H\zsu M$. As usual the same definition is applied to the underlying spaces of $M_{1}$, according
+to this the expression $H_{1}\zsu M_{1}$ will also be found.
+
+\section{Selfsufficient Closure}
+Let $H\in\fpe{M}$, we define the \emph{selfsufficient closure} of $H$ as follows:
+$$
+\ssc_{2}H_{1}
+=\!\bigcap_{\substack{H_{1}\inn C_{1}\zsu M_{1}\\C_{1}\in\fpe{M}}}\!\!C_{1}\quad\text{and}\quad\ssc_{2}(H)=\gena{\ssc_{2}(H_{1})}{M}
+$$
+So far, is $\ssc_{2}H$ the smallest $2$-strong substructure in $M$ containing $H$.
+
+We will show that if $H\in\fpe{M}$ then $d_{2}H_{1}=\delta_{2}\ssc_{2}(H_{1})$.
+%{\sl {\sl\bf vorsicht} was bedeutet $\ssc$ und wo ist's definiert!
+%Kann man schreiben $\ssc(H)$ als $\gena{\ssc(H_{1})}{M}$ }
+
+\medskip
+From $d_{2}$ we also get a pregeometry  on $M_{1}$
+given by the closure $\clz=\cl_{d_{2}}$ and a dimension notion
+$\dim_{2}$ is introduced which will agree, on finite ($2$ dimensional) spaces with $d_{2}$.
+Wir m\"ussen aber dabei achten, wir schreiben $\map{\clz}{\fpe{M}}{\fpe{M}}$ und wir meinen $\clz(H)=\gena
+{\clz(H_{1})}{M}$ if $H=\gena{H_{1}}{M}$.
+
+\medskip
+Now we prove that $\ssc_{2}H\inn\clz H$. Assume $a$ is an element of $\ssc_{2}H_{1}$ then $d_{2}(Ha)=d_{2}H$, that's why
+the family of $2$-strong spaces above $\gen{H_{1},a}_{1}$ coincides with that of $2$-strong substructures
+above $H_{1}$.
+
+In particular a $\clz$-space is selfsufficient.
+%>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+\section{First Amalgam}
+We define a class of %finitely generated
+2-nilpotent Lie agebras that we want to be the \emph{Age} of our limit.
+We require these algebras, not to have zero divisors.
+
+Let $\Kdue=\{M\in\nla{2}\mid d_{1}(M)<\infty,\,\delta_{2}(H)\geq\min(2,d_{1}(H))\,\forall H\in\fpe{M}\}$.
+%¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬
+Now assume $A$ und $C$ are finitely generated algebras which have $B$ as common subalgebra.
+Let $D_{1}=\vram{A_{1}}{B_{1}}{C_{1}}$ and consider the ideal $N^{2}(A)+N^{2}(C)$ of $\exs D_{1}$.
+Now define the 2-algebra
+$$\am{A}{B}{C}=D_{1}\oplus\exs D_{1}\quot(N^{2}(A)+N^{2}(C)).$$
+We call $\am{A}{B}{C}$ the \emph{free amalgam} of $A$ and $C$ over $B$.
+We aim at proving that if $A,B,C$ belong to $\Kdue$, then also $\am{A}{B}{C}$ does.
+
+Assume $E\in\fpe{\am{A}{B}{C}}$, let $X^{B}$ be a basis of $B_{1}\cap E$, complete $X^{B}$ to a basis
+of $A_{1}\cap E$ and $C_{1}\cap E$, with respectively $X^{B}X^{A}$ and $X^{B}X^{C}$, where
+$X^{A}\inn A\non B$ and $X^{C}\inn C\non B$.
+
+We have the following
+\begin{lem}
+We can choose vectors of $E$, $d_{1},\dots,d_{m}$ such that $d_{i}=u_{i}+v_{i}$, with
+$\{u_{i}\}\inn A$ independent over $\gen{X^{B}X^{A}}$ and $\{u_{i}\}\inn C$ independent
+over $\gen{X^{B}X^{C}}$ such that $E=\gen{X^{B}X^{A}X^{C},d_{1},\dots,d_{m}}$ and
+$\mathcal{U}\mathcal{V}$ is idependent over $\gen{X^{B}X^{A}X^{C}}$.
+\end{lem}
+
+Next lemma provides a nice presentation of the elements from $N^{2}(E)$, for each $E$ in $\fpe{\am{A}{B}{C}}$.
+\begin{lem}
+Assume $E\in\fpe{\am{A}{B}{C}}$ and $\mathcal{B}=\{X^{B}<X^{A}<X^{C}<\mathcal{U}<\mathcal{V}$
+is an ordered suitable basis. Then each element $\Phi$ of $N^{2}(E)$ is a sum of basic commutators
+in $\mathcal{B}$, grouped as follows:
+$$\Phi=\Phi^{}$$.
+\end{lem}
+
+%¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬
+\begin{lem}[Skizze von]
+Seien $A,B,C\in\Kdue$ so da{\ss} $B\quot A$ ist eine $\delta_{2}$-minimale erweiterung.
+$B$ ist $2$-stark in $C$. Dann Existiert eine Struktur $D$ in $\Kdue$, die alles amalgamiert.
+\end{lem}
+%\begin{proof}
+%The proof will be divided in three cases:
+%\begin{itemize}
+%\punto{Case 1}$\delta_{2}(B\quot A)>0$ (no element of $B_{1}\non A_{1}$ is linked to $C_{1}$ over
+%$A_{1}$).
+
+%From the properties of minimal extensions, we have
+%$B_{1}=\gen{A_{1},b}$ with $\delta_{2}B=\delta_{2}A+1$.
+
+%Let $D_{1}=\gen{b}\oplus C_{1}$ and $D=D_{1}\oplus\exs D_{1}\quot N^{2}(C)$.
+%The definition make sense because $N^{2}(C)\inn_{\ssm{\id}}(\exs C_{1})_{2}$ and so $N^{2}(C)$
+%is also an idea of $\exs D_{1}$. Remmber $\exs C_{1}$ i scanonically embedded in $\exs D_{1}$.
+
+%With the following calculus we show at once that:\begin{itemize}
+%\item$D\in\Kdue$
+%\item$B\zsu D$
+%\item$C\zsu D$
+%\end{itemize}
+%Assume $E_{1}\in\fpe{D}$ that is $E_{1}=\gen{A_{1},b,\bar e}$ for $\bar e=\{e_{1},\dots,e_{m}\}\inn C_{1}
+%\non A_{1}$.
+%(If $E_{1}$ lives in $C_{1}$ there's nothing to prove.)
+
+%In our case we have $\dfp(N^{2}(B))=\dfp(N^{2}(B)\cap\exs A_{1})$, in particular $N^{2}(B)=N^{2}(A)
+%=N^{2}(C)\cap\exs A_{1}$, therefore since also $A\zsu C$, we have
+%\begin{multline*}
+%\delta_{2}E=d_{1}(\gen{A_{1},\bar e})+1-\dfp(\bigwedge {^{2}} E_{1}\cap N(D))=\\
+%=d_{1}(\gen{A_{1},\bar e})+1-\dfp(\bigwedge {^{2}} E_{1}\cap N(C))=\\
+%=d_{1}(\gen{A_{1},\bar e})+1-\dfp(\bigwedge {^{2}}\gen{A_{1},\bar e}\cap N(C))=\delta_{2}(\gen{A_{1},\bar e}+1
+%\geq\\\geq\delta_{2}A+1=\delta_{2}B\geq0.
+%\end{multline*}
+%We get the third point if $\gen{A_{1},\bar e}=C_{1}$.
+%It should be clear that $B$ and $C$ paste themselves over $A$ in $D$, via Lie Algebra monomorphisms.
+
+%\medskip
+%\punto{Case 2.1}$\delta_{2}(B\quot A)=0$ and an element $b$ from $B_{1}\non A_{1}$ is \emph{linked}
+%to $C_{1}$ over $A_1$.
+
+%Let assume that $\delta_{2}A=\delta_{2}B$ and that $\exists b\in B_{1}\non A_{1},\,\exists a\in A_{1},\,\exists c\in C_{1}$, such that
+%$[a,b]=[a,c]$ (necessarily) in $A_{2}$, modulo $N^{2}(A)$.
+
+%We first prove that, under these assumption, we have $B=\gen{A_{1},b}$ and that $c\in C_{1}\non A_{1}$.
+
+%Consider $\overline{[a,b]}\in A_{2}=\exs A_{1}\quot N^{2}(A)=\exs A_{1}\quot(\exs A_{1}\cap N^{2}(B))$.
+%But this means that $\exists\alpha\in\exs A_{1}$ and $\exists\nu\in N^{2}(B)$ such that
+%$[a,b]+\alpha=\nu$. In particular $[a,b]+\alpha\in\exs(\gen{A_{1},b})\cap N^{2}(B)$ and of course
+%$[a,b]+\alpha\notin\exs A_{1}$. Therefore $\delta_{2}(\gen{A_{1},b})=\delta_{2}A$, but
+%since $B\quot A$ is minimal, this implies $B=\gen{A_{1},b}$.
+
+%On the other hand if $c$ were in $A_{1}$, then $\overline{[a,b-c]}=0$, therefore $b-c$ would
+%be dependent on $a$, and $b$ also would belong to $A_{1}$.
+
+%\medskip
+%Now put $D=C\in\Kdue$ and define a morphism $\map{j}{B}{D}$ which extends the inclusion of
+%$A$ into $C$ via $j\colon b\longmapsto c$. We see that $j$ is an injection of Lie Algebras.
+%We conclude showing that $j(B)$ is strong in $D$, so assume $H\in\fpe{D}$ is above $j(B)$, then
+%$\delta_{2}H-\delta_{2}j(B)=\delta_{2}H-\delta_{2}B=\delta_{2}H-\delta_{2}A$. This last
+%difference is non negative as $H$ is above $A$ and $A\zsu D$.
+
+%\punto{2.2}$\delta_{2}(B\quot A)=0$ but $B_{1}$ is \emph{free} from $C_{1}$ over $A_{1}$.
+%Get the free Amalgam \dots
+%\end{itemize}
+%\end{proof}
+

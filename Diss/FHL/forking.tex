@@ -1,0 +1,255 @@
+We conclude the chapter with a complete picture of forking in $T^{2}$ in terms of $\cl_{d}$-independence and free amalgamation.
+
+\smallskip
+Recall that the self-sufficient closure $\ssc^{\mathbb{M}}$
+is defined on {\em sets} $S$ of $\mathbb{M}$, by composing $\ssc(\genp{S})$.
+
+We now introduce a ternary relation among sets $A,B$ and tuples $\bar a$ of $\mathbb{M}_{1}$ 
+$\fin{\bar a}{B}{A}$ which will turn out to be a {\em irreflexive independence relation} in the sense of \cite{ad}.
+\begin{dfn}\label{indepdef}
+For any tuple $\bar a$ of $\mathbb{M}_{1}$ and any small {\em sets} $A$ and $B$ of $\mathbb{M}_{1}$ {\em define}
+$$
+\fin{\bar a}{B}{A}\quad\text{if}\quad
+\begin{cases}
+d(\bar a/B)=d(\bar a/AB)\\
+\ssc(B,\bar a)\cap\ssc(AB)\inn\acl(B).%\ssc(B_{1},\bar a)\cap
+\end{cases}
+$$
+Each time $\fin{\bar a}{B}{A}$ holds, we say that $\bar a$ is {\em $\ind$-independent}
+of $A$ {\em over} $B$.
+
+We extend this relation to {\em $\nla{2}$-subalgebras} $A,B$ of $\mathbb{M}$ by writing
+$\fin{\bar a}{B}{A}$ whenever $\fin{\bar a}{B_{1}}{A_{1}}$.
+\end{dfn}
+
+Notice that  $\ind$ satisfies {\small\sc Invariance} as defined in Section \ref{stab}, that is
+for all $A,B$ and all $\sigma\in\aut(\mathbb{M})$, $\fin{\bar a}{B}{A}$ iff $\fin{\bar a^{\sigma}}{B^{\sigma}}{A^{\sigma}}$.
+
+We forget for the moment that our theory is totally-transcendental and
+prove indeed that the properties in Fact \ref{stableforking} are satisfied by $\ind$-independence and,
+as a result, that $\ind$ is non-forking independence among tuples and sets of $\mathbb{M}_{1}$.
+On the other hand, Remark \ref{tuttuno} imply that forking is witnessed entirely by tuples and sets of $\mathbb{M}_{1}$.
+
+\smallskip
+Note for the moment, that $\cl_{d}$-{\em independece} alone cannot coincide with non-forking, for assume
+$B$ is a strong algebra in $\mathbb{M}$ and $\bar a$ is a tuple of $\mathbb{M}_{1}$, assume that
+$\ssc(B,\bar a)$ decomposes into $B\zsu{}A\zsu{}\ssc(B,\bar a)$ where
+$\ssc(B,\bar a)$ is minimal algebraic over $A$ and $A$ is a pre-algebraic extension of $B$, then $d(\bar a/A)=d(\bar a/B)=0$
+but, as proven in Theorem \ref{titi},  $\mr(\bar a/A)=0<\mr(\bar a/B)=1$.
+
+This is essentially the only obstruction, since in the collapsed structure
+prealgebraic extensions are forced to be algebraic: and the geometric closure and the algebraic coincide.
+
+\medskip
+The following proposition shows that $\ind$-independence is expressible by means
+of free composition of algebras.
+\begin{prop}\label{forkingchar}
+For any tuple $\bar a$ of $\mathbb{M}_{1}$ and subalgebras $A$, $B$ of $\mathbb{M}$ if $C$ denotes
+$\gena{\ssc(B_{1},\bar a)\cap\ssc(A_{1}+B_{1})}{\mathbb{M}}$, then the following holds:
+\begin{itemize}
+\punto{i.}$d(\bar a/B)=d(\bar a/AB)$ implies $\ssc(A+B,\bar a)\simeq\am{\ssc(B,\bar a)}{C}{\ssc(A+B)}$
+\punto{ii.}assume both that $\ssc(A+B,\bar a)\simeq\am{\ssc(B,\bar a)}{C}{\ssc(A+B)}$ and
+%$\ssc(B_{1},\bar a)\cap\ssc(B_{1}+A_{1})
+$C_{1}\inn\acl(B_{1})$ hold, then $\fin{\bar a}{B}{A}$.
+%\ssc(B_{1},\bar a)\cap
+%$\ssc(A,\bar a)$ is the sum of $\ssc(B,\bar a)$ and $\ssc(A+B)$ and 
+%these two algebras are in free composition inside $\mathbb{M}$, in symbols
+%$$\ssc(A,\bar a)\simeq{\ssc(B,\bar a)}\!\!\underset{\ssc(B,\bar a)\cap\ssc(A+B)}{\circledast} \!\!\!\ssc(A+B)$$
+\end{itemize}
+\end{prop}
+\begin{proof}
+(i.) For sake of simplicity we will assume,
+that $B\zsu{}A\zsu{}\mathbb{M}$. Let also $C_{1}$ denote $\ssc(B_{1},\bar a)\cap A_{1}$. Then we have to show
+$\ssc(A,\bar a)\simeq\am{\ssc(B,\bar a)}{C}{A}$ whenever $d(\bar a/A)=d(\bar a/B)$.
+
+\smallskip
+We first prove that $\delta_{2}(\ssc(B,\bar a)/C)=\delta_{2}(\ssc(B,\bar a)/A )$.
+We have in fact, by Lemma \ref{2transmogrifer} and \ref{fincharssc}.{}(i),(iii)
+\begin{multline}\label{diseq}
+d(\bar a/ A_{1})
+	\leq d(\ssc(B_{1},\bar a)/A_{1})\leq\\
+   \leq\delta_{2}(\ssc(B_{1},\bar a)/A_{1})\leq\delta_{2}(\ssc(B_{1},\bar a)/C_{1})=\\
+=\delta_{2}(\ssc(C_{1},\bar a)/C_{1})=d(\bar a/ C_{1})\leq d(\bar a/ B_{1}).
+\end{multline}
+
+This implies on one side, by the hypothesis and Lemma $\ref{freecomp}$
+that $\ssc(B,\bar a)$ is in free composition with $A$ (over $C$). This means just
+that $\ssc(B,\bar a)+A=\gena{\ssc(B_{1},\bar a)+A_{1}}{\mathbb{M}}\simeq \am{\ssc(B,\bar a)}{B}{A}$.
+
+\smallskip
+On the other hand, since by \pref{diseq},
+$d(\ssc(B_{1},\bar a)/A_{1})=\delta_{2}(\ssc(B_{1},\bar a)/A_{1})$,
+Lemma \ref{fincharssc}.{}(iv) again, implies that $\ssc(B_{1},\bar a)+A_{1}$ is self-sufficient in $\mathbb{M}_{1}$, and
+therefore $\ssc(B_{1},\bar a)+A_{1}=\ssc(A_{1},\bar a)$.
+
+\medskip\noindent
+(ii.) Assume now $\ssc(A,\bar a)\simeq\am{\ssc(B,\bar a)}{C}{A}$.
+Then in particular %$\ssc(A_{1},\bar a)\simeq\vam{\ssc(B_{1},\bar a)}{B_{1}}{A_{1}}$, hence
+%$\ssc(B_{1},\bar a)\cap A_{1}=B_{1}$. Moreover
+$\ssc(B_{1},\bar a)+A_{1}=\ssc(A_{1},\bar a)\zsu{}\mathbb{M}_{1}$. The second hypothesis in (ii.) implies, with Remark
+\ref{aclssc}, $\delta_{2}(\ssc(B_{1},\bar a)/B_{1})=\delta_{2}(\ssc(B_{1},\bar a)/C_{1})$, hence by
+Lemmas \ref{freecomp} and \ref{fincharssc}.{}(iv) we have %inequality \pref{diseq} above, we deduce
+\begin{multline*}
+d(\bar a/B_{1})=\delta_{2}(\ssc_{2}(B_{1},\bar a)/B_{1})=\\
+=\delta_{2}(\ssc_{2}(B_{1},\bar a)/C_{1})=\delta_{2}(\ssc_{2}(B_{1},\bar a)/A_{1})=\\
+=d(\ssc_{2}(B_{1},\bar a)/A_{1})=d(\bar a/ A).
+%=\delta_{2}(\ssc_{2}(B_{1},m)/ A_{1})=\delta_{2}(\ssc_{2}(A_{1},\bar a)/ A)=
+%d(\bar a/A_{1})$ and hence $\fin{\bar a}{B}{A}$.
+\end{multline*}
+\end{proof}
+\begin{rem}
+It is clear that we may extend the $\ind$-relation to sets or subalgebras in the first entry by defining
+$\fin{A}{B}{C}$ to hold, whenever all tuples $\bar a$ from $A$ are $\ind$-independent of $C$ over $B$.
+
+By 
+\end{rem}
+
+\medskip
+The correspondence between the relation $\ind$ and free amalgams allows us to prove
+that $\ind$-independence satisfies a {\em finite} instance of {\small\sc Boundedness} property, described
+in section \ref{stab}. This is shown in the next proposition, along with {\em finite} {\small\sc Local Character} for $\ind$ (cfr.{\ }Fact \ref{stableforking}).
+%, as $\omega$-stability of $T^{2}$ actually requires 
+
+\medskip
+We call a type $p\in\ssp{}{A}$ with $A\nni B$, a $\ind$-{\em independendent} extension of $\res{p}{B}$ if for any $\bar a$ realising $p$ over $A$,
+$\fin{\bar a}{B}{A}$ holds.
+
+\begin{lem}\label{finitelcb}
+For any $\nla{2}$-subalgebra $B$ of $\mathbb{M}$ and $\bar a$ in $\mathbb{M}_{1}$.
+\begin{itemize}
+\punto{i.}There is a finite subset $B^{\sss 0}\inn B$
+such that $\fin{\bar a}{B^{\sss 0}}{B}$.
+%Also $B^{\sss 0}$ is such that $\tp{\bar a}{B}$ is the unique $\ind$-independent
+%extension of $\tp{\bar a}{B^{\sss 0}}$ to $B$,
+\punto{ii.}For any $A\nni B$, there are at most finitely many distinct orbits under $\aut_{A}(\mathbb{M})$
+in the set of all $\bar a^{\prime}$ with $\fin{\bar a^{\prime}}{B}{A}$ and $\bar a^{\prime}\equiv_{B}\bar a$. That is, at most finitely many
+$\ind$-independent extensions of $\tp{\bar a}{B}$ to $A$.
+\end{itemize}
+\end{lem}
+\begin{proof}
+(i.) That $\ind$ satisfies (i.) is precisely statement (v) of Lemma \ref{fincharssc}.
+
+\smallskip
+(ii.) Assume
+$\fin{\bar a^{\prime}}{B}{A}$, for some $\bar a^{\prime}$ in $\mathbb{M}$. This gives by Proposition \ref{forkingchar}
+that $\ssc(A,\bar a^{\prime})\simeq\am{\ssc(B,\bar a^{\prime})}{C}{\ssc(A)}$,
+where $C_{1}=\ssc(B_{1},\bar a^{\prime})\cap\ssc(A_{1})\inn\acl(B_{1})$.
+
+On the other hand  $\tp{\bar a^{\prime}}{B}=
+\tp{\bar a}{B}$ implies with Proposition \ref{bafo}, that $\ssc(B,\bar a^{\prime})\simeq\ssc(B,\bar a)$ via an isomorphism which maps
+$\bar a$ onto $\bar a^{\prime}$ and fixes $B$.
+
+This implies that the quantifier-free type of $\ssc(A,\bar a^{\prime})$, depends only on the choices for the subspace $C_{1}$
+between $B_{1}$ and $\ssc(B_{1},\bar a^{\prime})\cap\acl(B_{1})$, and these are just in a finite number.
+%More precisely,
+%Corollary \ref{aclssc} implies the choices for such a $C_{1}$ are restricted to $B^{i}_{1}$ for $1\leq i\leq k$, where
+%$B=B^{0}\zsu{}B^{1}\zsu{}\dots\zsu{}B^{k}$ are the first consecutive minimal algebraic steps
+%of any minimal decomposition $(B^{i})_{i\leq n}$ of $\ssc(B,\bar a)$ over $B$.
+ 
+Proposition \ref{bafo} again, give only finitely many representatives $\bar a^{\prime}$ in $\mathbb{M}_{1}$
+modulo $A$-conjugacy, which are $\ind$-independent of $A$ over $B$.
+\end{proof}
+
+%Assume $B\zsu{}A\zsu{}\mathbb{M}$ and $\bar a$ is a tuple $\ind$-independent of $A$ over $B$ and 
+%$B=B^{0}\zsu{}B^{1}\zsu{}\dots\zsu{}B^{n}=\ssc(B,\bar a)$ is a minimal decomposition
+%of $\ssc(B,\bar a)$ over $B$. Observe first, that by minimality  $A_{1}$ necessarily cuts
+%$\ssc(B,\bar a)$ in $B^{k}$ for some $k\leq n$. Now $\fin{\bar a}{B}{A}$ and Corollary \ref{aclssc} imply that
+%for all $i$ with $0\leq i\leq k$, the extension $B^{i}_{1}/B^{i-1}_{1}$ is of {\em algebraic} type.
+%Thus, by the same argument of Proposition \ref{finitelcb} follows that
+As expected, a type over a algebraically closed set $B$ is $\ind$-{\em stationary}
+in the sense of the following 
+\begin{cor}\label{stationary}
+Assume a tuple $\bar a\inn \mathbb{M}_{1}$ and a subalgebra $B$ are given.
+A type $p=\tp{\bar a}{B}$ is $\ind$-{\em stationary} {\rm(that is, it admits
+a unique $\ind$-independent extension $q$ to any algebra $A\nni B$ of $\mathbb{M}$)} % with $\fin{\bar a}{B}{A}$)}, if and only
+whenever $\ssc(B_{1},\bar a)\cap\acl(B_{1})=B_{1}$.
+\end{cor}
+
+\medskip
+We prove the remaining non-forking properties in the following proposition.
+\begin{prop}\label{indepnotion}
+The relation $\fin{}{}{}$ introduced by Definition \ref{indepdef} satisfies the following properties
+\begin{description}
+%\item{\small{\sc (Transitivity)}}
+\punto{\small\sc Transitivity}
+for all $C\inn B\inn A$, from $\fin{\bar a}{C}{B}$ and $\fin{\bar a}{B}{A}$ follows $\fin{\bar a}{C}{A}$,
+\punto{\small\sc %Weak
+Monotony}if $\fin{\bar a}{C}{A}$ and $C\inn B\inn A$ then $\fin{\bar a}{C}{B}$.
+\punto{\small\sc Existence}for any $\bar a$ and $B\nni C$ there exists a tuple $\bar a^{\prime}$ in $\mathbb{M}_{1}$ with $\bar a^{\prime}\equiv_{C}\bar a$
+such that $\fin{\bar a^{\prime}}{C}{B}$.
+\end{description}
+\end{prop}
+\begin{proof}
+To prove {\small\sc Transitivity}, let $A\nni B\nni C$ be (strong) subalgebras of $\mathbb{M}$, and $\bar a$ is a tuple of $\mathbb{M}_{1}$ with both $\fin{\bar a}{B}{A}$ and $\fin{\bar a}{C}{B}$. This gives $d(\bar a/A)=d(\bar a/B)=d(\bar a/C)$ and hence we have to
+show $\ssc(C_{1},\bar a)\cap A_{1}\inn\acl(C_{1})$.
+
+Since $\bar a$ is $\ind$-independent of $A$ over $B$
+$$\ssc(C_{1},\bar a)\cap A_{1}=\ssc(C_{1},\bar a)\cap\ssc(B_{1},\bar a)\cap A_{1}\inn\ssc(C_{1},\bar a)
+%\cap\ssc(B_{1},\bar a)
+\cap\acl(B_{1}).$$
+If $D_{1}$ denotes $\ssc(C_{1},\bar a)\cap B_{1}$, then $\ssc(C_{1},\bar a)=\ssc(D_{1},\bar a)$ and $\fin{\bar a}{C}{B}$
+implies $D_{1}\inn\acl(C_{1})$ and
+with Proposition \ref{forkingchar}, that $\ssc(D,\bar a)$ is in free composition with $B$ over $D$,
+moreover $\ssc(B,\bar a)\simeq\am{\ssc(D,\bar a)}{D}{B}$.
+
+Lemma \ref{mindecamalg} and Remark \ref{aclssc} now imply $\acl(B_{1})\cap\ssc(B_{1},\bar a)$ is forced to meet any minimal decomposition
+of $\ssc(D,\bar a)$ over $D$ necessarily within the first adjacent minimal algebraic extensions of $D$.
+
+This means $\ssc(D_{1},\bar a)\cap\acl(B_{1})%\cap\ssc(B_{1},\bar a)
+\inn\acl(D_{1})$ and since $D_{1}\inn\acl(C_{1})$, we may
+conclude $\ssc(C_{1},\bar a)\cap A_{1}\inn\acl(C_{1})$ as desired.
+
+\medskip
+While {\small\sc %Weak
+Monotony} is trivial to prove, to show {\small\sc Existence} let $\bar a$ be a tuple and
+$B\nni C$ algebras, which might -- without loss of generality be assumed strong in $\mathbb{M}$. Denote
+by $A$ the self-sufficient closure $\ssc(C,\bar a)$.
+
+By collecting all divisors\footnote{
+or simply by taking the relative algebraic closure $\acl(C_{1})\cap A_{1}$}
+of $C$ in $A_{1}$ which are realised (cfr.\,Definition \ref{divelement}) in $B$, we can find $\widetilde{C}$, such that
+$C\inn\widetilde{C}\inn\acl(C_{1})$, $A\zso{}\widetilde{C}\zsu{}B$ and there is no divisor of $\widetilde{C}$ in $A_{1}$ which
+is realised in $B$. %It also follows $A=\ssc(\widetilde{C},\bar a)$.
+
+Take an isomorphic copy $\widetilde{A}$ of $A$ and denote by $\tilde a$ the
+image of $\bar a$ inside $\widetilde{A}$. Now denote by $\widetilde{B}$, the free amalgam $\am{B}{\widetilde{C}}{\widetilde{A}}$ of $B$ and $\widetilde{A}$ over $\widetilde{C}$.
+By Lemma \ref{amalsigma2} follows, that $\widetilde{B}$ inherits $\sig{2}{2}$ and hence $\widetilde{B}$ is a finite strong
+extension of $B$ which is in $\Klt{2}$. By richness of $\mathbb{M}$ after Remark \ref{tildarich} we can find an embedding $\sigma$
+of $\widetilde{B}$ into $\mathbb{M}$ over $B$ such that $\widetilde{B}^{\sigma}\zsu{}\mathbb{M}$.
+
+Now since $\widetilde{A}\zsu{}\widetilde{B}$, $\widetilde{A}$ coincides with $\ssc^{\widetilde{B}}(C,\tilde a)$ and hence
+if $\bar a^{\prime}$ denotes the image in $\mathbb{M}_{1}$ of $\tilde a$ under $\sigma$, we have
+$\widetilde{A}^{\sigma}=\ssc^{\mathbb{M}}(C,\bar a^{\prime})$.
+
+On the other hand $\widetilde{B}$ must coincide with the the self-sufficient closure (in $\widetilde{B}$) of $B$ and $\tilde a$.
+%$\ssc^{\widetilde{B}}(B,\tilde a)$
+This gives analogously
+$\widetilde{B}^{\sigma}=\ssc^{\mathbb{M}}(B,\bar a^{\prime})\simeq\am{B}{\widetilde{C}}{\ssc^{\mathbb{M}}(C,\bar a^{\prime})}$.
+With (ii.)\,of Proposition \ref{forkingchar} we obtain $\fin{\bar a^{\prime}}{C}{B}$. Then of course $\bar a^{\prime}\equiv_{C}\bar a$, since
+$\ssc^{\mathbb{M}}(C,\bar a^{\prime})\simeq\widetilde{A}\simeq\ssc^{\mathbb{M}}(C,\bar a)$.
+\end{proof}
+
+\medskip
+Putting Lemma \ref{finitelcb} and Proposition \ref{indepnotion} together with Fact \ref{stableforking} we reobtain
+($\omega$-) stability of $T_{2}$ and in particular:
+\begin{cor}
+On the sets of $\mathbb{M}_{1}$ forking independence and $\ind$-independence coincide.
+This is $$\fin{\bar a}{B}{A}\iff\ffin{\bar a}{B}{A}$$
+for all $\bar a,A,B\inn\mathbb{M}_{1}$.
+\end{cor}
+\begin{rem*}
+For any given {\em set} $B$ in $\mathbb{M}_{1}$, the forking geometry on the generic type $p=p_{\ssc(B)}$ in $\mathbb{M}_{1}$
+over $\ssc(B)$ defined
+in Theorem \ref{titi}, is exactly the $\cl_{d}$-geometry. 
+That is to say, for any $a,\bar b$ in $p(\mathbb{M}_{1}\!)$ we have
+$$a\in\cl_{d}(\bar b/B) \iff\nfin{a}{B}{\bar b}$$
+\end{rem*}
+\begin{proof}
+By Remark \ref{cielle2} and the definition of $\ind$, we may assume $B$ is a self-sufficient subspace of $\mathbb{M}_{1}$.
+
+For the left-to-right implication, a routine induction argument with monotonicity of forking let us assume $\bar b$ is a singleton $b\in p_{B}(\mathbb{M}_{1})$. Now $a\in\cl_{d}(B,b)\non\cl_{d}(B)$ gives -- by exchange -- $b\in\cl_{d}(B,a)$, hence
+$d(a/B)=1>0=d(a/B,\bar b)$.
+
+\medskip
+Now if $\nfin{a}{B}{\bar b}$, then either $d(a/B,\bar b)=0$ or $\ssc(B,a)=\genp{B,a}\inn\ssc(B,\bar b)\inn\cl_{d}(B,\bar b)$.
+\end{proof}

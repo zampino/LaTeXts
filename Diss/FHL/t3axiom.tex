@@ -1,0 +1,92 @@
+
+\bigskip
+%Now let $\kappa_{3}$ be a non-negative integer which is not yet specified and, symmetrically to
+In parallel with axiom $\sig{2}{2}$, now define
+for $M$ in $\nla{3}$ a denumerable set of $\Lan{3}$-sentences $\sig{3}{2}$ which express:
+\begin{itemize}
+\punto{$\sig{3}{2}$}for any finite $A_{1}\inn M_{1}$, $\delta_{3}(A)\geq0$\footnote{the weak bound $\geq0$
+will have to be replaced with some stronger property, similar to that required by $\sig{2}{2}$ from Chapter \ref{due}.}
+\end{itemize}
+
+A natural candidate for a suitable amalgamation class among $\nla{3}$-algebras with $\sig{3}{2}$
+has to be found within -- possibly a subset of -- the family
+$$\Klt{3}=\{M\in\nla{3}\mid M_{*}\in\Klt{2},M\sat\sig{3}{2}\}.$$
+
+\begin{rem}\label{finalrem}
+It is the same whether we check $\sig{3}{2}$ of an $\nla{3}$-algebra $M$ with
+$\delta_{3}$ or with $\ded^{M}$.
+
+In fact Corollary \ref{deltaded} ensures $\delta_{3}(A)\geq\ded^{M}(A)$ for any finite $A_{1}\inn M_{1}$,
+while on the other hand, $\ded^{M}(A)\geq\ded^{M}(\ssc(A))=\delta_{3}(\ssc(A))$. In other words
+$M$ belongs to $\Klt{3}$ exactly if $M_{*}\in\Klt{2}$ and $\ded^{M}(A)\geq0$ for all finite $A_{1}\inn M_{1}$.
+\end{rem}
+
+\medskip
+In order to study (AP) within $\Klt{3}$, we first find a setting in which the free amalgamation \pref{amalgatre} inherits
+property $\sig{3}{2}$ of its constituents.
+
+Assume $N,A,B$ are $\nla{3}$-algebras in $\Klt{3}$ and suppose $N\nni B\dsu A$.
+If we take the amalgam $M$ like in \pref{amalgatre} we have $N\dsu M \nni A$.
+
+We also assume that the free $\nla{2}$-amalgam $M_{*}=\am{N_{*}}{B_{*}}{A_{*}}$ is in $\Klt{2}$, which
+is not such a serious restriction. Indeed a variant to the class defined above could rely on  $\nla{3}$-algebras $M$
+such that $M_{*}$ is a {\em self-sufficient and algebraically closed} subalgebra of $\K$, where $\K\in\Klt{2}$ is the Fra\"iss\'e limit of
+the class $\Kl{2}$ defined in the previous chapter \ref{due} (cfr.\,Proposition \ref{amalsigma2} and Lemma \ref{acldiv}).
+
+\begin{lem}\label{finallemma}
+Assume $M\in \nla{3}$ is the amalgam above, for $N\nni B\dsu{}A$ in $\Klt{3}$ with $M_{*}=\am{N_{*}}{B_{*}}{A_{*}}\in\Klt{2}$. Assume $E_{1}$ is a finite
+subspace of $M_{1}$,
+let $C_{1}$ denote $N_{1}+E_{1}$ and set as usual $C$ to be $\gena{C_{1}}{M}$.
+Suppose $C_{*}$ is the $\nla{2}$-free amalgam of $N_{*}$ and $E_{*}$ over $\gena{N_{1}\cap E_{1}}{C_{*}}$,
+then $\delta_{3}(E)\geq0$.
+\end{lem}
+\begin{proof}
+First notice $\delta_{3}(E)\geq\ded^{C}(E)$ by Lemma \ref{deltaded}.
+%we may assume $E$ is $\delta_{2}$-strong in $M$,
+%for $\ded^{M}(E)\geq\ded^{M}(\ssc(E))=\delta_{3}(\ssc(E))$ by Lemma \ref{sameded}.
+
+Now with the above assumptions, Lemma \ref{moduliftlem} and \pref{dedim} yield
+\begin{labeq}{rtmod}
+\rt_{C}(E_{1})\cap\rt_{C}(N_{1})=\rt_{C}(E_{1}\cap N_{1}).
+\end{labeq}
+
+In the same way submodularity \pref{submod} on page \pageref{submod} was obtained for $\nla{2}$, now \pref{rtmod} implies %$\delta_{3}(E)=
+$\ded^{C}(E)\geq\ded^{C}(E/N)+\ded^{C}(E_{1}\cap N_{1})$.
+
+Since $N$ is $\delta_{2}$-strong in $C$, by Lemma \ref{sameded} and Remark \ref{finalrem}
+we have %$E_{1}\cap N_{1}\zsu[2]{}N_{1}\zsu[2]{}C_{1}$ 
+$\ded^{C}(E_{1}\cap N_{1})=\ded^{N}(E_{1}\cap N_{1})\geq0$ for $N\in\Klt{3}$.%\i=\delta_{3}(E_{1}\cap N_{1})$.
+
+We have to prove $\ded^{C}(E/N)\geq0$. To achieve this we will show
+$\ded^{C}(E/N)\geq\ded^{M}(E/N)$ and use the fact $N\dsu{}M$.
+
+Notice that by the definition of $C$ and since $N\zsu[2]{}M$ we have $d_{2}^{C}(E/N)=\delta_{2}(E/N)$ and by Definition \ref{ded}
+$\rt_{C}(E/N)=\rt(C)/\rt(N)$.
+
+As $\ssc(C_{1})$ is finite over $N_{1}$ and $\rt_{M}(C_{1})=\gam{C}{M}(\rt(C))$, we have $\ded^{C}(E/N)-\ded^{M}(E/N)=
+-\delta_{2}(\ssc^{M}(C)/C)-\dfp(\kerg{C}{M})$, where as above $\kerg{C}{M}=\kerg{C}{\,\ssc(C)}$ is the kernel of $\gam{C}{M}$.
+
+Now %as $\ssc^{M}(C_{1})$ is a finite extension of $C_{1}$,
+by the finite character of $\ssc^{M}$ described in Proposition \ref{fincharssc},
+Theorem \ref{crocotheorem} applies with minor changes to the situation above and yields $\dfp(\kerg{C}{M})\leq
+-\delta_{2}(\ssc^{M}(C)/C)$.
+\end{proof}
+Notice that the subalgebra $C_{*}$ is indeed a free amalgam of $N_{*}$ and $\gena{C_{1}\cap A_{1}}{C_{*}}$, but
+the proof actually needs the stronger assumptions stated above.
+
+\medskip
+Suppose $M$ is the above $\nla{3}$-amalgam of $N$
+and $A$ over $B$.
+As a last remark to try solving the amalgamation issue inside $\Klt{3}$ we can address to the following problem.
+\begin{rem*}
+$M$ amalgamates $N$ and $A$ over $B$, for $A$, $B$ and $N$ in $\Klt{3}$ as above.
+Assume $M_{*}=\am{N_{*}}{B_{*}}{A_{*}}$ is in $\Klt{2}$ and for each finite $E_{1}$ of $M_{1}$,
+there is a subspace $\widetilde E_{1}\nni E_{1}$ with the features:
+\begin{itemize}
+\item[-]$d_{2}(\widetilde E)=d_{2}(E)$
+\item[-]$N_{*}+\widetilde{E}_{*}$ is the free amalgam of $N_{*}$ and $\widetilde{E}_{*}$ over
+$\gena{N_{1}\cap\widetilde{E}_{1}}{N_{*}+\widetilde{E}_{*}}$.
+\end{itemize}
+Then $M$ lay in $\Klt{3}$.
+\end{rem*}
+This confirms, it could be useful to work with algebraically closed underlying $\nla{2}$-structures, in the sense of Lemma \ref{acldiv}.

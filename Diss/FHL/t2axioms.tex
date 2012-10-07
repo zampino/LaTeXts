@@ -1,0 +1,413 @@
+%\begin{presection}
+%The axiom-schema we propose here is the natural and obligatory one in a setting
+%in which strongness is given by predimension and in which the class supports
+%a nice amalgamation. This is also the line of \cite{jbg}, for an extensive account of
+%various versions of amalgamation constructions one can see \cite{wag}.
+%
+%It has to be pointed out that this approach of approximating richness, by means of axioms
+%$\sig{2}{3}$ below, works because of the {\em asymmetric} amalgam (Lemma \ref{asymalg}).
+%\end{presection}
+In this last section, we axiomatise the $\Lan{2}$-theory of the Fra\"iss\'e limit $\K$ of $(\Kl{2},\zsu{})$. We prove
+it is $\omega$-stable and calculate its Morley rank.
+
+\medskip
+Nilpotency of class $2$ can be expressed universally in $\Lan{2}$,
+in terms of simple commutators, by requiring $[x,y,z]=[[x,y],z]=\triv$ for all $x,y,z$.
+Altough the language $\Lan{2}$ can naturally express the grading on each $\nla{2}$-algebra, by means of $M=P_{1}(M)+P_{2}(M)$,
+$P_{1}(M)\cap P_{2}(M)=\triv$
+and $(\forall xy)P_{2}([x,y])$, in general there is no first-order bound to the length of homogeneous sums of weight $2$, which could
+express $\gena{P_{1}(M)}{}=M$.
+
+In the axiom system chosen below for $\K$, this is sorted out in the strongest way possible: we require
+each weight $2$ element to be the Lie bracket of exactly two elements (from $P_{1}$). This feature may be compared with
+a corollary to Zilber's {\em Indecomposability Theorem}: in any group $G$ of finite Morley rank, there exists an integer $n$
+such that  any $g\in G^{\prime}$ is the product of $n$ commutators $[x_{i},y_{i}]$. 
+
+As a consequence, it will be true that elementary $\Lan{2}$-extensions are $\nla{2}$-extensions.
+
+\smallskip
+If $M$ is an $\Lan{2}$-structure, we define the theory
+$T^{2}$ by means of the following denumerable first order schema of $\Lan{2}$-axioms, expressed in terms of $M$:
+\begin{itemize}
+\punto{$\sig{2}{1}$}$M$ is a graded nil-$2$ Lie algebra over the field $\Fp$. This corresponds to write properties
+1.{\,}and 2.{\,}of Definition \ref{lcp} in $\Lan{2}$ as described above.
+\punto{$\sig{2}{2}$}For any finite subspace $H_{1}$ of $M_{1}$ $\delta(H)\geq\min(\dfp(H_{1}),\,2)$. 
+\punto{$\sig{2}{3}$}for any finite strong extension $A\nni B$ of $\Kl{2}$-algebras and any $n<\omega$,
+if $B$ is $(\dfp(A_{1}/ B_{1})+n)$-selfsufficient in $M$,
+then there exists an isomorphic copy of $A$ in $M$ over $B$, which is $n$-self-sufficient.
+\punto{$\sig{2}{4}$} for all $y\in M$ with $P_{2}(y)$ and all $\triv\neq z\in M_{1}$ there is $x\in M_{1}$ such that $y=[z,x]$
+\end{itemize}
+We can first observe that axioms $\sig{2}{2}$ and $\sig{3}{3}$ imply that a model of $T^{2}$ cannot be finite.
+
+\begin{teo}\label{Cazzuola}
+%The rich %countable structures in 
+An $\La_{2}$-structure $K$ is a rich algebra of $\Klt{2}$
+%are exactly the countable $\omega$-saturated models of $T^{2}$.
+if and only if $K$ is an $\omega$-saturated model of $T^{2}$.
+\end{teo}
+\begin{proof}
+We start proving that a rich algebra $K$ of $\Klt{2}$ is also a model of $T^{2}$ which is henceforth consistent: the
+Fra\"iss\'e limit $\K$ of $(\Kl{2},\zsu{})$ exhibits a countable model. The second part of the proof shows that an $\omega$-saturated model of $T^{2}$ is a rich $\Klt{2}$-algebra, now since rich
+structures are $\Lan{2}_{\infty,\omega}$-equivalent, because of Fact \ref{fraissteo} ($\nla{2}$-embeddings are in particular
+$\Lan{2}$-embeddings),
+it follows that rich $\Klt{2}$-structures are $\omega$-saturated.
+
+\smallskip
+So let first $K$ be such a rich algebra in $\Klt{2}$, then axioms $\sig{2}{1}$ and $\sig{2}{2}$ are
+satisfied automatically.
+
+To prove $\sig{2}{3}$, assume $A$ is a finite strong extension in $\Kl{2}$ of a finite subalgebra
+$B$ of ${K}$ and
+$B$ is $(\dfp(A_{1}/ B_{1})+n)$-selfsufficient in ${K}$. Take a finite strong subalgebra $\widetilde{B}$ of ${K}$ containing $B$ (the selfsufficient closure of $B$ for instance).
+We use the asymmetric amalgamation Lemma \ref{asymalgadue} to obtain a strong extension $\widetilde{A}$
+of $\widetilde{B}$ in $\Kl{2}$, such that $A$ is $n$-self-sufficient in $\widetilde{A}$.
+
+Now since ${K}$ is rich, $\widetilde{A}$ strongly embeds into ${K}$ over $\widetilde{B}$.
+As a consequence of transitivity (Lemma \ref{2trans}), $A$ embeds into ${K}$
+$n$-selfsufficiently over $B$.
+
+\smallskip
+To prove $\sig{2}{4}$, pick an element $w\in K_{2}$ and $m\in K_{1}$. Since $K=\gen{K_{1}}$, there exists a finite subspace
+$B_{1}$ of $K_{1}$ with $m\in B_{1}$ and $w\in B_{2}$. We may
+clearly assume that $B$ is self-sufficient in $K$.
+
+If there exists $c$ in $B_{1}$ such that $[c,m]=w$ we are done, if not, then we can apply Remark \ref{prealgchain},
+and find a minimal algebraic strong extension $A$ of $B$, such that $A$ is in $\Kl{2}$ and $A_{1}=\genp{B_{1},a}$ where
+$[a,m]=w$. Now since $B\zsu{}K$ and $K$ is rich, $a$ is realised in $K$ over $B$. In particular 
+there is $a^{\prime}$ in $K_{1}$ with $[a^{\prime},m]=w$ as desired.
+
+\medskip
+For the reverse implication suppose $M$ is an $\omega$-saturated model of $T^{2}$, then by $\sig{2}{4}$
+the $\Lan{2}$-structure $M$ is in particular an object of $\nla{2}$.
+
+\smallskip
+Now let $A\nni B$ be a finite strong extension of $\Kl{2}$-algebras, where $B$ is a finite strong
+$\nla{2}$-subalgebra of $M$. We may assume, without loss
+of generality, that $A$ is a minimal extension of $B$; otherwise we decompose it
+in a chain of minimal strong sections like \pref{mindec} and strongly embed each subalgebra stepwise in $M$, over the predecessor.
+
+Assume first $A\nni B$ is a free extension and $B$ is a finite strong substructure in $M$,
+by Proposition \ref{minimalext} and Lemma \ref{samedelta2} we are done if we find $a\in M_{1}$ which is $\cl_{d}$-independent of $B_{1}$, as $d(a/ B_{1})=1$ implies that $\gena{B_{1},a}{M}$ is strong in $M$
+
+If we can prove that $d^{M}(M_{1})$ is infinite, the desired condition will follow.
+To do so, denote by $\fla{2,n}{\bar x}$ the $\Lan{2}$-formula, which describes %quantifier-free diagram of
+the finite free nil-$2$ Lie algebra %$\fla{2}{\bar x}$
+in the following way: %generated by an $n$-element tuple $\tpl{x}{n}$.
+for any $n$-tuple $\bar a$ in $M_{1}$, $M\sat\fla{2,n}{\bar a}$ means $\gena{\tpl{a}{n}}{M}\simeq\fla{2}{\bar a}$.
+
+We show, with an inductive argument, that we can {\em strongly} embed $\fla{2,n}{\bar x}$ in $M$ for any $n<\omega$.
+Axiom $\sig{2}{2}$ ensure  that for any independent pair $m_{1},m_{2}$ of $M_{1}$,
+$\gena{m_{1},m_{2}}{M}$ is a selfsufficient subalgebra of $M$ isomorphic to
+the free nilpotent algebra $\fla{2}{m_{1},m_{2}}$; this will be our inductive base.
+
+Assume now $M\sat\fla{2,n}{\bar b}$ and $\gena{\bar b}{M}$ is strong in $M$. Consider
+the collection $\Phi^{n+1}(x,\bar b)$ of all formulae %\mn{better $\Phi^{n+1}(x,\bar b)\wedge \Sigma(\bar b)$ to say $\bar b$ str?}
+$\phi^{n+1}_{k}(x,\bar b)$ for $k<\omega$, where a $\Lan{2}$-structure $L$ %an $\nla{2}$-algebra $L$
+satisfies $\phi^{l}_{k}(\bar y)$ in $\bar m$ exactly if $\bar m\inn L_{1}$, $L\sat\fla{2,l}{\bar m}$ and $\gena{\bar m}{L}$ is $k$-strong in $L$.
+
+Now a finite portion of $\Phi^{n+1}$ is implied by a single formula $\phi^{n+1}_{k}(x,\bar b)$ with a sufficiently
+large $k$. %, here $k$ may also be assumed to be bigger than. Now use axiom
+Now since $\gena{\bar b}{M}$ is strong, we have $M\sat\phi^{n}_{k+1}(\bar b)$ and hence by $\sig{2}{3}$ there exists
+$a$ in $M_{1}$ such that $M\sat\phi^{n+1}_{k}(a,\bar b)$.
+
+We showed $\Phi^{n+1}(x,\bar b)$ is consistent with $T^{2}_{\bar b}$ and hence realized in $M_{1}$
+by $\omega$-saturation for some $m\in M_{1}$. It follows $\gena{m,\bar b}{M}$ is
+selfsufficient and hence $d^{M}(m,\bar b)=\delta(m,\bar b)=n+1$.
+By induction, $M$ has infinite $d$-dimension.
+\smallskip
+
+If $A\nni B$ is a minimal strong extension with $\delta(A/B)=0$ (hence
+algebraic or prealgebraic). Since $B$ is strong in $M$, (anyone among) axioms $\sig{2}{3}$ ensure
+the existence of an isomorphic copy $A^{\prime}$ of $A$ in $M$ over $B$.
+Note that algebraic extension may be sorted out with $\sig{2}{4}$ as well.
+%\footnote{and hence exclude
+%minimal algebraic extensions from the axioms $\sig{2}{3}$}.
+
+Because of $\delta(A^{\prime}/ B)=0$, we have that $A^{\prime}$ is self-sufficient in $M$ as
+well. This proves that $M$ is a rich Lie algebra in $\Kl{2}$.
+\end{proof}
+
+The proof of the theorem also shows that if $M$ is a $\kappa$-saturated model of $T^{2}$,
+then its $\cl_{d}$ dimension $d(M)$ is not smaller than $\kappa$.
+
+
+Note that the Fraïssé limit $\K$ of $\Kl{2}$ in the last section, is ``the'' countable saturated model of $T^{2}$.
+%\begin{lem}\label{alg-ex-cls}
+%Define a sentence $\sig{2}{4}$ by the property
+%\begin{itemize}
+%\end{itemize}
+%then $T^{2,\omega}\models\sig{2}{4}$.
+%\end{lem}
+%\begin{proof}
+%\end{proof}
+
+\begin{lem}\label{strongelm}
+Elementary $\nla{2}$-embedding are strong. In particular, elementary $\Lan{2}$-extension
+of models of $T^{2}$ are strong $\nla{2}$-extensions.
+\end{lem}
+\begin{proof}
+Let $M$ be an elementary $\nla{2}$-subalgebra of $N$.
+
+If $M$ is not strong in $N$, $\delta(A/M)<0$ for
+some finite subspace $A_{1}$ of $N_{1}$. By Remark \ref{finitedeltabase} there is a finite strong $C_{1}$
+in $M_{1}$ such that $\delta(A/M)=\delta(A/C)$. But then, since now $\delta(A/C)$ is expressible through
+a formula over $C$, %-- the $\La$-diagram of $C+A$ over $C$,
+for some finite subspace $A^{\prime}_{1}$ of $M_{1}$ we have $\delta(A^{\prime}_{1}/ C_{1})$
+contradicting self-sufficiency of $C$ in $M$.
+\end{proof}
+
+\begin{prop}\label{bafo}
+Assume $M$ and $M^{\prime}$ are two models of $T^{2}$. Let $\bar a$ and $\bar a^{\prime}$
+be tuples of $M_{1}$ and $M^{\prime}_{1}$ respectively.
+
+Then $\mathrm{tp}(\bar a)=\mathrm{tp}(\bar a^{\prime})$ %\mn{\"aqv:$\gena{a}{M}\equiv \gena{a^{\prime}}{M^{\prime}}$?}
+if and only if the selfsufficient closure $\gena{\ssc_{2}(\bar a)}{M}$ is $\nla{2}$-isomorphic to
+$\gena{\ssc_{2}(\bar a^{\prime})}{M^{\prime}}$
+via a Lie isomorphism mapping $\bar a$ onto $\bar a^{\prime}$.
+\end{prop}
+\begin{proof}
+If we assume $\mathrm{tp}(\bar a)=\mathrm{tp}({\bar a}^{\prime})$, then
+we have $d^{M}(\bar a)=d^{M^{\prime}}({\bar a}^{\prime})$ and we can
+find a finite subspace $A_{1}$ of $M_{1}$ containing $\bar a$ and
+isomorphic to $\ssc^{M^{\prime}}({\bar a}^{\prime})$. This yields
+$A_{1}=\ssc^{A}(\bar a)$. Now since $\delta(A)=d^{M}(\bar a ^{\prime})=d^{M}(\bar a)\leq d^{M}(A_{1})$,
+$A$ is strong in $M$, it follows $A_{1}=\ssc^{M}(\bar a)$ by Lemma \ref{samed2}.
+
+\medskip
+For the other direction
+we may assume that $M$ and $M^{\prime}$ are $\omega$-saturated,
+since by Lemma \ref{strongelm} the self-sufficient closure of a subspace of $M_{1}$
+will remain the same if computed in any elementary (saturated) extension of $M$.
+
+Assume tuples $\bar b\inn M_{1}$ and $\bar b ^{\prime}\inn M_{1}^{\prime}$ generate isomorphic strong subalgebras
+in $M$ and $M^{\prime}$ respectively, we show that $\bar b$ and $\bar b ^{\prime}$
+can be matched up by an Ehrenfeucht-Fra\"iss\'e game of lenght $\omega$.
+This implies that an isomorphism between $\gena{\bar b}{M}$ and $\gena{\bar b ^{\prime}}{M^{\prime}}$ preserves $\La_{\infty,\omega}$-formulas, hence $\mathrm{tp}(\bar b)=\mathrm{tp}(\bar b ^{\prime})$.
+
+Assume one player chooses an element $m$ of $M$ -- say -- outside $\gena{\bar b}{M}$. Then the other player
+first adds a linear independent tuple $\bar c$ over $\bar b$ such that
+$m\in\gena{\bar b,\bar c}{M}$ and such that $\gen{\bar b,\bar c}\zsu{}M_{1}$.
+Since $\gen{\bar b^{\prime}}$ is strong embeddable into $\gen{\bar b,\bar c}$ and $M^{\prime}$ is a rich $\Klt{2}$-structure, one can
+respond with a tuple $\bar c^{\prime}$ of $M_{1}^{\prime}$
+with $\gena{\bar b,\bar c}{M}\simeq
+\gena{\bar b^{\prime},\bar c^{\prime}}{M}$ and $\gen{\bar b^{\prime},\bar c^{\prime}}\zsu{}M_{1}^{\prime}$.
+We can play $\omega$ rounds in this way, back-and-forth between $M$ and $M^{\prime}$.
+%loss of generality we may assume both $\bar a ^{i}$ to be contained in $K^{i}_{1}$,
+%for assume for instance, $w=w_{1}+w_{2}$ is in $\bar a ^{1}$ for $w_{2}\neq\triv$.
+%If $w_{2}$ is an homogeneous sum of Lie products from $K^{1}_{1}\cap\gena{\bar a ^{1}}{K^{1}}$ then replace $w$ with $w_{1}$ (and do the same for the corresponding
+%element of $\bar a ^{2}$), otherwise pick $m$ in $K_{1}^{1}$ with $[m,e^{1}]=w_{2}$ for
+%some $e^{1}\in K^{1}_{1}\cap\gena{\bar a ^{1}}{K^{1}}$ (this space may be also
+%assumed to be non trivial). We have $\bar a ^{1} m$ is still strong in $K^{1}$.\mn{\bf need strong for non $\nla{2}$-subalg?}
+%-------MAYBE THIS?-------------
+%We say that a tuple $\bar a$ in $M\in\Kl{2}$ is a {\em strong tuple}\mn{{?}see ``constructions'' in AddColl} if there exists
+%a strong finite subspace $H_{1}$ in $M_{1}$ such that $\bar a\inn \gena{H_{1}}{M}$
+%and such that the set of elements from $H_{1}$ which are not in $\bar a$ are $d$-independent
+%over $M_{1}\cap\bar a$.
+\end{proof}
+
+\begin{rem*}
+Proposition \ref{bafo} allows a {\em converse} statement of Lemma \ref{strongelm}:
+any self-sufficient extension $N$ of a model $M$ of $T^{2}$ is elementary.
+\end{rem*}
+
+Since $\triv$ is self-sufficient in every model, by the lemma above
+we obtain that the theory $T^{2}$ is complete and in general
+any two algebras $H\zsu{}M$ and $H^{\prime}\zsu{}M^{\prime}$ which are self-sufficient in models $M$ and $M^{\prime}$ of $T^{2}$
+do have the same elementary type if and only if they are isomorphic.
+
+\medskip
+For the rest of the chapter, we assume a large saturated model $\mathbb{M}$ has been fixed, as monster model of $T^{2}$.
+By the above remarks, any model $M$ of $T^{2}$ is a self-sufficient $\nla{2}$-subalgebra of $\mathbb{M}$ with $\card{M}<\mathbb{M}$
+%.It follows by Lemma \ref{strongelm}, that $M$ is strong in $\mathbb{M}$
+and in particular, by Lemma
+\ref{samed2} $d^{M}=d^{\mathbb{M}}$ on $M_{1}$ for any model $M$. Since the theory will be proved
+to be $\omega$-stable, for the most purposes the countable saturated model $\K$ will be enough.
+
+\medskip
+As an immediate corollary of the previous proposition and Lemma \ref{samedelta2} we have
+\begin{rem}\label{indtypes}
+For any strong $H$ in $\mathbb{M}$, any $a,a^{\prime}$ in $\mathbb{M}_{1}$ are
+$\cl_{d}$-independent of $H$ -- that is $d(a/H_{1})=d(a^{\prime}/H_{1})=1$ -- exactly if
+$\tp{a}{H}=\tp{a^{\prime}}{H}$.
+\end{rem}
+%\begin{proof}
+%If $a$ is $\cl_{d}$-independent of $H_{1}$, then $a$ is linearly independent of $H_{1}$ and
+%there is no {\em link} between $a$ and $H$, i.{}e. $\rd(H_{1},a)=\rd(H_{1})$. Therefore, under
+%the above assumptions, $\gena{H_{1},a}{\mathbb{M}}\simeq_{H}\gena{H_{1},a^{\prime}}{\mathbb{M}}$ follows.
+%Moreover by Lemma \ref{samedelta2} both substructures are self-sufficient, hence the previous proposition yields
+%the desired statement.
+%\end{proof}
+
+On the other hand by Proposition \ref{samedelta2} and \ref{bafo} we obtain
+\begin{cor}\label{isola}
+Let $B$ be a finite
+strong subalgebra of %$M_{1}$ for some %$\omega$-saturated
+a model $M$ of $T^{2}$.
+
+Assume $\bar a$ is a tuple
+in $M_{1}$ such that $d(\bar a/ B_{1})=0$.
+Let the $\Lan{2}_{B}$-formula $\Delta(\bar x,\bar{y})$
+describe the quantifier-free diagram of $\ssc(B,\bar a)$ in such a way that
+for any tuple $\bar c$ of $M_{1}$, for $M$ to satisfy $\Delta(\bar a,\bar c)$ means that
+$\gena{B_{1},\bar a,\bar c}{M}\simeq\ssc(B,\bar a)$. %$\gena{B_{1},a,\bar c}{M}\simeq\gena{\ssc(B,a)}{M}$.
+Then the formula $\exists\bar y\Delta(\bar x,\bar y)$ isolates $\tp{\bar a}{B_{1}}$.
+\end{cor}
+
+\smallskip
+We will now prove that our theory $T^{2}$ is totally transcendental.
+The outline of the proof below is borrowed from Wagner's \cite{wag}.
+\begin{prop}\label{omegastab}
+$T^{2}$ is $\omega$-stable.
+\end{prop}
+\begin{proof}{Proposition \ref{omegastab}}
+Since $\mathbb{M}=\gena{\mathbb{M}_{1}}{\mathbb{M}}$,
+it is sufficient to count types $\tp{\bar m}{H}$ for tuples $\bar m$ in $\mathbb{M}_{1}$
+and countable sets $H\inn\mathbb{M}$ (cfr.\,\ref{tuttuno}). Moreover
+without loss of generality we might assume that $H=\gena{H_{1}}{\mathbb{M}}$ is
+a self-sufficient subalgebra of (or a countable model in) $\mathbb{M}$.
+
+The type of $\bar m$ over $H$ is fully determined by the quantifier-free type
+of $\gena{\ssc(H_{1},\bar m)}{\mathbb{M}}$. By Lemma \ref{fincharssc} we have
+$\ssc(H_{1},\bar m)=\genp{H_{1},\bar a}$ for a finite tuple $\bar a$ of $\mathbb{M}_{1}$, linearly independent over $H_{1}$.
+Moreover -- still by Lemma \ref{fincharssc} -- we can find a finite subalgebra $A$ and $B$ with $B\zsu{}H$ and
+$A_{1}=\genp{B_{1},\bar a}$ such that $\delta(A/B)=\delta(A/H)$ and $A_{1}\cap H_{1}=B_{1}$.
+
+By Lemma \ref{freecomp} $H$ and $A$ are in free composition over $B$, that is
+$$\gena{\ssc(H_{1},\bar m)}{\mathbb{M}}=H+A\simeq\am{H}{B}{A}.$$
+
+Since the isomorphism type of the free amalgam is fully determined by its components,
+the type of $H+A$ is determined by $\tp{A_{1}}{B}$ and by $\tp{B_{1}}{H}$ -- that is
+by the choice of $B_{1}$ into $H_{1}$.
+
+\smallskip
+Since we have a countable saturated model, namely the Fraïssé limit $\K$
+of $\Kl{2}$, the theory $T^{2}$ is small, this gives only countably many choices for $\tp{A_{1}}{B}$.
+Altogether we have $\aleph_{\sss 0}\cdot\card{H_{1}}^{<\aleph_{\sss 0}}=\aleph_{\sss 0}$ possibilities for $\tp{\bar a}{H}$
+and in particular for $\tp{\bar m}{H}$.
+\end{proof}
+
+\begin{rem}\label{tildarich}
+Any $\omega$-saturated model $M$ of $T^{2}$, satisfies a stronger version of richness over $\Klt{2}$.
+That is for {\em any} self-sufficient $\nla{2}$-subalgebra $N$ of $M$, if $H$ is a finite strong extension of $N$ in $\Klt{2}$,
+then $M$ embeds $H$ self-sufficiently over $N$.
+\end{rem}
+\begin{proof}
+Split $H_{1}/N_{1}$ into two strong sections $H_{1}/K_{1}$ and $K_{1}/N_{1}$ (cfr. Definition \ref{mindecomp}),
+such that $\delta(H/K)=0$ and $d(H/N)=d(K/N)=\dfp(K_{1}/N_{1})$.
+
+Now by saturation of $M$, iterating Remark \ref{indtypes} above, we first find a strong $\nla{2}$-subalgebra $\widetilde{K}$ of $M$
+with $N\inn\widetilde{K}$ and $\widetilde{K}\simeq_{N}K$.
+
+Secondly we consider the strong embedding $\widetilde{K}\into H$ and find -- by Proposition \ref{fincharssc} and the arguments
+of the previous Proposition -- a finite $K^{\rm o}\zsu{}\widetilde{K}$ such that $H\simeq\am{H^{\rm o}}{K^{\rm o}}{\widetilde{K}}$ for a suitable finite $H^{\rm o}\inn H$ such that
+$H=K+H^{\rm o}$.
+
+With richness of $M$, find a strong embedding $\alpha$ of $H^{\rm o}$ into $M$ over $K^{\rm o}$.
+Now since $\delta(\alpha(H^{\rm o})/\widetilde{K})=\delta(H^{\rm o}/\widetilde{K})
+=\delta(H^{\rm o}/K^{\rm o})=0$, we obtained the desired strong embedding of $H$ into $M$ as $\gena{\widetilde{K}+\alpha(H^{\rm o})}
+{M}$.
+\end{proof}
+
+\bigskip
+The next paragraphs are devoted to describe the algebraic closure of sets
+of $\mathbb{M}_{1}$.
+
+First observe that axioms $\sig{2}{2}$ imply that $\aut(\mathbb{M})$ is $2$-transitive on $\mathbb{M}_{1}$ as a group
+of $\Fp$-linear automorphisms, that is to say,
+transitive on the set of linearly independent ordered pairs from $\mathbb{M}$.
+In particular $\acl(\triv)=\triv$, and $\acl(a,b)=\gena{a,b}{\mathbb{M}}$ for any pair of elements $a,b\in\mathbb{M}_{1}$.
+
+Now take a finite subspace $C_{1}$ of $\mathbb{M}_{1}$, since by saturation $d(\mathbb{M}_{1}/C)$ is infinite,
+Remark \ref{indtypes} implies that for any , $\acl(C_{1})\cap\mathbb{M}_{1}$ is contained in $\cl_{d}(C_{1})$.
+
+It is also straightforward to see that $A=\ssc(C)$ is contained in the algebraic closure of $C$:
+if $A$ has infinitely many conjugates in $\mathbb{M}$ over $C$, then we can find a strong copy $A^{\prime}$ of $A$ such that
+$C\inn A\cap A^{\prime}\subsetneq A$ but his contradicts minimality of self-sufficient closure.
+With Lemma \ref{finchar}, we may also conclude that $\acl(C_{1})\cap\mathbb{M}_{1}$ is self-sufficient.
+One has then
+\begin{labeq}{inclusures}
+ssc(C_{1})\zsu{}\acl(C_{1})\cap\mathbb{M}_{1}\zsu{}\cl_{d}(C_{1}).
+\end{labeq}
+As opposed to amalgamation constructions in relational languages, here the
+self-sufficient closure does not equal algebraic closure (see \cite{wag}). On the other hand
+in our theory $T^{2}$ the algebraic closure does not coincide with the
+geometric closure $\cl_{d}$, as actually happens in the collapsed case.
+
+\smallskip
+We also have
+\begin{labeq}{acluno}
+\acl(C_{1})=\gena{\acl(C_{1})\cap\mathbb{M}_{1}}{\mathbb{M}}
+\end{labeq}
+for if
+$C_{1}$ is not trivial, for any element $m=m_{1}+m_{2}$ of $\acl(C_{1})$, property $\sig{2}{4}$ implies
+$m=m_{1}+[h,x]$ for some $h\in C_{1}$ and some $x$ in $\mathbb{M}_{1}$.
+
+Now $m_{1}\in\acl(C_{1})\cap\mathbb{M}_{1}$ and $x$ is algebraic over $m_{1},h_{1}$, by axiom
+$\sig{2}{2}$ (cfr.\,Remark \ref{tuttuno}).
+
+\smallskip
+We can actually fully characterise $\acl(C_{1})$ for a given $C_{1}\inn\mathbb{M}_{1}$, in terms of the divisor elements
+defined in Remark \ref{divelement}.
+
+Call a self-sufficient subalgebra $C$ of $\mathbb{M}$ {\em divisibly closed} if
+whenever $\delta(a/C)=0$ for $a\in\mathbb{M}_{1}$, then $a\in C_{1}$.
+%there is no divisor of $C$ in $\mathbb{M}_{1}$,
+%which is linearly independent over $C_{1}$.
+
+By the remarks above, $\acl(C_{1})$ is divisibly closed. Moreover if $U$ and $V$ are divisibly closed $\nla{2}$-algebras 
+then $W=\gena{U_{1}\cap V_{1}}{\mathbb{M}}$ is also divisibly closed, for %as a consequence of axiom $\sig{2}{2}$. This is for,
+if $\delta(x/U_{1}\cap V_{1})=0$ then
+%there is $u\in C_{1}\cap C_{1}$ such that $[x,u]\in U_{2}$, hence there are 
+$\delta(x/U)=\delta(x/V)=0$ and $x\in U_{1}\cap V_{1}$.
+
+Since meet-closed classes give rise to closure operators, we let $\mathscr{D}_{C}$ denote the collection
+of all subspaces $H_{1}$ containing $C_{1}$, which generate divisibly closed self-sufficient algebras in $\mathbb{M}$,
+then set
+$$\div(C_{1})=\bigcap\mathscr{D}_{C}$$
+and consistently to our terminology $\div(C)=\gena{\div(C_{1})}{\mathbb{M}}$.
+
+\begin{lem}\label{acldiv}
+For any subspace $C_{1}$ of $\mathbb{M}_{1}$ we have
+$$\acl(C_{1})%\cap\mathbb{M}_{1}
+=\div(\ssc(C))$$
+\end{lem}
+\begin{proof}
+%We can of course reduce ourself to the case in which $C$
+Since $\ssc(C_{1})\inn\acl(C_{1})$, we may actually assume $C$ to be self-sufficient and finite.
+As $\acl(C_{1})=\gena{\acl(C_{1})\cap\mathbb{M}_{1}}{\mathbb{M}}$ is divisibly closed,
+it is enough to show that $\div(C_{1})$ contains $\acl(C_{1})\cap\mathbb{M}_{1}$.
+
+Assume an element  $a$ of $\mathbb{M}_{1}$ is in $\acl(C_{1})$, let $A_{1}$ be $\ssc^{\mathbb{M}}(C_{1},a)$ and $B_{1}$ denote
+$\ssc(C_{1},a)\cap\div(C_{1})$.
+Suppose by contradiction $A$ is not included in $\div(C_{1})$, then by \pref{inclusures} we have a non-trivial finite strong extension $A$
+of $B$ such that $d(A/B)=\delta(A/B)=0$.
+
+Take distinct $B$-isomorphic copies $A=A^{1}$, $A^{2}$, \dots, $A^{n}$ of $A$ for $n<\omega$; set $\circledast^{0}_{B}A=B$ and
+$\circledast^{1}_{B}A=A^{1}$. For all $1\leq n<\omega$, also define inductively
+$\circledast^{n}_{B}A=\am{(\circledast^{n-1}_{B}A)}{B}{A^{n}}$.
+
+Then $\circledast^{n}_{B}A$ is in $\Kl{2}$ for all $n$. This follows by Lemma \ref{amalsigma2}:
+since $B$ is divisibly closed in $A^{n}$, there is no divisor of $B$ in $A_{1}$ to prevent the free amalgam of $\circledast^{n-1}_{B}A$
+and $A^{n}$ over $B$ from satisfying property $\sig{2}{2}$.
+
+Since $\mathbb{M}$ is $\Kl{2}$-rich, we can
+strongly embed $\circledast^{n}_{B}A$ into $\mathbb{M}$ over $\circledast^{n-1}_{B}A$ for all $n<\omega$.
+We obtain thus arbitrarily many distinct self-sufficient copies $A^{i}$ of $A$ over $B$ and hence infinitely many $C$-conjugates of
+$A$ in $\mathbb{M}$ against algebraicity over $C$.
+\end{proof}
+By Definition \ref{mindecomp} now follows
+\begin{rem}\label{aclssc}
+Let $A$ finitely extend $B$ in $\mathbb{M}$. 
+Assume $$B=B^{0}
+\zsu{}B^{1}\zsu{}\dots\zsu{}B^{n}=A$$
+is a minimal decomposition
+of $A$ over $B$. Then $\acl(B_{1})\cap A_{1}=B^{k}_{1}$, for some $1\leq k\leq n$
+such that $B^{i+1}\nni B^{i}$ is a minimal algebraic extension for all $i=1,\dots,k$
+and $k$ is maximal with respect to this property.
+\end{rem}
+%\begin{proof}
+%As observed before, $\acl(B_{1})$ is self-sufficient in $\mathbb{M}$,
+%hence $\acl(B_{1})\cap A_{1}\zsu{}A_{1}$. By minimality of the extensions $B^{i}\nni B^{i-1}$
+%then $\acl(B_{1})\cap A_{1}=B^{k}$ for some $k$. The rest of the claim follows by
+%the previous proposition.
+%\end{proof}

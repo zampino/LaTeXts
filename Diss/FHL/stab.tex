@@ -1,0 +1,298 @@
+The facts from stability theory we use are quite basic.
+In the case of the uncollapsed nil-$2$ Lie algebra we construct in Section \ref{t2axioms}, the theory obtained is $\omega$-stable.
+Only properties of such theories will therefore be needed. For the concepts and the definitions of this section,
+we essentially follow \cite{ziebous} or \cite{zietent}.
+
+\medskip
+By a {\em totally transcendental theory} we mean a theory in which each formula $\varphi(\bar x)$
+in $n$ variables has ordinal Morley rank, for all $n<\omega$.
+By Fact \ref{ziemr} below this is equivalent to require every $1$-formula to have ordinal Morley rank or
+to require the formula $x=x$ to have such a rank.
+\begin{fact*}
+An $\omega$-stable theory $T$ is totally transcendental (short t.t.). Moreover the two notion coincide
+if the language of $T$ is countable.
+\end{fact*}
+The facts recalled in the rest of the section, if not otherwise specified, concern a fixed large saturated monster $\mon$ of
+a totally transcendental theory $T$.
+{\em Small} sets are subsets of $\mon$ whose cardinality is less than $\card{\mon}$ and {\em models} are
+small elementary substructures of $\mon$.
+
+We assume Morley rank and degree are defined on partial types $p$ in $T$ over parameters from $\mon$
+and write respectively $\mr(p)$ and $\md(p)$. We also denote by $\mrd(p)$ the ordered pair $(\mr(p),\md(p))$.
+
+For a formula $\varphi(\bar x)$, $\mrd(\varphi(\bar x))$ stands for $\mrd(\{\varphi(\bar x)\})$ while $\mr(\bar a/B)$ will be the Morley rank of $\tp{\bar a}{B}$, for any tuple $\bar a$ and small subset set $B$ of $\mon$.
+
+\begin{rem}\label{belrango}
+Morley rank is {\em continuous}, that is for any complete type $p$, $\mr(p)$
+is the rank of a formula $\phi$ in $p$, and for any complete type $q\ni\phi$, $\mr(q)\leq\mr(\phi)$.
+Moreover for any formula $\psi(\bar x)$ we have dually
+$$\mr(\psi(\bar x))=\max(\mr(p)\mid p\in\ssp{\bar x}{A},\psi\text{ is over $A$ and }\psi\in p).$$
+\end{rem}
+
+\smallskip
+Both statements of the following fact will be used in Section \ref{rango} further below.
+The first is an easy exercise on rank computation under
+algebraicity, the second is due to a result of Erimbetov (\cite{eri}), in the formulation of which we follow \cite{ziemr}.
+The {\em product} of two ordinals $\alpha$ and $\beta$, denoted by $\alpha\cdot\beta$, is defined as
+the order type of the lexicographic order on $\alpha\times\beta$.
+
+\begin{fact}\label{ziemr}
+Let $\map{f}{\mathscr{D}}{\mathscr{E}}$ be a definable map between definable (possibly with parameters) classes of the monster
+model of an arbitrary theory.
+
+\begin{itemize}
+\item[1.]If $f$ is finite-to-one and onto $\mathscr{E}$, then $\mr(\mathscr{D})=\mr(\mathscr{E})$.
+\item[2.]If $\mathscr{E}$ has Morley rank $\beta$ and the Morley rank of all fibres $f^{-1}(e)$ is bounded by an ordinal $\alpha>0$, the Morley rank of $\mathscr{D}$ is bounded by $\alpha\cdot(\beta+1)$.
+\end{itemize}
+\end{fact}
+
+\medskip
+We assume a notion of {\em non-forking} extension of types is given (through {\em dividing}).
+In a totally transcendental setting, non-forking is expressed in terms of Morley rank.
+For tuples $\bar a$ and small subsets $A,B$ in $\mon$ we write
+\begin{labeq}{forkrank}
+\ffin{\bar a}{B}{A}%\stackrel{def}{
+\iff\mr(\bar a/B)=\mr(\bar a/AB).
+\end{labeq}
+to say that $\tp{\bar a}{AB}$ {\em does not fork over} $B$.
+ 
+The {\em Lascar rank} (\cite{las}) on complete types $p$ of a stable theory, denoted by $U(p)$ is the smallest {\em connected} notion
+of rank on complete types, whose gap on type extensions witness forking (see also \cite{haha} or and \cite[\S6]{bue}).
+This means, if $q$ extends $p$, $q$ is a forking extension of $p$ iff $U(q)<U(p)$.
+
+Moreover connectedness means, that $U(p)=\alpha$ and $\beta\leq\alpha$ implies the existence of a
+complete type $q\nni p$ with $U(q)=\beta$.\footnote{Morley rank is connected with respect to {\em formulas} but
+not on complete types.}
+
+%is  or $U$-rank as emerges, for instance
+%in \cite{las} and \cite{haha} or %. This is the $\mathit{L}$-rank defined by Shelah in
+%\cite[V.7.5]{sh90}.
+%which is a priori defined in an unstable context\mn{clarify the setting!}: $U$ is the unique {\em connected} (and hence
+%{\em minimal}) notion
+%of rank on complete types (cfr.\,\cite{la}); for an extension $p\inn q$ of
+%and hence, in a stable theory, witness the {\em non-forking} relation on complete type extensions:
+%for $q$ to be a {\em forking extension} of $p$ is equivalent to $U(p)<\infty$ and $U(q)<U(p)$.
+%It is in fact the smallest connected ordinal rank to isolate the properties of forking, 
+In particular we have $U(p)\leq\mr(p)$ on all complete types $p$ of $T$.
+
+\smallskip
+The strength of Lascar rank lays in its additive property. We refer to the book
+of Buechler cited, for the definition of the {\em connected sum} $\alpha\oplus\beta$ of two ordinal numbers
+$\alpha,\beta$.
+\begin{fact}[{\cite[Theorem 8]{las}}]\label{uddi}
+In a superstable theory $T$, for all tuples $\bar a,\bar b$ and sets $B$, we have
+$$
+U(\bar a/B\bar b)+U(\bar b/B)\leq U(\bar a\bar b/B)\leq U(\bar a/B\bar b)\oplus U(\bar b/B).$$
+Moreover since the ordinal sum $+$ and $\oplus$ coincide on finite ordinals, when
+$U(\bar a/B\bar b)$ and $U(\bar b/B)$ are both finite, we have
+$$
+U(\bar a\bar b/B)=U(\bar a/B\bar b)+U(\bar b/B).
+$$
+\end{fact}
+This additive behaviour resembles additivity of Morley rank in strongly minimal sets and will turn out
+very useful when computing the rank of the theory $T_{2}$ in Section \ref{t2axioms}.
+
+Unfortunately the two notions of rank introduced so far do not in general coincide on complete types even in
+an $\omega$-stable context.  In \cite[\S6 and \S7]{bue} one finds an extensive account of 
+examples and conditions under which these ranks do or do not coincide. Among the affirmative cases we find, for instance, the
+uncountably categorical theories.
+
+Rank computations in Section \ref{rango} involve the following very special instance, which we prove below
+\begin{lem}\label{RMU}
+Let $\mathfrak{X}$ be a family of complete isolated types in $T$, %each type in $\mathfrak{X}$ is
+over finite sets of parameters.
+
+Suppose further that for any type $p\in\mathfrak{X}$ and each finite set $C$ containing the parameters of $p$,
+any complete extension of $p$ over $C$ lays again in ${\mathfrak X}$.
+
+Then Morley rank and $U$-rank agree on $\mathfrak{X}$.
+\end{lem}
+\begin{proof}
+Let $p\in\ssp{\bar x}{A}$ be a type in $\mathfrak{X}$ for a finite set $A$, and assume that $M\!R(p)\geq\alpha$ for some ordinal number $\alpha$, we show
+by induction on $\alpha$, that $U(p)\geq\alpha$. Let the statement by true of types from ${\mathfrak X}$
+for all ordinals $\alpha<\kappa$. If $\kappa$ is a limit
+ordinal, then by the definition of ranks it follows $U(p)\geq\kappa$.
+
+Let $\kappa$ be $\alpha+1$ for some ordinal $\alpha$, and $\mr(p)\geq\alpha+1$. Since $p$ is isolated, there is a formula
+$\varphi(\bar x)$ over $A$ which implies $p$, hence $\mr(\varphi)\geq\alpha+1$. Since $T$ is t.t., let $\psi(\bar x)$ be a formula
+over some finite $C\nni A$ implying $\varphi$ with $\mr(\psi)=\alpha$. Choose a type $q$ in $\ssp{\bar x}{C}$ generic
+in $\psi$, then we have $\mr(q)=\alpha$, $q$ implies $\varphi$ and hence $q$ is a forking extension of $p$.
+This yelds $q\in\mathfrak{X}$ and
+since $\mr(q)\geq\alpha$, by induction, $U(q)\geq\alpha$, this means exactly $U(p)\geq\alpha+1$.
+
+We actually showed that the assumptions force Morley rank to be connected on ${\mathfrak X}$.
+\end{proof}
+
+\medskip
+We will also need the characterisation of forking in terms of a {\em notion of independence}:
+a ``stable version'' of Kim-Pillay results for simple theories.
+
+With this respect, we follow the approach of \cite[Theorem 5.8]{haha} and Ziegler and Tent in (\cite[Theorem 36.10]{zietent}).
+
+The last authors seem to exhibit an overall {\em shortest} list of properties for a distinguished class of type extensions to
+coincide with the non-forking relation. We stick however to the equivalent formulation in terms of an independence relation
+among {\em sets} rather than types.
+\begin{fact}\label{stableforking}
+Assume a complete theory $T$ is endowed with a ternary relation $\fin{\bar x}{X}{Y}$ between tuples $\bar x$ and pairs of
+(small) sets $X,Y$ of $T$,
+which is invariant under $\aut(\mon)$.
+Then $T$ is stable if an only if $\ind$ satisfies:
+%\begin{itemize}
+%\punto{\small{\sc Local Character}}there is a cardinal $\kappa$ such that for all tuple $\bar a$ and set $C$, there is $C_{0}\inn C$ of
+%cardinality at most $\kappa$ such that $\fin{\bar x}{C_{0}}{C}$.
+%\punto{\small{\sc Boundedness}}There is a cardinal $\mu$ such that for all $A\nni B$ and any tuple $\bar a$, there are at most
+%$\mu$ $\aut_{A}(\mon)$-orbits among tuples $\bar a^{\prime}$ with $\fin{\bar a^{\prime}}{B}{A}$ and $\bar a\equiv_{B}\bar a^{\prime}$.
+%\end{itemize}
+\begin{description}
+\item{\small{\sc (Local Character)}} there is a cardinal $\kappa$ such that for all tuple $\bar a$ and set $C$, there is $C_{0}\inn C$ of
+cardinality at most $\kappa$ such that $\fin{\bar x}{C_{0}}{C}$.
+\item{\small{\sc (Boundedness)}} There is a cardinal $\mu$ such that for all $A\nni B$ and any tuple $\bar a$, there are at most
+$\mu$ $\aut_{A}(\mon)$-orbits among tuples $\bar a^{\prime}$ with $\fin{\bar a^{\prime}}{B}{A}$ and $\bar a\equiv_{B}\bar a^{\prime}$.
+\end{description}
+\smallskip
+If in addition $\ind$ satisfies, for all sets $A\nni B\nni C$:
+\begin{description}
+\item{\small\sc(Transitivity)} for any tuple $\bar a$, %and $A\nni B\nni C$,
+from $\fin{\bar a}{C}{B}$ and $\fin{\bar a}{B}{A}$, follows $\fin{\bar a}{C}{A}$.
+\item{\small\sc(%Weak
+Monotony)} For all %$A\nni B\nni C$ and
+$\bar a$, $\fin{\bar a}{C}{A}$ implies $\fin{\bar a}{C}{B}$.
+\item{\small\sc(Existence)} %For all sets $A\nni B$ 
+There always exists a tuple $\bar a$ with $\fin{\bar a}{B}{A}$.
+\end{description}
+then $\ind$ coincides with non-forking independence,
+that is $\fin{\bar a}{B}{A}$ holds, exactly when $\tp{\bar a}{AB}$ {\em does not fork over} $B$.
+\end{fact}
+Of course properties above specialise to the case t.t.\,theories, i.{}e. Local Character becomes
+{\em finite} Local Character and a {\em finite} instance of Boundedness property is satisfied. 
+
+On the contrary, finite local character and finite boundedness of a notion of independence in a
+small theory imply $\omega$-stability.
+\begin{rem}\label{re:extrafking}
+Stable forking independence satisfies in addition:
+\begin{align}
+\tag{Symmetry}\forall\bar a,\bar b,B,\quad\ffin{\bar a}{B}{\bar b}&\iff\ffin{\bar b}{B}{\bar a}\\
+\tag{Irreflexivity}\forall\bar a,B,\quad\ffin{\bar a}{B}{\bar a}&\Rightarrow \bar a\in\acl(B)\\
+\tag{Algebraicity}\forall\bar a,\; C\inn\acl(A,B)\text{ and }\ffin{\bar a}{B}{A}\quad&\Rightarrow\ffin{\bar a}{B}{C}\\
+\tag{Base Monotonicity}\forall \bar a,A\nni B\nni C,\quad\ffin{\bar a}{C}{A}&\Rightarrow\ffin{\bar a}{B}{A}
+\end{align}
+\end{rem}
+%\begin{itemize}
+%\punto{Irreflexivity}$\ffin{\bar a}{B}{\bar a}\Rightarrow \bar a\in\acl(B)$
+%\punto{Algebraicity}If $C\in\acl(A,B)$ then $\ffin{\bar a}{B}{A}\Rightarrow\ffin{\bar a}{B}{C}$
+%\punto{Base Monotonicity}For $A\nni B\nni C$, $\ffin{\bar a}{C}{A}\Rightarrow\ffin{\bar a}{B}{A}$.
+%\punto{Symmetry}For all $\bar a,\bar b$ and $B$, $\ffin{\bar a}{B}{\bar b}\iff\ffin{\bar b}{B}{\bar a}$.
+%\end{itemize}
+For a comprehensive account on the possible axiomatic choices for a notion of independence
+we refer to \cite{ad}.
+
+\bigskip
+In the last section of Chapter \ref{due}, we prove some results around
+weak elimination of imaginaries and also draw a strategy toward a proof of $CM$-triviality for our uncollapsed structure.
+
+We recall below some essential facts about these notions, following
+\cite{ziebous} and \cite{cafa}.
+\begin{dfn}\label{wei}
+A theory $T$ has {\em weak elimination of imaginaries} (WEI) if for every imaginary element $e$,
+in $M^{eq}$ for any model $M$ of $T$, there is
+a real tuple $\bar c$ such that $e$ is definable over $\bar c$ and $\bar c$ is algebraic over $e$, that is
+$$e\in\dcl^{eq}(\bar c)\quad\text{and}\quad\bar c\in\acl^{eq}(e).$$
+\end{dfn}
+Imaginary elements are used essentially to deal with canonical bases of types and definable sets.
+
+In our t.t.{\,}theory $T$ for a complete stationary type $p=p(\bar x)$ ($\md(p)=1$) over a set $A$,
+the {\em canonical base} of $p$ is the definable closure $Cb(p)$ of the -- at most $\card{T}$-many -- canonical
+parameters of the $p$-definition formulas $d_{p}x\varphi(x,y)$ (\cite[p.29]{ziebous}) as $\varphi(x,y)$ ranges over the language of $T$.
+In our context $Cb(p)$ is the definable closure of a finite sequence of imaginaries.
+
+$Cb(p)$ lays a priori in $\mon^{eq}$ and is point-wise fixed by exactly those automorphism $\sigma$ of $\mon$
+for which $p$ and $p^{\sigma}$ have the same global non-forking extension.
+Therefore if ${\bf p}$ is a global type, ${\bf p}$ is fixed by exactly the automorphisms which fixes $Cb({\bf p})$ point-wise.
+For a global type ${\bf p}$ and a set $A$
+of parameters we will also need the following renown property of canonical bases:
+\begin{fact}[{\cite[Theorem 4.2]{ziebous}}]\label{ziecb}{\ }
+\begin{itemize}
+\punto{1.}{\bf p} does not fork over $A$ iff $Cb({\bf p})\inn\acl^{eq}(A)$
+\punto{2.}{\bf p} is the unique non-forking extension of the (stationary) type $\res{{\bf p}}{A}$ iff $Cb({\bf p})\inn\dcl^{eq}(A)$.
+\end{itemize}
+\end{fact}
+%I refer in general to \cite{ziebous,cafa} for the aforementioned definitions and facts about canonical parameters and imaginaries.
+We will write $Cb(\bar a/B)$ to denote $Cb(\tp{\bar a}{B})$, provided $\tp{\bar a}{B}$ is stationary.
+
+The following result which may be derived from \cite[Proposition 2.5]{cafa} will be also mentioned in Section \ref{cmt}. It is a statement
+about the existence of {\em weak} canonical bases for types over models.
+For ease of reference, we adapt the proof to the total transcendental setting.
+\begin{lem}\label{weimodels}
+%Let $\mon$ the monster model of a totally transcendental theory $T$, then
+$T$ has {\em (WEI)} if and only if for any (small) model $M\ess\mon$, and any type $p\in\ssp{}{M}$, there exists a {\em real} tuple $\bar c$
+in $M$ such that:
+\begin{itemize}
+\punto{{\it i\,}}the pointwise stabiliser of $\bar c$ in $\aut(M)$ fixes the type $p$,
+\punto{{\it ii\,}}$\bar c$ has finitely many conjugates under the automorphisms of $M$ which leave $p$ fixed.
+\end{itemize}
+\end{lem}
+\begin{proof}
+Let then $e$ be an imaginary of $T$ such that $e=\bar a/\epsilon$ where $\epsilon(\bar x,\bar y)$ is a $0$-definable
+equivalence relation, and $\bar a$ is in $\mon$. Let $\mathbf{p}$ a global generic type in $\epsilon(\bar x,\bar a)$.
+
+By taking a small but sufficiently saturated model $M$ ($\omega$-saturation will do), containing $\bar a$ and such that ${\bf p}$ does not
+fork over $M$, we obtain a real tuple $\bar c$ with properties (i) and (ii) related to $\aut(\mon)$ and ${\bf p}$.
+%For a totally transcendental theory, $\omega$-saturation of $M$ is enough.
+
+But then we have $e\in\dcl^{eq}(\bar c)$, for if $\sigma\in\aut_{\bar c}(\mon)$, then ${\bf p}^{\sigma}={\bf p}$ and
+this implies that $\epsilon(\bar x,\bar a)\wedge\epsilon(\bar x,\bar a^{\sigma})$ must be consistent, thus $\sigma$ fixes $e$.
+
+On the other side, the group $\aut_{e}(\mon)$ {\em transitively} permutes the generic global types of the formula
+$\epsilon(\bar x,\bar a)$. Since these are but in a finite number,
+if $\aut(\mon)_{\bf p}$ denotes the stabiliser of the type ${\bf p}$ under the action of $\aut_{e}(\mon)$,
+then the index of $\aut(\mon)_{\bf p}$ in $\aut_{e}(\mon)$ is finite. By the hypothesis, $\bar c$ has a finite orbit under $\aut(\mon)_{\bf p}$, then it has
+necessarily a finite orbit under $\aut_{e}(\mon)$. This gives $\bar c\in\acl^{eq}(e)$.
+
+\smallskip
+For the converse statement, (WEI) implies that for any type $p$ over a model $M$, we can find a real tuple $\bar c$ such that
+\begin{gather}
+\begin{cases}\label{ciBi}
+\bar c\in\acl^{eq}(Cb(p))\\Cb(p)\in\dcl^{eq}(\bar c).
+\end{cases}
+\end{gather}
+These properties imply (i) and (ii) above.
+\end{proof}
+A real finite set with property \pref{ciBi} above will be found -- for types of self-sufficient tuples -- in Lemma \ref{teowei} of
+Chapter \ref{due}.
+
+The following result from \cite{pilcm} will also be useful
+\begin{fact}\label{pilcb}
+Assume $M\ess\mon$ is a model of a stable theory, $\mon$ its monster model and let $c,d$ be tuples in $\mon^{eq}$.
+
+If any of the following two conditions
+%and denote by $\mathscr{C}$, $Cb(c/M)$ and by $\mathscr{D}$, $Cb(d/M)$.T
+%then the following holds:
+\begin{itemize}
+\punto{i}$c\in\acl(d)$ %\quad\Rightarrow\quad Cb(c/M)\inn\acl^{eq}(Cb(d/M))$
+\punto{ii}$\ffin{c}{d}{M}$ %\quad\Rightarrow\quad Cb(d/M)\inn\acl^{eq}(Cb(c/M))$
+\end{itemize}
+holds, then $Cb(c/M)\inn\acl^{eq}(Cb(d/M))$.
+\end{fact}
+
+\smallskip
+We recall next the definition of $CM$-triviality.
+%which actually 
+%This first appears in \cite{hruabi} together with two other equivalent conditions.
+%The formulation below is particularly suitable to work with the notion of weak canonical base
+%for self-sufficient tuples we will give after Theorem \ref{teowei}.
+\begin{dfn}\label{cmtdef}
+A theory $T$ is said to be {\sl CM}-trivial, if for any algebraically closed sets $B\inn A$ of the monster $\mathbb{C}^{eq}$ of $T$,
+and all tuple $c$ in $\mathbb{C}^{eq}$ with $\acl^{eq}(B,c)\cap A=B$ we always have $Cb(c/B)\inn\acl^{eq}\left(Cb(c/A)\right)$.
+\end{dfn}
+
+With Pillay's \cite[Corollary 2.5]{pilcm}, we can rephrase the definition above in terms of models of $T$ and {\em real} tuples:
+\begin{fact}\label{pilcmt}
+A theory $T$ is {\sl CM}-trivial iff for all small models $M\ess N$ and (real) tuples $\bar c$ from $\mathbb{C}$ with
+$acl(M,\bar c)\cap N=M$ we have $Cb(\bar c/M)\inn\acl^{eq}\left(Cb(\bar c/N)\right)$.
+
+Moreover $T$ is $CM$-trivial iff it is such after adding some set of parameters to $T$.
+\end{fact}
+Such a property for $T$ prevent the theory from interpreting fields:
+\begin{fact}[{\cite[Proposition 3.2]{pilcm}}]
+No infinite field is interpretable in a $CM$-trivial theory $T$.
+\end{fact}

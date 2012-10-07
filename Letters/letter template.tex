@@ -1,0 +1,23 @@
+\documentclass[fontsize=11pt, paper=a4]{scrlttr2}
+\KOMAoptions{parskip=full,fromemail=yes,fromrule=aftername,fromlogo=yes,backaddress=off,foldmarks=off,fromalign=right,
+locfield=narrow}
+\LoadLetterOption{DIN} %% oder: DINmtext, SN, SNleft, KOMAold.
+\makeatletter
+\@setplength[]{locvpos}{8em}
+\@setplength[]{lochpos}{2em}
+\makeatother
+%\setkomvar{adressee}{pongostr, 45}
+\setkomavar{fromname}{Andrea Amantini}
+\setkomavar{fromaddress}{Lausitzerstr 37, 10999 Berlin}
+\setkomavar{fromemail}{amantini@math.hu-berlin.de}
+\setkomavar{location}{\raggedright\small EinschrNr. 506852\\GebD. 28/01/1980}
+\setkomavar{signature}{Andrea Amantini} % printed after the \closing
+\setkomavar{subject}{Antrag auf Verl\"angerung der Promotionszeit} % subject of the letter
+\begin{document}
+\begin{letter}{An den Dekan der Mathematisch-Naturwissenschaftliche Fakult\"at II,
+Prof. Dr. Peter Frensch}
+\opening{Sehr geehrter Herr Dekan,}
+text....
+\closing{Mit freundlichen Gr\"ussen}
+\end{letter}
+\end{document}

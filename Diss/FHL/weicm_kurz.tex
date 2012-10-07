@@ -1,0 +1,458 @@
+We conclude this chapter with some results about identifying
+canonical bases for types over models of $T^{2}$.
+
+In this section, a distinguished non-trivial element of $\mathbb{M}_{1}$ will be added to the signature as parameter.
+With Remark \ref{tuttuno}, this implies we can actually work with tuples from $\mathbb{M}_{1}$ only.
+
+The result which follows
+provides a notion of {\em weak} canonical base for types of self-sufficient tuples over models
+and inspired a program about showing $CM$-triviality for $T^{2}$. This is now
+a work in progress which is not accomplished in this thesis.
+
+\medskip
+For any strong $\nla{2}$-subalgebra $H$ of $\mathbb{M}$, we call a tuple $\bar a\inn\mathbb{M}_{1}$ a {\em strong tuple over $H$},
+if $\bar a$ is linearly independent of $H_{1}$ and if $\genp{H_{1},\bar a}\zsu{}\mathbb{M}_{1}$. For the
+definition of canonical bases we refer to Section \ref{stab}.
+
+\begin{lem}\label{teowei}
+We fix a constant $c$ to the language $\Lan{2}$, interpreted by an element of $\mathbb{M}_{1}$ different from $\triv$.
+
+For any model $M$ of $T^{2}_{c}$, and any strong tuple $\bar a$ over $M$,
+there is a finite strong $\nla{2}$-subalgebra $C$ of $M$,
+such that
+$$C\inn\acl^{eq}(Cb(\bar a/M))\text{ and }Cb(\bar a/M)\inn\dcl^{eq}(C).$$
+\end{lem}
+\begin{proof}
+Let $p$ denote $\tp{\bar a}{M}$ and $\bar a$ be $\tupl{a}{0}{n-1}$.
+
+Let $\aut_{\{\!M\!\}}(\mathbb{M})$ denote the group of all automorphism of the monster $\mathbb{M}$,
+which leave $M$ invariant.
+
+If $\sigma$ is an automorphism of $\mathbb{M}$, whose restriction to ${M}$ fixes the type $p$,
+then $\bar a^{\sigma}\equiv_{M}\bar a$.
+%This means, by Proposition \ref{bafo}, that the application fixing $M$ and sending $\bar m$ to $\bar m^{\sigma}$
+%may be extended to an isomorphism $\phi$ of $\gena{M,\bar a}{\mathbb{M}}$ onto $\ssc(M,\bar m^{\sigma})=
+%%:\gena{M,\bar b}{\mathbb{M}}$.
+%\gena{M,\bar a^{\sigma}}{\mathbb{M}}=:\gena{M,\bar b}{\mathbb{M}}$\mn{Careful! $\bar a^{\phi}$ {\bf may not} be $\bar a^{\sigma}$!!!}
+%for some $\bar b\inn\mathbb{M}_{1}$ with $\phi\colon \bar a\stackrel[M]{\simeq}{\longmapsto}\bar b$.
+%
+%Proposition \ref{bafo} again now implies that $\phi$ is actually elementary, that is $\phi\colon\bar a
+%\stackrel[M]{\equiv}{\longmapsto}
+%\bar b$.
+Since $M$ is small, the strong homogeneity of the monster implies, that
+the action {\em on} $M$ of the stabiliser of the type $p$ %with respect of the action of
+in $\aut(M)$ %on $\ssp{}{M}$
+coincides with the action on $M$ %orbit of $\bar c$ %$C$
+under the pointwise stabiliser of %$\bar m$ {\em and } %$\bar a$ (and 
+$\bar a$ in $\aut_{\{\!M\!\}}(\mathbb{M})$. % which we denote by $\aut_{\{\!M\!\}}(\mathbb{M})$.%_{\bar m}$.
+We will first find a finite subspace of $M$ which is invariant under all $\sigma\in\aut_{\{\!M\!\}}(\mathbb{M})$ with
+$\bar a^{\sigma}=\bar a$.
+
+%On the other hand if $\sigma\in\aut_{\{\!M\!\}}(\mathbb{M})$ and fixes $\bar m$, then $\gen{M_{1},\bar a}^{\sigma}=
+%\ssc(M_{1},\bar m)^{\sigma}=\ssc(M_{1},\bar m^{\sigma})=\gen{M_{1},\bar a}$ and hence $\gen{\bar a}^{\sigma}=\gen{\bar a}$.
+
+%Since the self-sufficient closure commutes with automorphisms,
+%one has
+%$$\gena{M,\bar a^{\sigma}}{\mathbb{M}}=\ssc(M,\bar m)^{\sigma}=\ssc(M^{\sigma},\bar m^{\sigma})%{\gena{M_{1},\bar a}{\mathbb{M}}}^{\sigma}=\gena{M_{1},\bar a^{\sigma_{1}}}{\mathbb{M}}
+%=\ssc(M,\bar m)=\gena{M,\bar a}{\mathbb{M}}$$
+%and in particular $\gen{\bar a^{\sigma}}=\gen{\bar a}$ in $\mathbb{M}_{1}$.
+
+%For any automorphism $\sigma$ of $\aut_{\{\!M\!\}}(\mathbb{M})$ %fixes $\bar a$ pointwise and let
+%let $\sigma_{1}$ denote the restriction of $\sigma$ to $M_{1}$: $\sigma_{1}$ is a linear isomorphism in
+%$\mathit{GL}(\mathbb{M}_{1})$ which leaves the subspace $M_{1}$ invariant.
+%Let also $\widehat\sigma$ denote the graded Lie isomorphism induced by $\sigma_{1}$ on the free graded algebra
+%$\fla{2}{\mathbb{M}_{1}}=\mathbb{M}_{1}\oplus\exs\mathbb{M}_{1}$.
+%Remark that $\widehat\sigma$ leave the
+%subspace $\exs\gen{M_{1},\bar a}$ of $\exs\mathbb{M}_{1}$ invariant.
+
+\medskip
+Let %$\mathcal{B}$ an ordered basis of $M_{1}$ and
+$(\rho_{i})_{i<m}$ be a set in $\exs\genp{M_{1},\bar a}$ linearly independent over $\exs M_{1}$ which is a basis
+of $\rd_{\mathbb{M}}(M,\bar a)$ over $\rd(M)$. Since $M$ is self-sufficient, then $m\leq n$.%\dfp(\bar a/M_{1})$.
+%After having expressed each $\rho_{i}$ as linear combinations of basic monomials
+%over the ordered basis $\mathcal{A}=\{\bar a>\mathcal{B}\}$ of $\gen{M_{1},\bar a}$, we may assume that
+
+\smallskip
+For all $i<m$, we find a tuple $\bar b_{i}=(\utpl{b_{i}}{0}{n-1})$ of length $n$, of not necessarily linearly independent elements of $M_{1}$
+such that 
+\begin{labeq}{rhodi}
+\rho_{i}=\alpha_{i}+\beta_{i}+\gamma_{i}
+%\rho_{i}=\alpha_{i}(\bar a)+\beta_{i}(\bar a,\bar c)+\gamma_{i}(\bar c)
+\end{labeq}
+%where $\alpha_{i}\in\exs\gen{\bar a}$, $\beta_{i}\in\exs\gen{\bar a,\bar c}\non\exs\gen{\bar a}+\exs\gen{\bar c}$ and
+%$\gamma_{i}\in\exs\gen{\bar c}\non\rd(M)$ are supposed to be
+%where the terms
+%$\alpha_{i}$, $\beta_{i}$ and $\gamma_{i}$ are linear combinations of basic monomials
+%over the ordered set $\{\bar a>\bar c\}$ and the ordering on $\bar c$ is the one inherited from $\mathcal{B}$. We can also
+%require
+where each $\alpha_{i}=\alpha_{i}(\bar a)%\neq\triv <-------WHY??????
+$ is in $\exs\genp{\bar a}$
+and every $\gamma_{i}$ %(\bar c)\in
+-- when nontrivial -- lays in $\exs M_{1}\non\rd(M)$ for all $i<m$.
+%\sout{This yields\mn{Try: get the $c$'s right now}, since $M$ is a model,
+%that we can find a $c_{i}\in M_{1}$, such that $[c,c_{i}]=\bar\gamma_{i}$ for all $i<m$. Here $\bar\gamma_{i}$ denotes
+%the element of $M$ $\gamma_{i}+\rd(M)$.}
+Moreover, all nontrivial $\beta_{i}$ are given by
+$$\beta_{i}=\beta(\bar a,\bar b_{i})=\sum_{k<n}[a_{k},{b_{i}}^{k}]\in\exs\genp{M_{1},\bar a}\non\exs\genp{\bar a}+\exs M_{1}.$$
+
+\smallskip
+%Now take a tuple $\bar b$ of $\mathcal{B}$ %be a tuple of $M$,
+%minimal with the properties:
+%\begin{itemize}
+%\item[-]$\{\bar a,\bar b\}\nni\supp_{\mathcal{A}}(\beta_{i})$ for all $i$ and
+%\item[-]$\gen{\bar a,\bar b}\nni\bar m$.\mn{or, embed this feature somewherelse!!!}
+%\end{itemize}
+
+
+\smallskip
+Let now $\sigma$ be an automorphism  in
+$\aut_{\{\!M\!\}}(\mathbb{M})$ which fixes %$\bar a$ and
+$\bar a$ pointwise. Let $\widehat\sigma$ be the graded Lie isomorphism induced by $\res{\sigma}{\mathbb{M}_{1}}$ on the free graded algebra $\fla{2}{\mathbb{M}_{1}}=\mathbb{M}_{1}\oplus\exs\mathbb{M}_{1}$ like in Lemma \ref{commufreeno}.
+
+With this notation, as $\sigma(\gena{M,\bar a}{\mathbb{M}})=\gena{M,\bar a}{\mathbb{M}}$, it follows $\widehat\sigma\left(\rd(M_{1},\bar a)\right)=\rd(M_{1},\bar a)$.
+Moreover since $(\rho_{i})_{i<m}$ is a basis of $\rd(\bar a/M)$, for all $i$ we have %,${\rho_{i}}^{\widehat\sigma}\in\rd(M,\bar a)$, it follows
+\begin{labeq}{rhosig}
+{\rho_{i}}^{\widehat\sigma}-\sum_{j<m} s_{j}\rho_{j}=\mu
+\end{labeq}
+%for all $i$ and
+for some $\mu$ in $\exs M_{1}$ and $s_{j}$ in $\Fp$. On the other side
+$$
+{\rho_{i}}^{\widehat\sigma}=\alpha_{i}(\bar a)%^{\widehat\sigma}
++\beta(\bar a,{\bar b_{i}})^{\widehat\sigma}+\gamma_{i}^{\widehat\sigma}
+=
+\alpha_{i}(\bar a)+\beta(\bar a,{\bar b_{i}}^{\,\,\sigma})+\gamma_{i}^{\,\widehat\sigma}
+$$
+where
+\begin{labeq}{betasig}
+\beta(\bar a,{\bar b_{i}}^{\,\sigma})=\sum_{k<n}[a_{k},\sigma({b_{i}}^{k})]
+\end{labeq}
+
+Now \pref{rhosig} becomes
+\begin{labeq}{rhomuc}
+\alpha_{i}-\sum_{j<m}s_{j}\alpha_{j}+\beta_{i}%(\bar a,{\bar b_{i}}^{\,\sigma})
+^{\,\widehat\sigma}-\sum_{j<m}s_{j}\beta_{j}%(\bar a,{\bar b_{j}})
+=\mu-\gamma_{i}^{\,\widehat\sigma}+\sum_{j<m}s_{j}\gamma_{j}\:\in\exs M_{1}
+\end{labeq}
+and since $\genp{\alpha_{i},\beta_{i},\beta_{i}^{\,\widehat\sigma}\mid i<m}\cap\exs M_{1}=\triv$, one has
+$$\alpha_{i}+\beta(\bar a,{\bar b_{i}})^{\widehat\sigma}=\sum_{j<m}
+s_{j}(\alpha_{j}+\beta(\bar a,{\bar b_{j}})).$$ Now by the same arguments, we get
+$$\beta(\bar a,{\bar b_{i}}^{\,\sigma})=\sum_{j<m}s_{j}\beta(\bar a,{\bar b_{j}}).$$
+
+Hence in particular
+%On the other hand, since $\gen{\bar a}=\gen{\bar a^{\,\sigma}}$, we have $a_{k}=\sum_{l<n}r_{k}^{l}\sigma(a_{l})$ for
+%some $r_{k}^{l}$ in $\Fp$ and
+\begin{labeq}{beta}
+%\beta_{i}(\bar a^{\,\sigma},{\bar b_{i}}^{\,\sigma})
+\sum_{k<n}[a_{k},\sigma({b_{i}}^{k})]=
+\sum_{j<m}s_{j}\beta(\bar a,{\bar b_{j}})=\sum_{k<n}[a_{k},\sum_{j<m}s_{j}{b_{j}}^{k}].
+%=\sum_{l<n}[\sigma(a_{l}),\sum_{\substack{j<m\\k<n}}r_{k}^{l}s_{j}{b_{j}}^{k}].
+\end{labeq}
+
+Now by Fact \ref{ubc},
+in $\exs\mathbb{M}_{1}$ we have $[a_{k},{M}_{1}]\cap\sum_{j\neq k}[a_{j},{M}_{1}]=\triv$.
+%and hence $\exs\gen{M_{1},\bar a}=\bigoplus_{k<n}[a_{k},{M}_{1}]$.
+Therefore \pref{betasig} and \pref{beta} imply for all $k$, $[a_{k},\sigma({b_{i}}^{k})]=
+\sum_{k<n}[a_{k},\sum_{j<m}s_{j}{b_{j}}^{k}]$
+in $\exs\mathbb{M}_{1}$.
+
+This yields $\sigma({b_{i}}^{k})=\sum_{j<m}s_{j}{b_{j}}^{k}$ and hence
+$\sigma(\genp{\bar b_{i}\mid i<m})\inn\genp{\bar b_{i}\mid i<m}$.
+
+If we denote by $\bar b$ the tuple $\tupl{\bar b}{0}{m}$,
+%since $\sigma$ fixes $\bar m$, we may also assume -- by making $\bar b$ bigger if necessary --
+%that $\bar m\inn\gen{\bar a,\bar b}$ and again
+then $\bar b\inn M_{1}$ and $(\genp{\bar b})^{\sigma}\inn\genp{\bar b}$.
+
+\medskip
+Let now $\Gamma_{i}$ denote the image of $\gamma_{i}$ in $M_{2}$ modulo $\rd(M)$, that is
+$\Gamma_{i}=\gamma_{i}+\rd(M)$ for all $i$. Since, by \pref{rhosig} and \pref{rhomuc} we have
+$$
+\rd(M)\ni{\rho_{i}}^{\widehat\sigma}-\sum_{j<m} s_{j}\rho_{j}=\gamma_{i}^{\,\widehat\sigma}-\sum_{j<m}s_{j}\gamma_{j},$$
+we deduce
+$${\Gamma_{i}}^{\sigma}=\gamma_{i}^{\,\widehat\sigma}+\rd(M)=\sum s_{j}\gamma_{j}
++\rd(M)=\sum s_{j}\Gamma_{j}$$
+and hence, if $\overline{\Gamma}$ denotes the tuple $(\tupl{\Gamma}{0}{m})$,
+we get $\gen{\overline{\Gamma}}^{\sigma}\inn\gen{\overline{\Gamma}}$.
+
+\smallskip
+Till now we have shown, that for any automorphism $\sigma$ of $M$,
+if $\sigma$ fixes the type $p$, then $\sigma$ leaves both spaces $\genp{\bar b}$ and $\genp{\overline{\Gamma}}$
+invariant.
+
+As $Cb(\bar a/M)$ doesn't change by passing to non-forking extensions of $p$,
+we may assume $M$ is $\omega$-saturated. As $Cb(\bar a/M)$ is a finite imaginary,
+and $\genp{\bar b}$ and $\genp{\overline{\Gamma}}$ are finite subspaces, they lay in $\acl^{eq}(Cb(p))$.
+
+\medskip
+Now since $M$ is a model, by means of $\sig{2}{4}$ we can find $c_{i}$ in $M_{1}$ such that
+$[c,c_{i}]=\Gamma_{i}$ in $M$ for all $i<m$. This means $[c,c_{i}]$ can play the role of $\gamma_{i}$ in $\exs M_{1}$.
+Moreover, by Remark \ref{tuttuno} if the tuple $\bar c$ collects all the $c_{i}$, %by above remarks we have
+we have $\bar c\inn\acl(\bar\Gamma)$ -- $c$ is the constant added to the language.
+
+Take $C=\gena{C_{1}}{M}$ with $C_{1}=\ssc(\bar b,\bar c,c)$,
+then on one side $C\inn\acl(\bar b,\bar c)$ and hence $C\inn\acl^{eq}(Cb(p))$.
+
+\medskip
+On the other hand, by construction we have $\delta(\bar a/C)=\delta(\bar a/M)$. % and $\gen{C_{1},\bar a}\nni\bar m$,
+Therefore, as $C$ is strong in $M$ and $\bar a$ is a strong tuple over $M$, Lemma \ref{fincharssc} implies
+$$
+d(\bar a/M)=\delta(\bar a/M)=\delta(\bar a/C)\geq d(\bar a/C)\geq d(\bar a/M)
+$$
+and hence $d(\bar a/C)=d(\bar a/M)$.
+
+This also yields -- with Lemma \ref{fincharssc} again --  $M+\gen{C_{1},\bar a}\zsu{}\mathbb{M}$ and $\ssc(C_{1},\bar a)
+=\genp{C_{1},\bar a}$. Now since $\bar a$ is linearly independent over $M_{1}$, we have
+$\fin{\bar a}{C}{M}$ and hence $\ffin{\bar a}{C}{M}$.
+
+\medskip
+Now since $M$ is a model, % $\gen{C_{1},\bar a}$ meets
+$\acl(C_{1})\inn M$ %necessarily in $C_{1}$
+and this yields with Corollary \ref{stationary}, that $\tp{\bar a}{C}$
+is stationary. Now Fact \ref{ziecb}\,(2.) implies $Cb(p)\inn\dcl^{eq}(C)$.
+
+For such strong tuples $\bar a$ over $M$, %denote $C$ with $WCb(\bar a/M)$. W
+we have shown
+\begin{gather}\label{cibbi}
+\begin{cases}C\inn\acl(Cb(\bar a/M))\\
+Cb(\bar a/M)\inn\dcl^{eq}(C).\end{cases}
+\end{gather}
+\end{proof}
+%%%--------------------------CASE 2---------------------------
+%{\bf Case 2:}\quad{\sl $p=\tp{\bar d}{M}$ for $\bar d=\tupl{d}{0}{r-1}$ a linearly independent tuple in $\mathbb{M}_{1}$
+%over $M_{1}$}
+%
+%\medskip
+%Take a strong tuple $\bar a$ over $M$ such that $\gena{M,\bar a}{\mathbb{M}}$ is $\ssc(M,\bar d)$.
+%We assume $\bar a$ is of length $n>r$ and that $a_{k}=d_{k}$ for all $i<r$.
+%
+%Take a {\em Morley sequence} $(\bar a^{i})_{i<\omega}$ in $\tp{\bar a}{M}$ and let $C$ be a finite strong subalgebra of $M$,
+%as constructed in Case 1 with respect to $\bar a$ over $M$: properties \pref{cibbi} above hold for $C$. Recall
+%$C=\ssc(\bar b,\bar c,c)$ for suitable tuples $\bar b$ and $\bar c$ of $M_{1}$.
+%
+%If $\bar a^{<i}$ denotes the sequence $\bar a=\bar a^{0},\bar a^{1},\dots,\bar a^{i-1}$, then we have by definition
+%$\fin{\bar a^{i}}{M}{\bar a^{<i}}$ for all $i<\omega$ and since $\fin{\bar a}{C}{M}$, $(\bar a^{i})_{i<\omega}$ is a Morley sequence also in $\tp{\bar a}{C}$.
+%
+%By indiscernibility, if we let $\bar d^{i}$ denote the tuple $\tupl{a^{i}}{0}{r-1}$, we have in particular $\ssc(M,\bar d^{i})=\gen{M,\bar a^{i}}$
+%and also $\fin{\bar d^{i}}{M}{\bar d^{<i}}$ for all $i<\omega$. That means, $(\bar d^{i})_{i<\omega}$ is a Morley sequence in $p$ and in $\tp{\bar d}
+%{C}$ as well.
+%Moreover, by Lemma \ref{fincharssc} $\gen{C,\bar a^{i}}=\ssc(C,\bar d^{i})$ for all $i$. 
+%
+%Let $m>\dfp(C_{1})$ and $Y$ denote $\gena{C,\bar a^{i}\mid i\leq m}{\mathbb{M}}=\underset{0\leq i\leq m}{{\circledast_{C}}}\gen{C,\bar a^{i}}$. The $\ind$-independence of the $\bar a^{i}$'s over $C$ implies $Y$ is self-sufficient in $\mathbb{M}$.
+%
+%Define $X$ to be the self-sufficient closure $\ssc(\gen{\bar d^{i}\mid i<m})\inn Y$.
+%
+%\smallskip
+%We are to show, that $\bar a=\bar a^{0}$ is in $X_{1}$. Assume by contradiction, this is not the case.
+%
+%\smallskip
+%As $T^{2}_{c}$ is stable, the sequence $\{\bar a^{i}\}_{i\leq m}$ is an indiscernible set over $C$ and any permutation of the $\bar d^{i}$'s
+%(or of the $\bar a^{i}$'s) may be extended, in particular,
+%to an automorphism of the algebra $Y$ which fixes $C$.
+%By construction, the strong subspace $X$ is invariant under such automorphisms.
+%
+%This implies, we may actually find a number $s$ with $r\leq s<n-1$ and transform each $\bar a^{i}$ in such a way that, for every index $i$,
+%a first segment $a^{i}_{0},\dots, a^{i}_{s-1}$ lays in $X_{1}$ and $a^{i}_{s},\dots,a^{i}_{n-1}$ is linearly independent over $C_{1}+X_{1}$.
+%The length $s$ does not depend of $i$.
+%
+%\smallskip
+%We claim, the set $\{a^{i}_{j}\mid0\leq i<m,s\leq j<n\}$ is linearly independent of $C_{1}+X_{1}$.
+%This is done by induction over the length $\card{I}$ of sums $\sum_{i\in I}e_{i}$, where $e_{i}$ is a nontrivial linear combination
+%in $\bar a^{i}$ and $I$ is a subset of $\{0,1,\dots,m-1\}$. We show $\sum_{i\in I}e_{i}$ cannot belong to $C_{1}+X_{1}$.
+%
+%The case $I=\{i\}$ is clear. The inductive basis will be given by $\card{I}=2$.
+%
+%Assume without loss of generality, the sum $e_{0}+e_{1}$ lays in $C_{1}+X_{1}$. Consider the automorphism $\sigma_{i}$
+%of $Y$ over $C$, which leaves $\bar a^{0}$ fixed and transposes $\bar a^{1}$ with $\bar a^{i}$. Denote by $e_{2}$
+%the image of $e_{1}$ under $\sigma$, then $e_{0}+e_{2}$ lays again inside $C_{1}+X_{1}$.
+%This is then true also of $e_{1}-e_{2}$.
+%
+%
+%
+%Now consider the isomorphism $\tau$ which extends the $\Fp$-isomorphism we obtain -- as image of $e_{1}$ -- %$e^{3}\in\genp{\bar a^{3}$ such
+%a linear combination $e_{3}$ in $\bar a^{3}_{\geq s}$ such that
+%$e_{3}-e_{1}$ is in $C_{1}+X_{1}$.
+%
+%But this gives $e_{2}-e_{1}+(p-1)(e_{3}-e_{1})= \in C_{1}+X_{1}$.
+%
+%Assume we have a sum of length $\card{I}=k<m$, and the claim holds for all lengths less than $k$.
+%
+%Again by indiscernibility, we may test the case $e:=e^{0}+e^{1}+\dots+e^{k}\in C_{1}+X_{1}$. Consider a new automorphism $\sigma$
+%of $Y$ over $C$, fixing all $\bar a^{i}$ for $i<k$ and moving $\bar a^{k}$ to $\bar a^{k+1}$. Denote by $e^{k+1}$ the image of
+%$e^{k}$ under $\sigma$. We obtain $e^{\sigma}\in C_{1}+X_{1}$ and hence $e^{k}-e^{k+1}=e-e^{\sigma}\in X_{1}+C_{1}$.
+%With the same arguments, now we can move $e^{k}-e^{k+1}$ to a linear combination in $\bar a^{0},\bar a^{1}$ which
+%lays in $C_{1}+X_{1}$. This is a contradiction to the inductive basis and the claim follows.
+%
+%We rename $Y$ to be the free composition of only the first $m$ components: $Y=\circledast_{i<m}\gen{C,\bar a^{i}}$ and
+%change $X_{1}$ into $X_{1}\cap Y_{1}$. Then rename $X$ accordingly.
+%By the claim above follows $\dfp(Y_{1}/C_{1}+X_{1})=m(n-s)$.
+%
+%On the other hand, since $\genp{C_{1},\bar a^{i}}=\ssc(C_{1},\bar %a^{i}_{<s})$
+%d^{i})=\ssc(C_{1},\bar a^{i}_{<s})$, for all $i$ we have $\delta(\bar a^{i}/C_{1},\bar a^{i}_{<s})
+%<0$. This means $\dfp(\rd(\bar a^{i}/C_{1},\bar a^{i}_{<s}))>n-s$.
+%
+%Moreover, as $\genp{C_{1},\bar a^{i}}\cap X_{1}\inn\genp{C_{1},\bar a^{i}_{<s}}$, for all $i$ the
+%quotient $\rd(\bar a^{i}/C_{1},\bar a^{i}_{<s})$ embeds into $\rd(Y/Z)$.
+%
+%If we now compute $\delta(Y/X)=m(n-s)+\dfp(C_{1}/X_{1})-\dfp(\rd(Y/X))$, since $\dfp(C_{1})<m$
+%we obtain $\delta(Y/X)<0$ which is a contradiction. As a result we must have $s=n-1$ and
+%all $\bar a^{i}$'s lay inside $X$. In particular $\bar a$ does, as claimed.
+%
+%\medskip
+%We now show that $\bar b$ lays inside $X_{1}$ as well.
+%
+%Assume this is not the case, then for any $i$ we may find elements $\rho^{i}$ of $\rd(C,\bar a^{i})$,
+%such that the subset $\{\rho^{i}\}_{i<m}\inn\rd(Y)$  is linearly independent over $\exs X_{1}$.
+%It suffices for all $i$ to pick a suitable element $\rho^{i}=\rho_{t}$ like in the basis \pref{rhodi} at page \pageref{rhodi} with $\rho_{t}=
+%\alpha_{t}(\bar a^{i})+\beta(\bar a^{i},\bar b_{t})+[c,c_{t}]$ and $\bar b_{t}\nsubseteq X_{1}$.
+%
+%Since $m$ is greater than $\dfp(C_{1})$ and %$\rd(Y)=\sum_{i<m}\rd(C,\bar a^{i})$
+%$\bar a^{i}\inn X_{1}$ for all $i$, then $\delta(Y/X)=\dfp(C_{1}/X_{1})-\rd(Y/X)<0$. This is impossible unless
+%the whole $\bar b$ lays in $X_{1}$.
+%
+%\smallskip
+%We have in particular $\bar a,\bar b\inn X_{1}=\ssc(\bar d^{i}\mid i<m)\inn\acl(\bar d^{i}\mid i<\omega)$. Since the $\bar d^{i}$'s build a Morley
+%sequence in $\tp{\bar d}{M}$, it follows that $\bar a,\bar b\inn\acl(Cb(\bar d/M))$.
+%
+%Now, by the shape of the relations $\rho_{t}$ above, we have $\overline{\alpha_{t}(\bar a)+\beta(\bar a,\bar b_{t})}=
+%\overline{[c,c_{t}]}$ in $\mathbb{M}$.
+%
+%It follows $\overline{[c,c_{t}]}\in\dcl(\bar a,\bar b)$ and hence by Remark \ref{tuttuno}, $c_{t}\in\acl(\bar a, \bar b)$ for all $t$.
+%
+%In conclusion $\bar b,\bar c\inn\acl(Cb(\bar d/M))$ and hence $C\inn\acl(Cb(\bar d/M))$.
+%
+%On the other hand, since $\fin{\bar a}{C}{M}$ and $\bar d\inn%\genp{C_{1},
+%\bar a$ by (Symmetry), %(Algebraicity)
+%and (Weak Monotony), we have $\fin{\bar d}{C}{M}$. With the same arguments used in the previous case,
+%follows $$Cb(\bar d/M)\inn\dcl^{eq}(C).$$
+%
+%We have shown that the same finite $C$ obtained for $\bar a$ over $M$ suits for $\bar d$ as well.
+%%%--------------------------CASE---3---------------------------
+%
+%\medskip\noindent
+%{\bf Case 3:}\quad{\sl $p$ is the type over $M$, of an arbitrary tuple $\bar e$ of $\mathbb{M}_{1}$}.
+%
+%\smallskip
+%Let $\bar d$ be a subtuple of maximal length in $\bar e$ which is linearly independent over $M_{1}$.
+%Then $\bar e$ is linearly inter-dependent with the tuple $\bar d\bar m$, for some tuple $\bar m$ of $M_{1}$.
+%
+%By Case 2, we can find a finite strong subalgebra $\widetilde{C}$ of $M$ as in the statement of the theorem corresponding
+%to the type of $\bar d$ over $M$. That is $\widetilde{C}\inn\acl(Cb(\bar d/M))$ and $Cb(\bar d/M)\inn\dcl^{eq}(\widetilde{C})$.
+%
+%Then, on one side $\genp{\widetilde{C}_{1},\bar m}\inn\acl(Cb(\bar e/M))$.
+%Now set $C=\ssc(\widetilde{C},\bar m)$. By base monotonicity and algebraicity (cfr.{\,}Section \ref{stab}) we have
+%$$\fin{\bar d}{\widetilde{C}}{M}\Rightarrow\fin{\bar d}{C}{M}\Rightarrow\fin{\bar e}{C}{M}$$
+%and $\tp{\bar e}{C}$ -- as in the previous cases -- is stationary.
+%%[EXT] THIS FOLLOWS FROM $\fin{\bar d}{\widetilde{C}}{\bar m}$ WHICH IMPLIES
+%%$\ssc(\widetilde{C},\bar m,\bar d)=\ssc(\widetilde{C},\bar d)+C$
+%%AND HENCE $\ssc(C,\bar e)\cap\acl(C)\inn C$.
+
+Compared to Lemma \ref{weimodels}, we have obtained the condition for the weak elimination only with respect
+to types of strong tuples.
+
+We denote with $C_{M,\bar a}$ the finite self-sufficient subalgebra of $M$ as in \pref{cibbi} above, relative to the tuple $\bar a$ and
+the model $M$.
+
+Remark that to obtain a finite subspace of $M$ with the first property of \pref{cibbi}, it is enough for the tuple $\bar a$ to be linearly independent over
+$M_{1}$. On the contrary, by $\delta$-calculus alone (Lemma \ref{fincharssc}) a finite object with the second
+property of \pref{cibbi} is found for any tuple over a model -- this is the finite character of forking,
+common to all totally transcendental structures. Starting with a strong tuple over $M$ ensures the existence
+of a finite subalgebra with both properties.
+
+%Now for a tuple $\bar d$ of $\mathbb{M}_{1}$ and a model $M$, let $\bar a$ be a strong tuple
+%over $M$ such that $\ssc(M,\bar d)=\gen{M,\bar a}$. The idea here, is to compare $C_{M,\bar a}$ with
+%$Cb(\bar d/M)$ up to algebraicity.
+%
+%On one side we have -- with Fact \ref{pilcb}, for instance -- $Cb(\bar d/M)\inn\acl^{eq}(C_{M,\bar a})$.
+%On the other, if $C_{M,\bar a}=\ssc(\bar b,\bar c,c)$ as in the proof of Lemma \ref{teowei},
+%we can prove that $\bar b\inn\acl^{eq}(Cb(\bar d/M))$.
+%
+%We also conjecture that, modulo a suitable $\vac$-definable equivalence relation  $\epsilon$,
+%${C_{M,\bar a}}_{/\large\epsilon}$ is eq-interalgebraic with $\acl^{eq}(Cb(\bar d/M))$.
+\smallskip
+This said, we can sketch a strategy for proving $CM$-triviality as follows.
+By Fact \ref{pilcmt} one can test $CM$-triviality (Definition \ref{cmtdef}) by means of {\em real} tuples over {\em models}. Moreover
+this property for $T^{2}_{c}$ implies the result for $T^{2}$.
+
+\smallskip
+So {\em take a tuple $\bar d$ from $\mathbb{M}_{1}$ and models $M\ess N$ with $\acl^{eq}(M,\bar d)\cap N=M$.
+We have to show $Cb(\bar d/M)\inn\acl^{eq}(Cb(\bar d/N))$.}
+
+\smallskip
+Let $\bar a$ be a strong tuple over $M$ with $\ssc(M,\bar d)=\gen{M,\bar a}$ and $\bar a^{\prime}$, a strong tuple
+over $N$ with $\ssc(N,\bar d)=\gen{N,\bar a^{\prime}}$.
+
+We have firstly $Cb(\bar d/M)\inn\acl^{eq}(C_{M,\bar a})$, by Fact \ref{pilcb} and \pref{cibbi} above.
+
+Now by the hypothesis follows $\genp{M_{1},\bar a}\cap N_{1}=M_{1}$ and hence we may assume $\bar a\inn\bar a^{\prime}$.
+For the same reason we also have that $\rd(\bar a/M)$ embeds into $\rd(\bar a^{\prime}/N)$ and
+-- by the proof of Lemma \ref{teowei} --
+we may build $C_{N,\bar a^{\prime}}$ with $C_{M,\bar a}\inn C_{N,\bar a^{\prime}}$.
+
+Up to now, we used indeed the definition of $CM$-triviality {\em relative to} $\ssc(~)$ {\em over the theory of
+$\Fp$-vectorspaces}
+contained in the paper of Wagner, Blossier and Martin-Pizarro \cite{cmtr}.
+
+We now believe, there exists in general a
+$\vac$-definable equivalence relation  $\epsilon$,
+such that $C_{N,\bar a^{\prime}}/\epsilon$ is eq-interalgebraic with $Cb(\bar d/N)$\footnote{If $C_{N,\bar a^{\prime}}$ is
+$\ssc(\bar b,\bar c,c)$ as in Theorem \ref{teowei},
+then we can prove $\bar b\inn\acl^{eq}(Cb(\bar d/N))$ and the eq-sort $\epsilon$ should control the
+orbits of the tuple $\bar c$ under automorphism which fix $\tp{\bar d}{N}$.}.
+
+This should fill in the gap and get %$C_{N,\bar a^{\prime}}$
+$Cb(\bar d/M)$ contained in $\acl^{eq}(Cb(\bar d/N))$.
+
+%We may also think as more likely that the theory $T^{2}_{c}$ have {\em geometric elimination of imaginaries},
+%that is: {\em to every imaginary element $e$ there exists a real one $a$ with $\acl^{eq}(e)=\acl^{eq}(a)$.}
+
+%\begin{prop}\label{pr:cmtriv}
+%$T^{2}_{c}$ is a $CM$-trivial theory. That is for any real tuple $\bar e$ of $\mathbb{M}$ and models $M\ess N$,
+%if $\acl(M,\bar e)\cap N=M$, it follows $Cb(\bar e/M)\inn\acl^{eq}(Cb(\bar e/N))$.
+%\end{prop}
+%\crule
+%By the following proof and Case 1 of Theorem \ref{teowei} it would be enough to show
+%that for any tuple $\bar e$ like above, we may find a {\em strong} tuple $\bar a$ {\em over $M$} with
+%%$\genp{M_{1},\bar a}\cap N_{1}=M_{1}$
+%$\bar a\in\acl(M,\bar e)$ and such that
+%$$
+%\begin{cases}
+%Cb(\bar e/M)\inn\acl^{eq}(Cb(\bar a/M))\\
+%Cb(\bar a/N)\inn\acl^{eq}(Cb(\bar e/N))
+%\end{cases}
+%$$
+%With this respect, could Fact \ref{pilcb} be helpful.
+%\crule
+%\begin{proof}
+%By means of the definable map $\vartheta_{c}$ of Remark \ref{tuttuno}, each tuple of $\mathbb{M}$ is interalgebraic
+%with some tuple from $\mathbb{M}_{1}$. We may -- by Fact \ref{pilcb} -- assume that $\bar e$ lays in $\mathbb{M}_{1}$.
+% 
+%On account of the discussion around Case 3 in the proof of Theorem \ref{teowei}, we may assume that
+%$\bar e$ is linearly independent over $M_{1}$, and hence -- by the hypotheses -- over $N_{1}$.
+%
+%\smallskip
+%%Let therefore $\bar m$ be a tuple in $\mathbb{M}_{1}$ and $M\ess N\ess\mathbb{M}$ with $\acl(M,\bar m)\cap N=M$. 
+%By \pref{acluno} follows in particular $\ssc(M_{1},\bar e)\cap N_{1}=M_{1}$.
+%As a consequence, if $\bar a$ is
+%a strong tuple of $\mathbb{M}_{1}$ over $M_{1}$ such that $\ssc(M_{1},\bar e)=\genp{M_{1},\bar a}$,
+%then $\bar a$ is linearly independent over $N_{1}$ as well.
+%
+%Now if $\ssc(N_{1},\bar e)$ is $\genp{N_{1},\bar c}$ with $\bar c$ linearly independent of $N_{1}$,
+%then we may assume that $\bar a$ is a subtuple of $\bar c$. Since $\genp{M_{1},\bar a}\cap N_{1}=M_{1}$ we have
+%by Corollary \ref{cor:2modker} $\rd(M,\bar a)\cap\rd(N)=\rd(M)$ and hence
+%$$\rd_{\mathbb{M}}(\bar a/M)\inn\rd_{\mathbb{M}}(\bar c/N).$$
+%That means, any basis of $\rd_{\mathbb{M}}(\bar a/M)$ can be extended to a basis of $\rd_{\mathbb{M}}(\bar c/N)$.
+%
+%Therefore, by the construction of a weak canonical base $C$ for %$\tp{\bar e}{M}$
+%$\bar e$ over $M$ as in the proof of Theorem \ref{teowei},
+%we may extend any such $C$ to a finite strong subalgebra $D$ of $N$ which is a weak canonical base for $\tp{\bar e}{N}$.
+%
+%We may now conclude with Theorem \ref{teowei}, that
+%$Cb(\bar e/M)\inn\dcl^{eq}(C)$ and $D\inn\acl(Cb(\bar e/N))$.
+%
+%Since $C\inn D$, we get $Cb(\bar e/M)\inn\dcl^{eq}(\acl(Cb(\bar e/N)))=\acl^{eq}(Cb(\bar e/N))$ as desired.
+%\end{proof}
+%
+%As mentioned in Section \ref{stab}, by \cite[Proposition 3.2]{pilcm}, we may conclude
+%\begin{cor}
+%No infinite field is interpretable in $T^{2}$.
+%\end{cor}

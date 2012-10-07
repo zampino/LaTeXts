@@ -1,0 +1,716 @@
+Denote by $\Kl{2}$ the class of all finitely generated -- or equivalently, finite -- Lie algebras $M$ in $\nla{2}$,
+which share property $\sig{2}{2}$ defined at page \pageref{sig22}. Then $\Kl{2}$ is a denumerable set.
+
+At the end of this section we show properties (HP), (JEP) and (AP) for the class $\Kl{2}$
+with respect to strong $\nla{2}$-%(rather than $\Lan{2}$-)
+embeddings as described in Remark \ref{ModiFra}.\footnote{We tacitly perform two modifications of the
+standard method: one changes $\Lan{2}$-embeddings into $\nla{2}$-ones, the second introduces strongness.}
+The proof of Fact \ref{fraissteo}, to achieve a countable Fra\"iss\'e limit of $(\Kl{2},\zsu{})$ applies in this case as well and yields the same results.
+
+In accordance to this, %and slightly abusing the notation of Section \ref{fraisse},
+we rename by $\age(K)$ the collection of all finite $\nla{2}$-subalgebras of an algebra $K$ from $\nla{2}$.
+If $\Klt{2}$ denotes the family of all $K$ in $\nla{2}$ with $\age(K)\inn\Kl{2}$, then $\Klt{2}$ is {\em almost} an elementary class\footnote
+{$\nla{2}$ itself is not elementary as pointed out in Section \ref{nilgral}, but as a consequence of {\em richness}, the theory
+of the Fra\"iss\'e limit in the next Section can express property \ref{genero}.\,of Definition \ref{lcp}} 
+and we have $\Klt{2}=\{K\in\nla{2}\mid K\sat\sig{2}{2}\}$.
+
+\smallskip
+%Fix an algebra $K$ of $\Klt{2}$.
+%We call\mn{\bf Check if ever used!} a quotient $M_{1}/N_{1}$ of vector subspaces of
+%$K_{1}$, a {\em strong section of} $K$ if $N\zsu{}H$.
+%In this case we shall also say that $M$ {\em strongly extends $N$ in $K$} and that
+We say that $H\in\Klt{2}$ is a {\em finite} extension of $K=\gena{K_{1}}{H}$
+if $H_{1}$ has finite $\Fp$-dimension over $K_{1}$ and $H$ is a {\em strong extension} of $K$ if $K\zsu{}H$.
+
+
+\medskip
+\begin{dfn}\label{amalgama}
+Let $M$, $N$ and $K$ be algebras of $\nla{2}$. Assume we have $\nla{2}$-embeddings
+$\phi$ of $N$ into $M$ and $\nu$ of $N$ into $K$. We say that an $\nla{2}$-algebra
+$H$ {\em amalgamates $M$ and $K$ over $N$} if there exist $\nla{2}$-embeddings
+$\mu$ of $M$ into $H$ and $\psi$ of $K$ into $H$ such that $\phi\mu=\nu\psi$. In this case we draw the following square.
+\begin{labeq}{appi}
+\begin{split}
+\xymatrix@R-4mm{
+&H\\
+M\ar^(0.55){\mu}[ur]&&K\ar_(0.55){\psi}[ul]\\
+&N\ar_(0.55){\phi}[ul]\ar^(0.55){\nu}[ur]
+}\end{split}
+\end{labeq}
+\end{dfn}
+
+\smallskip
+It is always possible to build amalgams inside $\nla{2}$ as follows: assume $M$, $N$ and $K$ as above, we may consider $N$,
+without loss of generality, as a common $\nla{2}$-subalgebra of $M$ and $K$, that is $\gena{N_{1}}{M}=N=\gena{N_{1}}{K}$.
+
+We first build the $\Fp$-vector space amalgam $H_{1}=
+M_{1}\oplus_{N_{1}}K_{1}$, %recall $H_{1}=M_{1}\oplus_{N_{1}}K_{1}$,
+which is by definition $M_{1}\oplus K_{1}/\Delta(N_1)$ where $\Delta(N_{1})=\{(h,-h)\mid h\in N_{1}\}$.
+In $H_{1}$, $M_{1}$ and $K_{1}$ meet exactly in $N_{1}$.
+
+We now define
+the {\em free amalgam of $M$ and $K$ over $N$} by
+\begin{labeq}{fram}
+\am{M}{N}{K}\defeq\frac{\fla{2}{H_{1}}}{\rd(M)+\rd(N)}=H_{1}\oplus\frac{\exs H_{1}}{\rd(M)+\rd(K)}.
+\end{labeq}
+
+By a matter of weight $\rd(\am{M}{N}{K})=\rd(M)+\rd(K)$ is an ideal of $\fla{2}{H_{1}}$
+and hence the definition above is sound. Moreover $\am{M}{N}{K}=\gen{H_{1}}$ and lays in $\nla{2}$ and
+$\rd(M)\cap\rd(K)=\rd(N)$. 
+
+\smallskip
+\begin{rem}
+$\am{M}{N}{K}$ fits in the diagram \pref{appi} in the place of $H$, with the natural $\nla{2}$-embeddings. That is
+$\am{M}{N}{K}$ amalgamates $M$ and $K$ over $N$.
+
+Moreover $M\cap K=\gena{M_{1}}{\am{M}{N}{K}}\cap\gena{K_{1}}{\am{M}{N}{K}}=\gena{M_{1}\cap K_{1}}{\am{M}{N}{K}}=N$.
+\end{rem}
+\begin{proof}
+Let $H$ denote $\am{M}{N}{K}$. Since we identify $\fla{2}{M_{1}}$ with an $\nla{2}$-subalgebra of $\fla{2}{H_{1}}$, we have to show $\rd(H)\cap\fla{2}{M_{1}}=\rd(M)$,
+so that the map $w+\rd(M)\mto w+\rd(H)$ yields the desired $\nla{2}$-embedding $\mu$.
+But this holds, since $(\rd(M)+\rd(K))\cap\fla{2}{M_{1}}=(\rd(M)+\rd(K))\cap\exs M_{1}=\rd(M)+(\rd(K)\cap\exs M_{1})
+=\rd(M)+(\rd(K)\cap\exs N_{1})=\rd(M)+\rd(N)=\rd(M)$.
+
+A symmetric argument for $K$ implies the statement and the {\em moreover} part follows by
+$\rd(H)\inn\exs M_{1}+\exs K_{1}$ and $\exs M_{1}\cap\exs K_{1}=\exs N_{1}$.
+\end{proof}
+
+\smallskip
+The following definitions provides a notion of {\em inner} free amalgam. 
+\begin{dfn}\label{freeco}
+Assume $M$ and $K$ are $\nla{2}$-extension of $N$ in a $\Klt{2}$-algebra $H$. % and $K_{1}\inn H_{1}$.
+We say that $M$ is in {\em free composition with $K$ over $N$ in $H$} if $M+K(=\gena{M_{1}+K_{1}}{H})$ %\simeq
+is isomorphic with $\am{M}{N}{K}$.
+This is equivalent to require that
+$M_{1}\cap K_{1}=N_{1}$ and %, that $M_{1}+K_{1}\simeq_{\Fp}\vam{M_{1}}{N_{1}}{K_{1}}$ and
+that $$\rd_{H}(H_{1}+M_{1})\simeq_{\Fp}\rd_{H}(M_{1})+\rd_{H}(K_{1}).$$
+\end{dfn}
+
+Deficiency calculus yields an easy criterion to check for free-compositions:
+\begin{lem}\label{freecomp}
+Let $M$, $N$ and $K$ be $\nla{2}$-subalgebras of $H\in\Klt{2}$, then the following conditions are equivalent:
+\begin{itemize}
+\punto{i}$M$ is in free-composition with $K$ over $N$,
+\punto{ii}$M_{1}\cap K_{1}=N_{1}$ and $\delta(A/N)=\delta(A/K)$ for any finite subspace $A_{1}$ of $M_{1}$.
+%\punto{iii}$M_{1}\cap K_{1}=N_{1}$ and $\rd(K+M)\non\rd(K)\inn\exs M_{1}$.
+\end{itemize}
+\end{lem}
+\begin{proof}
+If $M_{1}\cap K_{1}=N_{1}$ holds, then %$\rd(M+K)=\rd(M)+\rd(K)$ exactly if $\delta(M/N)=\delta(M/K)$.
+$\dfp(M_{1}/N_{1})=\dfp(M_{1}/K_{1})$ and by \pref{exsmod} we have
+$\rd(M)\cap\rd(K)=\rd(M_{1}\cap K_{1})=\rd(N)$.
+
+One has in fact a canonical linear embedding of $\rd(M/N)$ into $\rd(M/K)$. This embedding is onto
+if and only if $\rd(K+M)=\rd(K)+\rd(M)$ but also iff
+for any finite $A_{1}\inn M_{1}$ the corresponding mapping of $\rd(A/N)$ in $\rd(A/K)$ is onto.
+This is true exactly if $\dfp(\rd(A/N))=\dfp(\rd(A/K))$ and hence exactly when
+$\delta(A/N)=\delta(A/K)$ for all finite subspaces $A_{1}\inn M_{1}$.
+\end{proof}
+
+\begin{rem}
+For the free amalgam $\am{M}{N}{K}$ with a finite dimensional
+{\em side} $M_{1}/N_{1}$, one has $\delta(M/N)=\delta(M/K)$.
+\end{rem}
+
+At the end of the chapter we will see that
+{\em composing} free-compositions turns out to be {\em transitivity} of forking in the theory of the $\Kl{2}$-rich structure.
+This lemma will be helping.
+\begin{lem}\label{fctrans}
+Assume $H\nni M\nni N\inn K$ are $\nla{2}$-extensions. Then
+$$\am{H}{N}{K}\simeq\am{H}{M}{(\am{M}{N}{K})}.$$
+%\item[ii)]\mn{bl\"od}Let $H/N$ be a finite section of $L$ and let $N_{1}\inn M_{1}\inn K_{1}\inn L_{1}$.
+%Then $H$ is in free composition with $K$ over $N$ iff $H$ is in free composition with
+%$M$ over $N$ and $H+M$ is in free composition with $K$ over $M$.
+\end{lem}
+\begin{proof}
+The statement essentially follows because it is true of vector space amalgams, that is
+$\vam{H_{1}}{N_{1}}{K_{1}}\simeq_{\Fp}\vam{H_{1}}{M_{1}}{(\vam{M_{1}}{N_{1}}{K_{1}})}$.
+
+Since $\am{M}{N}{K}$ $\nla{2}$-embeds into $\am{H}{N}{K}$, to conclude we have to show that
+$H$ is in free composition with $\am{M}{N}{K}$ over $M$ in $\am{H}{N}{K}$. If deficiencies are computed inside $\am{H}{N}{K}$,
+we have in fact
+\begin{multline*}
+\delta(H/M+K)=\delta(H+M/K)-\delta(M/K)=\delta(H/K)-\delta(M/N)=\\
+=\delta(H/N)-\delta(M/N)=\delta(H/M).
+\end{multline*}
+Now Lemma \ref{freecomp} applies.
+\end{proof}
+
+\begin{rem*}
+$H=\am{M}{N}{K}$ with the morphism in \pref{appi}, represents the {\em amalgamated coproduct} in the category $\nla{2}$.
+This means,
+for any $Z$ in $\nla{2}$ and $\nla{2}$-morphisms $\map{\alpha}{M}{Z}$ and $\map{\beta}{K}{Z}$ with
+$\phi\alpha=\nu\beta$, there exists a unique morphism $\map{\zeta}{\am{M}{N}{K}}{Z}$ with
+$\mu\zeta=\alpha$ and $\psi\zeta=\beta$.
+\end{rem*}
+
+\medskip
+The next lemma shows that the free amalgam \pref{fram} preserves self-sufficient extensions.
+\begin{lem}\label{asymam2}
+In the notation of Definition \ref{2strong}, for any $k<\omega$, $N\zsu{k} K$ holds if and only if $M\zsu{k} \am{M}{N}{K}$
+does.
+In particular $N\zsu{}K$ iff $M\zsu{}\am{M}{N}{K}$.
+\end{lem}
+\begin{proof}
+%\mn{we give two argmts cfr. strategy nil-$3$ case}\\
+%{\sl (Argument I)}\quad Assume $E_{1}\inn L_{1}$ is a finite subspace.
+%
+%Find a basis 
+%$\mathcal{E}^{m}\mathcal{E}^{h}\mathcal{E}^{k}(u_{i}+v_{i}:i=1,\dots,n)$ like {\bf ($\flat$)} for $E_{1}$.
+%
+%We have to show $\delta(E/ M)\geq0$.
+%
+%By definition $\delta(E_{1}/ M_{1})=\dfp(E_{1}/ M_{1})-\dfp(\rd(E/ M))$
+%and $\rd(E/ M)$ equals $\rd(M+E)/\rd(M)$.
+%
+%We are going to build an $\Fp$-isomorphism of $\rd(M_{1}+E_{1})/\rd(M_{1})$ into
+%$\rd(N_{1}+E_{1}\cap K_{1}+\gen{\mathcal{V}})/\rd(N_{1})$ as follows.
+%Since $(M_{1}+E_{1})\cap K_{1}=N_{1}+E_{1}\cap K_{1}+\gen{\mathcal{V}}$, any $\phi$ in
+%$\rd(M_{1}+E_{1})$ decomposes, by Lemma \ref{reldue} into $\phi^{M}+\phi^{K}$ where $\phi^{M}\in\exs M_{1}$, $\phi^{K}\in\exs (N_{1}+E_{1}\cap K_{1}+\gen{\mathcal{V}})$ and there exists $I\in\exs N_{1}$ such that $I+\phi^{K}\in \rd(K)\cap\exs(N_{1}+E_{1}\cap K_{1}+\gen{\mathcal{V}})$.
+%
+%Now map $\overline{\phi^{M}+\phi^{K}} $ to $\overline{I+\phi^{K}}$. This is independent of the choice
+%of $I$ as two such $I$'s differ by an element of $\rd(K)\cap\exs N_{1}$.
+%
+%The map is obviously onto and mono, since for $I+\phi^{K}$ to be in $\rd(N)$ means
+%$\phi^{M}-I+I+\phi^{K}$ is in $\rd(M)$.
+%
+%\smallskip
+%On the other hand $\dfp(E_{1}/ M_{1})=\dfp(E_{1}\cap K_{1}+\gen{\mathcal{V}}/ N_{1})$ and
+%thus $\delta(E_{1}/ M_{1})=\delta(E_{1}\cap K_{1}+\gen{\mathcal{V}}/ N_{1})\geq0$
+%as desired. 
+%
+%\bigskip
+%{\sl (Argument II)}\quad
+Consider a subspace $D_{1}\nni M_{1}$ of $\vam{M_{1}}{N_{1}}{K_{1}}$. %with $\dfp(D_{1}/ M_{1})\leq k$.
+Since $D_{1}=M_{1}+(D_{1}\cap K_{1})$ one has $D_{1}/ M_{1}\simeq_{\Fp}D_{1}\cap K_{1}/ N_{1}$.
+
+On the other hand, since $\rd(K)=\rd(\am{M}{N}{K})\cap\exs K_{1}$, we have by \pref{exsmod},
+$\rd(D)=(\rd(M)+\rd(K))\cap\exs D_{1}=\rd(M)+\rd(D_{1}\cap K_{1})$.
+Now this yields $\rd(D/M)=\rd(D_{1}\cap K_{1}/N_{1})$.
+
+Hence we may conclude
+\begin{labeq}{deltamalgam}
+\delta(D/M)=\delta(D_{1}\cap K_{1}/ N_{1})
+\end{labeq}
+%where, of course, $\dfp(D_{1}\cap K_{1}/ N_{1})\leq k$. T
+and the statement of the lemma follows.
+\end{proof}
+\begin{cor}\label{parapa}
+Let $M\nni N\inn K$ as in the previous lemma.
+If $A$ denotes $\am{M}{N}{K}$ and $A_{1}\nni D_{1}\nni M_{1}$, let $D$ be $\gena{D_{1}}{A}$ and %$D\scap K$ 
+$I$ denote $\gena{D_{1}\cap K_{1}}{A}$.
+Then
+$$D\simeq\am{M}{N}{\gena{D_{1}\cap K_{1}}{K}}\quad\text{and}\quad A\simeq\am{D}{I%D\cap K
+}{K}.$$
+\end{cor}
+\begin{proof}
+We assume for simplicity, that $D_{1}$ is finite over $M_{1}$. As observed above $D_{1}=M_{1}+(D_{1}\cap K_{1})$ and
+by \pref{deltamalgam} we have
+$$\delta(D_{1}\cap K_{1}/ M_{1})=\delta(D/M)=\delta(D_{1}\cap K_{1}/N_{1})$$
+and thus, Lemma \ref{freecomp} gives the first statement. The second follows by the facts $A_{1}\simeq_{\Fp}
+\vam{D_{1}}{I_{1}%D_{1}\cap K_{1}
+}{K_{1}}$ and $\rd(A)=\rd(M)+\rd(K)=\rd(D)+\rd(K)$.
+\end{proof}
+
+\medskip
+We now introduce {\em minimal strong extensions} of $\Klt{2}$-algebras. This is the main tool to
+compute the rank of types in the rich $\Klt{2}$-structures.
+\begin{dfn}\label{minimalext}
+We say that a proper strong $\nla{2}$-extension $K\zsu{}H$ is {\em minimal} if
+there is no subspace $V_{1}$ strictly in-between $H_{1}$ and $K_{1}$ such that $V$ is strong in $H$.
+\end{dfn}
+
+By Lemma \ref{fincharssc},(ii) minimal extensions are necessarily finite, moreover a finite
+extension $H$ of $K$ is minimal exactly if $\delta(H/K^{\prime})<0$ for all $K_{1}\subsetneq
+K_{1}^{\prime}\subsetneq H_{1}$.
+
+It turns out that there are only three
+types of minimal strong extensions, this is the content of the next proposition
+\begin{prop}
+Assume $H$ is a minimal extension of $K$, then only one of the following
+three situation may occur.
+\begin{itemize}
+\punto{i} $H$ is a {\em free} or {\em transcendental} extension of $K$, that is $\dfp(H_{1}/K_{1})=\delta(H/K)=1$ and $\rd(H)=\rd(K)$.
+
+\punto{ii} $H$ is an {\em algebraic} extension of $K$: $\dfp(H_{1}/K_{1})=1$ and $\delta(H/K)=0$.
+
+\punto{iii} $H$ is a {\em prealgebraic} extension of $K$: $\dfp(H_{1}/K_{1})\geq2$, $\delta(H/K)=0$ and
+for any finite $E_{1}\subsetneq H_{1}$ not entirely contained in $K_{1}$ one has $\delta(E/K)>0$. 
+\end{itemize}
+\end{prop}
+\begin{proof}
+We know $H_{1}$ is finite over $K_{1}$ and assume first
+$d^{H}(H_{1}/K_{1})=\delta(H/K)=0$.
+
+If $\delta(h/K)=0$ for some $h$ in $H_{1}$,
+then $\gen{K_{1},h}$ is strong in $H$ by Lemma \ref{samedelta2} and by minimality $H=\gena{K_{1},h}{H}$. We are in (ii).
+
+\smallskip
+If there is no $h$ with \lqq saldo null\rqq over $K$, then $\dfp(H_{1}/K_{1})>1$ and by minimality
+for any proper subspace $E_{1}$ of $H_{1}$ not entirely contained in $K_{1}$, we must have $\delta(E/K)>0$.
+This gives a prealgebraic extension.
+
+\medskip
+On the other hand if $d^{H}(H/K)>0$, then there must be an $a$ of $H_{1}$ $\cl_{d}$-independent of
+$K_{1}$. This implies $d^{H}(a/K)=1$ and $\gena{K_{1},a}{H}\zsu{}H$, hence $H=\gena{K_{1},a}{H}$ and
+also $\delta(a/K)=1$. In particular $\rd(H)=\rd(K)$.
+\end{proof}
+
+An algebraic extension is associated to a divisor element according to the following remark.
+\begin{rem}\label{divelement}
+For any $\nla{2}$-subalgebra $K$ of $H\in\Klt{2}$, a {\em divisor} of $K$ is an element $a$ of $H_{1}\non K_{1}$
+with $\delta(a/M)\leq0$. This is equivalent to require, that $[a,x]\in K_{2}$ for some non-trivial element $x$ of $K_{1}$.
+If in addition $K$ is ($1$-)strong in $H$ and $a$ is a divisor of $K$, then $$\rd_{H}(K_{1},a)=\rd(K)\oplus\genp{[a,x]-\kappa}$$
+for some $x\in K_{1}$ and $\kappa\in\exs K_{1}$. In particular $\gen{K,a}$ is a minimal algebraic extension of $K$.
+\end{rem}
+
+\begin{rem}\label{prealgchain}{\ }
+\begin{itemize}
+\item[1.]For any $B\in\Klt{2}$, any fixed $b$ of $B_{1}$ and $w$ in $B_{2}$, assume there is no $x\in B_{1}$ with $[x,b]=w$, then there
+is a minimal algebraic strong extension $A=\gen{B_{1},a}$ of $B$ in $\Klt{2}$ such that $[a,b]=w$.
+
+\item[2.]For any positive integer $n$ and any  $M\in\Kl{2}$,
+if $\dfp(M_{1})$ is large enough ($\geq2+2n$), it is possible to find a chain $$M\zsu{}M^{1}\zsu{}M^{2}\zsu{}\dots\zsu{}M^{n}$$
+in which $M^{i+1}$ is a minimal prealgebraic extension of $M^{i}$ for all $i$ and $M^{n}$ is in $\Kl{2}$.
+\end{itemize}
+\end{rem}
+\begin{proof}
+1. Define an extension $A$ of $B$ as follows: set first $A_{1}:=B_{1}\oplus\Fp$ and let $a\in A_{1}$ generate $A_{1}$ over $B_{1}$.
+Then set $\rd(A):=\rd(B)\oplus\gen{[a,b]-\beta}$, where
+$\beta$ is an element of $\exs B_{1}$ which represents $w$ modulo
+$\rd(B)$. Hence $[a,b]-\beta$ is an element of $\exs A_{1}$.
+
+Since in $\delta(A/B)=0$, $B$ is self-sufficient in $A$. We show
+next that $A$ is in $\Klt{2}$. Let $E_{1}$ be a finite subspace of $A_{1}$,
+then $E_{1}$ has dimension at most $1$ over $E_{1}\cap B_{1}$. Thus in a nontrivial
+case, there exists $b^{\prime}\in B_{1}$ such that $E_{1}=\gen{a+b^{\prime},E_{1}\cap B_{1}}$.
+
+As by submodularity \pref{submod} $\delta(E)=\delta(E_{1}\cap B_{1})+\delta(a+b^{\prime}/ E_{1}\cap B_{1})$ and by Lemma \ref{2cut}
+$E_{1}\cap B_{1}\zsu{}E_{1}$, if $\dfp(E_{1}\cap B_{1})\geq2$ we have $\delta(E)\geq2$.
+
+The other only case to be considered is when $\dfp(E_{1})=2$ and
+$E_{1}=\gen{a+b^{\prime},u}$ for $b^{\prime},u$ in $B_{1}$.
+If $\rd(E)\neq\triv$, then we may assume the equality $[a+b^{\prime},u]=[a,b]-\beta+\eta$ holds in $\exs A_{1}$,
+for some $\eta$ in $\rd(B)$. This translates into $[a,u-b]=[u,b^{\prime}]-\beta+\eta\in\exs B_{1}$.
+
+If we take any $\Fp$-basis $(b_{i}\mid i<n)$ of $B_{1}$
+for some $n<\omega$, then the set $([a,b_{i}]\mid i<n)$ is a basis for
+$\exs A_{1}$ {\em over} $\exs B_{1}$ (cfr.\,Fact \ref{ubc}). This yields that $u=b$ and that
+$[u,b^{\prime}]-\beta$ belongs to $\rd(B)$. Thus the element $-b^{\prime}$ of $B_{1}$ solves the equation $[-b^{\prime},b]=w$ in $B$, contradicting our assumption.
+
+\medskip
+For 2. it is sufficient to prove the first step, assume hence $M$ is in $\Kl{2}$ with
+%infinite dimensional $M_{1}$ and choose
+at least four linearly independent element $b_{1},b_{2},c_{1},c_{2}$ in $M_{1}$.
+
+Define an $\nla{2}$-algebra $K$ by means of the following presentation
+$$K=\gen{a_{1},a_{2},M_{1}\mid[a_{1},b_{1}]+[a_{2},b_{2}],[a_{1},c_{1}]+[a_{2},c_{2}]}.$$
+It is clear that $\delta(K/M)=0$ and that $K$ is a prealgebraic strong extension of $M$.
+
+We have to show that $K$ lays in $\Kl{2}$ as well: for any finite $E_{1}\inn K_{1}$ we must prove
+$\delta(E)\geq\min(2,\dfp(E_{1}))$.
+
+By \pref{submod} we have
+$\delta(E)\geq\delta(E_{1}\cap M_{1})+\delta(E/M)$. Moreover,
+for any element $u$ of $K_{1}\non M_{1}$, then $\delta(u/M)>0$. For, since $u$ is without loss $s a_{1}+t a_{2}$
+for some $s,t\in\Fp$, if an element $\rho$ of $\rd(K)$ lays in $\exs\genp{M_{1},u}$, then
+$$\rho=[sa_{1}+ta_{2},m]+\mu=
+u([a_{1},b_{1}]+[a_{2},b_{2}])+v([a_{1},c_{1}]+[a_{2},c_{2}])+\eta$$
+for some $u,v\in\Fp$, $m\in M_{1}$, $\eta\in\rd(M)$ and some $\mu\in\exs M_{1}$.
+
+As a consequence we obtain
+\begin{labeq}{contrad}
+[a_{1}, sm-ub_{1}-vc_{1}]+[a_{2},tm-ub_{2}-vc_{2}]\in\exs M_{1}
+\end{labeq}
+which is impossible unless $b_{1},b_{2},c_{1},c_{2}$ are linearly dependent.
+
+Now if every $2$-generated $\nla{2}$-subalgebra of $K$ is free,
+then the same is true of all its $3$-generated subalgebras (cfr.\,\cite[Lemma 4.5]{bad}).
+
+Hence by the above inequality, since $M$ has $\sig{2}{2}$ we only have to prove this property in the case $\dfp(E_{1})=2$ and
+$E_{1}\cap M_{1}=\triv$.
+In which case, with no loss of generality $E_{1}=\genp{a_{1}+l,a_{2}+m}$
+for $l,m$ elements of $M_{1}$. Now if some element of $\exs E_{1}$ meets $\rd(K)$, then
+a contradiction like \pref{contrad} would follow. Thus $\rd(E)=\triv$ in this case and $\sig{2}{2}$ holds in general for $K$.
+%the following equality must be true in $\exs K_{1}$,
+%$$[a_{1}+u,a_{2}+v]=s([a_{1},b_{1}]+[a_{2},b_{2}])+t([a_{1},c_{1}]+[a_{2},c_{2}])+\rho$$
+%for $s,t\in\Fp$ and $\rho\in\rd(M)$. This implies
+%$$[a_{1},a_{2}]+[a_{1}, v-sb_{1}-tc_{1}]-[a_{2},u+sb_{2}+tc_{2}]=\rho-[u,v]\in\exs M_{1}$$
+%which can never be the case.
+\end{proof}
+
+\begin{dfn}\label{mindecomp}
+Let $K\in\Klt{2}$ be a finite strong extension of $M$, a {\em minimal decomposition} of $K$ over $M$ is a
+sequence of minimal self-sufficient extensions %$M^{i}_{1}\nni M^{i-1}_{1}$ for $i=1,\dots n$ such that
+\begin{labeq}{mindec}
+M=M^{0}\zsu{}M^{1}\zsu{}\cdots\zsu{}M^{n}=K.
+\end{labeq}
+such that the following two conditions are satisfied:
+\begin{itemize}
+\punto{1}If $d^{K}(K/M)=d$, then $M^{i}\nni M^{i-1}$ is transcendental for $i\leq d$,
+\punto{2}for all $i>d$, if $M^{i}$ {\em is not} a minimal algebraic extension of  $M^{i-1}$,
+then there is no divisor $a$ of $M^{i-1}$ in $K$.
+\end{itemize}
+\end{dfn}
+Since the notion of self-sufficiency is transitive, by Lemma \ref{samedelta2}, it is always possible to find
+a minimal decomposition of $K$ over $M$ {\em for any} finite strong extension $K$ of $M$.
+We first exhaust all transcendental steps and obtain $M^{d}$ like in (1), so that $d^{K}(K/M^{d})=\delta(K/M^{d})=0$.
+
+Then (2) follows, by letting algebraic extensions take precedence over pr\ae{}lgebraic ones in the sequence.
+
+With Proposition \ref{dizero} of the next section follows that the number of prealgebraic steps in a minimal decomposition
+is an invariant of the elementary type of the extension.
+
+\smallskip
+Minimal decompositions commute with free amalgamation:
+\begin{lem}\label{mindecamalg}
+Let $M\zso{}M^{\sss 0}\inn H^{\sss 0}$ be $\nla{2}$-algebras.
+Then $$M^{\sss 0}\zsu{}M^{1}\zsu{}\cdots\zsu{}M^{n}=M$$ is a minimal decomposition of $M$ over $M^{\sss 0}$ if and only if
+$$H^{\sss 0}\zsu{}\am{M^{1}}{M^{\sss 0}}{H^{\sss 0}}\zsu{}\am{M^{2}}{M^{\sss 0}}{H^{\sss 0}}\zsu{}\cdots\zsu{}\am{M^{n}}{M^{\sss 0}}{H^{\sss 0}}$$%=\am{M}{M^{\sss 0}}{H^{\sss 0}}$$
+is a minimal decomposition of $\am{M}{M^{\sss 0}}{H^{\sss 0}}$ over $H^{\sss 0}$.
+
+In any of the two cases above, each extension $$\am{M^{i}}{M^{\sss 0}}{H^{\sss 0}}\nni \am{M^{i-1}}{M^{\sss 0}}{H^{\sss 0}}$$
+is exactly of the same kind of $M^{i}\nni M^{i-1}$, for all $1\leq i\leq n$.
+\end{lem}
+\begin{proof}
+As for all $i$, Lemmas \ref{fctrans} and \ref{asymam2} imply
+$$\am{M^{i}}{M^{\sss 0}}{H^{\sss 0}}\simeq\am{M^{i}}{M^{i-1}}{(\am{M^{i-1}}{M^{\sss 0}}{H^{\sss 0}})}\zso{}\am{M^{i-1}}{M^{\sss 0}}{H^{\sss 0}},$$
+both statements of the Lemma follow by %induction,
+considering $M$ minimal over $M^{\sss 0}$.
+
+\smallskip
+Let then $H$ denote the free amalgam $\am{M}{M^{\sss 0}}{H^{\sss 0}}$. For any subspace $K_{1}$ of $H_{1}$ with $K_{1}\nni H^{\sss 0}_{1}$, since
+$K_{1}=H^{\sss 0}_{1}+(K_{1}\cap M_{1})$, we have
+$$H_{1}\supsetneq K_{1}\supsetneq H^{\sss 0}_{1}\iff M_{1}\supsetneq K_{1}\cap M_{1}\supsetneq M^{\sss 0}_{1}.$$
+If now $K$ denote $\gena{K_{1}}{H}$ and $K^{\prime}=\gena{K_{1}\cap M_{1}}{M}$, then by Corollary \ref{parapa},
+$K\simeq\am{K^{\prime}}{M^{\sss 0}}{H^{\sss 0}}$. Hence by Lemma \ref{asymam2} and Proposition \ref{fctrans}
+$$K^{\prime}\zsu{}M\iff K\zsu{}\am{M}{K^{\prime}}{K}=\am{M}{K^{\prime}}{(\am{K^{\prime}}{M^{\sss 0}}{H^{\sss 0}})}=H.$$
+
+This means $H\nni H^{\sss 0}$ is minimal exactly if $M\nni M^{\sss 0}$ is a minimal extension and
+proves the first statement, while the second, follows by equality \pref{deltamalgam} -- here
+$\delta(K/H^{\sss 0})=\delta(K^{\prime}/M^{\sss 0})$ -- of Lemma \ref{asymam2}.%, where $K$ and $K^{\prime}$ are as above.
+In particular for any $h\in H_{1}$ there is an $m$ in $M_{1}$ such that $\delta(h/H^{\sss 0})=\delta(m/M^{\sss 0})$ and the lemma
+follows.
+\end{proof}
+
+\medskip
+Before we prove the next step toward amalgamation, we need to analyse in detail the space of relators $\rd$ in the free amalgam.
+To do that, we have to find suitable bases for the subspaces of the vector-space amalgam, which
+ease the treatment of basic monomials. This is Lemma 4.2 in \cite{bad}.
+\begin{lem}\label{basE}
+Assume $H$ is the free amalgam $\am{M}{N}{K}$ and let $E_{1}$ be a finite subspace of $H_{1}=\vam{M_{1}}{N_{1}}{K_{1}}$.
+
+Assume there exists $n<\omega$ and subsets $\mathcal{U}=(u_{i})_{i=1}^{n}$ and $\mathcal{V}=(v_{i})_{i=1}^{n}$
+of $M_{1}$ and $K_{1}$ respectively, such that $(u_{i}+v_{i})$ is a $\Fp$-basis
+of $E_{1}$ over $E_{1}\cap M_{1}+E_{1}\cap K_{1}$.
+
+%[EXT:] This yields that the set $(u_{i}+v_{i})$ is linearly
+%independent over $E_{1}\cap M_{1}+E_{1}\cap K_{1}+H_{1}$ as well.
+%[EXT:] \lambda\cdot u+v \in E_{1}\cap M_{1}+E_{1}\cap K_{1}+H_{1}
+% implies, since it is in E_{1} too, that it is actually in E_{1}\cap M_{1}+
+%E_{1}\cap K_{1}+(E_{1}\cap H_{1})=E_{1}\cap M_{1}+E_{1}\cap K_{1} !]
+Then the subset $\mathcal{UV}$ of $H_{1}$ is linearly independent over $E_{1}\cap M_{1}+E_{1}\cap K_{1}+N_{1}$.
+\end{lem}
+\begin{proof}
+We follow an inductive argument over $n<\omega$. Assume the assertion holds for $1\leq k\leq n-1$ and
+$\mathcal{U}=(u_{i})$ and $\mathcal{V}=(v_{i})$ for $1\leq i\leq n$ are the sets mentioned in the statement.
+If we set $\hat{\mathcal{U}}=\{u_{i}\mid i<n\}$ and $\hat{\mathcal{V}}=\{v_{i}\mid i<n\}$, then
+%set $\hat{E}_{1}:=\gen{E_{1}\cap M_{1}+E_{1}\cap K_{1},u_{i}+v_{i}\mid i<n}$ so that
+$\hat{\mathcal{U}}\hat{\mathcal{V}}$ is linearly independent over $E_{1}\cap M_{1}+E_{1}\cap K_{1}+N_{1}$.
+
+Set $\tilde{E}_{1}:=\genp{E_{1}\cap M_{1},E_{1}\cap K_{1},\hat{\mathcal{U}},\hat{\mathcal{V}},u_{n}+v_{n}}$ and notice
+%so that $\tilde{E}_{1}\cap M_{1}+\tilde{E}_{1}\cap K_{1}=$\\
+that $u_{n}+v_{n}$ generates $\tilde{E}_{1}$ over $\tilde{E}_{1}\cap M_{1}+\tilde{E}_{1}\cap K_{1}$ hence, by induction,
+$\{u_{n},v_{n}\}$ is linearly independent over $\tilde{E}_{1}\cap M_{1}+\tilde{E}_{1}\cap K_{1}+N_{1}=
+\genp{E_{1}\cap M_{1},E_{1}\cap K_{1},N_{1},\hat{\mathcal{U}},\hat{\mathcal{V}}}$ and
+the set $\mathcal{UV}$ is independent over $E_{1}\cap M_{1}+E_{1}\cap K_{1}+N_{1}$.
+
+The assertion is therefore to be proven in the case $n=1$.
+Let then $E_{1}$ be generated by a sum $u+v$ over
+$E_{1}\cap M_{1}+E_{1}\cap K_{1}$ for $u\in M_{1}$ and $v\in K_{1}$.
+
+
+It follows $u+v$ is not in $E_{1}\cap M_{1}+E_{1}\cap K_{1}+N_{1}$.
+%otherwise
+%$u+v\in E_{1}\cap M_{1}+E_{1}\cap K_{1}+(E_{1}\cap N_{1})=E_{1}\cap M_{1}+E_{1}\cap K_{1}$.
+If now $su+tv \in E_{1}\cap M_{1}+E_{1}\cap K_{1}+N_{1}$ for some $s$ and $t$ in $\Fp$ and
+say $s\neq0$, we have then $%\ambda(u+v)+  $\lambda\neq\mu$
+(t-s)v\in K_{1}\cap (E_{1} +N_{1})=N_{1}+(E_{1}\cap K_{1})$ and thus $s(u+v)\in E_{1}\cap M_{1}+E_{1}\cap K_{1}+N_{1}$ which is a contradiction.
+\end{proof}
+
+\begin{rem}\label{basee}
+Let $H$ be the free amlagam above. In the previous notation, for every finite $E_{1}\inn H_{1}$, we can find a $\Fp$-base of $E_{1}$
+in the form
+\begin{labeq}{flat}
+\mathcal{E}_{N}\mathcal{E}_{M}\mathcal{E}_{K}(u_{i}+v_{i}\mid u_{i}\in\mathcal{U},v_{i}\in\mathcal{V})_{i=1,\dots,n}
+\end{labeq}
+where $\mathcal{E}_{N}$ is a base of $E_{1}\cap N_{1}$, and $\mathcal{E}_{M}$ and $\mathcal{E}_{K}$ complete
+$\mathcal{E}_{N}$ to a basis of $E_{1}\cap M_{1}$ and $E_{1}\cap K_{1}$ respectively.
+\end{rem}
+
+A $\Fp$-basis $\mathcal{H}=\mathcal{H}_{M}\mathcal{H}_{N}\mathcal{H}_{K}$ of $H_{1}$ is said
+{\em compatible} with the base \pref{flat}, if $\mathcal{E}_{N}\inn\mathcal{H}_{N}$ and $\mathcal{H}_{N}$ is a $\Fp$-basis of $N_{1}$;
+if $\mathcal{U},\mathcal{E}_{M}\inn\mathcal{H}_{M}$ and $\mathcal{H}_{M}\mathcal{H}_{N}$ is a basis for $M_{1}$ and lastly
+if $\mathcal{V},\mathcal{E}_{K}\inn\mathcal{H}_{K}$ and $\mathcal{H}_{N}\mathcal{H}_{K}$ is a basis for $K_{1}$.
+%described above, we can always complete the $\Fp$-independent set $\mathcal{E}_{M}\mathcal{E}_{N}\mathcal{E}_{K}
+%\mathcal{U}\mathcal{V}$ to a basis $\mathcal{D}$ of $D_{1}$ as follows: begin by finding a basis $\mathcal{E}_{N}$ of $E_{1}\cap H_{1}$, this is to be extended with $\mathcal{E}_{M}$ and $\mathcal{E}_{K}$ to a basis of $E_{1}\cap M_{1}$ and $E_{1}\cap K_{1}$ respectively. In this way $\mathcal{E}_{M}\mathcal{E}_{N}\mathcal{E}_{K}$ forms a basis of
+%$E_{1}\cap M_{1}+E_{1}\cap K_{1}$.
+%Let $\mathcal{U}$ and $\mathcal{V}$ be as above, according to Lemma \ref{basee}, we can first complete $\mathcal{E}_{N}$ to a basis $\mathcal{D}^{h}$ of $H_{1}$, and then 
+%find  $\mathcal{D}^{m}$ containing $\mathcal{E}_{M}\mathcal{U}$ such that $\mathcal{D}^{h}\mathcal{D}^{m}$ is a basis of $M_{1}$.
+%On the other hand we can complete  $\mathcal{D}^{h}$ to a basis $\mathcal{D}^{h}\mathcal{D}^{k}$ of $K_{1}$ with $\mathcal{D}^{k}\nni
+%\mathcal{E}_{K}\mathcal{V}$.
+%We call $\mathcal{D}=\mathcal{D}^{m}\mathcal{D}^{h}\mathcal{D}^{k}$
+%a {\em compatible basis} of $D_{1}$ \emph{with} {\bf $(\flat)$}. %$E_{1}$.
+
+\medskip
+This way of extending bases to $H_{1}$ leads to the following description of $\rd(E)$ for any given finite $E$.
+
+Recall with Fact \ref{basisgen}, Corollary \ref{ubc} and Definitions \ref{basicommutators} and \ref{supp}, that for 
+a base $\mathcal{H}$ of $H_{1}$, any set $\mathscr{B}=\mathscr{B}_{\leq2}$ of basic monomials over $\mathcal{H}$
+of weight $\leq2$, constitutes a basis of $\fla{2}{H_{1}}=H_{1}\oplus\exs H_{1}$. In particular chosen an order $(\mathcal{H},<)$,
+the set $\mathscr{B}_{2}=\{[b,c]\mid b>c\in\mathcal{H}\}$, is a basis of $\exs H_{1}$ and $\mathscr{B}=\{\mathcal{H}<
+\mathscr{B}_{2}\}$ a basis of $\fla{2}{H_{1}}$. The following is borrowed from \cite[Lemma 4.3]{bad}.
+\begin{lem}\label{reldue}
+Let $E=\gena{E_{1}}{H}$ be a finite subalgebra of the free amalgam $H=\am{M}{N}{K}$ for $M\nni N\inn K$ algebras
+in $\nla{2}$.
+
+Let  $\mathcal{E}=\mathcal{E}_{N}\mathcal{E}_{M}\mathcal{E}_{K}(u_{i}+v_{i}:i=1,\dots,n)$ be a basis of $E_{1}$ as in \pref{flat}.
+%, and
+%choose a linear order on $\mathcal{E}$.
+
+We order a base $\mathcal{H}=\mathcal{H}_{N}>\mathcal{H}_{M}>\mathcal{H}_{K}$ of $H_{1}$ compatible with $\mathcal{E}$,
+in such a way that $\mathcal{E}_{N}>\mathcal{E}_{M}>\mathcal{U}>\mathcal{E}_{K}>\mathcal{V}$.
+%extending the order chosen above\mn{adjust indices here}.
+
+Then each element $\Phi$ of $\rd(E)$ has the form
+\begin{labeq}{2relator}
+\Phi_{M}+\Phi_{K}+\phi_{u}+\phi_{v}
+\end{labeq}
+where
+\begin{itemize}
+\item[]$\Phi_{M}$ and $\Phi_{K}$ are linear combination of basic $\mathcal{H}$-commutators with support
+in $\mathcal{E}_{N}\mathcal{E}_{M}$ and $\mathcal{E}_{N}\mathcal{E}_{K}$ respectively.
+\item[]$\phi_{u}$ is a linear combination of basic $\mathcal{H}$-commutators $[h,u_{i}]$ where $h$ belongs to $\mathcal{E}_{N}$ and
+$u_{i}$ is in $\mathcal{U}$
+\item[]$\phi_{v}$ is obtained by replacing each instance of $u_{i}$ in $\phi_{u}$ by the corresponding $v_{i}$ from $\mathcal{V}$.
+\end{itemize}
+Finally there exists $\eta$ in $\exs N_{1}$ such that $\Phi_{M}+\phi_{u}+\eta$ belongs to $\rd(M)$ and $\Phi_{K}+\phi_{v}-\eta$
+is in $\rd(K)$.
+\end{lem}
+
+\begin{proof}
+Let $\Phi$ be an element of $\rd(E)$, which is by definition $\rd(H)\cap\exs E_{1}$. Now $\rd(H)=\rd(M)+\rd(K)\inn
+\exs M_{1}+\exs K_{1}$, hence there exist $\rho_{M}$ in $\rd(M)$ and $\rho_{K}\in \rd(K)$ such that $\Phi=\rho_{M}+\rho_{K}$.
+
+Write $\rho_{M}$ and $\rho_{K}$ as linear combinations of basic $\mathcal{H}$-monomials with support respectively in $\mathcal{H}_{N}\mathcal{H}_{M}$ and $\mathcal{H}_{N}\mathcal{H}_{K}$, and call $\Phi_{\mathcal{H}}$ the resulting unique expression
+of basic $\mathcal{H}$-commutators which equals $\Phi$ after Corollary \ref{ubc}.
+
+\smallskip
+On the other hand, consider the linear order on $\mathcal{E}$ given by $\mathcal{E}_{N}>\mathcal{E}_{M}>\mathcal{E}_{K}>
+\{u_{1}+v_{1}>\dots>u_{n}+v_{n}\}$, where the first three fragments inherit the order of $\mathcal{H}$ above.
+Now write $\Phi\in\exs E_{1}$ as a linear combination $\Phi_{\mathcal{E}}$ of basic $\mathcal{E}$-commutators.
+%We have $\Phi_{\mathcal{H}}=\Phi=\Phi_{\mathcal{E}}$.
+By linearity, each monomial %$\mathcal{E}$-basic monomial in $\Phi_{\mathcal{E}}$
+involving entries $u_{i}+v_{i}$ expands into a sum of 
+basic monomials over $\mathcal{H}$: just transpose -- and accordingly change the sign of -- the entries which are in the wrong order. 
+%of the form $[b,u_{i}+v_{i}]$ for $b$ in $\mathcal{E}$ equals
+%indeed $\mathcal{H}$-basic terms $[b,u_{i}]+[b,v_{i}]$ (with transposed entries and
+%inverse sign, if $b$ happens to be greater than $u_{i}$ or $v_{i}$).
+This means $\Phi_{\mathcal{E}}$ is actually equal to a linear combination $\Phi^{\prime}$ of
+basic $\mathcal{H}$-monomials as well.
+
+Now comparing expressions $\Phi_{\mathcal{H}}=\Phi=\Phi^{\prime}$, by Corrollary \ref{ubc},
+%we have in particular $\supp_{\mathcal{H}}(\Phi_{\mathcal{H}})=\supp_{\mathcal{H}}(\Phi^{\prime})$.
+exactly the same monomials must appear in $\Phi_{\mathcal{H}}$ and $\Phi^{\prime}$.
+
+It follows, that terms of the kind
+$[b,u_{i}+v_{i}]$ with $b\in\mathcal{E}_{M}\mathcal{E}_{K}$ or $b=u_{j}+v_{j}$ for any $j$, are not allowed
+in the expression $\Phi_{\mathcal{E}}$. Following the same
+argument, basic monomials $[m,k]$ with $m\in\mathcal{E}_{M}$ and $k\in\mathcal{E}_{K}$ are excluded from $\supp_{\mathcal{E}}
+(\Phi_{\mathcal{E}})$ as well.
+
+We can conclude $\Phi$ consists of the sum $\Phi_{M}+\Phi_{K}+\phi_{u}+\phi_{v}$ described in the statement of the lemma.
+
+To obtained $\eta$, consider equality $\Phi_{M}+\Phi_{K}+\phi_{u}+\phi_{v}=\Phi=\rho_{M}+\rho_{K}$ and set
+$\eta:=\rho_{M}-\Phi_{M}-\phi_{u}=\Phi_{K}+\phi_{v}-\rho_{K}
+\in\exs M_{1}\cap\exs K_{1}=\exs N_{1}$.
+\end{proof}
+
+With the above description of relators, we can prove the following lemma, which
+shows, the only obstruction for the free amalgam to inherit property $\sig{2}{2}$ from
+its components are the divisor elements of the base.
+
+\smallskip
+If some algebra $K$ extends $N$ and $N\inn H$, a divisor (cfr.\,Remark \ref{divelement}) $a\in H_{1}$ of $N$ is {\em realised} %by $b$
+in $K$ over $N$, if there exists an element $b$ of $K_{1}$ and an isomorphism
+of $\gena{N_{1},a}{H}$ onto $\gena{N_{1},b}{K}$ which fixes $N$ and maps $a$ onto $b$.
+
+If $N$ is strong in both $H$ and $K$, according to Remark \ref{divelement},
+for some $x\in N_{1}$ and $\eta\in\exs N_{1}$, $[a,x]-\eta$ generates $\rd(N,a)$ over $\rd(N)$.
+In order to realise $a$ in $K$, it is sufficient to find $b\in K_{1}$ with $[b,x]-\eta\in\rd(K)$.
+\begin{prop}\label{amalsigma2}
+Assume $M\zso{k}N\zsu{}K$ for $\Klt{2}$-algebras $M$, $N$ and $K$, %with $\sig{2}{2}$,
+where $K$ is a finite extension of $N$,
+and the integer $k$ is not smaller than $\dfp(K_{1}/N_{1})$.
+
+Assume also that for any divisor $a$ of $N$ in $K$, $a$ {\em is not realised in $M$ over $N$}.
+Then $\am{M}{N}{K}$ satisfies $\sig{2}{2}$.
+\end{prop}
+\begin{proof}
+Let $H$ denote $\am{M}{N}{K}$, then by Lemma \ref{asymam2} we have $M\zsu{}H\zso{k}K$.
+
+Let $E_{1}$ be a finite subspace of $\vam{M_{1}}{H_{1}}{K_{1}}$ and choose a $\Fp$-basis
+$\mathcal{E}=\mathcal{E}_{N}\mathcal{E}_{M}\mathcal{E}_{K}(u_{i}+v_{i}\mid i=1,\dots,n)$ of $E_{1}$ for suitable
+$u_{i}$'s in $M_{1}$ and $v_{i}$'s in $K_{1}$ as described in Remark \ref{basee}.
+We have to show $\delta(E)\geq\min(2,\dfp(E_{1}))$.
+
+Applying submodularity \pref{submod} of $\delta$, we find $\delta(E)\geq\delta(E/ M)+\delta(E_{1}\cap M_{1})$.
+Since $M$ is self-sufficient and satisfies $\sig{2}{2}$, if $\dfp(E_{1}\cap M_{1})\geq2$ we are done.
+We might then assume $\dfp(E_{1}\cap M_{1})<2$.
+
+\smallskip
+If $E_{1}\cap M_{1}=\triv$,
+then $\mathcal{E}=\mathcal{E}_{K}(u_{i}+v_{i}\mid i=1,\dots, n)$ and by Lemma \ref{reldue} we have $\rd(E)=
+%\mn{check! Here and below}
+\rd(E_{1}\cap K_{1})$. It follows $\dfp(E_{1})=\dfp(E_{1}\cap K_{1})+n$ and hence $\delta(E)=\delta(E_{1}\cap K_{1})+n$.
+This yields $\delta(E)\geq\min(2,\dfp(E_{1}))$ since $\delta(\gena{E_{1}\cap K_{1}}{K})$ does.
+
+\smallskip
+Assume $E_{1}\cap M_{1}$ %\mn{too many cases considered?}
+has dimension $1$. If $E_{1}\cap N_{1}=\triv$ then by Lemma \ref{reldue} again, $\rd(E)=\rd(E_{1}\cap
+K_{1})$ because $\mathcal{E}=\{m\}\mathcal{E}_{K}(u_{i}+v_{i}\mid i=1,\dots,n)$ with $\{m\}$ as $\mathcal{E}_{M}$.
+We can conclude as above: this time $\delta(E)=\delta(E_{1}\cap K_{1})+n+1$.
+
+\smallskip
+Assume now $E_{1}\cap M_{1}=E_{1}\cap N_{1}=\gen{h}$ has dimension $1$, so that
+$E_{1}=\gen{E_{1}\cap K_{1},u_{i}+v_{i}\mid i=1,\dots,n}$ and $\mathcal{E}=\{h\}\mathcal{E}_{K}(u_{i}+v_{i}\mid i=1,\dots,n)$.
+
+If $E_{1}\cap K_{1}$ is $\gen{h}$ as well ($\mathcal{E}_{K}=\vac$), then $E_{1}=\gen{h,u_{i}+v_{i}\mid i=1,\dots,n}$. If we assume that 
+$\rd(E)$ is nontrivial %-- the converse would give us the desired conclusion --
+then by Lemma \ref{reldue} a nonzero element
+$\Phi$ of $\rd(E)$ is equal to a sum $\sum_{i=1}^{n}s_{i}[h,u_{i}+v_{i}]$ for some scalars $s_{i}$ in $\Fp$. Moreover for a suitable
+$\eta$ in $\exs N_{1}$, $[h,\sum_{i=1}^{n}s_{i}u_{i}]+\eta$ lies in $\rd(M)$ and $[h,\sum_{i=1}^{n}s_{i}v_{i}]-\eta$ in $\rd(K)$.
+
+If we now set $v:=\sum_{i=1}^{n}s_{i}v_{i}\in K_{1}\non N_{1}$, then we get $\delta(v/N)=0$ and
+$v$ is a divisor of $K$. Since $N$ is at least $1$-self-sufficient in $M$, if we set $u:=-\sum_{i=1}^{n}s_{i}u_{i}$,
+then $[h,u]-\eta\in\rd(M)$ and $u$ realises $v$ in $M$ over $N$. The hypotheses now imply that
+this sitution cannot occur and in this case $\rd(E)=\triv$.
+
+\smallskip
+For the very last step we assume, as in the previous case, that
+$E_{1}\cap M_{1}=E_{1}\cap H_{1}=\gen{h}$, but this time
+$\dfp(E_{1}\cap K_{1})\geq2$ and thus $\delta(E_{1}\cap K_{1})\geq2$.
+%By Lemma \pref{reldue} again, any $\phi$ in $\rd(E)$ equals
+%a sum $\phi^{u}+\phi^{K}+\phi^{v}$, where $\phi^{u}=\sum_{i=1}^{n} s_{i}[h,u_{i}]$, $\phi^{v}=\sum_{i=1}^{n}s_{i}[h,v_{i}]$
+%for $s_{i}\in\Fp$ and $\phi^{K}$ in $\exs E_{1}\cap K_{1}$.
+%
+%Moreover to any such $\phi$, an element $\beta$ of
+%$\exs H_{1}$ is given, such that $\phi^{u}+\beta$ is in $\rd(M)$ and $\phi^{K}+\phi^{v}-\beta$ is in $\rd(K)$.
+%%, where $\phi^{K}$ may be assumed non-trivial, to avoid the previous forbidden situation.
+%
+%Notice that the map $\phi\mapsto\phi^{u}+\beta$ can be factorised to a well defined linear morphism
+%of $\rd(E_{1}/ E_{1}\cap K_{1})$ to $\rd(\gen{u_{i}\mid i=1,\dots,n}/ H_{1})$. If
+%now $\phi^{u}+\beta$ is in $\rd(H_{1})$ then $\phi$ belongs to $\rd(E)\cap\exs K_{1}=\rd(E_{1}\cap K_{1})$,
+%and therefore $\phi$ is a linear embedding of $\rd(E_{1}/ E_{1}\cap K_{1})$ into $\rd(\gen{u_{i}\mid i=1,\dots,n}/ H_{1})$.
+
+Now by submodularity over $K$ we obtain
+$\delta(E)\geq\delta(E/K)+\delta(E_{1}\cap K_{1})$
+%=\delta(E_{1}\cap K_{1})+n-\dfp(\rd(E_{1}/ E_{1}\cap K_{1}))\geq
+%\delta(E_{1}\cap K_{1})+\delta(\gen{u_{i}\mid i=1,\dots,n}/N)$ and 
+and $\delta(E/K)=\delta(\gen{u_{i}+v_{i}\mid i=1,\dots,n}/K)\geq0$ since $H$ is $k$-self-sufficient in $M$ and by Lemma \ref{basE},
+$n\leq\min(\dfp(M_{1}/N_{1}),\dfp(K_{1}/N_{1}))\leq k$.
+
+\smallskip
+As there is no more cases left, $H$ has $\sig{2}{2}$ and the proof is complete.
+\end{proof}
+
+The following {\em asymmetric amalgamation} both proves amalgamation in $\Klt{2}$ and makes it possible to
+axiomatise the theory of the rich Fra\"iss\'e limit of $\Kl{2}$.
+\begin{lem}[Asymmetric Amalgam]\label{asymalgadue}
+Let $M$, $N$ and $K$ be algebras of $\Klt{2}$ %with $\sig{2}{2}$
+such that $K$ is a finite self-sufficient extension of $N$, and $N$ is $n+\dfp(K_{1}/ N_{1})$-self-sufficiently
+embedded in $M$, for some $n<\omega$.
+
+Then there exists $H$ in $\Klt{2}$, %$\nla{2}$  satisfying axiom $\sig{2}{2}$,
+which amalgamates $M$ and $K$ over $N$ as in Definition \ref{amalgama}, under which embeddings,
+$M$ is strong and $K$ is $n$-strong in $H$.
+\end{lem}
+\begin{proof}
+Fix an integer $n$ and assume $M$, $N$ and $K$ as above. We prove the
+statement by induction on $l=\dfp(K_{1}/ N_{1})$. So let
+$\widetilde{N}=\gena{\widetilde{N}_{1}}{K}$ be a self-sufficient
+subalgebra of $K$ such that $K\nni\widetilde{N}$ is a minimal strong extension.
+\footnote{consider the last step of a minimal decomposition of $K$ over $N$.}
+Denote by $\widetilde{\nu}$ the strong embedding of
+$N$ into $\widetilde{N}$, by $\nu^{\prime}$ the strong embedding of $\widetilde{N}$ into $K$
+and by $\phi$ the embedding of $N$ into $M$.
+
+If $\widetilde{l}=\dfp(\widetilde{N}_{1}/ N_{1})$ and
+$l^{\prime}=\dfp(K/\widetilde{N}_{1})$, then by the inductive hypothesis there exists an
+algebra $\widetilde{M}$ in $\Klt{2}$ which amalgamates $M$ and $\widetilde{N}$ over
+$N$ by virtue of a strong embedding $\widetilde{\mu}$ of $M$ into $\widetilde{M}$
+and of a $n+l^{\prime}$-strong embedding $\psi^{\prime}$ of $\widetilde{N}$ into $\widetilde{M}$ such that $\phi\widetilde{\mu}=\widetilde{\nu}\psi^{\prime}$.
+$$
+\xymatrix@C-1mm@R-2mm{
+&&&H\ar@{-}[dl]_{\mu^{\prime}}\ar@{--}[drr]^{\psi}&&\\
+&&\widetilde{M}\ar@{--}[drr]^{\psi^{\prime}}&&&K\ar@{-}[dl]_{\nu^{\prime}}\\
+&&&&\widetilde{N}&\\
+M\ar@{-}[uurr]^{\widetilde{\mu}}\ar@{--}[drr]^{\phi}&&&&&\\
+&&N\ar@{-}[uurr]^{\widetilde{\nu}}&&&}
+$$
+
+Now we distinguish two cases: in the first one, $K$ is an algebraic extension of $\widetilde{N}$
+with $K=\gen{\widetilde{N}_{1},a}$ for some $a$ in $K_{1}$ and
+we assume that $K$ is realised in $\widetilde{M}$ over $\widetilde{N}$ by means of
+an element $m$ of $\widetilde{M}_{1}$. We set in this case $H=\widetilde{M}$ and
+let $\psi$ denote the $\nla{2}$-Lie isomorphism which fixes $\widetilde{N}$ and
+maps $a$ onto $m$. Then clearly $H$ has $\sig{2}{2}$.
+Now since $\widetilde{N}$ is $n+1$-selfsufficient
+in $H$ and $\delta(m/\widetilde{N})=0$, it follows that
+$\psi(K)$ is $n$-self-sufficient in $H$. This is clear since,
+for any finite subspace $E_{1}$ of $H_{1}$ with $\dfp(E_{1}/\psi(K_{1}))\leq n$
+one has $\delta(E/\psi(K))=\delta(E/\widetilde{N}_{1},m)=
+\delta(E_{1},m/\widetilde{N}) %+\delta(m/\widetilde{N}_{1})
+\geq0$.
+
+\medskip
+In the second case we consider algebraic extensions which {\em are not} realised
+in $H$, as well as free or pre-algebraic extensions $K/\widetilde{N}$.
+
+By Proposition \ref{amalsigma2} the free amalgam $\am{\widetilde{M}}{\widetilde{N}}{K}=:H$
+satisfies property $\sig{2}{2}$. Denote with $\psi$ the canonical embedding of $K$
+into $H$, as $\psi^{\prime}$ is $n+l^{\prime}$-strong, Lemma \ref{asymam2} implies that $\psi$ is
+$n+l^{\prime}$-strong as well, and in particular $n$-strong. %\am{\widetilde{M}}{\widetilde{N}}{K}$.
+
+\smallskip
+In both of the cases considered above, denote with
+$\mu^{\prime}$ the strong embedding of $\widetilde{M}$ into $H$ and put
+$\mu:=\widetilde{\mu}\mu^{\prime}$ and $\nu:=\widetilde{\nu}\nu^{\prime}$.
+Then $\mu$ is a strong embedding, and $\phi\mu=\nu\psi$ as required
+by Definition \ref{amalgama}.
+\end{proof}
+
+\begin{cor}\label{amalgadue}
+The countable class $\Kl{2}$ has the properties {\rm(HP)}, {\rm(JEP)} and {\rm(AP)} defined in Section \ref{fraisse},
+with respect to strong $\nla{2}$-embeddings.
+\end{cor}
+\begin{proof}
+As $\sig{2}{2}$ is expressed by universal sentences, then in particular $\nla{2}$-subalgebras of an object $A$ of $\Kl{2}$
+still satisfy it. Hence we have (HP).
+
+That $\Kl{2}$ satisfies (AP) is Corollary \ref{asymalgadue},
+with $M,N$ and $K$ finite and strong embeddings on both sides.
+
+Moreover, since the trivial algebra $\triv$ is self-sufficient in every structure of $\Kl{2}$,
+if we apply Corollary \ref{asymalgadue} to pairs of algebras (with $N=\triv$) we obtain
+the joint embedding property (JEP).
+\end{proof}
+Now Fact \ref{fraissteo} applies to the countable class $\Kl{2}$ with respect to strong $\nla{2}$-embeddings.
+The Fra\"iss\'e limit $\K$ of $(\Kl{2},\zsu{})$ obtained in this way, is a countable $\Kl{2}$-{\em rich} algebra of $\Klt{2}$. This means
+by definition
+\begin{itemize}
+\item[-]$\age(\K)=\Kl{2}$
+\item[-]for any finite strong $\nla{2}$-extension $A$ of $B$
+in $\Kl{2}$, if $\map{\beta}{B}{\K}$ is a self-sufficient embedding, there exists a strong $\nla{2}$-embedding $\alpha$ of $A$ into $\K$
+with $\res{\alpha}{B}=\beta$.
+\end{itemize}

@@ -1,0 +1,343 @@
+\section{The infinite-rank Theory $T_{2}^{\omega}$}
+Let $M$ be an $\La_{2}$ structure we axiomatise the theory
+$T_{2,\omega}$ by means of the following first order schema
+\begin{itemize}
+\punto{$\sig{2}{1}$}$M$ is an algebra of $\nla{2}$
+\punto{$\sig{2}{2}$}For any finite subspace $H_{1}$ of $M_{1}$ with $\dfp(H_{1})\geq2$
+holds $\delta_{2}(H)\geq2$. %IN FORMULAE: $\delta_{2}(H)\geq\min(\dfp(H_{1}),\,2)$. 
+\punto{$\sig{2}{3}$}for any $n<\omega$ and finite  \mn{minimal?} %minimal
+strong extension
+$A\quot B$ of $\Kl{2}$-algebras, %with $\delta_{2}(A\quot B)=0$,
+if $B$ is $(\dfp(A_{1}\quot B_{1})+n)$-selfsufficient in $M$,
+then there exists an isomorphic copy of $A$ in $M$ over $B$, which is $n$-self-sufficient.
+\end{itemize}
+\begin{teo}
+%The rich %countable structures in 
+An $\La$-structure $K$ is a rich algebra of $\Kl{2}$
+%are exactly the countable $\omega$-saturated models of $T^{2}$.
+if and only if $K$ is an $\omega$-saturated model of $T^{2,\omega}$.
+\end{teo}
+\begin{proof}
+We start proving that a rich algebra $K$ of $\Klt{2}$ is also a model of $T^{2}$, which is
+henceforth consistent. The second part of the proof shows that an $\omega$-saturated model
+of $T^{2}$ is rich, now since rich %countable\mn{be careful!}
+structures are back-and-forth equivalent %and hence isomorphic,
+we can deduce that rich $\Klt{2}$-structures are $\omega$-saturated.
+
+\smallskip
+So let $K$ be such a rich algebra in $\Kl{2}$, it satisfies then automatically
+axioms $\sig{2}{1}$ and $\sig{2}{2}$.
+
+Now assume $A$ is a finite strong extension of a subalgebra $B$ of $\mathbb{K}$ which
+is $(\dfp(A_{1}\quot B_{1})+n)$-selfsufficient in $\mathbb{K}$. Take a finite strong subalgebra $\tilde{B}$ of $\mathbb{K}$ containing $B$ (the selfsufficient closure of $B$ for instance). Now
+use the asymmetric amalgamation lemma \ref{asymalgadue} to obtain a strong extension $\tilde{A}$ in $\Kl{2}$ of $\tilde{B}$,
+such that  $A$ is an $n$-selfsufficient substructure of $\tilde{A}$. %and $\tilde{B}_{1}\cap A_{1}=B_{1}$.
+
+Now since $\mathbb{K}$ is rich, $\tilde{A}$ strongly embeds into $\mathbb{K}$ over $\tilde{B}$.
+As a consequence of transitivity (lemma \ref{}), $A$ embeds into $\mathbb{K}$ $n$-selfsufficiently over $B$.
+
+\dots\bigskip
+
+{\tt direction $\Leftarrow$: use of bdd-ssuffncy}
+Suppose $M$ is a countable $\omega$-saturated model of $T^{2}$ and $A\quot B$
+a finite strong extension of $\Kl{2}$-algebras, where $B$ is a strong
+substructure of $M$. We may assume, without loss
+of generality, that $A\quot B$ is a minimal extension (otherwise decompose it as usual
+in minimal sections which are embedded stepwise in $M$).
+
+So assume first $A\quot B$ is a free extension and $B$ is a finite strong substructure in $M$,
+we are done if we find $a^{\prime}\in M_{1}$ which is $\cl_{2}$-independent over $B_{1}$.
+
+We actually prove that $d_{2}(M_{1})$ is infinite, and the desired condition will follow at once.
+We show, with an induction argument, that we can {\em strongly} embed $F^{2,n}$ in $M$ for any $n<\omega$. We ambiguously denote
+as $\F^{2,n}(\bar x)$ both the diagram of {\em and} the $n$-generated free nil-$2$ Lie algebra, with the convention
+that $\F^{2,n}(\bar a)$ means $\gen{\tpl{a}{n}}\simeq F^{2,n}$.
+
+Axiom $\sig{2}{2}$ ensure  that for any nontrivial $m_{1}, m_{2}$ which are not linear dependent in $M_{1}$,
+$\gena{m_{1},m_{2}}{M}$ is a selfsufficient subalgebra of $M$ and isomorphic to $F^{2,2}(m_{1},m_{2})$.
+For the same reason, also $2$-generated subalgebras share the same property;
+this will be our inductive base.
+
+Assume now $M\sat F^{2,n}(\bar b)$ and $\gena{\bar b}{M}$ is strong in $M$. Consider
+the following collection of formulae $\Phi^{n+1}(x,\bar b)=\left(\phi^{n+1}_{k}(x,\bar b)\mid k<\omega\right)$ where an $\La^{2}$-structure $L$ satisfies $\phi^{l}_{k}(\bar y)$ in $\bar m \inn L_{1}$ exactly when $L\sat\F^{2,l}(\bar m)$ and $\gena{\bar m}{L}$ is $k$-strong in $L$.
+
+Now a finite portion of $\Phi^{n+1}$ is implied by $\phi^{n+1}_{k}(x,\bar b)$ with a sufficiently
+large $k$. %, here $k$ may also be assumed to be bigger than. Now use axiom
+Now since $\gena{\bar b}{M}$ is strong, we have $M\sat\phi^{n}_{k+1}(\bar b)$ and hence by $\sig{2}{3}$ there exists
+$a$ in $M_{1}$ such that $M\sat\phi^{n+1}_{k}(a,\bar b)$.
+
+We showed $\Phi^{n+1}(x,\bar b)$ is consistent with $T^{2}$ and hence realized in $M_{1}$
+by $\omega$-saturation for some $m\in M_{1}$. It follows $\gena{m,\bar b}{M}$ is
+selfsufficient and hence $d_{2}^{M}(m,\bar b)=\delta_{2}(m,\bar b)=n+1$.
+
+By induction, $M$ has infinite $d_{2}$-dimension.
+\medskip
+
+Assume now $A\quot B$ is a minimal strong extension with $\delta_{2}(A\quot B)=0$ (hence
+algebraic or prealgebraic). Since $B$ is strong in $M$, (anyone among) axioms $\sig{2}{3}$ ensure
+the existence of an isomorphic copy $A^{\prime}$ of $A$ in $M$ over $B$. Because
+of $\delta_{2}(A^{\prime}\quot B)=0$, we have that $A^{\prime}$ is selfsufficient in $M$ as
+well. This proves that $M$ is a rich Lie algebra in $\Kl{2}$.
+\end{proof}
+
+Note that the Fraïssé limit of $\Kl{2}$ that we constructed in \ref{} is ``the'' countable saturated model of $T^{2,\omega}$.
+Also note that $T$ is not $\aleph_{0}$-categorical, because the self-sufficient closure, and  hence
+the algebraic closure, of a finite set can be infinite.
+\begin{lem}\label{strongelm}
+Elementary extensions are strong
+and conversely\mn{make any sense?}, strong model extensions are elementary.
+\end{lem}
+
+
+\begin{lem}\label{alg-ex-cls}
+Define
+\begin{itemize}
+\punto{$\sig{2}{4}$} for all $w\in M$ with $P_{2}(w)$ and all $z\in M_{1}$ there is $x\in M_{1}$ such that $[z,x]=w$.
+\end{itemize}
+then $\sig{2}{4}$ is a consequence of the other axioms in $T^{2}$.
+\end{lem}
+\begin{proof}
+Pick an element $w\in M_{2}$ and $m\in M_{1}$ for some $\La^{2}$-structure $M$\mn{maybe switch to
+$\omega$-sat and abovelemma} which satisfies $\sig{2}{i}$ for $i=1,2,3$. Now $w$ belongs to $\gena{B_{1}}{M}$ for some finite
+$B_{1}\inn M_{1}$ with also $m\in B_{1}$. Set $C_{1}:=\ssc_{2}(B_{1})$. If there exists $c$ in $C_{1}$ such that $[m,c]=w$ we are done, so assume not. Define the strong extension 
+$A$ of $B$ as follows: $A_{1}:=B_{1}\oplus\gen{a}$ and $N^{2}(A):=N^{2}(B)\oplus
+\gen{[m,a]-w}$ as a subspace of $\exs A_{1}$. Since $A$ is not realised in $C$,
+amalgamate\mn{We need $\sig{2}{2}$ of $A$ if $B$ does!}
+$A$ and $C$ over $B$ with lemma \ref{amalsigma2} to get $D=\gena{C_{1},a}{D}$ in $\Kl{2}$
+with $C\zsu D$. Now being $C$ strong in $M$, in particular axioms $\sig{2}{3}$ apply to
+the finite strong extension $D\quot C$,
+ensuring the existence of an element $x$ in $M_{1}$, for which $M\models [m,x]-w=\triv$. 
+\end{proof}
+
+In the proof above/below we actually show how any two $\omega$-saturated models of $T^{2}$ are back-and-forth
+equivalent
+
+\begin{prop} %\mn{see Zio:Primordial, use \ref{strongelm} in one direction}
+Assume $M$ and $M^{\prime}$ are two models of $T^{2,\omega}$. Let $a$ and $a^{\prime}$
+be tuples of $M_{1}$ and $M^{\prime}_{1}$ respectively. Then $a\equiv a^{\prime}$\mn{\"aqv:$\gena{a}{M}\equiv \gena{a^{\prime}}{M^{\prime}}$?} if and only
+if the selfsufficient closure $\gena{\ssc_{2}(a)}{M}$ is $\nla{2}$-isomorphic to
+$\gena{\ssc_{2}(a^{\prime})}{M^{\prime}}$
+via a Lie morphism mapping $a$ bijectively onto $a^{\prime}$. Since $\triv$ is self-sufficient
+in every model, the theory $T^{2,\omega}$ is complete.
+\end{prop}
+
+{\bf (explain in detail:)}{\sl Any two (finite) strong tuples $\bar a ^{1}$ and
+$\bar a ^{2}$ from two rich $\Kl{2}$-algebras $K^{1}$ and $K^{2}$ respectively,
+such that $\gena{\bar a ^{1}}{K^{1}}\simeq\gena{\bar a ^{2}}{K^{2}}$ can be
+matched up by an Ehrenfeucht-Fra\"iss\'e game of lenght $\omega$. Without
+loss of generality we may assume both $\bar a ^{i}$ to be contained in $K^{i}_{1}$,
+for assume for instance, $w=w_{1}+w_{2}$ is in $\bar a ^{1}$ for $w_{2}\neq\triv$.
+If $w_{2}$ is an homogeneous sum of Lie products from $K^{1}_{1}\cap\gena{\bar a ^{1}}{K^{1}}$ then replace $w$ with $w_{1}$ (and do the same for the corresponding
+element of $\bar a ^{2}$), otherwise pick $m$ in $K_{1}^{1}$ with $[m,e^{1}]=w_{2}$ for
+some $e^{1}\in K^{1}_{1}\cap\gena{\bar a ^{1}}{K^{1}}$ (this space may be also
+assumed to be non trivial). We have $\bar a ^{1} m$ is still strong in $K^{1}$.
+
+{\bf FIX: for non $\nla{2}$-subalgebras, it is not clear, what does it mean to be
+``strong'' (check on [Bad96] analogous condition for groups)}}.
+
+We say that a tuple $\bar a$ in $M\in\Kl{2}$ is a {\em strong tuple}\mn{{?}see ``constructions'' in AddColl} if there exists
+a strong finite subspace $H_{1}$ in $M_{1}$ such that $\bar a\inn \gena{H_{1}}{M}$
+and such that the set of elements from $H_{1}$ which are not in $\bar a$ are $d_{2}$-independent over $M_{1}\cap\bar a$.
+
+\bigskip
+A description of Types {\em à la John B. Goode} follows. The guiding principle here
+is that the type of a finite subspace $B_{1}$ in $T^{2,\omega}$ %of $M_{1}$ where
+is actually determined by the quantifier-free diagram of the self-sufficient closure
+of $B_{1}$.
+
+Recall that $M_{1}$ is equipped with the pregeometry
+coming from $d_{2}$. We will essentially use this dimension
+to classify types of elements.
+
+\begin{cor}\mn{or somewhat similar}\label{isola}
+Let $B_{1}$ be a strong space of $M_{1}$ for some $\omega$-saturated
+model $M$ of $T^{2,\omega}$.
+
+Assume $a$ is a tuple in $M_{1}$ such that $d_{2}(a\quot B_{1})=0$.
+Write the quantifier-free diagram of $\ssc(B_{1},a)$ as a $\La_{B_{1}}$ formula $\Delta(x,y)$, where $x$ is a placeholder for $a$
+and for any tuple $c$ of $M_{1}$, for $M$ to satisfy $\Delta(a,c)$ means that
+$\gena{B_{1},a,c}{M}\simeq_{\Fp}\ssc(B,a)$.
+
+Then $\exists y\Delta(x,y)$ isolates $\tp{a}{B_{1}}$.
+\end{cor}
+We need also the following (easy) general lemma
+\begin{lem}\label{RMU}
+Let $T$ be a complete theory with
+infinite models.\mn{do we need $T$ to be t.t.} Fix some parameter set $A$
+and let $\mathfrak{X}$ be a family of isolated types
+in $\ssp{}{A}$ which is closed under extensions.
+
+Then Morley rank and $U$-rank agree on $\mathfrak{X}$.
+\end{lem}
+\begin{proof}
+Since the inequality $U(p)\leq RM(p)$ for all $p$ in $\ssp{}{A}$, we have to show that for any
+ordinal number $\kappa$ and all $p$ in $\mathfrak{X}$, if $RM(p)\geq\kappa$ then also $U(p)\geq\kappa$.
+
+We proceed by induction on $\kappa$, and consider just the successor case. Assume the inequality has
+then been proved for all cardinals less than $\kappa+1$ and
+$RM(p)\geq\kappa+1$. Let $\varphi$ be a formula isolating $p$ and $\psi$ %\models\varphi$ a
+a rank $\kappa$ formula which implies $\phi$. Let $q$ be a generic type of $\psi$ which extends $p$, now
+since $q$ belongs to $\mathfrak{X}$ and $MR(q)\geq\kappa$ then $U(q)\geq\kappa$ by induction.
+We can conclude $U(p)\geq\kappa$.
+\end{proof}
+
+We can now prove
+\begin{teo}
+$T^{2,\omega}$ is totally transcendental\mn{is it true?} of Morley Rank
+$\omega2$ and Morley degree $1$.
+%Let $M$ be a model of $T^{2,\omega}$, then the definable set
+%$M_{1}$ is connected and has Morley rank $\omega$.
+\end{teo}
+\begin{proof}
+Let $M$ be an $\omega$-saturated model, that is,
+an elementary strong subalgebra of $\mathbb{M}$ by lemma \ref{}.
+
+Since $M$ is generated as an algebra by $M_{1}$, 
+we can restrict our analysis to $\ssp{P_{1}}{B}=\{p\in\ssp{1}{B}\mid p\models P_{1}\}$
+for finite sets of parameters $B$ of $M$.\mn{or only countably
+many ``$\delta_{2}$-geometric'' constructions à la {\sl Add.ve Collpse}}
+
+
+\smallskip
+Note that for types {\em over models} $\sig{2}{4}$ implies that a type of an element
+$a$ of $\mathbb{M}$ is {\em interalgebraic} with the type of an element $m$ of $\mathbb{M}_{1}$.
+
+\smallskip
+So consider $\tp{m}{B}$ where $m$ is in $M_{1}$.
+Since the self-sufficient closure is always contained in the algebraic closure of $B_{1}$,
+during rank computations,
+we might always assume that $B=B_{1}$ is a selfsufficient subspace of $M_{1}$.
+
+Assume first $d_{2}(m\quot B_{1})=0$. Take $A_{1}$ to be the self-sufficient closure
+$\ssc(B_{1},m)$ of $m$ over $B$. And discompose $A_{1}$ into a finite chain of finite
+subspaces $A^{i}$ such that
+$$B=A^{0}\zsu{}A^{1}\zsu{}\,\cdots\,\zsu{} A^{n}=A$$
+where each $A^{i+1}\quot A^{i}$ is a minimal extension.
+
+Since $d_{2}(m\quot B_{1})=\delta_{2}(A_{1}\quot B_{1})=d_{2}(A\quot B)=0$,
+in particular for each $i$ $d_{2}(A^{i+1}\quot A^{i})=0$
+hence if we apply lemmas \ref{isola} and \ref{RMU} to this situation,
+we can use additivity of $U$-rank as folows
+\begin{align*}
+RM(m\quot B_{1})=RM(A_{1}\quot B_{1})=U(A_{1}\quot B_{1})=\\
+=U(A^{n}\quot A^{n-1})+\,\dots\,+U(A^{1}\quot A^{0}) %=\\
+%=RM(A^{n}\quot A^{n-1})+\,\dots\,+MR(A^{1}\quot A^{0})
+\end{align*}
+
+We must now show that a minimal non-algebraic $\delta_{2}$-strong extension has
+rank and degree $1$. To do this we prove that such a type
+is {\em minimal} in the sense that it admits just one non-algebraic extension to
+every $C_{1}\nni B_{1}$.
+
+Assume then $A_{1}\quot B_{1}$ is a minimal non-algebraic strong extension
+and $C_{1}$ some subspace of $M_{1}$
+containing $B_{1}$ which can again be chosen self-sufficient.
+
+Since $A_{1}$ is a prealgebraic extension of $B_{1}$ and the intersection $A_{1}\cap C_{1}$ is again
+strong in $M_{1}$, we have that either $A_{1}$ {\em is contained} in $C_{1}$ or $A_{1}\cap C_{1}=B_{1}$
+and $0\leq\delta(A_{1}\quot C_{1})\leq\delta(A_{1}\quot B_{1})=0$, which implies that $A_{1}$ and $C_{1}$
+are in free composition over $B_{1}$. Since $A_{1}+C_{1}$ is self-sufficient, the isomorphism type
+of $\gena{A_{1}+C_{1}}{M}$ fully determines the type of $A_{1}$ over $C_{1}$, this gives but only one type
+over $C_{1}$.
+
+We conclude that $\tp{m}{B_{1}}$ has finite rank and degree $1$. Anyway, since in a rich model
+we can find arbitrarily many successive prealgebraic extensions nested one on top of the other,
+there is no a priori bound to such rank (which does not occur in the corresponding
+collapsed theory).
+
+
+\medskip
+If on the other hand $d_{2}(m\quot B_{1})=1$ then $\gen{m,B_{1}}$ is self sufficient\mn{prove} in $M_{1}$
+and, hence for this kind of elements there is only one type.
+
+The above dimensional dichotomy describes the picture of $\ssp{P_{1}}{B_{1}}$, this being partitioned
+into two subsets: on one side, a collection of types of finite, unbounded rank, on the other one single type, which
+has then necessarily rank $\omega$.
+
+\medskip
+To see that $M$ has rank $\omega2$
+we will essentially map definably onto $M_{1}$ onto $M_{2}$.
+and use the fact that $M=M_{1}\oplus M_{2}$.
+
+To do this consider an element $c$ of $M_{1}$, since ranks are preserved up to
+a finite choice of fixed parameters, we can actually work in $T^{2,\omega}_{c}$.
+
+Consider the linear map $\map{\lambda_{c}}{M_{1}}{M_{2}}$ defined by $m\mapsto[c,m]$.
+Then $\lambda_{c}$ is pure definable, onto by property $\sig{2}{4}$, and by axiom $\sig{2}{2}$,
+has kernel $\gen{c}$, which is a $p$-element set. It follows that $RM(M_{2})=RM(M_{1})$.
+
+%-------------------UNCOMMENT TO KEEP CALCULATIONS SEPARATED----------------------------------
+%\end{proof}
+
+%As a corollary
+%\begin{teo}
+%$T^{2,\omega}$ is $\omega$-stable\mn{follows from rank arguments?} connected of Morley Rank $\omega2$.
+%\end{teo}
+%\begin{proof}
+%Let $M$ be  an $\omega$-saturated model of $T^{2,\omega}$, to see that $M$ has rank $\omega2$
+%we will essentially map definably onto $M_{1}$ onto $M_{2}$.
+%and use the fact that $M=M_{1}\oplus M_{2}$.
+%
+%To do this consider an element $c$ of $M_{1}$, since ranks are preserved up to
+%a finite choice of fixed parameters, we can actually work in $T^{2,\omega}_{c}$.
+%
+%Consider the linear map $\map{\lambda_{c}}{M_{1}}{M_{2}}$ defined by $m\mapsto[c,m]$.
+%Then $\lambda_{c}$ is pure definable, onto by property $\sig{2}{4}$, and by axiom $\sig{2}{2}$,
+%has kernel $\gen{c}$, which is a $p$-element set. It follows that $RM(M_{2})=RM(M_{1})$.
+
+%\bigskip
+%If we wish to count types in $\ssp{n}{M_{1}}$ where $M$ is a countable model
+%we have to look at types of finite tuples $b$ inside some big saturated model $\mathbb{M}$.
+%Again take the self-sufficient closure $A_{1}$ of $\gen{M_{1},b}$
+\end{proof}
+
+\begin{prop}
+Forking in $T^{2,\omega}$ is geometric $d_{2}$-dependence in the following sense:
+for a type $\tp{m}{A}$ not to fork
+over $B$ exactly means that %$\gen{m}$ is in free composition with $A$ over $B$.
+$d_{2}(m\quot A)=d_{2}(m\quot B)$.\mn{necessarily tuples?}
+
+\end{prop}
+\begin{proof}
+%Assume $d_{2}(m\quot B)=d_{2}(m\quot A)$, 
+We will show $U(m\quot B)=U(m\quot A)$ and, by transitivity of forking, assume $A\quot
+B$ a minimal self-sufficient extension, with $A$ strong in $\mathbb{M}$ .
+
+Note that, unlike in $T^{2}$, we don't have $d_{2}(m\quot B)=RM(m\quot B)=U(m\quot B)$ here,
+which trivially implies the statement.
+
+Our hypothesis implies $\delta_{2}(\ssc_{2}(B_{1},m)\quot B_{1})=\delta_{2}(\ssc_{2}(B_{1},m)\quot A_{1})$,
+since
+\begin{multline*}
+\delta_{2}(\ssc_{2}(B_{1},m)\quot B_{1})=\\
+=d_{2}(m\quot B)=d_{2}(m\quot A)\leq\\
+\leq d_{2}(\ssc_{2}(B_{1},m)\quot A)\leq\delta_{2}(\ssc_{2}(B_{1},m)\quot A_{1})
+\end{multline*}
+Since also $B_{1}=\ssc_{2}(B_{1},m)\cap A_{1}=B_{1}$, we have that
+$\ssc_{2}(B,m)$ is in free composition with $A$ over $B$.
+
+%Moreover since $A_{1}+ssc(B_{1},m)$ is self-sufficient, we deduce that
+%$\ssc_{2}(A,m)\simeq\am{\ssc_{2}(B,m)}{B}{A}$\mn{sci-fi?}
+On the other hand we have $\ssc_{2}(A,m)=\ssc(\ssc(B_{1},m)+A_{1})$
+
+
+\end{proof}
+\begin{cor}
+$T^{2,\omega}$ has weak elimination of imaginaries.
+\end{cor}
+\begin{proof}
+We show that types over models have real canonical bases.
+Consider a finite tuple $a$ in $\mathbb{M}_{1}$, a model $M$ and
+the type $\tp{a}{M_{1}}$.
+As usual we consider $\ssc(M_{1},a)$ which is $\gen{M_{1},b}$ for some
+finite tuple $b$. Inside $\gen{M_{1},b}$ consider the self-sufficient closure $B_{1}$
+of $b$ and set $c=B_{1}\cap M_{1}$. $c$ is strong in $\mathbb{M}$. Now with some $\delta_{2}$-calculous
+we can show that $c$ is the minimal strong space in $M_{1}$ such that
+$d_{2}(a\quot c)=d_{2}(a\quot M)$ and $B_{1}$ is in free composition with $M_{1}$ over $c$. 
+
+Together with the characterisation of forking in $T^{2,\omega}$,
+we have that the real tuple $c$ can, up to interdefinability, play the role of a canonical base.
+ \end{proof}
+ 
+ Note that in the collapsed case of $T^{2}$, the above result follows immediately by Lascar-Pillay, because
+ we have strong minimality and the algebraic (geometric) closure of $\triv$ is infinite.

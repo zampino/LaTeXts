@@ -1,0 +1,282 @@
+Recall from Section \ref{stab}, that between tuples $\bar a$ and small sets $\mathcal{A},\mathcal{B}$ of $\mathbb{M}$, forking independence relation $\ffin{\bar a}{\mathcal{B}}{\mathcal{A}}$ holds whenever $\mr(\bar a/\mathcal{B})=\mr(\bar a/\mathcal{AB})$.
+
+\medskip
+We will use the following notation and facts in the sequel. 
+\medskip
+\begin{rem}\label{tuttuno}{\ }
+For a fixed non-trivial element $m$ of $\mathbb{M}_{1}$ we define:
+\begin{align} %\tag{$\Gamma$} %_{m}$} %\label{derivem}
+\lmap{\vartheta_{m}}{{\mathbb{M}_{1}}\times\mathbb{M}_{1}&}{\mathbb{M}}\label{tuttheta}\\\notag
+(a_{1},a_{2})&\longmapsto a_{1}+[m,a_{2}]
+\end{align}
+for all $a_{1},a_{2}$ in $\mathbb{M}_{1}$. Note that $\theta_{m}$ is
+a $\Fp$-linear (non-bilinear) morphism. We have
+\begin{itemize}
+\item[1.]For any fixed $m\neq\triv$ of $\mathbb{M}_{1}$ the map $\theta_{m}$ defined in above is surjective and 
+its fibres are all isomorphic to $\Fp$.
+\item[2.]For any tuple $\bar a$ of $\mathbb{M}$ and small sets $\mathcal{A},\mathcal{B}$ there exists
+a tuple $\bar a^{\prime}$ of $\mathbb{M}_{1}$ and {\em subspaces} $A_{1}, B_{1}$ of $\mathbb{M}_{1}$ such that
+$\ffin{\bar a}{\mathcal{B}}{\mathcal{A}}$ iff $\ffin{\bar a^{\prime}}{{B_{1}}}{{A_{1}}}$.
+\item[3.]For any tuple $\bar a\inn\mathbb{M}$ and set $\mathcal{A}\inn\mathbb{M}$ there exists
+an $\nla{2}$-subalgebra $A$ of $\mathbb{M}$ interalgebraic with $\mathcal{A}$ such that $\mr(\bar a/\mathcal{A})=\mr(\bar a/A)=\mr(\bar a/A_{1})$.
+\end{itemize}
+\end{rem}
+\begin{proof}
+Statement 1. follows by Axiom $\sig{2}{4}$ for the surjectivity, while by $\sig{2}{2}$ its fibres have all
+size exactly $p$: as pointed out in Section \ref{deltadue}, $[m,u]=[m,v]$ implies necessarily $u-v$ linearly depends of $m$.
+
+\medskip\noindent
+For 2. choose an element $m$ in $\mathbb{M}_{1}$ with $\ffin{m}{\mathcal{B}}{\,\mathcal{A},\bar a}$.
+The properties of the definable map $\vartheta_{m}$ above,
+allow us to find subspaces $B_{1}\inn A_{1}\inn\mathbb{M}_{1}$ with $m\in B_{1}$ and a tuple $\bar a^{\prime}\inn\mathbb{M}_{1}$, such that
+$B_{1}\inn\acl(m,\mathcal{B})$, $\mathcal{B}\inn\dcl(B_{1})$, $A_{1}\inn\acl(m,\mathcal{B},\mathcal{A})$, $\mathcal{A}\inn
+\dcl(A)$, $\bar a^{\prime}\in\acl(m,\bar a)$ and $\bar a\inn\dcl(m,\bar a^{\prime})$.
+
+Some forking calculus (Remark \ref{re:extrafking}) now yields
+$$\ffin{\bar a}{\mathcal{B}}{\,\mathcal{A}}\iff\ffin{\bar a}{m,\mathcal{B}}{\,\mathcal{A}}\iff\ffin{\bar a^{\prime}}{B}{A}$$ and hence the desired equivalence.
+
+\medskip\noindent
+3. is proven by similar same arguments.
+%assume we want to compute $\mr(a/\bf m)$ for $a$ in $\mathbb{M}_{1}$ and an arbitrary finite set ${\bf m}$ of $\mathbb{M}$.
+%Assume $b$ is %a finite set of $\mathbb{M}_{1}\backslash\{\triv\}$ 
+%non-zero element of $\mathbb{M}_{1}$ which is forking-independent of
+%$a$ over ${\bf m}$. Now choose -- with $\sig{2}{4}$ -- a finite set ${\bf c}$ of $\mathbb{M}$ %of the same length of ${\bf m}$, such that
+%such that for any $m\in{\bf m}$, $m_{1}\in{\bf c}$ and $m_{2}=[b,c]$ for some $c\in{\bf c}$ and such that all $c$ in ${\bf c}$ are employed in
+%such a task. %If we denote by ${\bf m}_{1}$ the set of all $P_{1}$-components of elements in ${\bf m}$,
+%$\sig{2}{2}$ now yields
+%${\bf c}\inn\acl(b,{\bf m})$ and ${\bf m}\inn\dcl({\bf c},b)$ and this is enough to infer
+%\begin{labeq}{forkuno}
+%\mr(a/{\bf m})=\mr(a/b\,{\bf m})=\mr(a/b\,{\bf m}{\bf c})=\mr(a/b\,{\bf c}).
+%\end{labeq}
+\end{proof}
+%{\center \rule{\textwidth}{0.5pt}}
+
+With a fine description of types in $T_{2}$ {\em à la John B. Goode} (\cite{jbg}) it will be possible
+to calculate Morley rank of $\mathbb{M}$.
+\begin{teo}\label{titi}
+$T^{2}$ has Morley Rank $\omega\cdot2$ and Morley degree $1$.
+\end{teo}
+The crucial step in the proof relies in the following proposition. With $S(B)$ for $B\inn\mathbb{M}$ we denote the union
+of all $\ssp{n}{B}$ as $n$ ranges in $\omega$. %, while with $P(\bar x)$ we denote the formula
+%$P_{1}(x_{1})\wedge\dots\wedge P_{1}(x_{n})$.
+\begin{prop}\label{dizero}
+Let $B$ a finite self-sufficient subalgebra of $\mathbb{M}$.
+
+Consider the following set of types in $\ssp{}{B}$
+\begin{labeq}{tpdizero}
+{\mathfrak X}=\{\tp{\bar a}{B}\mid B\zsu{}\mathbb{M},\bar a\inn\mathbb{M}_{1}, d(\bar a/B)=0\},
+\end{labeq}
+then $\mr(p)$ and $U(p)$ are finite and coincide for all type $p$ in ${\mathfrak X}$.
+
+The finite rank of $\tp{\bar a}{B}$ coincide with the
+number of prealgebraic steps in a minimal decomposition of $\ssc(B,\bar a)$ over $B$.
+\end{prop}
+\begin{proof}
+As the $\cl_{2}$-dimension over $B$ of a tuple $\bar a$ is an invariant of the type of $\bar a$ over $B$, the family ${\mathfrak X}$ is well defined. For a fixed $B$ and length $n$, $\ssp{n}{B}\cap{\mathfrak X}$ is a closed set. % in $\gen{P_{1}(\bar x)}$.
+
+By Lemma \ref{isola} each type of $\mathfrak{X}$ is isolated. Moreover if $q\in\ssp{}{C}$ extends a type $p$ of $\mathfrak{X}$ over $B$,
+for some finite set $C$ above $B$, then by $\ssc$ we find a finite strong subspace $D_{1}\zsu{}\mathbb{M}_{1}$ such that
+$B\inn D$ and $D\inn\acl(C)$. Of course $d(\bar a/D)=0$ for any realisation $\bar a\inn\mathbb{M}_{1}$ of $q$. % and $D\inn\acl(C)$.
+
+Therefore, up to algebraicity, the assumptions of Lemma \ref{RMU} with respect to $\mathfrak{X}$ are fulfilled. Morley rank
+and $U$-rank do coincide on $\mathfrak{X}$.
+
+\medskip
+We are now to prove that types in $\mathfrak{X}$ have finite rank, to do this assume $d(\bar a/ B)=0$
+for some tuple $\bar a$ of $\mathbb{M}_{1}$ and set $A$ equal to $\ssc(B,\bar a)$.
+
+Assume first that $A$ is a {\em minimal extension} of $B$. Then since
+$d(A/ B)=d(\bar a/ B)=0$, then $A$ is either algebraic or pre-algebraic over $B$.
+
+In the former case, then clearly $\mr(\bar a/B)=0$. Next we show that the type
+of a pre-algebraic extension $A$ of a self-sufficient algebra $B$ in $\mathbb{M}$,
+is {\em minimal} in the sense that it admits a unique non-algebraic extension to
+every set $C$ containing $B$, this is equivalent for such types to have Lascar rank $1$.
+In our case, since Morley and Lascar rank coincide, these types are actually {\em strongly} minimal.
+
+That $A$ isn't algebraic over $B$ is Lemma \ref{acldiv}.
+We may then take without loss, a subspace $C_{1}$ of $\mathbb{M}_{1}$ containing $B_{1}$.
+Since $A$ is minimal over $B$ and the intersection $A_{1}\cap\ssc(C_{1})$ is strong in $A_{1}$ after Lemma \ref{2cut},
+then either $A$ {\em is contained} in $\ssc(C)$ -- hence algebraic over $C$ -- or $A_{1}\cap\ssc(C_{1})=B_{1}$.
+In the latter case we have $0\leq\delta(A/\ssc(C))\leq\delta(A/B)=0$, which implies that $A$ and $\ssc(C)$
+are in free composition over $B$ (Lemma \ref{freecomp}) and that $A+\ssc(C)$ is self-sufficient in $\mathbb{M}$
+(Lemma \ref{samedelta2}).
+
+Since by Proposition \ref{bafo} the isomorphism type of
+$$\ssc(A+C)=\gena{A_{1}+\ssc(C_{1})}{M}\simeq\am{A}{B}{\ssc(C)}$$
+fully determines the type of $A$ over $C$, this gives but only one non-algebraic type over $C$ extending
+$\tp{A_{1}}{B}$. That is $\mrd(\bar a/B)=(1,1)$.
+
+\smallskip
+For the case in which $A$ is not minimal over $B$ let
+$$B=A^{0}\zsu{}A^{1}\zsu{}\,\cdots\,\zsu{} A^{n}=A$$
+be a minimal decomposition of $A$ over $B$ as in \pref{mindec}.
+
+Since again $d(A^{i+1}/ A^{i})=0$ for each $i$, each section $A_{1}^{i+1}/ A_{1}^{i}$ is of algebraic
+or pre-algebraic kind.
+
+We may now use additivity of Lascar Rank (Fact \ref{uddi}) and obtain
+\begin{align*}
+\mr(\bar a/B)=U(\bar a/ B)=U(A/ B)
+=U(A^{n}/ A^{n-1})+\,\dots\,+U(A^{1}/ A^{0}) %=\\
+\end{align*}
+and conclude $\mr(\bar a/ B)\leq n$.
+
+\smallskip
+We have shown that,
+types $\tp{\bar a}{B}$ of tuples $\bar a$ of $\mathbb{M}_{1}$,
+over a strong $B_{1}\inn\mathbb{M}_{1}$, such that
+$d(\bar a/B)=0$, do have finite Morley Rank, and
+this rank coincides with the number of pre-algebraic steps in a minimal decomposition
+of $\ssc(B,\bar a)$ over $B$, which is a posteriori an invariant of types in ${\mathfrak X}$.
+\end{proof}
+
+\medskip
+\begin{proofof}{Theorem \ref{titi}}
+
+\noindent
+({\sl 1$^{\text{\uline{st}}}$ Claim})\quad$\mr(\mathbb{M})=\mr(\mathbb{M}_{1}\times\mathbb{M}_{1})$
+and $\md(\mathbb{M})\leq\md(\mathbb{M}_{1}\times\mathbb{M}_{1})$.
+
+\smallskip
+Considering the definable map $\vartheta_{m}$ of Remark \ref{tuttuno}.
+With Fact \ref{ziemr}({\it 1.}) we obtain $\mr(\mathbb{M}_{1}\times\mathbb{M}_{1})=\mr(\mathbb{M})$. The statement
+about degrees is also trivial.
+
+\medskip\noindent
+({\sl 2$^{\,\text{\uline{nd}}}$ Claim})\quad $\mrd(\mathbb{M}_{1})=(\omega,1)$.
+\smallskip
+
+The claim will follow by showing that there is a unique generic type
+in the group $(\mathbb{M}_{1},+)$, such type having Morley rank $\omega$.
+
+By the {\em finite} local character (cfr. Fact \ref{stableforking}) of non-forking in totally transcendental theories,
+in order to compute the rank of types in $T^{2}$, it is enough to consider finite sets of parameters.
+
+We can therefore restrict our analysis to the clopen sets
+$$\ssp{{P}_{1}}{B}:=\{p\in\ssp{1}{B}\mid P_{1}(x)\in p\}$$
+for finite %\mn{actually arbitrary}
+sets of parameters $B$ in $\mathbb{M}$. 
+
+Moreover by Remark \ref{tuttuno} and algebraicity of $\ssc$, the sets $B$ above may always be assumed to be
+finite strong $\nla{2}$-subalgebras of $\mathbb{M}_{1}$.
+
+By Remark \ref{indtypes}, all the elements of $\mathbb{M}_{1}$ which are $\cl_{2}$-independent of $B$
+have all the same type over $B$, which we denote by $p_{B}$.
+
+Denote by $\mathfrak{X}_{B}$ %=\{%p\in\ssp{{P}_{1}}{B}
+the set of all types $\tp{m}{B}$ %\mid m\ind(m/ B)=0\,\text{whenever $m\sat p$}\}$,
+of elements $m$ of $\mathbb{M}_{1}$ with $d(m/ B)=0$.
+
+We have then
+\begin{labeq}{stoned}
+\ssp{P_{1}}{B}=\mathfrak{X}_{B}\cup\{p_{B}\}
+\end{labeq}
+and Morley rank of types in ${\mathfrak X}_{B}$ is finite by Proposition \ref{dizero}.
+
+On the other hand, by Remark \ref{prealgchain} the rich model $\mathbb{M}$ can embed
+arbitrarily long chains of prealgebraic extensions. This implies by Proposition \ref{dizero},
+Morley rank of types in $\mathfrak{X}_{B}$ is not bounded.
+
+\smallskip
+As a result, we have $\mr(p_{B})\geq\omega$ and, by Remark \ref{belrango} for any formula $\psi(x)$ over $B$,
+either $\mr(\psi(x))=0$ or $\mr(\neg\psi(x))=0$. Hence $\mr(p_{B})=\omega=\mr(\mathbb{M}_{1})$ for any strong finite $B$.
+
+When $B=\triv$, the unique generic type $p_{\triv}$ in $\mathbb{M}_{1}$ over $\vac$ is the type of any non-trivial element, it follows
+$\mathbb{M}_{1}$ is connected and the claim is proved.
+
+In particular since Lascar rank is connected, then $U(p_{B})$ must also be equal to $\omega$.
+That is for complete types in $P_{1}$ Lascar rank and Morley rank do coincide.
+
+\bigskip\noindent
+({\sl 3$^{\,\text{\uline{rd}}}$ Claim})\quad $\mrd(\mathbb{M}_{1}\times\mathbb{M}_{1})=(\omega\cdot2,1)$.
+
+It suffices once again to discuss rank of types of couples of elements in $\mathbb{M}$ over finite strong subspaces.
+Once again, we use $\cl_{2}$ dimension, to discern kind of types.
+
+Let $B$ be a fixed finite
+self-sufficient algebra in $\mathbb{M}$, for arbitrary elements
+$a,b$ of $\mathbb{M}_{1}$, we have $d(a,b/B)=d(a/B,b)+d(b/B)\leq2$.
+
+We may therefore assume without loss of generality, one of the following
+three cases holds:
+\begin{itemize}
+\punto{1}$d(a,b/B)=2$
+\punto{2}$d(a/B,b)=0$ and $d(b/B)=1$
+\punto{3}$d(a,b/B)=0$
+\end{itemize}
+%Also, these three situations exhaust all kind of types of pairs in $\mathbb{M}_{1}$.
+
+In the first case, $a$ and $b$ are in particular linearly independent over $B_{1}$ and
+by Lemma \ref{samedelta2} we have $B_{1}\zsu{}\gen{B_{1},a}\zsu{}\gen{B_{1},a,b}\zsu{}\mathbb{M}_{1}$.
+Remark \ref{indtypes} implies that such pairs have all the same type over $B$.
+This type will be denoted $q_{B}$.
+
+\smallskip
+On the other hand, by Proposition \ref{dizero}, all types in (3) with $d(a,b/B)=0$
+have finite -- unbounded -- Morley (=Lascar) rank.
+
+\smallskip
+Now we have to deal with case (2) Types. We show for such
+types Morley rank is bounded by $\omega\cdot2$.
+
+Let $\bar c$ a tuple in $\mathbb{M}_{1}$ such that $\ssc(B,a,b)=\gena{B_{1},a,b,\bar c}{\mathbb{M}}$, we have
+$$
+\mr(a,b/B)=\mr(a,b,\bar c/B)\leq\mr(\varphi(x,\bar y,z))
+$$
+where $\varphi(x,\bar y,b)$ describes the quantifier-free $\Lan{2}_{Bb}$-type of $A\defeq\ssc(B,a,b)$ like in
+Corollary \ref{isola}. The variables $x,\bar y$ take the places of $a,\bar c$.
+
+Moreover since by (2) $d(a,\bar c/B,b)=0$, let $\mr(a,\bar c/B,b)=r<\omega$. Note also that $\gen{B_{1},b}$ is strong,
+and that $r$ coincides with the number of pre-algebraic extensions in a minimal decomposition of $A$ over $\gena{B_{1},b}{\mathbb{M}}$.
+
+We want to apply Fact \ref{ziemr}.({\it 2.}) to the definable map $\map{\pi}{\mathscr{D}}{\mathscr{E}}$
+where $\mathscr{D}$ denotes $\varphi(\mathbb{M}_{1})$ and $\mathscr{E}$ stands for $((\exists x\exists\bar y)\varphi)(\mathbb{M}_{1})$ and $\pi$ is just the projection $(x,\bar y,z)\mapsto z$.
+
+By the second claim above $\mr(\mathscr{E})$ is at most $\omega$ and if $e$ is an element of $\mathscr{E}$,
+we will prove $\mr(\pi^{-1}(e))=\mr(\varphi(x,\bar y,e))$ is smaller than $r$.
+
+By Remark \ref{belrango} it suffices to prove $\mr(p(x,\bar y))\leq r$ for types $p$ in $\ssp{x,\bar y}{C}$ whenever
+$p$ implies $\varphi(x,\bar y,e)$ and $C$ is a finite self-sufficient subalgebra of $\mathbb{M}$ which contains $B$ and $e$.
+
+Let $u,\bar v$ realise $p(x,\bar y)$ over $C$ and let $U$ denote $\gena{B_{1},e,u,\bar v}{\mathbb{M}}$.
+
+Now $\varphi(u,\bar v,e)$ witness $\gena{B_{1},e}{\mathbb{M}}\zsu{}U$ and a minimal decomposition %of $A$ over $\gena{B,e}{\mathbb{M}}$,
+$$\gena{B_{1},e}{\mathbb{M}}\zsu{}U^{1}\zsu{}\cdots\zsu{}U^{n}=U$$
+with at most $r$ pre-algebraic steps and $\delta(U^{i+1}/U^{i})=0$ for all $i$.
+
+Since Lemma \ref{2cut} implies $C_{1}\cap U_{1}\zsu{}U_{1}$, then $C_{1}$ meets $U_{1}$ necessarily in some $U_{1}^{k}$ for
+$1\leq k\leq n$. Moreover $\delta(U/C)\leq\delta(U/U^{k})=0$ and then $C+U$ is self-sufficient. This yields
+$$\ssc(C,u,\bar v)=C+U=\am{U}{U^{k}}{C}$$ %\am{\gena{U_{1}^{k},u,\bar v}{\mathbb{M}}}{U^{k}}{C}$$
+and $d(u,\bar v/C)=0$. Now by Lemma \ref{mindecamalg}
+\begin{labeq}{decot}
+C\zsu{}C+U^{k+1}\zsu{}\cdots\zsu{}C+U^{n}=C+U
+\end{labeq}
+is a minimal decomposition of $C+U$ over $C$ with
+$$C+U^{i+1}\simeq\am{U^{i+1}}{U^{i}}{(C+U^{i})}$$
+for all $i\geq k$ and where the minimal extension $C+U^{i+1}$ of $C+U^{i}$ is exactly
+of the same type as $U^{i+1}$ over $U^{i}$. This means that the minimal decomposition \pref{decot} contains
+at most $r$ pre-algebraic steps.
+
+Since as observed before $\mr(u,\bar v/C)=\mr(\ssc(C,u,\bar v)/C)$ coincides
+with the prealgebraic steps of a minimal decomposition between $C$ and $\ssc(C,u,\bar v)$, this rank is bounded
+by $r$.
+This yields $\mr(\varphi(x,\bar y,e))\leq r$ and Fact \ref{ziemr} now implies
+$\mr(\phi(x,\bar y,z))\leq n\cdot(\omega+1)=n\cdot\omega+n=\omega+n$.
+
+As already pointed out in the previous claim, on the other hand $\mathbb{M}$
+is rich enough to embed diagrams with rank exactly $\omega+n$ with
+unboundedly large $n<\omega$. As a result, by the same arguments we used above, the type $q_{B}$
+is the unique generic of Morley rank $\omega\cdot2$.
+It follows $\mr(\mathbb{M}_{1}\times\mathbb{M}_{1})=\omega\cdot2$.
+
+\medskip
+Putting the three claims together we obtain $\mrd(\mathbb{M})=(\omega\cdot2,1)$ and  the theorem is proven.
+\end{proofof}
+\begin{rem}
+Let $\mathbb{G}=G(\mathbb{M})$ be the $\ngb{2}{p}$-group interpretable in $\mathbb{M}$ with Corollary \ref{co:interp}.
+Then $\mathbb{G}$ is a connected $\omega$-stable group of Morley rank $\omega\cdot2$ with $Z(\mathbb{G})=\mathbb{G}^{\prime}$
+and $\mr(\mathbb{G}_{\rm ab})=\mr(G^{\prime})=\omega$.
+\end{rem}
+
+

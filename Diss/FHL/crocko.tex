@@ -1,0 +1,303 @@
+Abusing our previous notation we denote again by $\map{\gam{B}{A}}{\fl{B}}{\fl{A}}$ the canonical map of
+the free-lift of any extension $A\nni B$ of $\nla{2}$-algebras.
+The theorem above is based on the following lemma.
+\begin{lem}\label{crocolemma}
+Let $A$ be an extension of a finite $\nla{2}$-algebra $C$ with %$\dfp(A_{1}/ C_{1})=1$ and
+$A_{1}=\gen{C_{1},a}$ for some $a$ in $A_{1}$ linearly independent over $C_{1}$.
+
+Assume $\delta_{2}(a/ C)\leq0$ and $\left(\tpl{\psi}{n}\right)$ is a basis
+for $\rd(A)$ over $\rd(C)$, where $\psi_{i}=[c_{i},a]-w_{i}$ for linearly independent $\tpl{c}{n}$ in
+$C_{1}$ and $w_{i}$ in $\exs C_{1}$, then $\dfp(\ker(\gam{C}{A}))\leq\dfp\rd(\gen{\tpl{c}{n}})$.
+\end{lem}
+%\begin{figure}[hbt]
+%\centering\includegraphics{kroko}
+%%\caption{That's what happens to nasty relations}
+%\end{figure}
+\begin{proof}
+We first claim that a basis for $\rd(A/ C)$ like in the statement of the lemma
+can always be found. For assume $A_{1}=\geno{a,C_{1}}$, if $(\psi_{i})_{i=1}^{n}$ is a basis of
+$\rd(a/C)$ then, by bilinearity of the Lie product we can assume\footnote{
+express each $\psi_{i}$ in basic monomials with respect to any basis of $A_{1}$, which completes $\{a\}$ and collect all terms which contain $a$.}
+each $\psi_{i}$ to be a sum $[c_{i},a]+w_{i}$,
+where $c_{i}$ is in $C_{1}$ and $w_{i}\in\exs C_{1}$.
+
+The linear independence of the $\psi$'s over $\exs C_{1}$ yields the linear independence of $c_{1},\dots,c_{n}$.
+
+We now  arrange a basis $\mathcal{B}$
+of $A_{1}$ as follows: $\mathcal{B}=\{c_{1}>\dots >c_{n}>\mathcal{C}>a\}$, where $\mathcal{C}$ is some ordering of a base completion of
+$c_{1},\dots,c_{m}$ to $C_{1}$. %It follows the set $(w_{i})$ is also independent.
+
+\medskip
+Recall that $\ker(\gam{C}{A})$ is $(\fla{3}{C_{1}}\cap\J(A))/\J(C)$ and take an homogeneous element
+$\Psi$ in $\fla{3}{C_{1}}\cap\J(A)$ of weight $3$.
+
+Since $\J(A)=[\rd(A),A_{1}]=\sum_{i=1}^{n}[\psi_{i},A_{1}]+[\rd(C),a]+\J(C)$ we may
+assume $\Psi$ is a finite homogeneous sum of weight $3$:
+\begin{labeq}{firstPsi}
+\Psi=\sum_{u\in\mathcal{B}\non\{a\},\,i=1}^{n}\!\!\lambda_{i,u}[\psi_{i},u]+\sum_{i=1}^{n}\theta_{i}[\psi_{i},a]+[\nu,a]
+\end{labeq}
+for $u\in\mathcal{B}$, $\lambda_{u,i},\theta_{i}\in\Fp$ and some $\nu\in\rd(C)$.
+
+We proceed with the same arguments of Proposition \ref{bellemma} concerning basic and {\em pre}basic commutators
+of weight $3$.
+
+We claim first, that terms $[\psi_{i},a]$ do not actually appear in the sum above.
+Consider the unique expression for $\Psi\in\fla{3}{C_{1}}$ as sum of basic monomials
+over $\{c_{i},\mathcal{C}|i=1,\dots,n\}$. These are chosen according to the linear order on $\mathcal{B}$. %with respect to the base $\mathcal{B}$ obtained from \pref{firstPsi}.
+
+On the other hand, from each $[\psi_{i},a]$ we have $[c_{i},a,a]+[w_{i},a]$ and (Engel) basic monomials like
+$[c_{i},a,a]$ cannot be cleared up from the sum \pref{firstPsi} -- applying Jacobi identities -- by any other summand.
+But this would contrast the fact that $\Psi$ belongs to $\fla{3}{C_{1}}$.
+
+Hence $\Psi=\sum_{i,u}\lambda_{i,u}[\psi_{i},u]+[\nu,a]$. Furthermore we affirm that each
+base element $u$ above must belong to the $c_{i}$'s. For assume instead some $u$ is in $\mathcal{C}$,
+and $[\psi_{i},u]=[c_{i},a,u]+[w_{i},u]$ is a non trivial summand in \pref{firstPsi}.
+The basic monomial $[c_{i},a,u]$ -- which cannot appear in the expression over $C_{1}$ for $\Psi$ --
+%cannot be canceled by terms like $[w_{k},v]$. It follows,
+forces the term $[\nu,a]$ to contain $[c_{i},u,a]$ as a summand. This implies {\em both} basic terms $[c_{i},a,u]$ and $[u,a,c_{i}]$
+are to be found in the sum of the $\lambda_{i,u}[\psi_{i},u]$'s in \pref{firstPsi}, which is impossible if $u$ differs from all
+$c_{i}$'s.
+
+%Then $\Psi$ consists of $\sum_{r,s}[\psi With. 
+With totally similar arguments, now follows that $\nu$ also actually
+belongs to $\exs\genp{\tpl{c}{m}}$ and hence to $\rd(\genp{\tpl{c}{m}})$. 
+
+\medskip
+To conclude,  let $k$ be $\dfp(\ker(\gam{C}{A}))$ and $\{\overline{\Psi}^{t}\}_{t<k}$ a basis of such kernel, where
+$$
+\Psi^{t}=\sum_{%\substack{
+r,s=1 %\\r\neq s}
+}^{m}\lambda_{r,s}^{t}[\psi_{r},c_{s}]+[\nu^{t},a]\in\fla{3}{C_{1}}\cap\J(A)
+$$
+for $\nu^{t}$ in $\rd(c_{1},\dots,c_{m})$. % and $b_{s}\in\mathcal{B}\non\{a\}$.
+
+After the due simplifications, each element $\Psi^{t}$ above reduces to
+\begin{labeq}{kelements}
+\Psi^{t}=\sum_{r,s=1}^{m}\lambda_{r,s}^{t}[w_{r},c_{s}].
+\end{labeq}
+
+
+
+We prove the Lemma by showing linear independence of the $\nu^{t}{}^{'s}$.
+So assume there are $(\theta_{t})_{t<k}\inn\Fp$, such that $\sum_{t}\theta_{t}\nu^{t}=\triv$.
+
+It follows $\sum_{t}\theta_{t}\Psi^{t}=\sum_{r,s,t}\lambda_{r,s}^{t}\theta_{t}[\psi_{r},c_{s}]=
+\sum_{r,s=1}^{m}(\sum_{t=1}^{k}\theta_{t}
+\lambda_{r,s}^{t})[\psi_{r},c_{s}]$.
+
+But this yields that  the sum
+$$\sum_{r,s=1}^{m}(\sum_{t=1}^{k}\theta_{t}
+\lambda_{r,s}^{t})[c_{r},a,c_{s}]$$
+belongs to $\fla{3}{C_{1}}$.
+This is impossible -- all $[c_{r},a,c_{s}]$ are basic monomials which are linearly independent over $\fla{3}{C_{1}}$ -- unless
+$\sum_{t=1}^{k}\theta_{t}
+\lambda_{r,s}^{t}$ is trivial for all choices of different $r,s$.
+
+But this gives, then $\sum\theta_{t}\Psi^{t}%=\overline{\sum\theta_{t}\Psi^{t}}
+=\triv$ and hence $\theta^{t}$ has to be trivial for all $t<k$. It follows $k\leq\dfp(\rd(\genp{\tpl{c}{m}}))$ as desired.
+\end{proof}
+
+\bigskip
+In the sequel we denote by $\kerg{B}{A}$ the kernel of $\map{\gam{B}{A}}{\fl B}{\fl A}$ for $A\nni B\in\nla{2}$
+and we set $\dkerg{B}{A}:=\dfp(\kerg{B}{A})$.
+
+For any two extensions $A\nni B\nni C$,
+since $\gam{C}{A}=\gam{C}{B}\gam{B}{A}$,
+$\gam{B}{C}$ maps $K_{B}^{A}$ into $\kerg{C}{A}$ with kernel $\kerg{B}{C}$. In particular we have
+\begin{labeq}{addkerg}
+\dkerg{C}{A}\leq\dkerg{C}{B}+\dkerg{B}{A}.
+\end{labeq}
+
+
+\begin{proofof}{Theorem \ref{crocotheorem}}
+We prove the statement by induction on $l=\dfp(A_{1}/ B_{1})$. For $l=0$
+there is nothing to prove.
+
+For $l=1$ remark that $B$ is {\em not} strong in $A$ and
+apply Lemma \ref{crocolemma} to the finite extension $A\nni B$. This gives $\dkerg{B}{A}\leq\dfp(\rd(c_{1},\dots,c_{n}))$ where
+$c_{1},\dots, c_{n}$ are linearly independent elements of $B_{1}$ and $n=\dfp(\rd(A/B))>1$.
+Now since $A\sat\sig{2}{2}$ then $\dfp(\rd(c_{1},\dots,c_{n}))<n$ and we have $\dkerg{B}{A}\leq n-1=-\delta_{2}(A/B)$.
+
+\medskip
+Assume $l\geq2$. We divide the proof into different cases:\\[+0.5mm]\noindent
+{\bf Case 1:}\quad{\sl There exists a proper subspace $H_{1}$ of $A_{1}$ such that $B_{1}\subsetneq H_{1}\subsetneq A_{1}$ and
+$\delta_{2}(H)\leq\delta_{2}(B)$.}
+
+\smallskip
+The properties of the self-sufficient closure imply $\delta_{2}(H)>\delta_{2}(A)$ and $A=\ssc^{A}(H)$. Take such an $H$ which is minimal with respect to inclusion and with minimal $\delta_{2}(H)$.\\[+1mm]\noindent
+{\bf Case 1.{}1:}\quad$\delta_{2}(H)=\delta_{2}(B)$.
+
+\smallskip
+By the choice of $H$, $B\zsu[2]{}H$, hence $\dkerg{B}{H}=0$ and $\dkerg{B}{A}\leq\dkerg{H}{A}$.
+By induction now $\dkerg{H}{A}\leq-\delta_{2}(A/H)=-\delta_{2}(A/B)$.
+And the assertion follows.\\[+0.8mm]\noindent
+{\bf Case 1.{}2:}\quad$\delta_{2}(H)<\delta_{2}(B)$.
+
+\smallskip
+In this case we have $H=\ssc^{H}(B)$ and $A=\ssc^{A}(H)$. By applying the inductive hypothesis we obtain
+$\dkerg{B}{A}\leq\dkerg{B}{H}+\dkerg{H}{A}\leq-\delta_{2}(H/B)-\delta_{2}(A/H)=-\delta_{2}(A/B)$.\\[+2mm]\noindent
+{\bf Case 2:}\quad{\sl There is no such $H_{1}$ like in Case 1. That is for all $B_{1}\subsetneq H_{1}\subsetneq A_{1}$ we have
+$\delta_{2}(B)<\delta_{2}(H)$.}
+ 
+\smallskip
+Take a subspace $C_{1}\nni B_{1}$ with codimension $1$ in $A_{1}$, such that $A_{1}=\gen{C_{1},a}$ for some
+$a$ in $A_{1}$. We have $B\zsu[2]{}C$ and hence $\gam{B}{C}$ is mono.
+
+We proceed like in Lemma \ref{crocolemma} to find a basis
+\begin{labeq}{basipsi}\psi_{i}=[c_{i},a]+w_{i}\quad\,i=1,\dots,n\end{labeq}
+of $\rd(A)$ over $\rd(C)$ where $w_{i}\in\exs C_{1}$ and the set $(\tpl{c}{n})\inn C_{1}$ is
+linearly independent. Also $n>1$ since $\delta(A/C)<0$.
+
+Moreover, any element $\Psi$ of $\kerg{C}{A}$ is the image modulo $\J(C)$ of a sum
+\begin{labeq}{kca}
+\Psi=\sum_{%\substack{
+i,j=1 %\\r\neq s}
+}^{n}\lambda_{i,j}[\psi_{i},c_{j}]+[\nu,a]=\sum_{i,j=1}^{n}\lambda_{i,j}[w_{i},c_{j}]
+\end{labeq}
+for some $\nu$ in $\rd(c_{1},\dots,c_{n})$ (cfr.~\pref{kelements} above).\\[+2mm]\noindent
+{\bf Case 2.{}1:}\quad{\sl $C_{1}$ is generated by  $B_{1}$ and the $\tpl{c}{n}$.}
+
+\medskip
+For a suitable choice of $m$ independent elements $b_{1},\dots,b_{m}$ of $B_{1}$ and $n-m=:h$ 
+elements $\tpl{a}{h}$ of $C_{1}$ independent over $B_{1}$, we may assume
+that $c_{i}=b_{i}$ for $i=1,\dots,m$ and that $c_{m+i}=a_{i}$ for $i=1,\dots,h$. 
+
+We arrange and order a basis of $A_{1}$ by taking
+$$\{\mathcal{B}>b_{1}>\dots >b_{m}>a_{1}>\dots>a_{h}>a\}$$
+where $\mathcal{B}$ is a completion of $\{b_{i}\mid i=1,\dots,m\}$ to a basis for $B_{1}$
+and $C_{1}=\genp{B_{1}, a_{j}\mid j=1,\dots,h}$.
+
+Observe also that we may assume $m\geq 1$, for otherwise by comparing the expression in \pref{kca}, we would
+have $\fla{3}{B_{1}}\cap\J(A)=\triv$ and hence
+$$\kerg{B}{A}\simeq\gam{B}{C}(\kerg{B}{A})=\kerg{C}{A}\cap\gam{B}{C}(\fl{B})\simeq\frac{(\fla{3}{B_{1}}\cap\J(A))+\J(C)}{\J(C)}=\triv$$
+and the result would trivially follow.
+
+\medskip
+If $k$ denotes the dimension of $\rd(\genp{b_{i},a_{j}})$ and we set  $k_{b}=\dfp(\rd(\genp{b_{i}}))$, then we have
+$k-k_{b}\leq\dfp(\rd(C/B))$ and as $\dfp(\rd(a/C))=n=m+h$,
+\begin{multline*}
+-\delta(A/B)=\dfp(\rd(a/C))+\dfp(\rd(C/B))-(h+1)\geq\\
+\geq m+h+k-k_{b}-h-1\geq m-1-k_{b}+k
+\end{multline*}
+Now since $B$ has $\sig{2}{2}$, $m-1-k_{b}\geq0$ and hence $k\leq-\delta(A/B)$.
+
+Since $B\zsu[2]{}C$ we have $\dkerg{B}{A}\leq\dkerg{C}{A}$ while
+by Lemma \ref{crocolemma} we have $\dkerg{C}{A}\leq k$ and hence
+$\dkerg{B}{A}\leq-\delta(A/B)$ follows.%
+%\smallskip
+%Now we  want to understand a basis of our kernel $K^{A}_{B}$ of the natural map
+%between $\fl B$ and $\fl A$. This is $K^{A}_{B}=(\fla{3}{B_{1}}\cap\J(A))/\J(B)$.
+%Since $\J(A)=[\rd(A),A_{1}]=[\rd(a/ B),A_{1}]+[\rd(B),a]$ our \emph{Crocodile Lemma}
+%tells us we can find a basis $(\Psi^{\alpha})_{\alpha=1}^{k}$ of $K_{B}^{A}$, which has the following shape:
+%$$
+%\Psi^{\alpha}=\sum_{\substack{r,s=1\\r\neq s}}^{m}\lambda_{r,s}^{\alpha}[\psi_{r},b_{s}]+[\nu^{\alpha},a]
+%$$
+%for $\nu^{1},\dots,\nu^{k}\in \rd(b_{1},\dots,b_{m})$.
+%Now if we want to claim linear independence of the $(\nu^{\alpha})^{'s}$, then we assume
+%for some some $\mu_{\alpha}$ in the field, that $\sum_{\alpha=1}^{k}\mu_{\alpha}\nu^{\alpha}=\triv$.
+%But this yields that $\sum_{\alpha=1}^{k}\mu_{\alpha}\Psi^{\alpha}=\sum_{\alpha=1}^{k}\mu_{\alpha}(
+%\sum_{r,s=1}^{m}\lambda_{r,s}^{\alpha}[\psi_{r},b_{s}])$ and therefore the sum
+%$$\sum_{r,s=1}^{m}(\sum_{\alpha=1}^{k}\mu_{\alpha}
+%\lambda_{r,s}^{\alpha})[b_{r},a,b_{s}]$$ belongs to $\fla{3}{B_{1}}$.
+%This is impossible unless $\sum_{\alpha=1}^{k}\mu_{\alpha}
+%\lambda_{r,s}^{\alpha}$ is trivial for all choices of different $r,s$.
+%\emph{Does this imply also that all $\mu^{\alpha}$ are zero??? I don't know
+%what else could be calculated here. And I am sorry  not to see the point.} 
+%
+%\smallskip
+%Statement of crocodile ($k_{B}^{A}:=\dfp(K^{A}_{B})\leq\dfp \rd(b_{1},\dots b_{m})$) is not in peril anyway, for I can replace stepwise
+%each $\Psi^{\alpha}$ by a $\widetilde{\Psi}^{\alpha}$, in such a way that the resulting $\widetilde{\nu}^{\alpha\,'s}$ are independent and such that the $\widetilde{\Psi}^{\alpha\,'s}$ span the whole $K_{B}^{A}$.
+%This has the only disadvantage of mixing up the terms $[\psi_{r},b_{s}]$ in our presentation of $\Psi^{\alpha}$,
+%which is of no harm hier, but could be a problem in \emph{crocodile two} below.
+%
+%\bigskip
+%\subsection*{remarks on the final case}
+%In the second crocodile, our extension $A/ B$ can be presented as $A=\gen{B_{1},c_{1},\dots,c_{n},
+%a_{1},\dots,a_{s},a}$ for independent $b_{1},\dots b_{m}$ in $B$ and independent
+%$c_{1},\dots,c_{n},a_{1},\dots,a_{s},a$ over $B_{1}$,
+%such that, if $C$ denotes
+%$\gen{B_{1},c_{1},\dots,c_{n},a_{1},\dots,a_{s}}$, then $\rd(a/ C)$ is generated by
+%$$
+%\psi_{i}=[b_{i},a]+w_{i}\quad i=1,\dots, m\quad w_{i}\in\exs C_{1}
+%$$
+%$$
+%\phi_{j}=[b_{j},a]+y_{j}\quad j=1,\dots, n\quad y_{j}\in\exs C_{1}.
+%$$
+%If now we set $k=\dfp \rd(b_{1},\dots b_{m},c_{1},\dots, c_{n})$ and $k_{b}=\dfp \rd(b_{1},\dots b_{m})$
+%and  call $C^{\prime}=\gen{B_{1},c_{1},\dots,c_{n}}$.
+%We get
+%$k-k_{b}=\dfp\left(\rd(b_{1},\dots b_{m},c_{1},\dots, c_{n})/ \rd(B)\cap \rd(b_{1},\dots b_{m},c_{1},\dots, c_{n})\right)\leq\dfp \rd(C^{\prime}/ B)$.
+%If we argue like in \emph{Crocodile one}, then we get $\dfp(K_{C}^{A})\leq k$ and by the axioms
+%$k_{b}\leq m-1$.
+%\smallskip
+%Now thanks to some clever arguments (\dots) we can write
+%\begin{multline*}
+%\delta_{2}(A)
+%=\delta_{2}(B)+n+s+1-\dfp \rd(A/ B)=\\
+%=\delta_{2}(B)+n+s+1-(n+m)-\dfp \rd(C/ C^{\prime})-\dfp \rd(C^{\prime}/ B)\leq\\
+%\leq\delta_{2}(B)+s-k_{b}-\dfp \rd(C/ C^{\prime})-(k-k_{b})=\\
+%=\delta_{2}(B)-k+s-\dfp \rd(C/ C^{\prime})=\delta_{2}(B)-k+\delta_{2}(C/ C^{\prime}).
+%\end{multline*}
+%Well this extra term $\delta_{2}(C/ C^{\prime})$ is not that exotic but it would be
+%really annoying if it is positive. Till now I couldn't go much further than this. The funny
+%part of this way of proceeding is that we do not use any inductive step.
+\\[+0.5mm]\noindent
+{\bf Case 2.2:}\quad{\sl $C_{1}$ is not generated by the $c_{i}$'s over $B_{1}$ only.}
+
+\medskip
+In this case, me may assume $C_{1}$ has an ordered basis
+$$\mathcal{C}=\{\mathcal{B}>b_{1}>\dots>b_{m}>a_{1}>\dots>a_{h}>e_{1}>\dots>e_{r}\}$$
+where $r\geq1$, the set $\{b_{i},a_{j}\mid i=1,\dots,m,\,j=1,\dots,h\}$ play the role of $\{c_{i}\mid i=1,\dots,n\}$ as before, and $\mathcal{B}$ completes $\{b_{1},\dots,b_{m}\}$ to a basis of $B_{1}$. Also let $a$,
+which completes $\mathcal{C}$ to a basis of $A_{1}$, be smaller than any other element.
+
+\medskip
+As previously observed, being $\kerg{B}{A}\simeq\gam{B}{C}(\kerg{B}{A})=(\fla{3}{B_{1}}\cap\J(A))+\J(C)/\J(C)$,
+we take into account the representative $\Psi$ in $\fla{3}{B_{1}}\cap\J(A)$ for some
+arbitrary element $\overline{\Psi}$ in $\gam{B}{C}(\kerg{B}{A})$.
+
+For all $j$, if we set $\hat\psi_{j}=\sum_{i}\lambda_{i,j}\psi_{i}$
+and $\hat w_{j}=\sum_{i}\lambda_{i,j}w_{i}$, expression \pref{kca} for $\Psi$ becomes
+$$\Psi=\sum_{j}[\hat\psi_{j},c_{j}]+[\nu,a]=\sum_{j}[\hat w_{j},c_{j}].$$
+
+%On the other side,
+%we can replace %each term $\lambda_{ij}w_{i}$ from \pref{kca}
+%each $w_{i}$ with a sum of basic monomials
+%$\sum_{\alpha}s^{\alpha}_{i}[x^{i,\alpha},y^{i,\alpha}]$ with $x^{i,\alpha}>y^{i,\alpha}$ in $\mathcal{C}$. We obtain in particular
+%\begin{labeq}{krokobasic}
+%\Psi=\sum_{\alpha,i,j}\lambda_{i,j}s^{\alpha}_{i}[x^{i,\alpha},y^{i,\alpha},c_{j}].
+%\end{labeq}
+On the other side,
+we can replace %each term $\lambda_{ij}w_{i}$ from \pref{kca}
+each $\hat w_{j}$ with a sum of basic monomials
+$\sum_{\alpha}s^{\alpha}_{j}[x^{j,\alpha},y^{j,\alpha}]$ with $x^{j,\alpha}>y^{j,\alpha}$ in $\mathcal{C}$. We obtain in particular
+\begin{labeq}{krokobasic}
+\Psi=\sum_{\alpha,j}s^{\alpha}_{j}[x^{j,\alpha},y^{j,\alpha},c_{j}].
+\end{labeq}
+which has to be compared with the unique expression of $\Psi$ in basic commutators
+over $\mathcal{B}\cup\{b_{i}\mid i=1,\dots,m\}$.
+
+\smallskip
+Consider the subspace
+$C^{\prime}=\genp{B_{1},a_{1},\dots,a_{h},e_{1},\dots,e_{r-1},a}$, we claim that $\hat w_{j}$ belongs to $\exs C_{1}^{\prime}$ for all $j$.
+If this is not the case, then a term $[x,e_{r}]$ appears {\em with
+a nontrivial coefficient} from $\Fp$, in the sum presenting $\hat w_{j}$ for some $j$.
+This implies that the weight $3$ commutator $[x,e_{r},c_{j}]$ appears in \pref{krokobasic} with a non-zero coefficient.
+Also remark that $[x,e_{r},c_{j}]$ is basic, because $x>e_{r}<c_{j}$.
+
+Since $e_{r}$ does not appear among the $c_{i}$'s, this basic commutator can in no way arise\footnote{
+by means of Jacobi identities. Cfr. the proof of Proposition \ref{bellemma}.} from -- nor be eliminated by -- a prebasic monomial, that is,
+by a term $[u,v,e_{r}]$ in \pref{krokobasic} with $u>v>e_{r}$. Since $\Psi$ is in $\fla{3}{B_{1}}$, the claim above follows.
+%all terms $[x,e_{r},c_{j}]$, for different $x$'s, must cancel each other exclusively within the sum
+%$\sum_{\alpha,i}\lambda_{i,j}s^{\alpha}_{i}[x^{i,\alpha},y^{i,\alpha},c_{j}]=%f^{\alpha}_{ij^{*}}[x_{i}^{\alpha},y_{i}^{\alpha},c_{j^{*}}]=
+%%\sum_{i}\lambda_{ij^{*}}[w_{i},c_{j^{*}}]=
+%[\sum_{i}\lambda_{ij}w_{i},c_{j}]$.
+
+Now if $\hat w_{j}$ is in $\exs C^{\prime}_{1}$, then in particular $\hat\psi_{j}$ is in $\rd(C^{\prime})$ and
+$[\hat\psi_{j},c_{j}]$ belongs to $\J(C^{\prime})$ for all $j$.
+Since $\nu$ belongs to $\rd(\genp{c_{1},\dots,c_{n}})$, then $\Psi$ is in $\J(C^{\prime})$.
+
+On the other hand, as we are in ``Case 2'' we have $B\zsu[2]{} C^{\prime}$ and hence $\fla{3}{B_{1}}\cap\J(C^{\prime})=\J(B)$,
+but then $\Psi$ belongs to $\J(B)\inn\J(C)$, and $\overline{\Psi}$ is trivial.
+The statement of the theorem %$\dkerg{B}{A}\leq-\delta(A/B)$,
+is (trivially) true in this case as well.
+\end{proofof}

@@ -1,0 +1,9 @@
+\ProvidesFile{myLetter.lco}
+%\newkomavar[Mobile Phone]{mobile}
+\setkomavar{fromname}{Andrea Amantini}
+\setkomavar{fromaddress}{Lausitzerstr 37, 10999 Berlin}
+\setkomavar{fromphone}{+49 (0)30 3462 4345}
+\setkomavar{fromemail}{amantini.andrea@gmail.com}%@math.hu-berlin.de}
+\setkomavar{location}{\raggedright\small Extra Data}
+\setkomavar{signature}{Andrea Amantini} % printed after the \closing
+%\@addtoplength{toaddrvpos}{-3cm}

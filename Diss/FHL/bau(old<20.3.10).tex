@@ -1,0 +1,352 @@
+\section{$\delta_{2}$-Calculus}
+%\begin{citation}
+In the praxis\mn{put in the introduction} Hrushovski constructions,
+the two steps referred as to be the usual ones,
+exhibition of the infinite rank geometry and
+successive collapse to finite rank, are tightly
+combined. The collapsed theory  is often directly axiomatised,
+so that there is no mention 
+
+In this chapter we propose a new version of
+what might be essentially found in \cite{BAD96}. The
+first part of the construction is given here with
+particular attention to \dots. The two presentation decisively differ in the axiomatisation of
+the theory we get, this one being of infinte rank. There will be principally no mention of groups here,
+the homogeneous procedure to get groups from algebras has been discussed in \ref{graal}.
+%\end{citation}
+
+\bigskip
+The structures considered in this chapter belong to $\nla{2}$. As described in section \ref{graal}
+this category contains graded Lie algebras $2$-nilpotent $M=M_{1}\oplus M_{2}$ for which $M$ is always generated
+as a ring by its {\em unilinear} subspace $M_{1}$.
+Any object $M$ of $\nla{2}$ may thus be associated to a {\em presentation}
+$$R\into \fla{2}{M_{1}}\onto M$$
+a short exact sequence of $\nla{2}$-morphisms, which gives $M$ isomorphic to $\fla{2}{M_{1}}\quot R$ where
+$R$ an homogeneous ideal of $\fla{2}{M_{1}}$ with $R_{1}=\triv$. 
+
+It is customary to describe free nilpotent Lie algebras of class $2$, which are objects of $\nla{2}$, in terms of the
+external square of a vector space (see among others \cite{}), that is $\fla{2}{M_{1}}\simeq M_{1}\oplus\exs M_{1}$.
+
+By $\exs M_{1}$ we could mean by definition $(\fla{2}{M_{1}})_{2}$.
+
+Hence if $M$ is given by the presentation above, since we have $R_{1}=\triv$, $M\simeq M_{1}\oplus\,\exs M_{1}\quot R$.
+We denote $R$ by $\rd(M)$ or ambiguously $\rd(M_{1})$.%$\rd(M)$ or also $\rd(M_{1})$.
+
+An object $M$ of $\nla{2}$ is therefore univocally determined by the couple $\left(M_{1},\rd(M_{1})\right)$, the approach of \cite{BAD96} relies on these pairs.
+
+\medskip
+If $X=\{x_{\alpha}:\alpha<\lambda\}$ is a basis of $M_{1}$, we denote by $\flat_{2}(X)=\{[x_{\alpha},x_{\beta}]\mid\lambda>\alpha>\beta\}$ the set of \emph{basic commutator} of weight $2$ over $X$. According to Hall's theorem \ref{} $X\cup\flat_{2}(X)$
+is a basis for $\fla{2}{M_{1}}$.
+
+\medskip
+If $M\in\nla{2}$ and $H_{1}$ a subspace of $M_{1}$ we consider $\exs H_{1}$ as a natural subspace of $\exs M_{1}$.
+To any such $H_{1}$ or equivalently, to any $\nla{2}$-subalgebra $H=\gena{H_{1}}{M}$ of $M$ we set
+$$\rd(H_{1}):=\rd(M)\cap\exs{H_{1}}.$$
+
+Observe that if $H$ is $\gena{H_{1}}{M}$, then $H\simeq \fla{2}{H_{1}}+\rd(M)\quot\rd(M)\simeq\fla{2}{H_{1}}\quot \rd(H_{1})$, 
+therefore we will write $\rd(H_{1})$ or ambiguously $\rd(H)$.
+
+\bigskip
+We now introduce an integer valued %\emph{predimension}
+function $\delta_{2}$ with entries on the finite $\Fp$-subspaces of $M_{1}$ which measure,
+in terms of $\Fp$-dimension, {\sl how much a finitely generated structure differs from a free one.}
+
+For a finite subspace $A_{1}$ of $M_{1}$ set
+\[
+\delta_{2}A_{1}=\dfp(A_{1})-\dfp\left(\rd(A_{1})\right).
+\]
+we call $\delta_{2}(A_{1})$ the {\em deficiency} of the $\nla{2}$-subalgebra $A=\gena{A_{1}}{M}$ and
+write indifferently  $\delta_{2}(A_{1})$ or $\delta_{2}(A)$. It is an invariant of the isomorphism type
+of the structure $A$.
+
+Note how close this definition resembles the relational
+$\delta$ function cited in \ref{} and in \ref{} as a difference between the size
+of generators compared to relations.
+
+For arbitrary subspaces $H_{1}$ of $M_{1}$, and any finite $C_{1}$, we introduce a {\em relative} deficiency\footnote{with values in $\Z\cup\{-\infty\}$.}
+by means of
+\[
+\delta_{2}(C_{1}\quot H_{1})=\dim_{\Fp}(C_{1}\quot H_{1})-\dfp\left(\rd(C_{1}\quot H_{1})\right)
+\]
+provided we define $\rd(C_{1}\quot H_{1})$ to be the quotient space $\rd(H_{1}+C_{1})\quot \rd(H_{1})$. This 
+$\delta(C\quot H)$ is what Poizat calls ``{\it le solde}'' of the extension, first appeared about \dots in \cite{}.
+
+\medskip
+Fixed an algebra $M$ of $\nla{2}$, we observe a modular behaviour of the operator
+$\rd$ on the subspaces of $M_{1}$, that is
+\begin{labeq}{2modker}
+\rd(H_{1}\cap K_{1})=\rd(H_{1})\cap \rd(K_{1})
+\end{labeq}
+for all subspaces $H_{1}$, $K_{1}$ of $M_{1}$. This follows directly by the same condition
+on exterior squares, which actually holds for all $H_{1}$ and $K_{1}$ in $M_{1}$,
+namely $\exs(H_{1}\cap K_{1})=\exs H_{1}\cap\exs K_{1}$\mn{need some more expl?}.
+
+This simple result turns out to be strongly decisive in the whole further discussion, we anticipate
+here that such a straightforward conclusion cannot be drawn, in a suitable setting, for higher nilpotency class.
+
+As a first consequence of modularity in $\rd$, we obtain that $\delta$ is actually a predimension. We have in fact
+a stronger version of the subadditivity property as defined in section \ref{qdim}:
+
+\begin{lem}\label{2transmogrifer}
+Let $H_{1},\,V_{1}$ and $C_{1}$ be subspaces of an $\nla{2}$-structure $M$ with $C_{1}$ finite and such that $C_{1}\cap H_{1}\inn V_{1}\inn H_{1}$,
+then $\delta_{2}(C_{1}\quot H_{1})\leq\delta_{2}(C_{1}\quot V_{1})$.
+\end{lem}
+\begin{proof}
+Just observe,\mn{expand} for the negative part of $\delta_{2}$, that $\rd(C_{1}\quot V_{1})$ embeds into
+$\rd(C_{1}\quot H_{1})$. This follows from $\rd(H_{1})\cap \rd(V_{1}+C_{1})\inn \rd(V_{1})$.
+\end{proof}
+As an extremal case, we get \emph{subadditivity} for $\delta_{2}$ as defined in \ref{clpred}: for
+finite subspaces $A_{1}$ and $B_{1}$, condition $\delta_{2}(A_{1}\quot B_{1})\leq\delta_{2}(A_{1}\quot A_{1}\cap B_{1})$
+is by definition of $\rd(A_{1}\quot B_{1})$ {\em exactly} $\delta_{2}(\gen{A_{1},B_{1}})+\delta_{2}(A_{1}\cap B_{1})\leq\delta_{2}(A_{1})+\delta_{2}(B_{1})$.
+
+The next step is to force $\delta_{2}$ to be non-negative. To do this we fix
+for the rest of this section an algebra $M$ of $\nla{2}$ that satisfies
+the following property:
+\begin{itemize}
+\punto{$\sig{2}{2}$}for any finite
+$A_{1}\inn M_{1}$, it
+holds $\delta_{2}A_{1}\geq\min(2,\,\dfp A_{1})$.
+\end{itemize}
+Since $\delta_{2}$ is an invariant of
+the isomorphism type of finite $\nla{2}$-structures, property $\sig{2}{2}$ is first order expressible in
+$\La_{2}$ by a denumerable axiom system. Just negate the diagrams of those which \emph{do not}
+have the desired property.\mn{comment the 2}
+
+The above considerations imply the following:
+\begin{prop}\label{preg2}
+Assume $M$ has $\sig{2}{2}$, if $\cl_{1}$ denotes the $\Fp$-linear closure in $M_{1}$, then
+$\delta_{2}$ defines a $\cl_{1}$-predimension on $M_{1}$ according to definition \ref{clpred}.
+\end{prop}
+We denote by $d_{2}^{M}$ or simply $d_{2}$ if $M$ is clear from the context, the dimension function associated to $\delta_{2}$ and and by $\cl_{2}$ the resulting closure.
+Lemma \ref{preg} ensures that $(M_{1},\,\cl_{2})$ is a pregeometry extending the linear closure on $M_{1}$.
+
+Recall how $d_{2}$ was defined: for a finite subspace $A_{1}$ of $M_{1}$ we set 
+$d_{2}(A_{1})$ as the minimal value among all $\delta_{2}(C_{1})$, where the $C_{1}$ range over
+all finite subspaces of $M_{1}$ containing $H_{1}$,
+this is a sound definition by virtue of property $\sig{2}{2}$ of $M$. On the other hand, an element $b$ of $M$
+is in $\cl_{2}(A_{1})$ if $d_{2}(A_{1}a)=d_{2}(A_{1})$.
+
+The crucial notion of {\em selfsufficiency} which now follows,
+allows us to make a choice\mn{this is false} for such a subspace of minimal predimension.
+\begin{dfn}
+Let $H_{1}$ be a subspace of $M_{1}$, for $M\in\nla{2}$.
+We say that $H_{1}$ is ($\delta_{2}$-)\emph{strong} or 
+\emph{self-sufficient} in $M_{1}$ if
+for any finite subspace $C_{1}\inn M_{1}$, we have $\delta_{2}(C_{1}\quot H_{1})\geq0$.\\
+We say that an $\nla{2}$-substructure $H$ of $M$ is self-sufficient, if this is true of $H_{1}$ in $M_{1}$. We write
+indifferently $H_{1}\zsu{}M_{1}$ or $H\zsu{}M$. 
+\end{dfn}
+Evidently, for a finite subspace $A_{1}$\mn{use {\bf always} A, B for finite spaces and H,K for the rest}
+of $M_{1}$ to be self-sufficient means that
+$\delta_{2}B_{1}$ is not smaller than $\delta_{2}A_{1}$ for any finite $B_{1}\nni A_{1}$ and in this case
+$d_{2}(A_{1})=\delta_{2}(A_{1})$. Conversely this condition for a finite subspace $A_{1}$ implies the
+self-sufficiency of $A$.
+
+\smallskip
+Let $B_{1}$ be a finite subspace, define a \emph{self-sufficient closure} of $B_{1}$ in $M_{1}$ to be a 
+$\inn$-minimal subspace $A_{1}$ of $M_{1}$ containing $B_{1}$ with $\delta_{2}(A)=d_{2}^{M}(B)$.
+%???????PLACE THESE???????????
+%as the intersection in $M_{1}$ of all the
+%finite strong $F_{1}$ containing $H_{1}$.
+%
+%Such a minimal strong
+%overset exists because, as $\delta$ is positive, an $F_{1}$
+%of minimal $\delta$ above $H_{1}$ can always be found, and such
+%a subspace is obviously strong.
+%Now set $d_{2}H_{1}=\delta_{2}\ssc_{2}H_{1}$ for any finite subspace of $M_{1}$ and
+We will see with corollary \ref{interstrong} below, that the family of strong subspaces of $M_{1}$ is closed under
+intersection, as a consequence the notion of self-sufficient closure of a finite space $A_{1}$ depends only
+by $A$ and $M$ and it is univocally determined: we can {\em define} it as the intersection
+of all strong finite subspaces containing $A_{1}$. It will be denoted by $\ssc^{M}(A_{1})$ or simply $\ssc(A_{1})$:
+$$\ssc(A_{1})=\bigcap\{C_{1}\zsu{}M_{1}\mid C_{1}\, \text{finite and}\, C_{1}\nni A_{1} \}$$
+
+Note that this definition implies the finitary operator $\ssc$ is actually a {\em closure}:
+it is monotone, and has properties (cl1) and (cl2) of definition $\ref{pregdef}$.
+%the intersection above may be considered  to involve finitely many subspaces only.
+%In the next section it will be clear how the {\sl ambient structure} $M$ influences the nature of $\ssc$.
+By the fact $d_{2}(A_{1})=\delta_{2}(\ssc(A_{1}))=d_{2}(\ssc(A_{1}))$, it follows now 
+$A_{1}\inn\ssc(A_{1})\inn\cl_{2}(A_{1})$ for all $A_{1}$ and by lemma \ref{preg2}
+$d_{2}(A_{1})\leq\dfp(A_{1})$. 
+
+We also define the {\em subalgebra} $\ssc^{M}\!(H)$ of $M$ to be $\gena{\ssc(H_{1})}{M}$,
+this will be called the self-sufficient closure of $H$ in $M$.
+
+It is fundamental to remark that although each notion we introduced so far, like {\em }, {\em } or {\em },
+actually takes place within $M_{1}$, of course the whole structure $M=M_{1}\oplus M_{2}$ plays
+an active role in
+
+\medskip
+A finer analysis of $\delta_{2}$ computations and of self-sufficiencies now follows.
+For the rest of the section, we assume that an algebra
+$M$ of $\nla{2}$ has been  fixed, with property $\sig{2}{2}$. All the spaces mentioned will be subspaces of $M_{1}$ or $\nla{2}$-subalgebras of
+$M$.
+
+Lemma \ref{2transmogrifer} implies that, for any subspace $H_{1}$ and finite $A_{1}$,
+the notion of relative deficiency $\delta_{2}(A_{1}\quot H_{1})$ retains a finitary character
+with respect to the {\em base} $H_{1}$. We have indeed
+$$\delta_{2}(A_{1}\quot H_{1})=\mn{expand (2 lines more)}
+\inf\left(\delta_{2}(A_{1}\quot C_{1})\mid A_{1}\cap H_{1}\inn C_{1}\inn H_{1},\, C_{1}\text{ finite}\right).$$
+Moreover if $\delta_{2}(A_{1}\quot H_{1})$  is finite, or in particular if $H$ is self-sufficient, then
+the lowest bound above is attained by some big enough $C_{1}$ in $H_{1}$. This also follows by the
+definition of $\delta_{2}(A_{1}\quot H_{1})$ above: since $\rd(A_{1}\quot H_{1})$ has finite dimension,
+choose $C_{1}$ in $H_{1}$ such that $\exs (C_{1}+A_{1})$ supports each element of a basis of
+$\rd(H_{1}+A_{1})$ over $\rd(H)$.
+
+As a  consequence of this, self-sufficiency is closed under increasing chains of subspaces: assume $B_{1}^{i}\zsu{} M_{1}$ for all $i<\omega$ is an increasing family of finite subspaces
+whoose union subspace is $B_{1}\inn M_{1}$. Then by the previous remarks, for any finite $A_{1}$, we can prove $\delta_{2}(A_{1}\quot B_{1}^{i})\searrow\delta_{2}(A_{1}\quot B_{1})$ for $i\rightarrow\infty$.
+%[EXT] -->  \dfp K_{1}\quot V_{1}^{i} is def.ly constant = \dfp K_{1}\quot V_{1} while \rdK_{1}\quot V_{1}^{i} converges increasing to \rdK_{1}\quot V_{1}.
+This gives
+$V_{1}\zsu{} M_{1}$.
+
+\medskip
+We prove in the next lemma {\em transitivity} of strong embedings
+\begin{lem}\label{2trans}
+If $H\zsu{} K$ and $K\zsu{} M$, then $H\zsu{}M$.
+\end{lem}
+\begin{proof}
+Let $C_{1}$ be a finite subspace, we prove the statement of the lemma once we show $\delta_{2}(C_{1}\quot H_{1})-\delta_{2}(C_{1}\cap K_{1}\quot H_{1})\geq\delta_{2}(C_{1}\quot K_{1})$. This clearly holds for the positive part $\dfp$ of $\delta_{2}$.
+For the negative one observes that $\rd\left(H_{1}+C_{1}\quot
+H_{1}+(C_{1}\!\cap\!K_{1})\right)$ embeds\mn{expand!} into $\rd(C_{1}\quot K_{1})$.
+\end{proof}
+
+
+Another straightforward application of lemma \ref{2transmogrifer} is the following:
+\begin{lem}[Cut Lemma]\label{2cut}
+If $H$ is self-sufficient in $K$, then for any subspace $V_{1}$ of $M_{1}$, we have
+$H_{1}\cap V_{1}\zsu{} K_{1}\cap V_{1}$.
+\end{lem}
+\begin{cor}\label{interstrong}
+If $H$ and $K$ are self-sufficient,
+then the intersection $H_{1}\cap K_{1}$ is also strong.
+\end{cor}
+\begin{proof}
+By lemma \ref{2cut} we have $H_{1}\cap K_{1}\zsu{} K_{1}$.
+Then conclude by transitivity of $\zsu{}$ (lemma \ref{2trans}).
+\end{proof}
+
+
+\subsubsection*{A finer $\delta$-analysis}
+\begin{prop}\label{2strnchar}
+Let $H_{1}$  be an arbitrary subspace of $M_{1}$ then
+$H_{1}$ is strong if and only if for any finite subspace
+$C_{1}$ of $H_{1}$ there exists a finite
+subspace of $H_{1}$, $C_{1}^{*}$ containing $C_{1}$ such that
+$C_{1}^{*}\zsu{} M_{1}$.
+\end{prop}
+\begin{proof}
+In one direction we use the fact that $\delta_{2}$ is positive.
+Given any finite $C_{1}$ in $H_{1}$, the subspace we
+may look at, among others, $\ssc_{2}C_{1}\cap H_{1}$. We conclude
+with transitivity.
+
+\smallskip
+For the converse, let $A_{1}$ be finite in $M_{1}$.
+We want $\delta_{2}(A_{1}\quot H_{1})$ to be non negative.
+If we consider an arbitrary finite $B_{1}$ in $H_{1}$ containing
+$A_{1}\cap H_{1}$ and take a $C_{1}^{*}\zsu{} M_{1}$
+with $B_{1}\inn C_{1}^{*}\inn H_{1}$, then $\delta_{2}(
+A_{1}\quot B_{1})\geq\delta_{2}(A_{1}\quot C_{1}^{*})\geq0$.
+It follows the lowest bound of $\delta_{2}(A_{1}\quot B_{1})$ as $B_{1}$ range over
+suitable these finite sets of $H_{1}$, which is $\delta_{2}(A_{1}\quot H_{1})$,
+cannot be negative.
+\end{proof}
+By the proof above we realise that for a self-sufficient $H_{1}$ and a finite $A_{1}$, there exists
+a minimal finite strong subspace of $H_{1}$, such that $\delta_{2}(A_{1}\quot H_{1})=\delta_{2}(A_{1}\quot B_{1})$.
+
+Assume then we have $H_{1}\zsu{}M_{1}$, we {\em define} 
+
+
+\medskip
+Given two algebras $M\inn L$ of $\nla{2}$ the self-sufficient
+closure of a finite subspace $A_{1}$ as computed in $M$ may differ from the one computed in $L$. But, as we might expect, we have
+\begin{cor}\label{d2coerente}
+Let $M$ be an $\nla{2}$-subalgebra of $L$. Then $M$ is $\delta_{2}$ strong in $L$ if and only if for any finite subspace
+$A_{1}$ of $M_{1}$ the dimension $d_{2}^{M}(A_{1})$ coincides with $d_{2}^{L}(A_{1})$.
+\end{cor}
+\begin{proof}
+We have to show that the family of all self-sufficient $B_{1}$ in $M_{1}$ coincides.
+
+\end{proof}
+
+\begin{lem}\label{samedelta2}
+Assume $H_{1}\zsu{} M_{1}$ and $\delta_{2}(K_{1}\quot H_{1})=0$ for some finite subspace $K_{1}$, then it follows
+$H_{1}+K_{1}$ is $\delta_{2}$-self-sufficient as well.
+The same is true of a strong $H_{1}$ with an element $e$ of $M_{1}$ whenever $d_{2}(e\quot H_{1})=1$.
+\end{lem}
+\begin{proof}
+As $H_{1}$ is strong, and by Lemma \ref{2strnchar},
+we can assume $\delta_{2}(K_{1}\quot H_{1})=\delta_{2}(K_{1}
+\quot C_{1}^{*})$ for a finite $C_{1}^{*}\zsu{} M_{1}$.
+Now the statement is trivially true for finite strong subspaces.
+
+The second statement is proven in a similar way.
+\end{proof}
+
+For an arbitrary space $H_{1}$ we
+define the self-sufficient closure $\ssc_{2}H_{1}$ as the union
+of the self-sufficient closures of all its finite subspaces.
+It remains true, by Lemma \ref{2strnchar}, that a subspace of $M_{1}$ is strong if and only if it coincides with its self-sufficient closure. This is again the intersection of all the strong subspaces of $M_{1}$ containing $H_{1}$.\mn{Is it so in general? cfr. below}
+
+%It is clear that if $d_{2}H_{1}$ is finite, its self-sufficient closure\footnote{
+%{\bf defined} as the union of the self-sufficient closure of all the finite parts of $H_{1}$},
+%is the intersection of all the $\delta_{2}$-strong subspaces of $M_{1}$ containing $H_{1}$ and of finite $d_{2}$, will retain such a finite $d_{2}$-dimension.
+%?????????????????????????????????????????????????
+%{\em Just discompose $H_{1}$ in a tower of $H^{i}$ each of which has $d_{2}$ fixed
+%equal to $d_{2}H_{1}$ then take the union
+%$\ssc_{2}(H_{1}^{i})$ this is strong and of the same $d_{2}$!}
+
+\begin{prop}[Finite character of $\ssc$]
+Assume we have a strong subspace $H_{1}$ of $M_{1}$ and $B_{1}$ is a finite space,
+then
+\begin{itemize}
+\punto{i}$\ssc(H_{1}+B_{1})$ is a {\em finite} extension of $H_{1}$,
+\punto{ii}$d_{2}(B_{1}\quot H_{1})=\delta_{2}(\ssc(H_{1}+B_{1})\quot H_{1})$.
+\end{itemize}
+%Moreover 
+\end{prop}
+\begin{proof}
+%It suffices to prove the case with $H_{1}=B_{1}$ finite.\mn{is it?}
+Since $\delta_{2}(A_{1}\quot H_{1})$ is non-negative for all finite $A_{1}$ in $M_{1}$, take
+such an $A_{1}$ containing $B_{1}$ with minimal value of $\delta_{2}(A_{1}\quot H_{1})$.
+It follows that for an arbitrary finite $C_{1}$ one has
+$$\delta_{2}(C_{1}\quot H_{1}+A_{1})=\delta_{2}(C_{1}+A_{1}\quot H_{1})-\delta_{2}(A_{1}\quot H_{1})\geq0.$$
+This means $H_{1}+A_{1}$ is self-sufficient in $M_{1}$ and contains $\ssc(H_{1}+B_{1})$.
+
+\smallskip
+By (i) we can assume $\ssc(H_{1}+B_{1})=H_{1}+A_{1}$ for a finite $A_{1}$. Since
+$A_{1}\inn\cl_{2}(B_{1}\quot H_{1})$ we also have $d_{2}(B_{1}\quot H_{1})=d_{2}(A_{1}\quot H_{1})$.
+
+Now $\delta_{2}(\ssc(H_{1}+B_{1})\quot H_{1})=\delta_{2}(A_{1}\quot H_{1})=\delta_{2}(A_{1}\quot D_{1})$
+for a big enough finite  subspace $D_{1}\nni A_{1}\cap H_{1}$ of $H_{1}$. On the other hand, as $d_{2}$ is a dimension, there
+is also a finite $E_{1}\nni A_{1}\cap H_{1}$ in $H_{1}$ such that $d_{2}(A_{1}\quot H_{1})=d_{2}(A_{1}\quot E_{1})$.
+
+If we set $A_{1}^{\prime}$ to be $\ssc(A_{1}+D_{1}+E_{1})$, since $H_{1}+A_{1}$ is self-sufficient,
+then $H_{1}+A_{1}^{\prime}=H_{1}+A_{1}$ and we have 
+\begin{multline*}
+\delta_{2}(A_{1}\quot H_{1})=\delta_{2}(A_{1}^{\prime}\quot H_{1}\cap A_{1}^{\prime})=\\
+=\delta_{2}(A_{1}^{\prime})-
+\delta_{2}(A_{1}^{\prime}\cap H_{1})=d_{2}(A_{1}^{\prime})-d_{2}(A_{1}^{\prime}\cap H_{1})=\\
+=d_{2}(A_{1}^{\prime}\quot H_{1}\cap A_{1}^{\prime})=d_{2}(A_{1}\quot H_{1}).
+\end{multline*}
+\end{proof}
+From the last proposition it follows, for $H$ and $B$ as above, that $\ssc(H_{1}+B_{1})$ is
+the intersection of all strong subspaces of $M_{1}$ containing $H_{1}+B_{1}$ and finite over $H_{1}$.
+Furthermore for any finite $A_{1}$ and  strong $H_{1}$ %with finite $\dfp(D_{1}\quot H_{1})$,
+we have in general $d_{2}(A_{1}\quot H_{1})\leq\delta_{2}(A_{1}\quot H_{1})$.
+%{\em [EXT.] Pass to finite $K_{1}$ with  $H_{1}+K_{1}=D_{1}$
+%		and such that $d_{2}K_{1}\quot H_{1}=d_{2}D_{1}\quot H_{1}$
+%		then $d_{2}K_{1}\quot H_{1}\leq d_{2}(K_{1}\quot
+%		H_{1}^{'}$ for any finite big enough $H^{'}$ strong in $H$ so
+%		$\leq\delta_{2}K_{1}\quot H_{1}^{'}$. Use char of $\delta{2}$
+%		in terms of $\inf$ to conclude that $\delta_{2}K_{1}=
+%		\delta_{2}D_{1}$ over $H_{1}$.}
+
+\medskip
+\begin{lem}
+Let $B$ be a finitely generated $\nla{2}$-subalgebra of $M$, then
+$$\cl_{2}(B_{1})=\gen{\bigcup\{C_{1} \text{finite}\mid\delta_{2}(C_{1}\quot\ssc(B_{1}))=0\}}.$$
+\end{lem}
+
+
+
+

@@ -1,0 +1,71 @@
+\documentclass[11pt,german]{article}
+\usepackage{babel}
+\usepackage[latin1]{inputenc}
+\usepackage{amsmath,amsfonts,amssymb,amsthm}
+\usepackage{ModNet}
+\usepackage{FHL}
+%\linespread{1.2}
+\pagestyle{empty}
+\begin{document}
+\title{}
+\author{}
+\date{}
+%\maketitle
+
+$Y=\underset{i<m}{{\circledast_{C}}}\gen{C,\bar a^{i}}$ f\"ur $m>\dfp(C_{1})$.
+We have as usual $C_{1}=\ssc(\bar b\bar c)$ and $\gen{C,\bar a^{i}}=\ssc(C,\res{\bar a^{i}}{r})$ und we denote by $Z$ the self-sufficient closure $\ssc(\{\res{\bar a^{i}}{r}\mid i<m\})$. Assume that $Z$ is strictly contained inside $Y$, then
+$Z_{1}$ does not contain the tuple $\bar b\bar c$ etirely.
+
+\medskip
+Observe that $\fin{{\res{\bar a}{r}}^{i}}{C}{\,{\res{\bar a}{r}}^{<i}}$ implies - with Proposition \ref{forkingchar} -- for all $i<m$
+\begin{labeq}{sscmolge}
+\ssc(C,\bar a^{<i},{\res{\bar a}{r}}^{i})=\gen{C,\bar a^{\leq i}}
+\end{labeq}
+
+Now define for all $i<m$
+$$X^{i}:=\gen{C_{1},\bar a^{<i}}+\left(Z_{1}\cap\gen{C_{1},\bar a^{\leq i}}\right)=\gen{C_{1},\bar a^{\leq i}}\cap\left( Z_{1}+\gen{C_{1},\bar a^{<i}}\right)$$
+hence $\gen{C,\bar a^{<i},{\res{\bar a}{r}}^{i}}\inn X^{i}\inn\gen{C,\bar a^{\leq i}}$.
+
+\medskip
+Let for all $i<m$ the (possibly empty) tuple $\bar y^{i}$ be a basis
+%\mn{maybe restrict the $y$'s just for the right $i$'s}
+of $\gen{{C,\bar a^{\leq i}}}$ over $X^{i}$.
+
+It follows that the set $\{\bar y^{i}\mid i<m\}$ generates $Y_{1}$ over $C_{1}+Z_{1}$, and in particular we have
+
+$$
+\dfp(Y_{1}/Z_{1})=\sum_{i<m}\card{\bar y^{i}}+\dfp(C_{1}/Z_{1})
+$$
+On the other hand let $\bar\rho^{i}$ be a basis of $\rd(C,\bar a^{\leq i})$ over $\exs X^{i}$, allowing $\bar\rho^{i}$ to be the
+empty tuple whenever $\rd(X^{i})$ equals $\rd(C,\bar a^{\leq i})$. This yields, that the subset
+$\{\bar\rho^{i}\mid i<m\}$ of $\rd(Y)$ is linearly independent over $\exs Z_{1}$.
+
+To prove the last claim, we adopt an inductive argument to show the set $\{\bar\rho^{k}\mid k<i\}$ is linearly independent of $\exs Z_{1}$.
+For assume, there exist scalar tuples $\underline\lambda_{k}\inn\Fp$ for $k\leq i$, which yield the following dependecy
+$$\underline\lambda_{i}\boldsymbol{\cdot}\bar\rho^{i}+\underline\lambda_{i-1}\boldsymbol{\cdot}\bar\rho^{i-1}+\cdots+\underline\lambda_{0}\boldsymbol{\cdot}\bar\rho^{0}\in\exs Z_{1}.$$
+But then
+\begin{multline}
+%\begin{split}
+\underline\lambda_{i}\boldsymbol{\cdot}\bar\rho^{i}\in\left(\exs Z_{1}\cap\exs\gen{C_{1},\bar a^{\leq i}}\right)+\exs\gen{C_{1},\bar a^{<i}}=\\
+=\exs\gen{C_{1},\bar a^{\leq i}}\cap\left(\exs Z_{1}+\exs\gen{C_{1},\bar a^{<i}}\right)\inn\exs X^{i}
+%\end{split}
+\end{multline}
+and hence $\underline\lambda_{i}\equiv\triv$.
+
+\medskip
+Denote by $I$ the set of all $i<m$ for which $X^{i}\subsetneq\gen{C_{1},\bar a^{\leq i}}$. Then by \pref{sscmolge}
+for all $i$ of $I$ we have $\card{\bar\rho^{i}}>\card{\bar y^{i}}$.
+
+
+On the other hand -- since $\bar b\bar c$ do not lay completely in $Z_{1}$, to all $j\notin I$ there is a $\tau^{j}$ in $\rd(C,\bar a^{j})$ which is not in $\rd(Z)$.
+
+{\bf Moreover we care to choose $\tau^{j_{1}},\dots,\tau^{j_{k}}$ to be independent of $\gen{\bar\rho^{i}\mid i<j_{k}}$ over $\exs Z_{1}$.
+(Can we do this?)}
+
+It follows, the set $\{\bar\rho^{i},\tau^{j}\mid i\in I, j\notin I\}$ is linearly independent over $\exs Z_{1}$.
+This implies
+$$\sum_{i<m}\card{\bar y^{i}}-\dfp(\rd(Y/Z))\leq-m.$$
+and hence
+$$\delta(Y/Z)=\sum_{i<m}\card{\bar y^{i}}-\dfp(\rd(Y/Z))+\dfp(C_{1}/Z_{1})<0$$
+contradicting $Z\zsu{}Y$.
+\end{document}

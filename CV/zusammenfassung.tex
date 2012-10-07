@@ -1,0 +1,174 @@
+%---------------------------------------------------------------------------
+\documentclass%%
+%---------------------------------------------------------------------------
+  [fontsize=10pt,%%          Schriftgroesse
+%---------------------------------------------------------------------------
+% Satzspiegel
+   paper=a4,%%               Papierformat
+   enlargefirstpage=on,%%    Erste Seite anders
+   pagenumber=headright,%%   Seitenzahl oben mittig
+%---------------------------------------------------------------------------
+% Layout
+   headsepline=off,%%         Linie unter der Seitenzahl
+   parskip=off,%%           Abstand zwischen Absaetzen
+%---------------------------------------------------------------------------
+% Briefkopf und Anschrift
+   fromalign=right,%%        Plazierung des Briefkopfs
+   fromphone=off,%%           Telefonnummer im Absender
+   fromrule=aftername,%%           Linie im Absender (aftername, afteraddress)
+   fromfax=off,%%            Faxnummer
+   fromemail=on,%%          Emailadresse
+   fromurl=off,%%            Homepage
+   fromlogo=off,%%           Firmenlogo
+   addrfield=off,%%           Adressfeld fuer Fensterkuverts
+   backaddress=off,%%          ...und Absender im Fenster
+   subject=beforeopening,%%  Plazierung der Betreffzeile
+  locfield=narrow,%%        (narrow,wide) zusaetzliches Feld fuer Absender
+   foldmarks=off,%%           Faltmarken setzen
+   numericaldate=off,%%      Datum numerisch ausgeben
+   refline=wide,%%         Geschaeftszeile im Satzspiegel
+%---------------------------------------------------------------------------
+% Formatierung
+   draft=on%%                Entwurfsmodus
+]{scrlttr2}
+\LoadLetterOption{myLetter}
+%---------------------------------------------------------------------------
+% Weitere Optionen
+\KOMAoptions{%%
+}
+%---------------------------------------------------------------------------
+\usepackage[ngerman]{babel}
+\usepackage[T1]{fontenc}
+\usepackage[latin1]{inputenc}
+\usepackage{url}
+%---------------------------------------------------------------------------
+% Fonts
+\setkomafont{title}{}
+%\setkomafont{fromname}{\large}
+\setkomafont{fromaddress}{\small}%% statt \small
+\setkomafont{pagenumber}{\sffamily}
+\setkomafont{subject}{\mdseries}
+\setkomafont{backaddress}{\mdseries}
+%\usepackage{mathptmx}%% Schrift Times
+%\usepackage{mathpazo}%% Schrift Palatino
+%\setkomafont{fromname}{\LARGE}
+%---------------------------------------------------------------------------
+\begin{document}
+%---------------------------------------------------------------------------
+% Briefstil und Position des Briefkopfs
+%\LoadLetterOption{DIN} %% oder: DINmtext, SN, SNleft, KOMAold.
+\addtolength{\textheight}{2\baselineskip}
+\makeatletter
+\@setplength{locwidth}{\textwidth}
+%\@addtoplength{locvpos}{2mm}
+%\@addtoplength{lochpos}{3.3cm}
+\@addtoplength{refvpos}{-7\baselineskip}
+\@setplength{firstheadvpos}{10mm}
+\@setplength{firstheadwidth}{\paperwidth}
+\ifdim \useplength{toaddrhpos}>\z@
+  \@addtoplength[-2]{firstheadwidth}{\useplength{toaddrhpos}}
+\else
+  \@addtoplength[2]{firstheadwidth}{\useplength{toaddrhpos}}
+\fi
+\@setplength{foldmarkhpos}{6.5mm}
+\makeatother
+%-----------------------------------------------------------------------------
+%
+%????? Absender-----> defined in myLetter.lco for the ``Letters'' folder
+%                                               commands there are overridden by this file
+%
+%-------------------------------------------------------------------------------------------------
+\setkomavar{title}{\textnormal{ Zusammenfassung der Dissertation}}
+%\setkomavar{fromname}{Absender Name}
+%\setkomavar{fromaddress}{ Straße\\12345 Ort.}
+%\setkomavar{fromphone}{+49 (0)30 3462 4345}
+%\renewcommand{\phonename}{Telefon}
+%\setkomavar{fromemail}{absender.name@provider.de}
+\setkomavar{backaddressseparator}{, }
+%\setkomavar{signature}{\flushright\usekomavar{fromname}}
+%\setkomavar{frombank}{}
+\setkomavar{location}{}%% Neben dem Adressfenster
+%---------------------------------------------------------------------------
+%\firsthead{Frei gestalteter Briefkopf}
+%---------------------------------------------------------------------------
+%\firstfoot{Fußzeile}
+%---------------------------------------------------------------------------
+% Geschaeftszeilenfelder
+%\setkomavar{place}{Ort}
+%\setkomavar{placeseparator}{, den }
+\setkomavar{date}{}
+%\setkomavar{yourmail}{1. 1. 2003}%% 'Ihr Schreiben...'
+%\setkomavar{yourref} {abcdefg}%%    'Ihr Zeichen...'
+%\setkomavar{myref}{}%%      Unser Zeichen
+%\setkomavar{invoice}{123}%% Rechnungsnummer
+%\setkomavar{phoneseparator}{}
+%---------------------------------------------------------------------------
+% Versendungsart
+%\setkomavar{specialmail}{Einschreiben mit Rückschein}
+%---------------------------------------------------------------------------
+% Anlage neu definieren
+\renewcommand{\enclname}{Anlage}
+\setkomavar{enclseparator}{: }
+%---------------------------------------------------------------------------
+% Seitenstil
+%\pagestyle{plain}%% keine Header in der Kopfzeile
+%---------------------------------------------------------------------------
+\begin{letter}{~}
+%---------------------------------------------------------------------------
+%\setkomavar{subject}{Halo}
+%---------------------------------------------------------------------------
+\opening{~}
+%\centering
+%\begin{minipage}{.9\textwidth}
+In dieser Arbeit wird das Fra\"iss\'e-Hrushowskis Amalgamationsverfahren in Zusammenhang
+%mit nilpotenten Gruppen von endlichem Exponent beziehungsweise
+mit nilpotenten graduierten Lie Algebren \"uber einem endlichen K\"orper untersucht.
+
+Die Pr\"adimensionen die in der Konstruktion auftauchen sind mit dem gruppentheoretischen Begriff der {\em Defizienz}
+zu vergleichen, welche auf homologische Methoden zur\"uckgef\"uhrt werden kann.
+
+Darüber hinaus wird die Magnus-Lazardsche Korrespondenz zwischen den oben genannten Lie Algebren
+und nilpotenten Gruppen von Primzahl-Exponenten beschrieben.
+Dabei werden solche Gruppen durch die Baker-Haussdorfsche Formel
+in den entsprechenden Algebren definierbar interpretiert.
+
+\medskip
+Es wird eine $\omega$-stabile Lie Algebra von Nilpotenzklasse 2 und Morleyrang $\omega\cdot2$ erhalten, indem
+man eine {\em unkollabierte} Version der von Baudisch konstruierten {\em new uncountably categorical group} betrachtet.
+Diese wird genau analysiert. Unter anderem wird die Unabh\"angigkeitsrelation des Nicht-Gabelns durch die
+Konfiguration des freien Amalgams charakterisiert.
+%Ziel dieser Arbeit ist eine Erweiterung auf h\"oheren Nilpotenzklassen der von Baudisch
+%konstruierten nil-2 {\sl } von prim Exponent.
+
+\smallskip
+Mittels eines induktiven Ansatzes werden die Grundlagen entwickelt, um neue Pr\"adimensionen f\"ur Lie Algebren der Nilpotenzklassen
+gr\"o\ss er als zwei zu schaffen.
+%F\"ur den nil-3 Fall geben wir eine Notion einer {\em selbstgen\"ugende} Erweiterung;
+%damit wird ein erstes Amalgamationslemma bewiesen.
+
+Dies erweist sich als wesentlich schwieriger als im Fall 2.
+Wir konzentrieren uns daher auf die Nilpotenzklasse 3, als Induktionsbasis des oben genannten Prozesses.
+
+In diesem Fall wird die Invariante der Defizienz
+auf endlich erzeugte Lie Algebren adaptiert. Erstes Hauptergebnis der
+Arbeit ist der Nachweis dass diese Definition zu einem vern\"uftigen Begriff selbst-gen\"ugender
+Erweiterungen von Lie Algebren f\"uhrt und
+sehr nah einer gew\"unschten Pr\"adimension im Hrushovskischen Sinn ist.
+
+Wir zeigen -- als zweites Hauptergebnis -- ein erstes Amalgamationslemma bez\"uglich
+selbst-gen\"ugender Einbettungen.
+%\end{minipage}
+
+\vfil
+
+
+\begin{flushright}
+%\begin{minipage}{.5\textwidth}
+Andrea Amantini\\[+3mm]
+Berlin, den \today
+%\end{minipage}
+\end{flushright}
+
+%---------------------------------------------------------------------------
+\end{letter}
+\end{document}

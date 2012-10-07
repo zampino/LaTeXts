@@ -1,0 +1,240 @@
+%---------------------------------------------------------------------------
+\documentclass%%
+%---------------------------------------------------------------------------
+  [fontsize=12pt,%%          Schriftgroesse
+%---------------------------------------------------------------------------
+% Satzspiegel
+   paper=a4,%%               Papierformat
+   enlargefirstpage=on,%%    Erste Seite anders
+   pagenumber=headright,%%   Seitenzahl oben mittig
+%---------------------------------------------------------------------------
+% Layout
+   headsepline=on,%%         Linie unter der Seitenzahl
+   parskip=off,%half,%%           Abstand zwischen Absaetzen
+%---------------------------------------------------------------------------
+% Briefkopf und Anschrift
+   fromalign=right,%%        Plazierung des Briefkopfs
+   fromphone=off,%%           Telefonnummer im Absender
+   fromrule=aftername,%%           Linie im Absender (aftername, afteraddress)
+   fromfax=off,%%            Faxnummer
+   fromemail=on,%%          Emailadresse
+   fromurl=off,%%            Homepage
+   fromlogo=on,%%           Firmenlogo
+   addrfield=on,%%           Adressfeld fuer Fensterkuverts
+   backaddress=off,%%          ...und Absender im Fenster
+   subject=beforeopening,%%  Plazierung der Betreffzeile
+   locfield=narrow,%%        (narrow,wide) zusaetzliches Feld fuer Absender
+   foldmarks=off,%%           Faltmarken setzen
+   numericaldate=off,%%      Datum numerisch ausgeben
+   refline=narrow,%%         Geschaeftszeile im Satzspiegel
+%---------------------------------------------------------------------------
+% Formatierung
+   draft=off%%                Entwurfsmodus
+]{scrlttr2}
+\LoadLetterOption{myLetter}
+%---------------------------------------------------------------------------
+% Weitere Optionen
+\KOMAoptions{%%
+}
+%---------------------------------------------------------------------------
+\usepackage{german}
+\usepackage[T1]{fontenc}
+\usepackage[latin1]{inputenc}
+\usepackage{url}
+%---------------------------------------------------------------------------
+% Fonts
+%\setkomafont{fromname}{\large}
+\setkomafont{fromaddress}{\small}%% statt \small
+\setkomafont{pagenumber}{\sffamily}
+\setkomafont{subject}{\mdseries}
+\setkomafont{backaddress}{\mdseries}
+%\usepackage{mathptmx}%% Schrift Times
+%\usepackage{mathpazo}%% Schrift Palatino
+%\setkomafont{fromname}{\LARGE}
+%---------------------------------------------------------------------------
+\begin{document}
+%---------------------------------------------------------------------------
+% Briefstil und Position des Briefkopfs
+%\LoadLetterOption{DIN} %% oder: DINmtext, SN, SNleft, KOMAold.
+\makeatletter
+\@addtoplength{toaddrvpos}{-10mm}
+\@setplength{firstheadvpos}{10mm}
+\@setplength{firstheadwidth}{\paperwidth}
+\ifdim \useplength{toaddrhpos}>\z@
+  \@addtoplength[-2]{firstheadwidth}{\useplength{toaddrhpos}}
+\else
+  \@addtoplength[2]{firstheadwidth}{\useplength{toaddrhpos}}
+\fi
+\@setplength{foldmarkhpos}{6.5mm}
+\makeatother
+%-----------------------------------------------------------------------------
+%
+%????? Absender-----> defined in myLetter.lco for the ``Letters'' folder
+%                                               commands there are overridden by this file
+%
+%-------------------------------------------------------------------------------------------------
+%\setkomavar{fromname}{Absender Name}
+%\setkomavar{fromaddress}{ Stra�\\12345 Ort.}
+%\setkomavar{fromphone}{+49 (0)30 3462 4345}
+\renewcommand{\phonename}{Telefon}
+%\setkomavar{fromemail}{absender.name@provider.de}
+\setkomavar{backaddressseparator}{, }
+%\setkomavar{signature}{(Name)}
+%\setkomavar{frombank}{}
+%\setkomavar{location}{}
+%\setkomavar{location}{\\[8ex]\raggedleft{\footnotesize{\usekomavar{fromaddress}\\
+%      Telefon:\ usekomavar{fromphone}}}}%% Neben dem Adressfenster
+%---------------------------------------------------------------------------
+%\firsthead{Frei gestalteter Briefkopf}
+%---------------------------------------------------------------------------
+%\firstfoot{Fu�eile}
+%---------------------------------------------------------------------------
+% Geschaeftszeilenfelder
+%\setkomavar{place}{Ort}
+%\setkomavar{placeseparator}{, den }
+\setkomavar{date}{\today}
+%\setkomavar{yourmail}{1. 1. 2003}%% 'Ihr Schreiben...'
+%\setkomavar{yourref} {abcdefg}%%    'Ihr Zeichen...'
+%\setkomavar{myref}{}%%      Unser Zeichen
+%\setkomavar{invoice}{123}%% Rechnungsnummer
+%\setkomavar{phoneseparator}{}
+%---------------------------------------------------------------------------
+% Versendungsart
+%\setkomavar{specialmail}{Einschreiben mit Rckschein}
+%---------------------------------------------------------------------------
+% Anlage neu definieren
+\renewcommand{\enclname}{Anlage}
+\setkomavar{enclseparator}{: }
+%---------------------------------------------------------------------------
+% Seitenstil
+%\pagestyle{plain}%% keine Header in der Kopfzeile
+%---------------------------------------------------------------------------
+\begin{letter}{an Annette Lindemann\\
+Personalabteilung
+
+Fachinformationszentrum Karlsruhe\\
+Gesellschaft fr wissenschaftlich-technische Information mbH
+
+Hermann-von-Helmholtz-Platz 1\\
+76344 Eggenstein-Leopoldshafen}
+%---------------------------------------------------------------------------
+\setkomavar{subject}{\bf Bewerbung als Fachredakteur vom ZentralBlatt MATH, Abteilung Mathematik u. Informatik, Berlin}
+%---------------------------------------------------------------------------
+\opening{Sehr geehrte Frau Lindemann}
+Mein Name ist Andrea Amantini und ich m\"ochte mich hiermit fr die von Ihnen ausgeschriebene Stelle als
+Fachredakteur vom ZentralBlatt MATH.
+
+Maine Allgemeine Kenntnisse und Leistungen in der mathematische Forschung sind aus meinem
+Akademischen Bildungsgang zur\"uckzuziehen:
+\begin{itemize}
+\item[>]abgeschlossener Diplomsstudium der Mathematik in Florenz, mit der Note 110/110 {\sl cum laude}
+\item[>]Mathematischer Promotionsstudium an der Humboldt Universit\"at. Schwerpunkt Mathematische Logik/Modelltheorie
+\end{itemize}
+Zum letztere, da ich am 8.~Dezember die Dissertation eingereicht habe,
+kann man im Fr\"uhjahr 2011 mit der Abschlu{\ss} der Promotion rechnen.
+
+\smallskip
+Meine bisherigen Studien der Gruppentheorie als Diplomand und Forschungen in
+der algebraischen Modelltheorie, sind schon seit viele Jahren der besondere Schwerpunkt meiner akademischen Entwicklung.
+
+Modelltheorie selbst ist eine Branche der Mathematische Logik, die eine Einsicht
+auf den verschiedenste Gebiete der Mathematik bietet und die axiomatische Grundlage der -- isbesondere algebraische -- Systeme untersucht.
+
+ wie algebraische
+Geometrie, Algebra, Topologie. 
+
+F\"ur beide mein Diplom- wie f\"ur meine Doktorarbeit habe ich mich st\"andig
+
+
+daher ist mir h\"ochst bekannt wie es relevant sei, ein
+verl�slichen und unkomplizierten Zugriff auf digitale Ressourcen, sowie traditionelle Zeitschriften.
+
+von Neuesten Artikeln sowie \"alteste Dokumente.
+
+dank der Database der
+Digitalisierungszentrum (GDZ) an der SUB G\"ottingen, k\"onnte ich
+eine Arbeit von Wilhelm Magnus 1940 in der {\em Zeitschrift f\"ur die reine und
+angewandte Mathematik} finden, welche h\"ocster Bedeutung f\"ur meine Dissertation gewesen ist.
+
+Dasselbe gilt f\"ur einen Artikel von Lazard, den ich auf
+den ENDAM auf Franz�isch
+
+Das nur zu 
+
+
+\vspace{2em}
+{\bf warum interessiere ich mich ?}
+\begin{itemize}
+\item[*] Engagement  beim Verbreiten der Wissenschaftlichen Wissen 
+
+\item[*] Meine Zuneigung zum Schrift der Mathematik als elegante Kommunikationsform
+und die Faszination f\"ur wissenschaftliche Publikationswesen als Objekt in sich, seien es Bcher einer Bibliothek sowie auch.
+
+Die Spannung beim Recherchieren -- vom Inhaltsverzeichnis -- direkt im K\"orper 
+ 
+
+\begin{itemize}
+\item 
+\end{itemize}
+  
+\end{itemize}
+
+
+\vspace{2em}
+{\bf Eine Zusammenfassung von dei Eigenschaften, die ich mitbringen werde:}
+\begin{itemize}
+
+\item Erfahrung mit Lehre auf Hochschulniveau: wie mein Curriculum Vit{\ae} erweist,
+habe 
+
+\item Expertise mit den verschiedensten {\em front-end} der elektronischen Mathematischen
+Zeitschrift-Databasen bzw. Digitalisierte Bibliotheken: die ich f\"ur die Quelle meiner eigenen Forschung
+benutzt habe: u.a. ZBMAth, MR (MAthSciNet) der AMS,
+Project Euclid, JStor, Science Direct usw. und die Interesse,
+bei einer der weltweit wichtigen \lq unter den Culissen \rq arbeiten zu
+konnen.
+
+\item Erweiterte Kenntnisse der \LaTeX~Auszeichnungssprache f\"ur die Komposition Mathematische Schriften,
+sowie des Bib-\TeX~Literaturverzeichnis-Editors.
+
+Die berietschaft 
+
+\item methodische Indexierung der eingehenden Publikationen und Koordination der Gutachter
+\item sicherer Umgang mit den \"ubliche elektronischen DV Software, sowie einige Programmiersprachen. Die Bereitschaft,
+schnell und effektiv, neue 
+
+\item Bereitschaft zum lernen von weiteren 
+
+	\begin{itemize}
+		\item Lokalisierung des Internet Dienstleistungen auf diversen Plattformen f\"ur
+		eine Browser-unabh\"angige fruition der Zeitschriften
+		\item Optimierung der Databasen und der {\sl interface}
+		
+	\end{itemize}
+\item 
+
+
+\end{itemize}
+wie ich die Gebiete di Herr Teschke telefonisch mir kurz geschildert hat, effizient und
+verantwortungsbewusst ausf\"urlich bedecken kann. 
+
+
+Ich werde mich sehr freuen zum Vorstellungsgespr\"ach eingeladen zu werden.
+
+
+
+
+
+
+
+
+
+
+\closing{Mit freundlichen Gr\"u\ss en}
+%---------------------------------------------------------------------------
+%\ps{PS:}
+%\encl{}
+%\cc{}
+%---------------------------------------------------------------------------
+\end{letter}
+\end{document}

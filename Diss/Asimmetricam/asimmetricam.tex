@@ -1,0 +1,334 @@
+\documentclass[a4paper,11pt,german,english]{article}
+\usepackage{babel}
+\usepackage[latin1]{inputenc}
+\usepackage{amsmath,amsfonts,amssymb,amsthm}
+\usepackage{ModNet}
+\usepackage{FHL}
+\usepackage{pdfsync}
+%\usepackage{syntonly}
+\usepackage[all]{xy}
+%\linespread{1.3}
+%\usepackage[mathscr]{euscript}
+\title{Asymmetric Amalgam}
+%\renewcommand{\thesection}{\arabic{section}} 
+%\setcounter{tocdepth}{3}
+%\syntaxonly
+%\includeonly{}
+\begin{document}
+\maketitle\noindent
+%\tableofcontents
+Starting with $M\nni B\dsu A$ nil-$3$ algebras, we use the following
+
+\smallskip
+{\bf Notation and Setting:}
+\begin{itemize}
+\item[-]Asterisks in the subscript substitute the old $\tr{2}$ i.e. $M_{\ast}=\tr{2}M$
+\item[-]$L_{*}:=M_{*}\amalg_{B_{*}}A_{*}$ {\em the $\Kl^{2}$ free (graded) amalgam}
+\item[-]$\ftr{L}$ {\em is the ``free lift''} of $L$ or of $L_{*}$ i.e. $\fr{3}L$ or $\fr{3}\tr{2}{L}$ in the old notation, according to whether $L$ is in $\nla{2}$ or $\nla{3}$.
+\item[-]if $L_{*}^{\sss +}:=\ta L_{*}$ {\em the $\ta$-closure of $L_{*}$} then we set $\ftr{L^{\sss +}}=\fr{3}{(L_{*}^{\sss +})}$
+\item[-]$\gam{X}{Y}$ is the canonical map of $F_{X}$ into $F_{Y}$ with image $\gena{X_{1}}
+{F_{Y}}$.
+\end{itemize}
+
+\medskip
+We first prove a result concerning intersection of subalgebras under free lifting
+%!TEX encoding = UTF-8 Unicodestrengthen an older result,
+which will be crucial in the following.
+
+Assume $L\in\nla{2}$ and $H=\gena{H_{1}}{L}$ and
+$K=\gena{K_{1}}{L}$ are subalgebras of $L$,
+%such that $\gena{H_{1}}{{L}}\cap\gena{K_{1}}{{L}}=\gena{H_{1}\cap K_{1}}{{L}}$.
+then we ask whether
+\begin{itemize}
+\item[(d)]\quad\quad$\gena{H_{1}}{F_{L}}\cap\gena{K_{1}}{F_{L}}=\gena{H_{1}\cap K_{1}}{F_{L}}.$
+
+A necessary condition to get (d) is first to get this intersection in weight $2$. Observe
+that if $M\nni B\inn A$ are $\Kl^{2}$-algebras and if $L$ denotes their amalgam as above,
+then for any $E_{1}\nni M_{1}$ and $D_{1}\nni A_{1}$ one has $\gena{E_{1}}{L}\cap\gena{D_{1}}{L}=\gena{E_{1}\cap D_{1}}{L}$. This is for if $w_{E}-w_{D}\in N^{2}(L)=N^{2}(M)+N^{2}(A)$ where $w_{E}$ and $w_{D}$ are homogeneous polynomials of weight $2$, then $w_{E}-v_{M}=w_{D}+v_{A}\in\exs E_{1}\cap D_{1}$ for some $v_{A}$ and $v_{M}$.
+
+%Naturally a symmetric result holds
+We now prove (d) in a very special case.
+\end{itemize}
+
+\begin{lem*}
+Assume $L,M,A,B$ as above and $E_{1}\nni M_{1}$. Then
+\begin{itemize}
+\item[$(*)$]\quad\quad$\gena{E_{1}}{F_L}\cap\gena{A_{1}}{F_L}=\gena{E_{1}\cap A_{1}}{F_L}$
+\end{itemize}
+\end{lem*}
+\begin{proof}
+Suppose $w_{E}-w_{A}\in\J(L)$ where we
+may assume $w_{E}$ and $w_{A}$ are homogeneous polynomial of weight $3$ lying
+in $\fla{3}{E_{1}}$ and $\fla{3}{A_{1}}$ respectively. Both these algebras are considered
+free subalgebras of $\fla{3}{L_{1}}$.
+
+We arrange a basis $X$ for $L_{1}$ as follows $X=\{X^{a}>X^{e}>X^{B}>X^{m}\}$, where
+$X^{B}$ is a basis for $B_{1}$, $X^{B}X^{m}$ is a basis for $M_{1}$, $X^{m}X^{B}X^{e}$ is
+a basis for $E_{1}$ and $X^{e}X^{B}$ is a basis for $E_{1}\cap A_{1}$. With $X^{a}$ we complete
+$X^{e}X^{B}X^{m}$ to a basis for $L_{1}$ and $X^{a}X^{e}X^{B}$ is a basis of $A_{1}$.
+
+
+Now  since $\J(L)_{3}=\gen{\J(A),\J(M),[N^{2}(A),M_{1}],[N^{2}(M),A_{1}]}$ as an $\Fp$-subspace,
+without loss of generality $w_{E}-w_{A}$, may be written as a sum of terms like
+$[\nu_{M},x]$ and %$[\nu_{M},y]$ and
+$[\nu_{A},y]$. Here and below, we consider $x\in X^{a}$ % $y\in X^{e}$
+and $y\in X^{m}$, moreover $\nu_{A}\in N^{2}(A)$ and $\nu_{M}\in N^{2}(M)$.
+
+Once each $\nu_{A}$ and $\nu_{M}$ is expressed as sums of basic monomials over $X$, we obtain an equality in $\fla{3}{L_{1}}$:
+
+$$w_{E}-w_{A}=\mathcal{B}^{M,a}+%\mathcal{B}^{M,e}+
+p\mathcal{B}^{A,m}$$
+
+where 
+\begin{itemize}
+\item[$\mathcal{B}^{M,a}$] is a sum of basic terms $[m_{1},m_{2},x]$ for $m_{i}\in X^{B}X^{m}$
+%\item[$\mathcal{B}^{M,e}$] is a sum of basic terms $[m_{1},m_{2},y]$ for $m_{i}\in X^{B}X^{m}$
+\item[$p\mathcal{B}^{A,m}$]is a sum of prebasic terms $[a_{1},a_{2},y]$ for $a_{i}\in X^{a}X^{e}X^{B}$.
+\end{itemize}
+We now transform all prebasic monomials above into $[a_{1},y,a_{2}]-[a_{2},y,a_{1}]$ which are basic
+and whose sum we denote by $\mathcal{B}^{A,m}_{*}$.
+
+We obtain a sum of basic commutators
+$$w_{E}-w_{A}=\mathcal{B}^{M,a}+
+\mathcal{B}^{A,m}_{*}.$$
+
+Since an expression in basic monomials for $w_{E}-w_{A}$ does not involve
+{\em mixed} terms (i.{}e.{\,}monomials supported on both $X^{a}$ and $X^{m}$), by uniqueness all mixed terms must cancel each other from the sum $\mathcal{B}^{M,a}+%\mathcal{B}^{M,e}+
+\mathcal{B}^{A,m}_{*}$. Cancellations do not arise within the same group, the only possibility
+instead is that mixed $\mathcal{B}^{A,m}_{*}$-monomials cancel mixed $\mathcal{B}^{M,a}$-monomials and vice versa.
+
+Consider indeed a term $[m_{1},m_{2},x]$ above with $m_{2}\in X^{m}$, %(note that such a term has to exist in $\mathcal{B}^{M,a}$),
+%the corresponding prebasic which is meant to cancel it will be 
+this is to be neutralised by the prebasic commutator
+$[x,m_{1},m_{2}]$ of $p\mathcal{B}^{A,m}$, hence $m_{1}\in X^{B}$ and $\mathcal{B}^{A,m}_{*}$ contains the basic commutator $[x,m_{2},m_{1}]$ which differs from any $\mathcal{B}^{M,a}$-term. We deduce that no mixed $\mathcal{B}^{M,a}$-term is present in the sum above, and, with much similar arguments no
+mixed $p\mathcal{B}^{A,m}$-term shows up as well.
+
+We showed $w_{E}$ and $w_{A}$ lies, modulo $\J(L)$, in $\fla{3}{E_{1}\cap A_{1}}$.
+\end{proof}
+
+%\medskip
+%Denote $D_{1}=H_{1}\cap K_{1}$, and set $\mathcal{H}:=(\gena{H_{1}}{F_{L}})_{3}$, $\mathcal{K}:=(\gena{K_{1}}{F_{L}})_{3}$, $\mathcal{D}:=(\gena{D_{1}}{F_{L}})_{3}$.
+
+%\smallskip
+%We artificially induce a graded Lie algebra structure on
+%$$X=L\oplus\left( \mathcal{H}\oplus_{\mathcal{D}}\mathcal{K}\right)$$
+%if we define Lie brackets to be nontrivial
+%only for products of weight not greater than $3$, which arise from $\gena{H_{1}}{L}$
+%or $\gena{K_{1}}{L}$.\footnote{this means $[w,y]\neq\triv$ if both $w$ and $y$
+%belong to $\gena{H_{1}}{L}$ or $\gena{K_{1}}{L}$, moreover the value
+%of $[w,y]$ is the one in $\mathcal{H}$ or in $\mathcal{K}$. This makes sense since
+%$\gena{H_{1}}{F_{L}}=\gena{H_{1}}{L}\oplus\mathcal{H}$, and the same holds for $K$ and $D$}
+
+%Now since $X_{*}=L$, we have an epimorphismus $\pam{X}$ of $\ftr{L}$ onto
+%$X$. Moreover it {\em should be clear} that $\pam{X}$ maps $\gena{H_{1}}{\ftr{L}}$
+%isomorphic onto $\gena{H_{1}}{X}$, and the same holds with $H_{1}$ and $K_{1}$.
+
+%Observe that, since at the first two levels we have a good intersection, in $X$ we have
+%$\gena{H_{1}}{X}\cap\gena{K_{1}}{X}=\gena{D_{1}}{X}$. Now,
+%considering preimages through $\pam{X}$ we get $(\ast)$.
+
+\bigskip\noindent
+We proceed amalgamating the triple $M_{*}\nni B_{*}\zsu A_{*}$ to get $M_{*}\zsu L_{*}\nni A_{*}$, so that
+$\gam{B}{A}$ and $\gam{M}{L}$ are monomorphisms.
+
+Then set $\ke{B}{}=\ker\gam{B}{M}$ and $\ke{A}{}=\ker\gam{A}{L}$. Since $\gam{B}{M}\gam{M}{L}=\gam{B}{A}\gam{A}{L}$, we have $$\gam{B}{A}\ke{B}{}=\ke{A}{}\cap\gena{B_{1}}{\ftr{A}}$$
+({\em by a basic commutator argument, similar to those used before, we can actually show that $\ke{A}{}\inn\gena{B_{1}}{\ftr{A}}$ and hence
+$\gam{B}{A}\ke{B}{}=\ke{A}{}$ but what we stated should be enough for what follows}).
+
+%\bigskip
+%Thes i sthe argument \dots We choose an ordered base $X_{1}^{L}=\{X_{1}^{a}>X_{1}^{B}>X_{1}^{m}\}$ of $L_{1}$ where $X_{1}^{B}$ is a basis for $B_{1}$,
+%$X_{1}^{A}=X_{1}^{a}X_{1}^{B}$ is a basis for $A_{1}$ and $X_{1}^{m}$ completes $X_{1}^{B}$ to a basis $X_{1}^{M}$ of $M_{1}$. Each of the three segments of $X_{1}^{L}$ is ordered arbitrarily.
+
+%We consider the surjective map
+%$\map{\lambda_{A}}{\fr{3}\tr{2}A}{\gena{A_{1}}{\fr{3}\lda}}$ as in \pref{lollipop}, where
+%$\fr{3}\lda$ is presented by $\fla{3}{X_{1}^{L}}\quot\jei{L}$ and $\fr{3}\tr{2}A$ by $\fla{3}{X_{1}^{A}}\quot\jei{A}$.
+
+%%To prove that $\lambda_{A}$ is an injection we have to show that
+%We have $$\ker(\lambda_{A})=\frac{\fla{3}{X_{1}^{A}}\cap\jei{L}}{\jei{A}}%=\mathbf{0}
+%$$
+%moreover $\ker(\lambda_{A})$ is homogeneous of weight $3$.
+
+%We note that
+%\begin{labeq}{bulaba}
+%\jei{L}_{3}=\gen{\jei{M}_{3},\,\jei{A}_{3},\,[\nu^{A},y],\,[\nu^{M},x]}_{+}^{\fla{3}{X_{1}^{L}}}
+%\end{labeq}
+%$$\text{where}\quad x\in X_{1}^{a},\,y\in X_{1}^{m},\,\nu^{A}\in N^{2}(A),\,\nu^{M}\in N^{2}(M)$$
+%and we can assume both the $\nu^{A}$'s and the $\nu^{M}$'s to be independent over $\exs B_{1}$.
+
+%Following the reasoning which led to expression \pref{basipre}, an element $w$ in $\ker(\lambda_{A})$
+%%which is not zero
+%may be written modulo $\jei{A}$ as
+%\begin{labeq}{baluba}
+%B_{A}=w=B^{M}+pB^{M}+B^{Ma}+pB^{aM}
+%\end{labeq}
+%where $B^{M}$, $pB^{M}$ are respectively sums of basic and prebasic commutators
+%over $X_{1}^{B}X_{1}^{m}$ which cover the $\jei{M}$-part of $w$. $B^{Ma}$ is a sum of commutators
+%arising from terms of type $[\nu^{M},x]$ in $w$, these are necessarily basic after the order of $X_{1}^{L}$
+%we chose. $pB^{aM}$ denotes the sum of prebasic commutators obtained by the terms $[\nu^{A},y]$ of $\jei{L}$.
+%$B_{A}$ is a linear combination of basic commutators over $X_{1}^{A}$ which write the word $w$
+%as member of $\fla{3}{X_{1}^{A}}$.
+
+%We transform the prebasic commutators in the right term of \pref{baluba} in basic ones,  by means of substitutions \pref{prebi}, thus we have
+%$$B_{A}=B^{M}+B^{M}_{*}+B^{Ma}+B^{aM}_{*}$$
+%where now both terms of the equality concern basic commutators over $X_{1}^{L}$.
+
+%By uniqueness all
+%the terms on the right which do not appear in $B_{A}$ must be cancelled by the sum.
+
+%By the shape of the generators for $\jei{M}$ in \pref{bulaba}, we see that we fall in contradiction if
+%some term of type $B^{Ma}$ or $pB^{aM}$ is present in \pref{baluba},
+%because, after basic transformations, these cannot cancel each other, nor be cancelled by terms of $B^{M}+B_{*}^{M}$.
+
+%As a consequence $B_{A}=w=B^{M}+pB^{M}\in\jei{M}$, and this forces $w$ to lay in
+%$\fla{3}{X_{1}^{A}}\cap\fla{3}{X_{1}^{M}}=\fla{3}{X_{1}^{M}\cap X_{1}^{A}}=\fla{3}{X_{1}^{B}}$.
+
+%We have
+%\begin{labeq}{kerlam}
+%K:=\ker(\lambda_{A})=\frac{(\jei{M}\cap
+%\fla{3}{X_{1}^{B}})+\jei{A}}
+%{\jei{A}}\inn\gena{B_{1}}{\fr{3}\tr{2}A}.
+%\end{labeq}
+
+%Now because $B_{1}\zsu A_{1}$, on account of lemma \ref{bellemma} we have $\jei{B}=\jei{A}\cap\fla{3}{X_{1}^{B}}$. Hence if we look at the analog of $\lambda_{A}$ for $B$ $\map{\lambda_{B}}{\fr{3}\tr{2}B}{\fr{3}\tr{2}M}$, it holds
+%\begin{multline*}
+%\ker\lambda_{B}=
+%\frac{\jei{M}\cap\fla{3}{X_{1}^{B}}}{\jei{B}}=\\
+%=\frac{\jei{M}\cap\fla{3}{X_{1}^{B}}}{\jei{A}\cap\fla{3}{X_{1}^{B}}}
+%=\frac{\jei{M}\cap\fla{3}{X_{1}^{B}}}{\jei{A}\cap(\jei{M}\cap\fla{3}{X_{1}^{B}})}
+%\simeq K
+%\end{multline*}
+
+
+\medskip
+So if we write 
+$\overline{F}_{\sss A}$ for $\ftr{A}\quot_{\!\ke{A}{}}$ and
+$\overline{F}_{\sss B}$ for $\ftr{B}\quot_{\!\ke{B}{}}$ and we bar the maps
+we take the quotients of,
+%and call the respective quotient maps $
+we obtain the following
+{\em injective} commutative arrows
+\begin{labeq}{pream}
+\xymatrix{
+&{\ftr{L}}&\\
+{\ftr{M}}\ar%@{^{(}->}
+[ur]^{\gam{M}{L}}&&{\overline{F}_{\sss A}%\quot_{\ke{A}{}}
+}\ar%@{_{(}->}
+[ul]_{\bgam{A}{L}}\\
+&{\overline{F}_{\sss B}%\quot_{\ke{B}{}}
+}\ar%@{_{(}->}
+[ul]^{\bgam{B}{M}}\ar%@{^{(}->}
+[ur]_{\bgam{B}{A}}&}
+\end{labeq}
+Recall we have $\gena{M_{1}}{\ftr{L}}=\gam{M}{L}\ftr{M}$ and $\gena{A_{1}}{\ftr{L}}=
+\gam{A}{L}F_{\sss A}=\bgam{A}{L} \overline{F}_{\sss A}$.
+
+Now since $L_{*}$ is the free amalgam of $M_{*}$ and $A_{*}$ over $B_{*}$, we have
+ $\gena{M_{1}}{{L}_{*}}\cap\gena{A_{1}}{{L}_{*}}=\gena{M_{1}\cap A_{1}}{{L}_{*}}$
+hence by $(\ast)$ above, $\gena{M_{1}}{\ftr{L}}\cap\gena{A_{1}}{\ftr{L}}=\gena{M_{1}\cap A_{1}}{\ftr{L}}=\gena{B_{1}}{\ftr{L}}$.
+
+%\begin{center}
+%\begin{itemize}
+%\item[($\ast$)] we artificially induce a graded Lie algebra structure on
+%$$X=L_{*}\oplus\left( (F_{\sss M})_{3} \oplus_{(\overline{F}_{B})_{3}}
+%(\overline{F}_{\sss A})_{3} \right)$$
+%if we define Lie brackets to be nontrivial
+%for products of weight not greater than $3$, which arises from $\gena{M_{1}}{L_{*}}$
+%or $\gena{A_{1}}{L_{*}}$ only\footnote{this means $[w,y]\neq\triv$ if both $w$ and $y$
+%belong to $\gena{M_{1}}{L_{*}}$ or $\gena{A_{1}}{L_{*}}$, moreover the value
+%of $[w,y]$ is the one in $\ftr{M}$ or in $\overline{F}_{\sss A}$. This makes sense since,
+%$F_{\sss M}=\gena{M_{1}}{L_{*}}\oplus(F_{\sss M})_{3}$, $\overline{F}_{\sss A}=\gena{A_{1}}
+%{L_{\ast}}\oplus(\overline{F}_{A})_{3}$ and $\overline{F}_{\sss B}=\gena{B_{1}}
+%{L_{*}}\oplus(\overline{F}_{\sss B})_{3}$.
+%}.
+
+%Now since $X_{*}=L_{*}$, we have an epimorphismus $\pam{X}$ of $\ftr{L}$ onto
+%$X$. Moreover $\pam{X}$ is injective on $\gena{M_{1}}{\ftr{L}}\simeq\ftr{M}$ and maps $\gena{B_{1}}{\ftr{L}}$
+%onto $\gena{B_{1}}{X}$.
+
+%Observe that since at the first two levels we are in a free amalgam we have
+%$\gena{M_{1}}{X}\cap\gena{A_{1}}{X}=\gena{B_{1}%M_{1}\cap A_{1}
+%}{X}$, now
+%considering preimages through $\pam{X}$ we get the desired intersection.
+%\end{itemize}
+%\end{center}
+
+\bigskip 
+We now define $N_{A}:=\gam{A}{L}N^{3}(A)$
+%=\bgam{A}{L}\overline{N}^{3}(A)$.
+and $N_{M}:=\gam{M}{L}N^{3}(M)\simeq
+N^{3}(M)$ and also set
+%\begin{multline*}
+$N_{B}:=\gam{A}{L}N^{3}_{A}(B_{1})=
+%[EXP]
+%\bgam{A}{L}( ( N^{3}_{A}(B_{1}) + \ke{A}{} )\quot \ke{A}{} )
+\bgam{A}{L}(\bgam{B}{A} (N^{3}(B)\quot\ke{B}{}) )
+=\gam{M}{L}(\bgam{B}{M} (N^{3}(B)\quot\ke{B}{}) )
+=\gam{M}{L}N^{3}_{M}(B_{1})=N_{M}\cap\gena{B_{1}}{F_{L}}$.
+%\end{multline*}
+
+\medskip
+Moreover all inclusions and arrows above preserve in $\ftr{L^{\sss +}}$ since
+$\gam{L}{L^{\sss +}}$ is a monomorphism ($L_{1}\zsu L^{+}_{1}$), this allows us to define:
+$$L:=\frac{\ftr{L}}{N_{M}+N_{A}}\quad\text{and}\quad L^{\sss +}:=\frac{\ftr{L^{\sss +}}}{N_{M}+N_{A}}$$
+where $L\simeq\gena{L_{1}}{L^{+}}$ for $L_{1}=M_{1}\oplus_{B_{1}}A_{1}$
+and a weight argument yields first that $N_{M}+N_{A}$ is an ideal of $\ftr{L^{\sss +}}$ and then
+shows $N^{3}(L)=N^{3}(L^{+})$ is actually $N_{M}+N_{A}$.
+
+We have now to show $N^{3}_{L^{+}}(A_{1})=N^{3}_{L}(A_{1})=N_{A}$, and this holds since
+\begin{multline*}
+N^{3}_{L^{+}}(A_{1})=
+N^{3}(L^{+})
+\cap\gena{A_{1}}{\ftr{ L^{\sss +} } }=(N_{M}+N_{A})\cap\gena{A_{1}}{\ftr{ L}}=\\
+=N_{A}+( N_{M} \cap \gena{A_{1}}{\ftr{ L}} )
+=N_{A}+( N_{M}\cap\gena{M_{1}}{\ftr{L}} \cap \gena{A_{1}}{\ftr{ L}} )=\\
+=N_{A}+( N_{M}\cap\gena{B_{1}}{\ftr{L}})=N_{A}+N_{B}=N_{A}
+\end{multline*}
+
+Since $\ke{A}{}\inn N^{3}(A)$, this also implies $A\simeq\ftr{A}\quot_{\!N^{3}(A)} \simeq\overline{F}_{\sss A}\quot_{\!N_{A}}\simeq\gena{A_{1}}{L^{\sss +}}(\simeq\gena{A_{1}}{L})$ and the same results hold for $M$ of course.
+
+\bigskip\noindent
+Now $M\dsu L$.
+
+\smallskip
+Assume $M_{1}\inn E_{1}\zsu L_{1}$.
+%If we assume $A$ to be $\ta$-closed as well\footnote{
+%or if we have $\gena{E_{1}}{L_{*}}\cap\gena{A_{1}}{L_{*}}=\gena{E_{1}\cap A_{1}}{L_{*}}$
+%considering $L$ and {\em not} $L^{+}$. This is however
+%to be discussed with the proof of rich/model theorem},
+By $(\ast)$ we have $\gena{E_{1}}{\ftr{L}}\cap\gena{A_{1}}{\ftr{L}}=\gena{E_{1}\cap A_{1}}{\ftr{L}}$, hence if
+%and to get this we essentially repeat the argument $(\ast)$ above,\footnote{{\bf Note:} To make this work here we have to assume that
+%$\gena{E_{1}}{L^{+}_{*}}\cap\gena{A_{1}}{L^{+}_{*}}=
+%\gena{E_{1}\cap A_{1}}{L^{+}_{*}}$ and this is achieved if we assume, say,
+%$A$ to be $\ta$-closed as well.}
+%this time with
+%$$
+%X:=L_{*}^{+}\oplus\left( (F_{\sss E})_{3} \oplus_{(\overline{F}_{D})_{3}}
+%(\overline{F}_{\sss A})_{3} \right)
+%$$
+%where $D=\gena{E_{1}\cap A_{1}}{F_{L^{+}}}$.
+we compute $N^{3}_{L^{+}}(E_{1})$ we get
+$$
+(N_{M}+N_{A})\cap\gena{E_{1}}{F_{L}}=N_{M}+(N_{A}\cap
+\gena{E_{1}}{F_{L}})=N_{M}+N_{L}^{3}(E_{1}\cap A_{1}).
+$$
+
+%On the other hand $N_{M}\cap N_{L^{+}}^{3}(E_{1}\cap A_{1})=
+%N^{3}_{L^{+}}(M_{1})
+Therefore $N^{3}_{L}(E_{1})\quot N^{3}_{L}(M_{1})$ is isomorphic to
+$N^{3}_{L}(E_{1}\cap A_{1})\quot N^{3}_{L}(B_{1})$ which is epimorphic image
+of  $N^{3}_{A}(E_{1}\cap A_{1})\quot N^{3}_{A}(B_{1})$ through $\gam{A}{L}$.
+
+\medskip
+Since on the other hand we have $d_{2}^{L}(E_{1}\quot M_{1})\geq d_{2}^{A}(E_{1}\cap
+A_{1}\quot B_{1})$,\footnote{follow arguments already used in the symmetric amalgam}
+we get in the end $\ded^{L}(E_{1}\quot M_{1})\geq\ded^{A}(E_{1}\cap A_{1}\quot
+B_{1})\geq0$ since $B\dsu A$.
+
+\bigskip
+If we wish $M\dsu L^{+}$ as well, we should prove (d) for
+$$\gena{E_{1}}{\ftr{L^{+}}}\cap\gena{A_{1}}{\ftr{L^{+}}}=\gena{E_{1}\cap A_{1}}{\ftr{L^{+}}}$$
+where now $M_{1}\inn E_{1}\inn L_{1}^{+}$ and conclude with the above arguments.
+
+Since we do not have (d) in the case above, even for a couple of $2$-strong subalgebras,
+we actually cannot prove $M\dsu L^{+}$ even if $L$ is a {\em symmetric} amalgam.
+\end{document}

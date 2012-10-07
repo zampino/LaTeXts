@@ -1,0 +1,45 @@
+\documentclass[english,german,11pt]{article}
+\usepackage{babel}
+\usepackage[latin1]{inputenc}
+\usepackage{amsmath,amsfonts,amssymb,amsthm}
+\usepackage{ModNet}
+\usepackage{FHL}
+\linespread{1.2}
+\title{ein Beispiel gegen Subadditivit\"at}
+\pagestyle{empty}
+\author{}
+\date{}
+%\pagestyle{empty}
+\begin{document}
+\maketitle
+\begin{itemize}
+\item[] Man betrachtet die folgende Algebren $A,B$ und $M$ aus $\nla{3}$.
+$$B=\gen{b_{1},b_{2},b_{3},b_{4}}$$
+$$A=\gen{B_{1},\,a\mid[a,b_{1}]-[b_{2},b_{3}]}$$
+$$M=\gen{m_{1},m_{2},\,B_{1}\mid\alpha=[b_{2},b_{3},b_{4}]-[m_{1},m_{2},m_{2}],\,\beta=[b_{2},b_{3},m_{1}]-[b_{4},m_{2},m_{2}]}.$$
+
+Man sieht, da{\ss} $M\dso B\dsu A$, wobei $A\quot B$ eine algebraische
+(mit $\delta_{2}(A\quot B)=\delta_{3}(A\quot B)=0$) und
+$M\quot B$ eine \emph{pr\"aalgebraische}  Erweiterung ist.
+
+Falls $L_{*}$ das freie Amalgam der auf Stufe $2$ abgeschnittenen Strukturen $A_{*}$,
+$B_{*}$ und $M_{*}$ bezeichnet, gilt dann also $F_{L}=\fla{3}{m_{1},m_{2},B_{1},a}
+\quot\jei{L}$ wobei
+$$\jei{L}=\genid{[a,b_{1}]-[b_{2},b_{3}]}{\fla{3}{L_{1}}}.$$
+
+Setze $N^{3}(L)=N^{3}(M)+N^{3}(A)$ and $L=F_{L}\quot N^{3}(L)$.
+
+Sei nun $H_{1}=\geno{m_{1},m_{2},b_{1},b_{4},a}$, so $H_{1}\cap M_{1}=\geno{m_{1},m_{2},b_{1},b_{4}}$.
+
+Darum liegen beide $\alpha\equiv[a,b_{1},b_{4}]-[m_{1},m_{2},m_{2}]$
+und $\beta\equiv[a,b_{1},m_{1}]-[b_{4},m_{2},m_{2}]$ in $N_{L}^{3}(H_{1})\non N_{L}^{3}(H_{1}\cap M_{1})$.
+
+Dabei ist $H_{1}$, und daher auch $H_{1}\cap M_{1}$, ein $\delta_{2}$-starker unterraum
+mit $\delta_{2}(H\quot M)=\delta_{2}(A\quot M)=\delta_{2}(A\quot B)=0$ wehrend
+$\delta_{2}(H\quot H\cap M)=1$.
+
+Deshalb folgt $0=\ded^{L}(H\quot M)>\ded^{L}(H\quot H\cap M)=-1$, welches
+der Subadditivit\"at des $\ded$ widerspricht.
+
+\end{itemize}
+\end{document}

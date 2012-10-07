@@ -1,0 +1,235 @@
+Notice that in the example above, $H$ {\em is not self-sufficient} in $M$ ($\delta(a/H)=-3$). This is actually
+the only obstruction for extensions of $\Klt{2}$ not to be lifted to $\nla{3}$-embeddings by $\frl$:
+\begin{prop}\label{bellemma}
+Let $M$ be a $\Klt{2}$-algebra. Assume $i\colon H=\gena{H_{1}}{M}\inn M$ is a self-sufficient $\nla{2}$-embedding,
+then the map $\map{\gamma=\frl(i)}{\fl H}{\fl M}$ is an $\nla{3}$-monomorphism.
+
+By Remark \pref{sangalgano} this is equivalent for a strong extensions $H\zsu{}M$ to imply \[\J(H)=\J(M)\cap\fla{3}{H_{1}}\]
+where as above we let $\fla{3}{H_{1}}$ coincide with $\gena{H_{1}}{\fla{3}{M_{1}}}$.
+\end{prop}
+%\sout{The quite long proof of the above proposition is deferred to the end of the section/Cha[ter}
+\begin{proof}
+%Let $\mathcal{M}$ be a base for $M_1$ and $\xoh\inn \mathcal{M}$ be a base for $H_1$.
+%As in diagramm \pref{communoemezzo} we have:
+As \emph{$\delta$-strongness} traduces into a local property by Proposition \ref{finchar}, we may assume without loss of generality, that $H_{1}$ is a {\em finite} subspace of $M_{1}$.
+
+If $\gamma$ denotes $\frl(i)$ as above,
+assuming $\gamma$ not injective, yields a nontrivial $w\in(\jei{M}\cap\fla{3}{H_{1}})\setminus\jei{H}$.
+
+As $M$ lays in $\nla{2}$ and hence $M=\fla{2}{M_{1}}/\rd(M)$, we have by definition
+$$
+\J(M)=%\genid{N}{\fla{3}{M_1}}=
+\genp{\mu,\,[\nu,z]\mid\mu,\nu\in\rd(M),\,z\in M_1}.
+$$
+
+Moreover, by the remarks above $w$ may be assumed homogeneous of weight $3$, hence a finite sum like
+\begin{labeq}{summa}
+w=\sum_{\al}[\nu_{\al},z_{\al}].
+\end{labeq}
+for some $\nu_{\al}\in\rd(M)$ and $z_{\al}\in M_{1}$.
+On the other hand $w$ must be also identical to a linear combination of monomials of weight $3$ in elements of $H_{1}$.
+
+\smallskip
+Extract a maximal subset $\mathcal{Z}$ out of the $z_{\alpha}$'s above, which is linearly independent over $H_{1}$.
+With bilinearity of the Lie bracket
+and since $\rd(M)$ % and $\rd(H)$ are
+is an additive subgroup of $\exs M_{1}$, we can actually give expression \pref{summa}
+the form
+\begin{labeq}{mustiola}
+w=%\sum_{i=1}^{m_{1}}[\nuu{i}, u_i]+\sum_{j=1}^{n_{1}}[\nuw{j}, w_j]
+\sum_{u\in\mathcal{U}_{0}}[\nuu{},u]+\sum_{z\in\mathcal{Z}}[\nu_{z},z]
+\end{labeq}
+where $\mathcal{U}_{0}$ %${\{u_i\}}_{i=1,\dots,m_{1}}$
+is a linearly independent subset of $H_1$, $\mathcal{Z}\inn M_{1}$ is the above set independent over $H_{1}$ and $\nuu{},\nu_{z}$
+belong to $\rd(M)$.
+ \pref{mustiola}.
+
+\smallskip
+Now we claim that sum \pref{mustiola} can be transformed into
+\begin{labeq}{sangennaro}
+w=%\sum_{i=1}^m[\nuu{i}, u_i]+\sum_{j=1}^n[\nux{j}, x_j]+\sum_{k=1}^r[\lay{k},y_k]
+\sum_{u\in\mathcal{U}}[\nuu{}, u]+\sum_{x\in\mathcal{X}}[\nux{}, x]+\sum_{y\in\mathcal{Y}}[\lay{},y]
+\end{labeq}
+where $\mathcal{U}$ %{\left\{u_i\right\}}_{i=1,\dots,m}$
+is a $\Fp$-independent subset of $H_1$, $\mathcal{XY}$ %{\{x_j, y_k\}}^{k=1,\dots,r}_{j=1,\dots,n}$
+is linearly independent over $H_1$ in $M_{1}$,
+the set $\{\nuu{},\nux{}\mid u\in\mathcal{U},x\in\mathcal{X}\}$ %^{k=1,\dots,r}_{j=1,\dots,n}$
+is linearly independent over $\exs H_1$ in $\rd(M)$, and $\{\lay{}\mid y\in\mathcal{Y}\}$ %_{k=1,\dots,r}$
+is an independent subset of $\rd(H)$.
+
+To obtain \pref{sangennaro} from \pref{mustiola} we adopt the following steps.
+Let first $\mathcal{X}$ be a maximal subset of $\mathcal{Z}$ with the property that $\{\nux{}\mid x\in\mathcal{X}\}$ is an
+$\exs H_{1}$-independent subset of the $\nu_{z}$'s. We transform by bilinearity of the Lie product,
+the sum $\sum_{z\in\mathcal{Z}}[\nu_{z},z]$ %$\sum_{j=1}^{n_{1}}[\nuw{j}, w_j]$
+of \pref{mustiola} into
+%Assume
+%%\pref{mustiola} has been trasformed, in such a way that a first segment of the sum
+%%has the desired independence properties:$$
+%we have
+%$$
+%\sum_{j=1}^{n_{1}}[\nuw{j}, w_j]=\sum_{j=1}^{n_0}[\nux{j}, x_j]+\sum_{k=1}^{r_0}[\lay{k},y_k]+[\nu,z]+\sum_{\beta}[\nu_{\beta},z_{\beta}]
+%$$
+%where ${\{\nux{j}\}}_{j}$ is a maximal set of $\nuw{}$'s which are independent over $\exs H_{1}$ and
+%the $\lay{}$'s are independent inside $\rd(H)$.  
+%
+%If now $\{\nux{1},\dots,\nux{n_0},\nu\}$ is not independent over $\exs H_1$,
+%%and $(x_{j},y_{k},z,z_{\beta})$ is independent over $H_1$.
+%then ${\nu}=\summ{j}{s_{j}}{\nux{j}}+
+%\summ{k}{\mu_k}{\lay{k}}+h$, with $h\in \rd(H)$, $h$ indepent over ${\{\lay{k}\}}_{k=1}^{r_0}$. %and  $[\nu,z]=$.
+%
+%Now put $\lay{r_0+1}=h$ and $y_{r_0+1}=z$, distribute $\nu$ by bilinearity, and obtain
+%$$
+%%=\sum_{i=1}^{m_0}[\nuu{i}, u_i]+
+%\sum_{j=1}^{n_{1}}[\nuw{j}, w_j]=\sum_{j=1}^{n_0}[\nux{j}, x_j+s_{j}z]+\sum_{k=1}^{r_0}[\lay{k},y_k+\mu_kz]
+%+[\lay{r_0+1},y_{r_0+1}]+\sum_{\beta}[\nu_{\beta},z_{\beta}].
+%$$
+%Note that the set ${\{x_j+s_{j}z,\, y_k+\mu_kz,\, y_{r_{0}+1},\,z_{\beta}\}}_{j,k,\beta}$
+%is still independent over $H_1$.
+%Changing names to the second entries in the Lie bracket we have
+%$$
+%\sum_{j=1}^{n_{1}}[\nuw{j}, w_j]=\sum_{j=1}^{n_0}[\nux{j}, x_j]+\sum_{k=1}^{r_{0}+1}[\lay{k},y_k]
+%+\sum_{\beta}[\nu_{\beta},z_{\beta}].
+%$$
+%Repeated application of this procedure will lead to
+$$ %\sum_{j=1}^{n_{1}}[\nuw{j}, w_j]=\sum_{j=1}^{n}[\nux{j}, x_j]+\sum_{k=1}^{r}[\lay{k},y_k]
+\sum_{x\in\mathcal{X}}[\nux{}, x]+\sum_{y\in\mathcal{Y}}[\lay{},y]
+$$ %with the $x_{j},y_{k}$'s independent over $H_{1}$, the $\nux{j}$'s independent over $\exs H_{1}$ and
+%the $\lay{k}$'s linearly independent inside $\rd(H)$.
+where $\mathcal{Y}$ is a subset of $\mathcal{Z}$ such that $\mathcal{XY}$ and the $\lay{}$'s have the properties claimed for \pref{sangennaro}.
+
+To get \pref{sangennaro} we now modify the set $\{\nuu{},\nux{}\mid u\in\mathcal{U}_{0},x\in\mathcal{X}\}$ to get an
+$\exs H_{1}$-independent one, this will possibly reduce the length $\card{\mathcal{U}_{0}}$ of the first segment of \pref{mustiola}.
+
+Assume $\mathcal{U}$ is a maximal subset of $\mathcal{U}_{0}$ for which %the tuple $\overline{\nu}_{u}$ is a maximal subset of the
+%$\nuu{i}$'s which 
+$\{\nuu{}\mid u\in\mathcal{U}\}$ is linearly independent
+over $\genp{\exs H_{1},\nux{}\mid x\in\mathcal{X}}$ in $\exs M_{1}$. Then for any $u_{0}\in\mathcal{U}_{0}\non\mathcal{U}$ we have
+$$\nuu{0}=\sum_{u\in\mathcal{U}}t_{u}\nuu{}+\sum_{x\in\mathcal{X}}s_{x}\nux{}+\eta$$
+where $t_{u}$ and $s_{u}$ are in $\Fp$ for all $u$ and $\eta$ is an element of $\rd(H)$. This yields
+\begin{labeq}{sanfanulo}
+[\nuu{0},u_{0}]=\sum_{u\in\mathcal{U}}[\nuu{},t_{u}u_{0}]+\sum_{x\in\mathcal{X}}[\nux{},s_{x}u_{0}]+[\eta,u_{0}].
+\end{labeq}
+Since $w$ is not in $\J(H)$, by replacing $w$ with $w-[\eta,u_{0}]$, we still obtain an element of $\fla{3}{H_{1}}\cap\J(M)$
+which does not belong to $\J(H)$. On the other hand we merge\footnote
+{This is actually how we reached expressions \pref{mustiola} and \pref{sangennaro}.}
+the remaining terms of \pref{sanfanulo}
+into
+$$ %\begin{labeq}{sanfatucchio}
+w=\!\!\!\!\sum_{%\substack{
+u\in\mathcal{U}_{0}\non\mathcal{U}, u_{0}}\!\!\![\nuu{},u]+\sum_{u\in\mathcal{U}}
+[\nuu{},u+t_{u}u_{0}]+\sum_{x\in\mathcal{X}}[\nux{},x+s_{x}u_{0}]+\sum_{y\in\mathcal{Y}}[\lay{},y]
+$$ %\end{labeq}
+%Now the maps
+%$$\mathcal{U}\ni u\mapsto u+t_{u}u_{0}\quad\text{and}\quad\mathcal{X}\ni x\mapsto x+s_{x}u_{0}$$
+%preserve the linear independence of $\mathcal{U}$ and the independence of $\mathcal{X}$ over $\genp{\mathcal{Y},H_{1}}$.
+Now the sets $$\{u+t_{u}u_{0}\mid u\in\mathcal{U}\}\quad\text{and}\quad\{x+s_{x}u_{0}\mid x\in\mathcal{X}\}$$
+are again respectively linearly independent and linearly independent over $\genp{\mathcal{Y},H_{1}}$.
+
+Iterating this step for all $u\in\mathcal{U}_{0}\non\mathcal{U}$ -- each time renaming
+the $u$'s, the $x$'s and $w$ -- we reach the desired expression \pref{sangennaro}. At the end
+\pref{sangennaro} is not trivial if $w$ doesn't lay in $\J(H)$.
+
+\medskip
+Now arrange the above sets into a linearly ordered base $\mathcal{M}$ of $M_1$ according to the following hierarchy:
+$$
+\mathcal{M}=\{\bu>\hu>\mathcal{X}>\mathcal{Y}>\vu\}
+$$
+%with $\bu=\{u_i\}$,
+where $\hu$ is a completion of $\bu$ to a base of $H_1$,
+%$\mathcal{X}=\{x_j\}$, $\mathcal{Y}=\{y_k\}$ and
+$\vu$ is a completion of $\bu\hu \mathcal{X} \mathcal{Y}$ to a base
+of $M_{1}$ and each of the above subparts of $\mathcal{M}$ is ordered in some way.
+
+According to Definitions \ref{basicommutators} and \ref{supp} and Fact \ref{ubc},
+we write elements $\nuu{}$, $\nux{}$ and $\lay{}$ in \pref{sangennaro} as $\Fp$-linear combinations
+of basic $\mathcal{M}$-monomials of weight $2$.
+%with respect to the base $\mathcal{M}$, according to the ordering chosen above.
+
+As a result, for suitable scalars $\theta_{\alpha}\in\Fp$, the sum \pref{sangennaro} becomes a linear combination
+\begin{labeq}{santarita}
+\summ{\al}{\theta_{\al}}{[a_{\al},b_{\al},z_{\al}]}
+\end{labeq}
+of left-normed commutators of weight $3$, where each monomial $[a_{\al},b_{\al},z_{\al}]=[a,b,z]$ has
+$a,b$ laying in $\mathcal{M}$ with $a>b$ while $z$ belongs to $\bu\mathcal{X}\mathcal{Y}$.
+If in addition $z\geq b$, the term $\trec{a}{b}{z}$ is a basic monomial of weight $3$.
+If on the contrary $a>b>z$, then we call the monomial $\trec{a}{b}{z}$ a \emph{prebasic} monomial.
+
+Applying the Jacobi Identity, every prebasic monomial $\trec{a}{b}{z}$ can be transformed (cfr.\,\cite[p.577]{mhalll})
+in the sum of two basic commutators, namely
+\begin{labeq}{prebi}
+\trec{a}{b}{z}=\trec{a}{z}{b}-\trec{b}{z}{a}.
+\end{labeq}
+
+On the other hand, with Fact \ref{ubc} again, as an element of $\fla{3}{H_1}$, %\inn\fla{3}{\mathcal{M}}$,
+$w$ admits a unique expression as a linear combination $\mathcal{B}^H$ of basic monomials over $\bu\hu$ of weight $3$.
+
+We have then
+\begin{labeq}{basipre}
+\mathcal{B}^H=w=\mathcal{B}+p\mathcal{B}=\mathcal{B}+\mathcal{B}_*
+\end{labeq}
+where $\mathcal{B}$, $p\mathcal{B}$ are sums of respectively basic and prebasic commutators over $\mathcal{M}$
+representing $\pref{santarita}$ and $\mathcal{B}_{*}$ is the sum of basic $\mathcal{M}$-monomials arising from $p\mathcal{B}$
+by means of substitutions \pref{prebi}.
+
+By abuse of notation, we let $\mathcal{B}$, $\mathcal{B}^{H}$, $p\mathcal{B}$ and $\mathcal{B}_{*}$ also denote the {\em sets} of
+monomials which appear in the corresponding sum.
+
+From a comparison of equality $\mathcal{B}^{H}=\mathcal{B}+\mathcal{B}_{*}$ %in $\pref{basipre}$
+and by unicity in Fact \ref{ubc}, it follows that 
+$\mathcal{B}^{H}\inn \mathcal{B}\mathcal{B}_{*}$ and
+%in $\mathcal{B}+\mathcal{B}_*$ will be cancelled all the terms that do not appear in $\mathcal{B}^H$.
+each basic $\mathcal{M}$-monomial in $\mathcal{B}\mathcal{B}_{*}$ which is not in $\mathcal{B}^{H}$, must be cancelled
+from the sum $\mathcal{B}+\mathcal{B}_{*}$ by the same commutator with opposite coefficient,
+the latter laying again in $\mathcal{B}\mathcal{B}_{*}$.
+This happens in particular of all basic terms containing elements of $\mathcal{M}$ which are not in $H_1$.
+
+Assume a term $\trec{a}{b}{z}$ appearing in \pref{santarita} as a $\mathcal{B}$-element is to be cancelled,
+then the same commutator, with opposite sign will be necessarily found in $\mathcal{B}_{*}$ and not of course in $\mathcal{B}$ again.
+The same holds with the roles of $\mathcal{B}$ and $\mathcal{B}_{*}$ exchanged.
+
+Also notice that the elements of $\mathcal{M}$, appearing in the rightmost entry of the
+Lie brackets in \pref{santarita} force the sum to be grouped after the labels $\bu$, $\mathcal{X}$ and $\mathcal{Y}$.
+\begin{itemize}
+\punto{Claim 1}Monomials $\trec{a}{b}{z}$ appearing in \pref{santarita} do not have entries from $\vu$.
+\end{itemize}
+Assume on the contrary, \pref{santarita} contains a commutator $\trec{a}{v}{z}$ with $v\in\vu$, $z\in\bu \mathcal{X}$.
+Then necessarily $z\geq v$ and $\trec{a}{v}{z}$ is basic. It follows that, monomials whose support meets $\vu$
+cannot appear in $p\mathcal{B}$ and then $\mathcal{B}_{*}$-basic terms will not contain $\vu$-elements.
+By the above remarks, we conclude, there is no hope for  $\trec{a}{v}{z}$ to be cancelled from $\mathcal{B}$ and this implies such terms simply don't occur.
+
+In particular, all $\nuu{}$ and $\nux{}$ have support contained in $\bu\hu \mathcal{X}\mathcal{Y}$.
+
+%\medskip
+\begin{itemize}
+\punto{Claim 2}The sum \pref{sangennaro} contains terms $[\nu_{\ast}, \ast]$ with $\ast\in \mathcal{X}\mathcal{Y}$. Concisely
+$\mathcal{X}\mathcal{Y}\neq\vac$. Moreover $\bu$ cannot be empty either.
+\end{itemize}
+Assume $w=\sum_{u\in\mathcal{U}}[\nuu{}, u]$ only. As the $\nuu{}$'s are independent over $\exs H_1$, then there is at least one
+monomial $\trec{a}{b}{u}$ of \pref{santarita} with 
+$[a,b]$ not entirely supported on $\bu\hu$. This would contradict (Claim 1).
+
+We also have $\mathcal{U}\neq\vac$, for if in $\mathcal{B}+\mathcal{B}_*$ every monomial contains an element from $\mathcal{X}\mathcal{Y}$, %$w$ would not belong to $\fla{3}{H_{1}}$.
+%nothing remains after cancellation of non-$H_1$ terms. 
+the entire expression would cancel although $w$ is nontrivial.
+\begin{itemize}
+\punto{Claim 3}The support of each $\lay{}$ is contained in $\bu$.
+\end{itemize}
+Assume not. Then in \pref{santarita} appears a term $\trec{a}{b}{y}$ with $a$ or $b$ in $\mathcal{H}$.
+As $a>b$ and $\bu>\hu>\mathcal{Y}$, it follows necessarily
+$b\in\hu$ and $\trec{a}{b}{y}$ is prebasic, its transformation in two $\mathcal{B}_*$-elements produces basic terms
+$\trec{a}{y}{b}$ and $\trec{b}{y}{a}$, both not in $\mathcal{B}^{H}$.
+On the other hand, the commutator $\trec{a}{y}{b}$ cannot be found in part
+$\mathcal{B}$ of \pref{basipre} and will not be cancelled. This is a contradiction
+
+\medskip
+We eventually prove the assertion of the lemma contradicting the self-sufficiency of $H$ in $M$.
+
+Consider the subspace $C_{1}=\genp{H_1,\mathcal{X},\mathcal{Y}}$ of $M_{1}$.
+On one hand by (Claim 2) $\mathcal{U}\neq\vac$ and $C\supsetneq H$, while (Claim 3) together with axiom $\sig{2}{2}$ imply $\card{\mathcal{Y}}<\card{\mathcal{U}}$ as
+$\delta(\mathcal{U})$ must be positive and the $\lay{}$'s are in $\exs\genp{\bu}$.
+
+On the other hand by (Claim 1), since the $\nuu{},\nux{}$'s are relators in $\rd(M)$, which are linearly independent over $\exs H_{1}$
+and have support inside $C_{1}$, we have $\delta(C/H)=\dfp(C_{1}/H_{1})-\dfp(\rd(C/H))\leq\card{\mathcal{X}}+\card{\mathcal{Y}}-
+(\card{\mathcal{X}}+\card{\mathcal{U}})<0$ which is impossible.
+The proof is now complete.
+\end{proof}

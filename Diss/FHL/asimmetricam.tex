@@ -1,0 +1,241 @@
+%  THIS IS THE CONTENT OF ``ASIMMETRICAM'' - FOLDER AND *.tex
+We now describe a free amalgamation construction for $\nla{3}$ algebras. We want to proceed as similar as possible
+to amalgamation in $\nla{2}$ and prove the analogous of the {\em asimmetric} Lemma \ref{asymam2}. As we have seen
+in Section \ref{t2axioms}, the asymmetric amalgam allows the approximation of richness in the axiomatisation.
+
+\medskip
+We first prove a result concerning the modular issue \pref{notmodular}, we show
+that under {\em free composition}, the intersection of subalgebras is actually preserved under the free lift.
+
+\smallskip
+Switch back to nil-$2$ algebras for a moment and take $M\in\nla{2}$ and subspaces $H_{1}$, $K_{1}$
+of $M_{1}$. Since $\exs H_{1}\cap\exs K_{1}=\exs H_{1}\cap K_{1}$, then it is straightforward to verify, that the condition
+\begin{gather}
+\gena{H_{1}}{M}\cap\gena{K_{1}}{M}=\gena{H_{1}\cap K_{1}}{M}\label{modulino}\\
+\intertext{is equivalent to require}
+\rd(M)\cap\left(\exs H_{1}+\exs K_{1}\right)=\rd(H)+\rd(K)\tag*{}.
+%$\gena{H_{1}}{\fl M}\cap\gena{K_{1}}{\fl M}=\gena{H_{1}\cap K_{1}}{\fl M}.$
+\end{gather}
+and that the last equality is satisfied in particular when $H$ and $K$ are in free composition in $M$ (cfr.{} Definition \ref{freeco}).
+
+In fact free amalgams imply that condition \pref{modulino} remains true of the free-lifted algebras:
+\begin{lem}\label{moduliftlem}
+Assume $M$ is the free amalgam $\am{N}{B}{A}$ of $\nla{2}$-algebras $N\nni B\inn A$.
+We identify as usual $\fla{3}{N_{1}}$ and $\fla{3}{A_{1}}$ with subalgebras of
+$\fla{3}{M_{1}}$. Then we have
+\begin{gather}
+%\begin{labeq}
+\J(M)\cap(\fla{3}{N_{1}}+\fla{3}{A_{1}})=\J(N)+\J(A).\label{modujei}\\
+%\end{labeq}
+\intertext{and also}
+%\item[2.]\begin{labeq}{modulift}
+\gena{N_{1}}{\fl M}\cap\gena{A_{1}}{\fl M}=\gena{N_{1}\cap A_{1}}{\fl M}=\gena{B_{1}}{\fl M}\label{modulift}.
+%\end{labeq}
+\end{gather}
+\end{lem}
+
+\begin{proof}
+Since $\fla{3}{A_{1}}\cap\fla{3}{N_{1}}=\fla{3}{A_{1}\cap N_{1}}$, the second statement follows easily from the first,
+considering the above arguments for nil-2 algebras.
+
+\smallskip
+To prove \pref{modulift} assume that $w_{N}+w_{A}\in\J(M)$ for some $w_{N}$ and $w_{A}$ in $\fla{3}{N_{1}}$ and $\fla{3}{A_{1}}$
+respectively. By \pref{modulino}, we may assume, these are homogeneous elements of weight $3$.
+%We have to show that $w_{N}$ (and $w_{A}$) lays in $\fla{3}{B_{1}}$ modulo $\J(M)$.
+
+We arrange a basis $X$ for $M_{1}$ as follows $X=\{X^{a}>X^{B}>X^{n}\}$, where
+$X^{B}$ is a basis for $B_{1}$, $X^{B}X^{n}$ is a basis for $N_{1}$ and $X^{a}X^{B}$ is a basis for $A_{1}$.
+
+Now since $\rd(M)=\rd(N)+\rd(A)$, we have
+$$\J(M)_{3}=\genp{\J(A),\J(N),[\rd(A),N_{1}],[\rd(N),A_{1}]}$$
+and without loss of generality, $w_{N}+w_{A}$ may be written as a sum of terms like $[\nu_{N},x]$ and
+$[\nu_{A},y]$ with $x\in X^{a}$, $y\in X^{n}$ and $\nu_{A}\in \rd(A)$ and $\nu_{N}\in \rd(N)$.
+
+We proceed with the terminology used in the proof of Proposition \ref{bellemma} and obtain -- after
+each $\nu_{A}$ and $\nu_{N}$ has been expressed as sums of basic $X$-monomials of weight $2$ -- an equality in $\fla{3}{M_{1}}$:
+$$w_{N}+w_{A}=\mathcal{B}^{N,a}+p\mathcal{B}^{A,m}$$
+where 
+\begin{itemize}
+\item[$\mathcal{B}^{N,a}$] is a sum of basic terms $[m_{1},m_{2},x]$ for $m_{i}\in X^{B}X^{n}$
+%\item[$\mathcal{B}^{N,e}$] is a sum of basic terms $[m_{1},m_{2},y]$ for $m_{i}\in X^{B}X^{n}$
+\item[$p\mathcal{B}^{A,m}$]is a sum of prebasic terms $[a_{1},a_{2},y]$ for $a_{i}\in X^{a}X^{B}$
+\end{itemize}
+and $x,y$ are as required above.
+
+We now transform all prebasic monomials above into $[a_{1},y,a_{2}]-[a_{2},y,a_{1}]$ which are basic
+and whose sum we denote by $\mathcal{B}^{A,m}_{*}$.
+
+We obtain a sum of basic commutators
+$$w_{N}+w_{A}=\mathcal{B}^{N,a}+
+\mathcal{B}^{A,m}_{*}.$$
+
+On the other hand the unique basic expression from Fact \ref{ubc} for $w_{N}+w_{A}$ does not involve
+{\em mixed} terms, that is monomials whose support meets both $X^{a}$ and $X^{n}$ non-trivially.
+
+As a consequence, all mixed terms must cancel each other from the sum $\mathcal{B}^{N,a}+\mathcal{B}^{A,m}_{*}$ and
+cancellations do not arise within the same group. The only possibility
+instead, is that mixed $\mathcal{B}^{A,m}_{*}$-monomials cancel mixed $\mathcal{B}^{N,a}$-monomials and vice versa.
+
+Consider indeed a term $[m_{1},m_{2},x]$ above with -- say -- $m_{2}\in X^{n}$,
+this is to be neutralised by the prebasic commutator $[x,m_{1},m_{2}]$, which has to lay in $p\mathcal{B}^{A,m}$.
+This yields $m_{1}\in X^{B}$ and implies $\mathcal{B}^{A,m}_{*}$ contains the basic commutator $[x,m_{2},m_{1}]$ which differs from any
+$\mathcal{B}^{N,a}$-term. We deduce that no mixed $\mathcal{B}^{N,a}$-term is present in the sum above, and, with much similar
+arguments no mixed $p\mathcal{B}^{A,m}$-term shows up as well. This means that all monomials
+$[m_{1},m_{2}]$ and $[a_{1},a_{2}]$ above must belong to $\exs B_{1}$. Thus both $\nu_{A}$ and $\nu_{N}$ belong to $\rd(B)$ and the assertion follows.
+%$w_{N}$ and $w_{A}$ lies, modulo $\J(M)$, in $\fla{3}{N_{1}\cap A_{1}}$.
+\end{proof}
+
+\bigskip
+As the plan is to consider an asymmetric configuration, we start from $\nla{3}$-algebras $N\nni B\zsu[2]{}A$
+and let $M_{*}$ {\em denote} the $\nla{2}$-free amalgam $\am{N_{*}}{B_{*}}{A_{*}}$.
+
+Now by Lemma \ref{asymam2} follows $N_{*}\zsu{}M_{*}\nni A_{*}$ and hence both  $\map{\gam{B}{A}}{\fl{B_{*}}}{\fl{A_{*}}}$ and
+$\gam{N}{M}:=\map{\frl(i:N_{*}\inn M_{*})}{\fl{N_{*}}}{\fl{M_{*}}}$ are monomorphisms.
+
+\smallskip
+If we set $\kerg{B}{}=\ker(\gam{B}{N})$ and $\kerg{A}{}=\ker(\gam{A}{M})$, then since $\gam{B}{N}\gam{N}{M}=\gam{B}{A}\gam{A}{M}$,
+we have by \pref{immaker}$$\gam{B}{A}(\kerg{B}{})=\kerg{A}{}\cap\gena{B_{1}}{\fl{A}}.$$
+
+On the other hand by \pref{modujei} and \pref{immaker} follows that
+$$K_{A}=\frac{\fla{3}{A_{1}}\cap\J(M)}{\J(A)}=\frac{(\fla{3}{A_{1}}\cap\J(N))+\J(A)}{\J(A)}\inn\gena{B_{1}}{\fl A}$$
+and hence $\gam{B}{A}(K_{B})=K_{A}$.
+
+%Denote with $\overline{F}_{\sss A}$ and $\overline{F}_{\sss B}$ the quotient algebras $\fl{A_{*}}/\kerg{A}{}$ and
+%$\fl{B_{*}}/\kerg{B}{}$ respectively.
+If now $\bgam{B}{N}$, $\bgam{B}{A}$ and $\bgam{A}{M}$ denote the
+quotient maps modulo $\kerg{B}{}$ and $K_{A}$ respectively, we obtain the following {\em injective} commutative arrows:
+\begin{labeq}{pream}
+\begin{split}
+\xymatrix@R-3mm@C+3mm{
+&{\fl{M_{*}}}&\\
+{\fl{N_{*}}}\ar[ur]^{\gam{N}{M}}&&\fl{A_{*}}/\kerg{A}{}\ar[ul]_{\bgam{A}{M}}\\
+&{\fl{B_{*}}/{\kerg{B}{}}}\ar[ul]^{\bgam{B}{N}}\ar[ur]_{\bgam{B}{A}}&}\end{split}
+\end{labeq}
+We also have $\gena{N_{1}}{\fl{M_{*}}}=\gam{N}{M}(\fl{N_{*}})$ and $\gena{A_{1}}{\fl{M_{*}}}=
+\gam{A}{M}(\fl{A_{*}})=\bgam{A}{M}(\fl{A_{*}}/\kerg{A}{})$.
+
+Furthermore, by Lemma \ref{gammap} we have $\kerg{A}{}\inn\rt(A)$ and $\kerg{B}{}\inn\rt(B)$. We can therefore rebuild $A$ and $B$ as quotients
+\begin{labeq}{quotquot}
+A\simeq\frac{\fl{A_{*}}}{\rt(A)}\simeq\frac{\fl{A_{*}}/\kerg{A}{}}{\rt(A)/\kerg{A}{}}\text{ and similarly }
+B\simeq\frac{\fl{B_{*}}/\kerg{B}{}}{\rt(B)/\kerg{B}{}}.
+\end{labeq}
+Now by Lemma \ref{moduliftlem} we get
+\begin{labeq}{modusides}
+\gena{N_{1}}{\fl{M_{*}}}\cap\gena{A_{1}}{\fl{M_{*}}}=\gena{N_{1}\cap A_{1}}{\fl{M_{*}}}=\gena{B_{1}}{\fl{M_{*}}}.
+\end{labeq}
+Define $R_{A}:=\gam{A}{M}(\rt(A))=\bgam{A}{M}(\rt(A)/K_{A})\text{ and }%$$ and
+%$$
+R_{N}:=\gam{N}{M}(\rt(N))\simeq\rt(N)$ and set
+\begin{multline}\label{errebi}
+R_{B}:=\gam{A}{M}(\rt_{A}(B_{1}))=R_{A}\cap\gena{B_{1}}{\fl{M_{*}}}\\
+%\bgam{A}{M}( ( \rt_{A}(B_{1}) + \kerg{A}{} )/ \kerg{A}{} )
+=\bgam{A}{M}(\bgam{B}{A} (\rt(B)/\kerg{B}{}) )
+=\gam{N}{M}(\bgam{B}{N} (\rt(B)/\kerg{B}{}) )=\\
+=\gam{N}{M}(\rt_{N}(B_{1}))=R_{N}\cap\gena{B_{1}}{F_{M_{*}}}.
+\end{multline}
+
+\medskip
+Now as $(\rt(N))_{2}=\triv=(\rt(A))_{2}$, both $R_{N}$ and $R_{A}$ are homogeneous subspaces of $\fl{M_{*}}$ of
+weight $3$ ($R_{N},R_{A}\inn(\fl{M_{*}})_{3})$ and in particular ideals of $\fl{M_{*}}$. This allows us to define
+an algebra of $\nla{3}$
+\begin{labeq}{amalgatre}
+M:=\frac{\fl{M_{*}}}{R_{N}+R_{A}}.
+\end{labeq}
+%{\bf [Note:]} {\sl Define $M=:N\star_{B} A$. Show again this is the amalgamated free product.
+%And  $\fl{M}$ is also free product of $\fl{N}$ and $\fl{A}$ over $\fl{B}$ {\bf modulo} various Kernels
+%of the $\gamma$'s }\\
+
+Now we see $M/M_{3}$ coincides {\em a posteriori} with $M_{*}=\am{N_{*}}{B_{*}}{A_{*}}$ constructed above and hence
+$\rt(M)$ equals $R_{N}+R_{A}$.
+In particular by \pref{modusides} and \pref{errebi} we obtain
+\begin{gather}
+\rt_{M}(A)=\rt(M)\cap\gena{A_{1}}{\fl{M_{*}}}=R_{A}\label{rtma}\\
+\rt_{M}(N)=\rt(M)\cap\gena{N_{1}}{\fl{M_{*}}}=R_{N}\label{rtmn}\\
+\intertext{and therefore both $A$ and $N$ embeds into $M$ as $\nla{3}$-subalgebras. Moreover \pref{errebi} and
+\pref{rtma} or \pref{rtmn} give} 
+%R_{N}\cap R_{A}=\rt_{M}(B)=R_{B}
+\rt_{M}(B)=\rt(M)\cap\gena{B_{1}}{\fl{M_{*}}}=R_{B}\label{rtmb}.
+\end{gather}
+
+%\medskip
+%Also\mn{{\bf Check if we really need this}}%We have now to show $\rt_{M}(A_{1})=R_{A}$, and this holds since
+%\begin{multline*}
+%\rt_{M}(A_{1})=\rt(M)\cap\gena{A_{1}}{\fl{ M_{*} } }=(R_{N}+R_{A})\cap\gena{A_{1}}{\fl{ M_{*}}}=\\
+%=R_{A}+( R_{N} \cap \gena{A_{1}}{\fl{ M_{*}}} )
+%=R_{A}+( R_{N}\cap\gena{N_{1}}{\fl{M_{*}}} \cap \gena{A_{1}}{\fl{ M_{*}}} )=\\
+%=R_{A}+( R_{N}\cap\gena{B_{1}}{\fl{M_{*}}})=R_{A}+R_{B}=R_{A}
+%\end{multline*}
+This means $M$ {\em amalgamates $N$ and $A$ over $B$} in $\nla{3}$ (rewrite Definition \ref{amalgama} for $\nla{3}$).
+In particular with the above defined structures we can
+now show the following.
+\begin{lem}\label{amalgatrestrong}
+Let $N\nni B\zsu[3]{}A$ be $\nla{3}$-extensions and assume $M$ is the $\nla{3}$-algebra defined in \pref{amalgatre},
+then $N\dsu M\nni A$.
+\end{lem}
+\begin{proof}
+As $N\zsu[2]{}M$ by construction, we have to show that for any finite subspace $E_{1}$ of $M_{1}$, we have $\ded^{M}(E/N)\geq0$.
+
+Since by \ref{fincharssc}, $d_{2}(E_{1}/N_{1})=d_{2}(\ssc(N_{1}+E_{1})/N_{1})$ and hence
+$$\ded^{M}(E/N)\geq\ded^{M}(\ssc(N_{1}+E_{1})/N).$$
+It is then sufficient to test $\ded^{M}(E/N)$ on $\delta_{2}$-self-sufficient subspaces $E_{1}\zsu[2]{}M_{1}$ containing $N_{1}$ and
+of finite dimension over $N_{1}$.
+
+By Corollary \ref{parapa}, since $E_{1}\nni N_{1}$ we have that $M_{*}$ is also free amalgam of $\gena{E_{1}}{M_{*}}$ and $A_{*}$ over
+$\gena{E_{1}\cap A_{1}}{M_{*}}$.
+By \pref{modulift} of Lemma \ref{moduliftlem} we have therefore
+\begin{labeq}{modue}
+\gena{E_{1}}{\fl{M_{*}}}\cap\gena{A_{1}}{\fl{M_{*}}}=\gena{E_{1}\cap A_{1}}{\fl{M_{*}}}.
+\end{labeq}
+
+This equality, with \pref{rtma} and \pref{rtmn} imply
+\begin{multline*}
+\rt_{M}(E_{1})=(R_{N}+R_{A})\cap\gena{E_{1}}{\fl{M_{*}}}=R_{N}+(R_{A}\cap
+\gena{E_{1}}{\fl{M_{*}}})=\\=
+R_{N}+(\rt(M)\cap\gena{E_{1}\cap A_{1}}{\fl{M_{*}}})=\rt_{M}(N)+\rt_{M}(E_{1}\cap A_{1}).
+\end{multline*}
+
+Therefore by %\pref{rtmn},
+\pref{rtmb} and \pref{modue}
+$$\rt_{M}(E)/ \rt_{M}(N)\simeq_{\Fp}
+\rt_{M}(E_{1}\cap A_{1})/\rt_{M}(E_{1}\cap A_{1})\cap\rt_{M}(N)
+=\rt_{M}(E_{1}\cap A_{1})/\rt_{M}(B)$$
+which is the image of  $\rt_{A}(E_{1}\cap A_{1})/ \rt_{A}(B)$ through $\gam{A}{M}$ by Remark \ref{vecchialenza}.
+
+\smallskip
+On the other hand by Proposition \ref{fincharssc}, Lemma \ref{2cut} and by \pref{deltamalgam}
+we have $d_{2}^{M}(E / N)=\delta(E/N)=\delta(E_{1}\cap A_{1}/B)=d_{2}^{A}(E_{1}\cap A_{1}/ B)$.
+
+In the end we have $\ded^{M}(E/N)\geq\ded^{A}(E_{1}\cap A_{1}/B_{1})\geq0$ since $B\dsu A$.
+\end{proof}
+The above result has been proved in a non-symmetric fashion. As we have seen in the axiomatisation
+of $T^{2}$, this will be used in a possible first-order approximation of richness in terms of $\Lan{3}$-formulas, should
+a Fra\"iss\'e model be constructed inside $\nla{3}$.
+
+Of course a symmetric statement holds as well:
+\begin{cor}
+Given strong $\nla{3}$-extensions $N\dso{}B\dsu{}A$, it is possible to find $M\in\nla{3}$ with $N\dsu{}M\dso{}A$, which
+amalgamates $N$ and $A$ over $B$.
+
+$M$ is isomorphic (with loose notation) to
+$$\frac{\frl(\am{N_{*}}{B_{*}}{A_{*}})}{\rt(N)+\rt(A)}$$
+\end{cor}
+
+
+
+\bigskip
+Notice that the example constructed in Remark \ref{nossummo} employes an algebra $M=\gen{m_{1},m_{2},B_{1},a\mid
+\rho,\alpha,\beta}$ which is obtained by the underlying free amalgam $M_{*}=\am{N_{*}}{B_{*}}{A_{*}}$ as in \pref{amalgatre} by
+taking $B_{1}=\genp{b_{1},\dots,b_{4}}$ and $A_{1}=\genp{B_{1},a}$.
+
+In $M$ submodularity of $\delta_{3}$ fails because $\gena{E_{1}\cap N_{1}}{\fl{M_{*}}}\subsetneq\gena{E_{1}}{\fl{M_{*}}}\cap\gena{N_{1}}{\fl{M_{*}}}$ but in this case we have $\gena{E_{1}\cap N_{1}}{{M_{*}}}\subsetneq\gena{E_{1}}{{M_{*}}}\cap\gena{N_{1}}{{M_{*}}}$ as well.
+
+It is possible to build similar examples, in which such a modular behaviour is true of the $\nla{2}$-truncated algebra, but not
+in the free-lifted $\nla{3}$-structure.  
+
+As \pref{modulift} does not hold in general, then in particular $\rt(\dots)$ fails to be modular. As a consequence
+we cannot easily decide whether $\dsu$ is transitive (cfr.~Lemma \ref{2trans}).
+As pointed out in the introduction, we cannot adopt the solution of redefining self-sufficiency
+by requiring for instance $A\dsu B$ whenever $\delta_{3}(X\cap A_{1})\leq\delta_{3}(X)$ for
+any finite subspace $X$ of $B_{1}$. With this definition in fact, our amalgamation Lemma \ref{amalgatrestrong}
+does not work.
+

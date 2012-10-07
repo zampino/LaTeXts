@@ -1,0 +1,427 @@
+The purpose of this work is twofold: on one side we propose a new treatment of the structures which led to Baudisch' {\em new
+$\aleph_{1}$-categorical group} of nilpotency class $2$ constructed in \cite{bad}. On the other hand we settle
+a new framework to possibly achieve Groups with similar properties but in higher nilpotency classes. The main efforts
+involve the nilpotent-$3$ case.
+
+For what concerns both aspects, the deep contiguity between nilpotent groups of prime exponent and
+graded Lie algebras over finite fields, let us work within the second kind of structures, which support in addition
+a linear-algebraic approach. %, suitable for a {\em counting} argument.
+This correspondence is explained in detail in Section \ref{nilgral}.
+
+\smallskip
+The aforemensioned \lqq Baudisch group\rqq arises from a direct translation in combinatorial group-theoretic terms, of the restyled
+Fra\"iss\'e amalgamation technique, which led Hrushovski in \cite{hruabi} to confute Zilber's {\em structural conjecture}
+(\cite{zil}). % on uncountably categorical theories.
+We briefly review these facts below, as they form in part the guidelines of the
+present work.
+
+\medskip
+A definable set of a complete first-order theory is called strongly minimal if its Morley rank and degree are both equal to one.
+%This translates to the fact that no definable set
+%can be infinite and co-infinite, in any elementary extension.
+%The essential tool to prove Morley's categoricity results (rephrased in a geometric flavour
+%by Baldwin and Lachlan in \cite{blsms}) is the fact that, in strongly minimal structures, the
+%algebraic closure is a pregeometry and hence allow a dimension theory.
+In a strongly minimal structure, the (model-theoretic) algebraic closure yields a {\em pregeometry}. This allowed for instance
+Baldwin and Lachlan in \cite{blsms} to reprove Morley's categoricity results by means of a {\em dimensional} approach, derived
+by such pregeometries.
+Strongly minimal structures are in particular $\aleph_{1}$-categorical
+and on the contrary, uncountably categorical structures do always ``contain'' strongly minimal sets as
+-- we might say -- building blocks.
+
+For the definition of a (pre)geometry and related notions, the reader is referred to Section \ref{qdim}.
+
+%In \cite{hruabi} and \cite{jbg} it is recalled that t
+The pregeometries attached to the strongly minimal sets definable in a
+$\aleph_{1}$-categorical structure, have (after localisation) all isomorphic associated geometries. This local isomorphism type
+constitutes therefore an invariant of such structures.
+
+Zilber conjectured indeed that each $\aleph_{1}$-categorical theory $T$ is assigned a geometry according to the following trichotomy
+(cfr.\,\cite{hruabi,jbg}).
+\begin{itemize}
+\punto{1}A disintegrated geometry. No infinite %almost strongly minimal
+group is definable in $T$.
+\punto{2}A nontrivial modular geometry of a vector space. An infinite % rank-$1$
+group is definable in $T$, but no infinite field does.
+\punto{3}A non locally modular geometry. $T$ is not one-based and an infinite field is interpretable
+in $T$.
+\end{itemize}
+
+The conjecture was disproved by Hrushovski in \cite{hruabi} by means of {\em new strongly minimal sets},
+which have a non-locally modular geometry, but nevertheless do not interpret an infinite field.
+%\xsubsection{The {\em ab Initio} Construction}
+These counterexamples rely on a Fra\"{\i}ss\'e amalgamation procedure (described in Section \ref{fraisse}), together with
+a pregeometric machinery, which modifies ordinary embeddings. This allows in particular
+to control the types of the Fra\"iss\'e limit by means of a dimension function: the
+structures obtained are stable, which is not in general the case for Fra\"iss\'e constructions.
+
+\smallskip
+To summarise the above process, start -- say -- from a ternary, order-invariant relation $(M,R)$
+and define an integer valued function of the finite parts of the domain $M$:
+\begin{labeq}{urdelta}
+\delta(A)=\card{A}-\card{R(A)}
+\end{labeq}
+where $R(A)$ describes the set of all ternary {\em links} $(a,b,c)$ with $R(a,b,c)$ -- up to permutation -- which insist among
+points of $A$.
+
+This $\delta$ turns out to be a {\em predimension function} in the sense of Section
+\ref{pregextsec}; there we explain how to derive a pregeometry from any predimension.
+This yields a dimension function $d_{M}$ on each $\{R\}$-structure $M$.
+
+The crucial steps -- rather informally -- are given below and summarise the approach of \cite{jbg}. In this paper, Poizat
+divides the construction into two distinct subsequent steps:
+\begin{itemize}
+\punto{Phase One}Define the class $\Kl{}$ of all finite $\{R\}$-structures with non-negative predimension.
+Give a notion of {\em strong} %or {\em self-sufficient}
+extensions $A\geqslant B$ in terms of $\delta$ and prove $\Kl{}$ has the properties %(HP), (JEP) and (AP)
+of {\em Hereditarity, Joint Embedding} and {\em Amalgamation}
+described in Section \ref{fraisse}, with respect to $\leqslant$.
+%\end{itemize}
+
+The Fra\"iss\'e limit $K$ of $(\Kl{},\leqslant)$ obtained is $\omega$-saturated and $\omega$-stable of Morley rank $\omega$ and is
+ultrahomogeneous with respect to $\leqslant$.
+Types of elements over a set $B$ are discerned in base of their dimension $d_{K}$: points
+which are dependent over $B$ have all finite (unbounded) Morley rank, while transcendent points have all the same type and
+rank $\omega$.
+The (forking) geometry of the generic type is the $d_{K}$-pregeometry,
+this is not locally modular.
+No group diagram is allowed by dimension arguments.
+
+If we restrict the class $\Kl{}$ by changing the initial lower bound of $\delta$ to a fixed positive integer $k$, one obtains a Fra\"iss\'e
+limit with a $k$-transitive, non $k-1$-transitive automorphism group.
+
+\punto{Phase Two} A proper subclass $\Kl{}^{\mu}$ of $\Kl{}$ is defined, for which an $\N$-valued function $\mu$
+bounds the length of realisations of a family of distinguished {\em minimal pre-algebraic} extensions. With a more difficult proof,
+the amalgamation property is true of $\Kl{}^{\mu}$ as well.
+The theory $T^{\mu}$ of the Fra\"iss\'e limit  $K^{\mu}$ of $(\Kl{}^{\mu},\leqslant)$ is strongly minimal.
+
+This second phase is referred to in the literature as the {\em collapse}, because the
+finite-rank pre-algebraic types in Phase one, are collapsed to algebraic ones, while as a consequence,
+the infinite rank type is forced to assume Morley rank $1$. The strongly
+minimal geometry on $K^{\mu}$ {\em coincides} with the $d$-pregeometry of $K$ above.
+\footnote{In his PhD thesis \cite{fer}, Marco Ferreira proves that the geometries of the collapsed structures are isomorphic to the geometry of the regular type in the uncollapsed construction.}
+\end{itemize}
+
+\smallskip
+In the original paper \cite{hruabi}, this bipartite analysis is not present and the amalgamation
+is carried out directly in the collapsed case. Hrushovski proves the non-interpretability of an infinite group in $T^{\mu}$
+as a consequence of {\em flatness}, a property attributed to the geometry of $K^{\mu}$. On the other hand Pillay shows in \cite{pilcm},
+that $CM$-{\em trivial} structures do not allow the interpretation of an infinite field:
+in \cite{hruabi} it is also proved that that the collapsed structure is $CM$-trivial and that flatness implies $CM$-triviality.
+
+\smallskip
+F.{\ }Wagner in \cite{wag}, provides
+an axiomatic approach to the above constructions which replaces an explicit predimension argument.
+\crule
+%\xsubsection{Baudisch Group and the Red Collapse Frame}
+\bigskip
+In \cite{bad} Baudisch starts from a predimension $\delta$ which is very much alike \pref{urdelta}: it computes
+the gap between the number of {\em generators} and {\em relators} of a suitably {\em linearised} presentation of groups.
+
+In the perspective of Zilber's trichotomy, he obtains a pure uncountably categorical group of Morley rank $2$ with no infinite field
+interpretable: the associated pregeometry is not locally modular -- because the group obtained is connected and non-abelian
+(cfr.{\,}\cite{hp}) -- and its theory is shown to be $CM$-trivial.
+
+The following result indicates which classes of groups may allow such feature.
+\begin{fact*}[{\cite[Theorem 2.1]{bad}}]
+Assume a connected group $G$ of finite Morley rank does not interpret an infinite field. Then {\em either}
+a definable section of $G$ contradicts the Cherlin-Zilber algebraicity Conjecture\footnote{
+Infinite simple groups of finite Morley rank are conjectured to be algebraic groups over
+an algebraically closed field.}, {\em or}
+%its connected component $G^{o}$
+$G$ is nilpotent.
+
+In the last case $G$ is the central product of a definable divisible abelian subgroup $A$
+and a definable nilpotent subgroup $B$ of $G$ of bounded exponent.
+\end{fact*}
+
+To eventually place ourselves on the ``bright side'' of Cherlin-Zilber Conjecture,
+the objects considered in \cite{bad} are $2$-nilpotent groups of exponent a fixed prime $p$ bigger than $2$.
+Such groups can be reconstructed from the pair of $\Fp$-vector spaces $(G_{ab},G^{\prime})$ -- the sections
+of the lower central series -- by means
+of the %bilinear map $\map{[\,\,,\,]}{G_{ab}\times G_{ab}}{G^{\prime}}$. 
+linear map $\map{c_{G}}{\exs G_{ab}%\wedge G_{ab}
+}{G^{\prime}}$, induced by the group commutator in $G$ on the exterior square algebra of $G_{ab}$.
+This draws our attention to the pair $(G_{ab},\ker(c_{G}))$: step-$2$ nilpotency
+yields a 1-1 correspondence of these groups with the
+%The Fra\"isse procedure are in fact conducted along embeddings of
+structures $(M,N(M))$, where $M$ is a $\Fp$-vector space and $N(M)$ is a subspace of $\exs M$. %(cfr.\,Remark \ref{baucond}).
+
+In case of a finitely generated $M$, one considers
+\begin{labeq}{deltabau}
+\delta(M)=\dfp(M)-\dfp(N(M))
+\end{labeq}
+The Hrushovski amalgamation program described above is carried out in \cite{bad} with this $\delta$ directly for the Collapsed case,
+once a suitable native function $\mu$ is implicitly given. 
+
+\smallskip
+In Chapter \ref{due} we recast all the steps leading to (Phase One) of the Hrushovski-Baudisch construction in terms
+of nilpotent Lie algebras over $\Fp$.
+
+\crule
+In Section \ref{nilgral} we present a well-known uniform method to associate a group
+with a Lie ring, this uses the sections of the lower central series and the group commutator.
+As a consequence, this procedure becomes particularly effective when dealing with nilpotent groups.
+%of prime exponent $p$.
+If we denote by $\ngb{c}{p}$ the variety %In this case in fact the above correspondence supplies 
+of $c$-nilpotent and exponent $p$ groups, we isolate a class of $c$-nilpotent graded Lie algebras $\nla{c}$ over the field $\Fp$
+in order to obtain a {\em grading} functor $\gr$ of $\ngb{c}{p}$ into $\nla{c}$, which is surjective
+at the level of objects.
+
+The literature about this subject is founded on the work of Lazard, Magnus \cite{laz,mag,mag37} and
+Witt's \cite{witt}. In a {\em torsion-free} context this phenomenon is
+also called {\em Mal'cev Correspondence}: it establishes an equivalence between the categories of
+torsion-free divisible nilpotent groups and nilpotent Lie $\Q$-algebras (see \cite[\S6]{bah}). 
+
+We give two different methods to associate a given Lie algebra $L$ of $\nla{c}$, a group $G$ of $\ngb{c}{p}$ with $\gr(G)=L$:
+a group theoretical one, which employes a torsion version of the relationship between free groups and free Lie
+rings (this is Witt's {\em Treue Darstellung}) and
+a more analytical procedure, which uses the Baker-Hausdorff formula.
+%(Theorem \ref{faikaha} and Corollary \ref{co:grupphausdorff}).
+This last approach, although less transparent for higher classes $c$, has the advantage of establishing a multiplicative group
+structure $(L,\circ)$ directly on the Lie algebra domain $L$.
+This group law will be in fact first-order definable in terms of the ring signature.
+
+\smallskip
+The additional requirement $G^{\prime}=Z(G)$ for the groups $G$ considered in \cite{bad},
+is discussed in Remark \ref{baucond}. This property, which is preserved by the algebra-group correspondence,
+will be obtained for $\nla{2}$-algebras as a consequence of the positive lower bound chosen for the predimension.
+
+\smallskip
+In Section \ref{schur} we are concerned with an existing notion of group theoretical {\em deficiency}, which computes the difference
+between the generators and the relators of a finitely presented group $G$. The second integral homology group of $G$ is involved
+in such a measurement.
+More precisely, the deficiency of $G$ is always bounded from above, by the difference between the $\Z$-rank of $G_{\it ab}$
+and the minimal number of generators for $H_{2}(G,\Z)$.
+Following Stammbach and Stallings we derive the correspondent notion of deficiency
+for groups in the variety $\ngb{c}{p}$ and homology will be taken with coefficients over $\Fp$.
+
+If we consider a presentation $R\to F\to G$, the so called {\em Hopf formula} returns $H_{2}(G)$ as
+the quotient $R\cap F^{\prime}/[R,F]$. This term filters in fact the {\em essential} relators in $R$,
+those which actually cause the deficiency to drop.
+
+This filter is basically the same adopted in Chapter \ref{tre} for $\nla{c}$-algebras in order to obtain new kinds of
+presentations.
+Despite the strong similarity between the above notions and the relators space we constructed,
+we encountered this group-homological interpretation only in a very late phase of this work.
+We decided to include this section as a sort of {\em a posteriori} motivation.
+
+\bigskip
+In the first section of Chapter \ref{due}, we start by adapting the deficiency predimension \pref{deltabau} to finite objects of $\nla{2}$.
+
+Any $M=M_{1}\oplus M_{2}$ in $\nla{2}$, is given by a presentation $R\to\fla{2}{M_{1}}\to M$ from the free nil-2 Lie algebra
+$\fla{2}{M_{1}}$ over $M_{1}$.
+For a subspace $A$ of $M_{1}$, the integer $\delta(A)$ (or $\delta_{2}(A)$ to distinguish from other nilpotency classes) will be defined as
+$\dfp(A)-\dfp(R(A))$. The
+relators ideal $R(A)\inn\fla{2}{A}$ depends by the ambient relators $R$ and the subspace $A$.
+
+This function is proved to be a predimension {\em over} the $\Fp$-linear closure, as defined in Section \ref{qdim}.
+As a consequence, $\delta$ gives rise to a pregeometry on the vector space $M_{1}$ whose closure operator extends the
+linear span. We show directly that this pregeometry is actually a non locally-modular geometry {\em over} $\Fp$.
+
+The notion of {\em self-sufficient} extensions $M\zsu[2]{}N$ of $\nla{2}$-algebras will be given in terms of $\delta$: as
+usual $\delta(C)$ cannot drop below $\delta(M)$ on spaces $C$ between $M$ and $N$.
+
+\medskip
+Section \ref{amalga2} describes the subclass $\Kl{2}$ of $\nla{2}$, for which
+an {\em asymmetric} amalgamation lemma is shown: we define a free amalgam in $\nla{2}$, which preserves a positive lower bound
+of the deficiency, provided a kind of one-point algebraic extensions are suitably avoided.
+Compared to the correspondent statements in \cite{bad}, the proofs here are overall simplified, left aside some
+technicalities (Lemmas \ref{basE} and \ref{reldue})%\mn{\bf maybe we can avoid these, cfr. Lemma \ref{amalsigma2}}
+, which we have to borrow with minor changes from the original text.
+
+As part of this section we find the treatment of {\em minimal} strong extensions, these will be
+fundamental for the rank computations in the uncollapsed theory. To this end we prove that chains of minimal extensions
+commute with free amalgamation.
+
+\medskip
+Asymmetric amalgamation yields a first-order axiom system $T^{2}$
+for the countable Fra\"iss\'e limit of $\Kl{2}$. As it is meant to happen the $\omega$-saturated models
+of $T_{2}$ are exactly the rich structures whose age is $\Kl{2}$. This is Theorem \ref{Cazzuola} of Section \ref{t2axioms},
+where we also prove $\omega$-stability of $T_{2}$ and give a description of the algebraic closure in $T_{2}$.
+
+In Section \ref{rango}, we explicitly compute the Morley rank of the %theory $T_{2}$, the Morley rank of the
+countable rich model $\mathbb{M}$, which is -- as expected\footnote{It is sort of
+by chance that this value coincides with the rank of the uncollapsed {\em black field} of Poizat. In that case this factor
+is artificially obtained by the shape of the predimension, while in ours it closely reflects the structural nil-$2$ constraint.}
+ -- $\omega\cdot2$.
+ 
+The reason for this number comes from the $\nla{2}$-grading $\mathbb{M}=\mathbb{M}_{1}\oplus\mathbb{M}_{2}$ and the
+locally-free behaviour imposed by the axioms.
+As our predimension takes its entries among the finite parts of $\mathbb{M}_{1}$, we first obtain Morley rank $\omega$ for this
+set, by a geometric type analysis \`a la John B. Goode (cfr.\,Phase One above).
+On the other hand, to require a positive deficiency, forces the
+homogeneous subspaces $\mathbb{M}_{1}$ and $\mathbb{M}_{2}$ to be definably $\Fp$-isomorphic. This doubles the rank.
+The same happens in the collapsed case and explains the rank $2$, there in fact the corresponding set
+$\mathbb{M}_{1}$ is strongly minimal.
+
+By applying the aforementioned correspondance
+we reconstruct a nil-2 group $\mathbb{G}$ which has Morley rank $\omega\cdot2$. Indeed the whole local construction (amalgamation,
+self-sufficient embeddings, richness, etc.)
+can be traced back at the level of groups; cfr.~Remark \ref{baucond}.
+
+\smallskip
+A complete description of forking in $T^{2}$ follows. This is done in Section \ref{forking} by exhibiting a suitable ternary
+{\em independence relation} among sets of the monster model $\mathbb{M}$ which satisfies the
+axioms of forking in stable theories. This notion of independence reflects both the {\em geometric} information of
+the predimension and the {\em structural} condition imposed by free amalgamation.
+
+\smallskip
+In the last section of Chapter \ref{due}, we propose a notion of {\em weak canonical base} for
+types of self-sufficient tuples over models.
+This is compared with the properties of {\em weak elimination of imaginaries} and $CM$-triviality
+for the {\em uncollapsed} theory. On this purpose one may also check the notion
+of {\em relative} $CM$-triviality proposed in \cite{cmtr}.
+
+\bigskip
+In the third Chapter we study a possible construction of deficiency predimensions in the case of nilpotent
+Lie algebras from $\nla{c}$ of class $c$ greater than $2$.
+
+The guiding principle here is an inductive approach\label{indunil} over the nilpotency class, suggested by the graded shape of
+a (saturated-homogeneous say) object $\mathbb{M}=\mathbb{M}_{1}\oplus\dots\oplus\mathbb{M}_{c}$ of $\nla{c}$.
+
+This corresponds to a presentation $R\to\fla{c}{\mathbb{M}_{1}}\to \mathbb{M}$ from the free Lie nil-$c$ algebra
+$\fla{c}{\mathbb{M}_{1}}$, where the homogeneous ideal $R$ equals $R_{2}+\dots+R_{c}$ (cfr.\,Section \ref{nilgral}).
+On the other hand, denote by $\mathbb{M}_{*}$ the {\em truncation}
+to $\nla{c-1}$, that is $\mathbb{M}_{*}=\mathbb{M}/\mathbb{M}_{c}\simeq\mathbb{M}_{1}\oplus\dots\oplus\mathbb{M}_{c-1}$.
+
+Now assume we have a notion of deficiency $\delta_{c-1}$
+which locally measures the gap among linear dimensions in $\mathbb{M}_{1}$
+and the numbers of independent relators from $\mathbb{M}_{*}$ in all possible weights $<c$.
+Suppose further, such a function behaves like a predimension and yields a dimension function $d_{c-1}$ on $\mathbb{M}_{1}$.
+Then we ideally define $\delta_{c}(A)$ for $A\inn \mathbb{M}_{1}$, as the difference between $d_{c-1}(A)$
+and the linear dimension of a new {\em relators space} $\rc(A)$.
+
+$\rc(A)$ is able to isolate elements of $R_{c}$,
+from Lie products $[\rho,x_{1},\dots,x_{c-k}]\in R_{c}$, involving relations $\rho\in R_{k}$ of a lesser weight $k<c$.
+The definition of $\rc(M)$ is found in Section \ref{maxrels}.
+
+\smallskip
+For a fixed prime $p$ and $c$ with\footnote{
+The constraint $c<p$ lays in the nature of the Hausdorff series development described in Section \ref{nilgral}.
+%the rational coefficient of the homogeneous term of degree $i$ is in fact divided by primes not greater than $i$. 
+} $c<p$, in its entirety, this recursive program should produce a sequence of pregeometries
+$(\mathbb{M}_{1},\cl_{i})_{i\leq c}$, each one extending the previous ($\cl_{i}\inn\cl_{i+1}$) and all insisting upon the 
+same domain set $\mathbb{M}_{1}$. Here $\cl_{1}$ is the $\Fp$-linear closure and $\cl_{2}$ is the pregeometry obtained
+from the deficiency $\delta_{2}$, associated to $\nla{2}$-algebras.
+
+This aspect motivates the study of extensions among pregeometries and the notion of predimentions {\em over} a given pregeometry
+given in Section \ref{pregextsec}.
+
+\medskip
+The above operator $\rc$ relies on a {\em free-lift} functor $\map{\frl}{\nla{c-1}}{\nla{c}}$
+defined in Section \ref{freelift}. This is such that $\frl(M)_{*}=M$ for all $M$ in $\nla{c-1}$ and obey the following universal property:
+for any other $N\in\nla{c}$ with $N_{*}\simeq_{\nla{c-1}}M$, $\frl(M)$ maps uniquely onto $N$. In other words $\frl(M)$ is the freest possible
+object in $\nla{c}$ to have a truncation in $\nla{c-1}$ which is $M$. We prove in fact that $\frl$ is left-adjoint to $\map{_{*}}{\nla{c}}
+{\nla{c-1}}$ in Proposition \ref{morphifreelift}.
+
+Composed the other way around, the universal property of $\frl$ yields, for any algebra $M$ of $\nla{c}$, the desired {\em shifted presentation} $\rc(M)\to\frl(M_{*})\to M$. The kernel $\rc(M)$ has the properties mentioned above.
+
+\medskip
+This formal strategy is applied, in Section \ref{preditre}, in the step from $\nla{2}$ to $\nla{3}$. Already in this {\em induction
+basis}, major difficulties are encountered in the reproduction of both the Fra\"iss\'e procedure and the pregeometric approach.
+
+We define a first deficiency for finitely generated $\nla{3}$-algebras $A$, as the difference between $\delta_{2}(A_{*})$
+-- the $\nla{2}$-predimension defined in Chapter \ref{due} -- and the $\Fp$-dimension of the space $\rt(A)$ given above.
+
+So defined, this function is unreliable to control deficiencies within a fixed ambient structure $M$ of $\nla{3}$. That is
+is because $\rt(A)$ is not in general contained into $\rt(B)$ for extensions $A\inn B$ inside $M$.
+
+\smallskip
+This is due to a structural issue intrinsic to the free-lift functor:
+for extensions $M\inn N$ of $\nla{2}$-structures, the lifted algebra $\frl(M)$ {\em does not} always embed into $\frl(N)$.
+In Section \ref{embiss} we prove however that if $M$ is a {\em self-sufficient} $\nla{2}$-subalgebra of $N$, then
+we have a corresponding extension of the lifted $\nla{3}$-algebras, i.e.\,$\frl(M)\inn\frl(N)$.
+This crucial result, which influences the whole subsequent construction,
+is proved by using the so called {\em Hall's bases} (Definition \ref{basicommutators}) of {\em basic} commutators
+for free Lie algebras. In fact a similar approach to Hall's {\em collecting process} in \cite{mhalll} is employed.
+
+\smallskip
+Now fixed an $\nla{3}$-algebra $M$, we define a more adaptive deficiency $\ded^{M}(A)$, which reads subspaces $A$ of
+$M_{1}$. This is built in terms of the {\em dimension function} $d_{2}^{M}$ -- induced by the pregeometry from $M_{*}$ -- and a
+suitable {\em monotone} operator $\rt_{M}(A)$, which returns subspaces of $\rt(M)$ and depends on $\frl(\gen{A})$. %(\gena{A}{M})$.
+
+As a consequence of the above embedding result, the functions $\delta_{3}$ and $\ded^{M}$ do agree
+on $\delta_{2}$-strong subalgebras $A$ of $M$.
+
+This behaviour also suggests the following definition of {\em strong} $\nla{3}$-extensions: to write $A\dsu{} M$ and
+say $A$ is self-sufficient in $M\in\nla{3}$, we require in fact that the truncated
+structures are
+self-sufficient with respect to $\delta_{2}$ ($A_{*}\zsu[2]{}M_{*}$) and that the auxiliary deficiency $\ded^{M}$ assumes values
+bigger than $\delta_{3}(A)$ on all $C$ between $A$ and $M_{1}$.
+
+\smallskip
+Consequently, we exhibits in Section \ref{amalgatre} a strong amalgam of $\nla{3}$-algebras.
+This is obtained as follows: start with a strong configuration like $A\dso{}B\dsu{}C$, then
+take the truncated preamalgam $A_{*}\zso[2]{}B_{*}\zsu[2]{}C_{*}$ and obtain, with the results in Chapter \ref{due},
+a free $\nla{2}$-amalgam $D_{*}$ of $A_{*}$ and $B_{*}$ over $C_{*}$.
+
+This yields strong $\nla{2}$-inclusions $A_{*}\zsu[2]{}D_{*}\zso[2]{}C_{*}$. Now take the free-lift $\frl(D_{*})$ and by virtue of the aforementioned fact, obtain the embeddings $\frl(A_{*})\inn \frl(D_{*}) \nni \frl(C_{*})$.
+
+Since $A$ and $C$ are isomorphic to the quotients $\frl(A)/\rt(A)$ and $\frl(C)/\rt(C)$, the $\nla{3}$-algebra
+$D\defeq\frl(D_{*})/(\rt(A)+\rt(C))$, amalgamates $A$ and $C$ over $B$ and we show $A\dsu{} D\dso{}C$ in
+Lemma \ref{amalgatrestrong}.
+
+With a modified procedure we were actually able to prove the {\em asymmetric} version of the above result: from
+$A\nni B\dsu{} C$, we obtain $A\dsu{} D\nni C$.
+As shown in Chapter \ref{due} in fact, asymmetric amalgamation is indispensable
+to approximate richness in a possible axiomatisation of the Fra\"iss\'e limit.
+
+
+\medskip
+A further remark, independent of previous issues, settle at this point the following -- and more critical -- problem:
+{\sl to decide whether $\rt_{M}(A)\cap\rt_{M}(B)$ equals $\rt_{M}(A\cap B)$, for given subspaces $A$ and $B$ of $M_{1}$.}
+%given subspaces $A$ and $B$ of $M_{1}$, $\rt_{M}(A)\cap\rt_{M}(B)$ does not equal $\rt_{M}(A\cap B)$ in general.
+
+The answer is negative in general and two main obstructions follow thereafter:
+\begin{itemize}
+\item[-]we prove with examples, that $\ded^{M}$ (and $\delta_{3}$) is not in general submodular.
+\item[-]We cannot prove the strong $\nla{3}$-embedding $\dsu{}$is transitive, nor find a transitive notion related to
+$\dsu{}$\footnote{
+there is a standard way to {\em force} transitivity via a local ``cut lemma'' (cfr. Lemma \ref{2cut}) definition of strongness: in our case
+one should define \lqq $A$ is strong in $M$\rqq if for any finite part $U$ of $M_{1}$, $\delta_{3}(A_{1}\cap U)\leq\delta_{3}(U)$.
+This definition however does not comply with the amalgamation in $\nla{3}$ described in Lemma \ref{amalgatrestrong}.
+}.
+\end{itemize}
+The first makes void the proof-strategies adopted in Chapter \ref{due}. Submodularity %\pref{summo}
+is in fact on one hand the key property to turn a deficiency-like function into a predimension,
+on the other, it ensures that free amalgamation preserves the same lower bound
+for the deficiency, of the amalgamated structures. 
+
+\smallskip
+The efforts of Section \ref{classetre}
+goes in the direction of finding {\em local} conditions to force a modular behaviour of $\rt_{M}$ and hence be able to
+use submodularity of $\ded$ {\sl just where we need it}.
+
+This is strongly connected to the relationship between $\delta_{3}$ and $\ded$. In this
+section we prove indeed that they are uniformly comparable, namely in the direction $\ded^{M}(A)\leq\delta_{3}(A)$ for
+any finite algebra $A$ of $\nla{3}$.
+
+In accordance to this and the above amalgamation process,
+we define a class $\Kl{3}$ of $\nla{3}$-algebras $M$ with $M_{*}$ in $\Kl{2}$ for which
+$\delta_{3}$ is non-negative on the finite subalgebras of $M$. By the above, we can use
+indifferently $\delta_{3}$ or $\ded^{M}$ to test whether $M$ is in $\Kl{3}$.
+
+We indicate $\Kl{3}$ as a possible candidate to represent the age of the desired rich $\nla{3}$-algebra, although we couldn't
+prove the amalgamation property for $\Kl{3}$. 
+
+%\smallskip
+%Despite a very long series of attempts, the whole Fra\"iss\'e construction was not accomplished.
+%The long time employed, eventually with very slow and rare improvements, forced us to prematurely put an end to this work.
+\crule
+The exclusive treatment of the uncollapsed case in this work is also motivated by a later project of Baudisch',
+{\em The Additive Collapse} (\cite{addcoll}).
+Here an $\omega$-stable theory $T$ is considered, which expands the theory of vector spaces over the finite field $\Fp$.
+A pregeometry is assigned on the models of $T$ and a notion of {\em strong embedding}
+between subspaces is given, which both influence the elementary type of the saturated monster $\K$ of
+$T$. Further properties are required of $T$, which capture the essential features of the {\em uncollapsed} infinite rank versions of the known amalgamation examples. 
+
+After {\em prealgebraic codes} and the aforementioned bound-function $\mu$ are chosen,
+the collapsed structure $\K^{\mu}$ of finite rank, is constructed directly {\em inside} $\K$.
+
+This new procedure is meant to unify under a common frame, the Red fields \cite{rf}, the new uncountably categorical group and
+the fusion over a vector space \cite{fu}.
+
+Should suitable stable rich $\nla{c}$-algebras ($c>2$) be constructed with the methods described in the present work,
+then the additive collapse process would give finite rank nilpotent Lie algebras or groups, with underlying Hrushovski
+geometries.

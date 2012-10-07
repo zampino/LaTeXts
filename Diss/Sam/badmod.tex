@@ -1,0 +1,53 @@
+\documentclass[a4paper,11pt,german,english]{article}
+\usepackage{babel}
+\usepackage[latin1]{inputenc}
+\usepackage{amsmath,amsfonts,amssymb,amsthm}
+\usepackage{ModNet}
+\usepackage{FHL}
+\usepackage{pdfsync}
+%\usepackage[left=2cm,right=2cm]{geometry}
+%\usepackage{syntonly}
+%\usepackage[all]{xy}
+\linespread{1.3}
+%\usepackage[mathscr]{euscript}
+\title{We cannot ``lift'' strong intersections}
+%\renewcommand{\thesection}{\arabic{section}} 
+%\setcounter{tocdepth}{3}
+%\syntaxonly
+%\includeonly{}
+\begin{document}
+\maketitle
+Consider the following spaces
+$H_{1}=\gen{u,\,h,\,h_{1},\,\dots,\,h_{4},\,d_{1},\,d_{2}}$ %\inn L_{1}$
+and
+$K_{1}=\gen{d_{1},\,d_{2},\,v}$, so that  $H_{1}\cap K_{1}=\gen{d_{1},d_{2}}$. %\inn L_{1}$,
+Now let $L_{1}$, with $L_{1}=\gen{H_{1},\, K_{1}}$, generate the following nil-$2$ Algebra
+$$L:=\gen{L_{1}\mid [u,v]+[h_{1},h_{2}],\,[v,h]+[h_{3},h_{4}],\,[h,u]+[d_{1},d_{2}]}$$
+
+\smallskip
+We have $H_{1}\zso H_{1}\cap K_{1}\zsu K_{1}$ and $\gena{H_{1}}{L}\cap\gena{K_{1}}{L}=\gena{H_{1}\cap K_{1}}{L}$ since
+$N^{2}(L)\cap(\exs H_{1}+\exs K_{1})=N^{2}(H)+N^{2}(K)$.
+
+\smallskip
+On the other hand consider $\phi_{H}=[h_{1},h_{2},h]+[h_{3},h_{4},u]$
+and $\phi_{K}=[d_{2},d_{1},v]$ in $\fla{3}{H_{1}}$ and in $\fla{3}{K_{1}}$ respectively.
+
+Now since
+%\begin{multline}
+$$
+\phi_{H}-\phi_{K}=[[u,v]+[h_{1},h_{2}],h] + [[v,h]+[h_{3},h_{4}],u] + [[h,u]+[d_{1},d_{2}],v]
+$$
+%\end{multline}
+we have that $\phi_{H}\equiv\phi_{K}\:(mod\,\J(L))$ but neither $\phi_{H}$ nor $\phi_{K}$ lies
+in $\fla{3}{H_{1}\cap K_{1}}$ modulo $\J(L)$, which means
+$\gena{H_{1}}{\fl{L}}\cap\gena{K_{1}}{\fl{L}}\neq\gena{H_{1}\cap K_{1}}{\fl{L}}$.
+
+This example shows at least that our previous lemma about {\em lifting of
+strong intersection} from $L$ to $\fl{L}=\fla{3}{L_{1}}\quot\J(L)$ is false.
+
+\medskip
+The point now is to embed this $H$-$K$ configuration in a free amalgam $M\nni M\cap A\zsu A$, in such a way that $H$ or $K$ play the role of $M$. But this is not the case, as we could
+set $M_{1}=H_{1}$ and $A_{1}=\gen{u,\,h,\,h_{1},\,\dots,\,h_{4},\,v}$ to have
+$\gena{M_{1}}{L}$ and $\gena{A_{1}}{L}$ in free composition, but $M_{1}\cap A_{1}$ is {\em not}
+selfsufficient in $A_{1}$. But maybe we can find a better example similar to this. 
+\end{document}

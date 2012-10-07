@@ -1,0 +1,215 @@
+%---------------------------------------------------------------------------
+\documentclass%%
+%---------------------------------------------------------------------------
+  [fontsize=10pt,%%          Schriftgroesse
+%---------------------------------------------------------------------------
+% Satzspiegel
+   paper=a4,%%               Papierformat
+   enlargefirstpage=on,%%    Erste Seite anders
+   pagenumber=headright,%%   Seitenzahl oben mittig
+%---------------------------------------------------------------------------
+% Layout
+   headsepline=off,%%         Linie unter der Seitenzahl
+   parskip=full,%%           Abstand zwischen Absaetzen
+%---------------------------------------------------------------------------
+% Briefkopf und Anschrift
+   fromalign=right,%%        Plazierung des Briefkopfs
+   fromphone=off,%%           Telefonnummer im Absender
+   fromrule=aftername,%%           Linie im Absender (aftername, afteraddress)
+   fromfax=off,%%            Faxnummer
+   fromemail=on,%%          Emailadresse
+   fromurl=off,%%            Homepage
+   fromlogo=off,%%           Firmenlogo
+   addrfield=off,%%           Adressfeld fuer Fensterkuverts
+   backaddress=off,%%          ...und Absender im Fenster
+   subject=beforeopening,%%  Plazierung der Betreffzeile
+   locfield=narrow,%%        (narrow,wide) zusaetzliches Feld fuer Absender
+   foldmarks=off,%%           Faltmarken setzen
+   numericaldate=off,%%      Datum numerisch ausgeben
+   refline=wide,%%         Geschaeftszeile im Satzspiegel
+%---------------------------------------------------------------------------
+% Formatierung
+   draft=on%%                Entwurfsmodus
+]{scrlttr2}
+\LoadLetterOption{myLetter}
+%---------------------------------------------------------------------------
+% Weitere Optionen
+\KOMAoptions{%%
+}
+%---------------------------------------------------------------------------
+\usepackage[ngerman]{babel}
+\usepackage[T1]{fontenc}
+\usepackage[latin1]{inputenc}
+\usepackage{url}
+%---------------------------------------------------------------------------
+% Fonts
+\setkomafont{title}{\huge\rmfamily}
+%\setkomafont{fromname}{\large}
+\setkomafont{fromaddress}{\small}%% statt \small
+\setkomafont{pagenumber}{\sffamily}
+\setkomafont{subject}{\mdseries}
+\setkomafont{backaddress}{\mdseries}
+%\usepackage{mathptmx}%% Schrift Times
+%\usepackage{mathpazo}%% Schrift Palatino
+%\setkomafont{fromname}{\LARGE}
+%---------------------------------------------------------------------------
+\begin{document}
+%---------------------------------------------------------------------------
+% Briefstil und Position des Briefkopfs
+%\LoadLetterOption{DIN} %% oder: DINmtext, SN, SNleft, KOMAold.
+\addtolength{\textheight}{9\baselineskip}
+\makeatletter
+\@setplength{locwidth}{\textwidth}
+%\@addtoplength{locvpos}{2mm}
+%\@addtoplength{lochpos}{3.3cm}
+\@addtoplength{refvpos}{-2.5\baselineskip}
+\@setplength{firstheadvpos}{10mm}
+\@setplength{firstheadwidth}{\paperwidth}
+\ifdim \useplength{toaddrhpos}>\z@
+  \@addtoplength[-2]{firstheadwidth}{\useplength{toaddrhpos}}
+\else
+  \@addtoplength[2]{firstheadwidth}{\useplength{toaddrhpos}}
+\fi
+\@setplength{foldmarkhpos}{6.5mm}
+\makeatother
+%-----------------------------------------------------------------------------
+%
+%????? Absender-----> defined in myLetter.lco for the ``Letters'' folder
+%                                               commands there are overridden by this file
+%
+%-------------------------------------------------------------------------------------------------
+\setkomavar{title}{\sc Lebenslauf}
+%\setkomavar{fromname}{Absender Name}
+%\setkomavar{fromaddress}{ Straße\\12345 Ort.}
+%\setkomavar{fromphone}{+49 (0)30 3462 4345}
+%\renewcommand{\phonename}{Telefon}
+\setkomavar{fromemail}{amantini@math.hu-berlin.de}
+\setkomavar{backaddressseparator}{, }
+%\setkomavar{signature}{\flushright\usekomavar{fromname}}
+%\setkomavar{frombank}{}
+%\setkomavar{location}{}
+\setkomavar{location}{%\\[8ex]
+\raggedright{\small{%
+%	Address:\usekomavar{fromaddress}\\Staatsangeh\"origkeit: italienisch\\
+%      	Telefon:\usekomavar{fromphone}%
+\begin{tabular}{r@{\extracolsep{1em}}p{9cm}}
+	 					&{\bf\large\usekomavar{fromname}}\\[+3mm]% {\bf\large Andrea Amantini}\\
+Geburtsort, Datum: 			&Florenz (Italien), 28.01.1980\\
+Staatsangeh\"origkeit:		&italienisch\\
+Wohnsitz:					&Lausitzerstra{\ss}e 37, 10999 Berlin\\
+Tel:						&+49 (0)30 3462 4345\\
+Mob:						&+49 (0)176 2829 7792\\
+E-Mail:					&\usekomavar{fromemail}%amantini.andrea@gmail.com\\[+10mm]
+\end{tabular}%
+}%
+}}%% Neben dem Adressfenster
+%---------------------------------------------------------------------------
+%\firsthead{Frei gestalteter Briefkopf}
+%---------------------------------------------------------------------------
+%\firstfoot{Fußzeile}
+%---------------------------------------------------------------------------
+% Geschaeftszeilenfelder
+%\setkomavar{place}{Ort}
+%\setkomavar{placeseparator}{, den }
+\setkomavar{date}{}
+%\setkomavar{yourmail}{1. 1. 2003}%% 'Ihr Schreiben...'
+%\setkomavar{yourref} {abcdefg}%%    'Ihr Zeichen...'
+%\setkomavar{myref}{}%%      Unser Zeichen
+%\setkomavar{invoice}{123}%% Rechnungsnummer
+%\setkomavar{phoneseparator}{}
+%---------------------------------------------------------------------------
+% Versendungsart
+%\setkomavar{specialmail}{Einschreiben mit Rückschein}
+%---------------------------------------------------------------------------
+% Anlage neu definieren
+\renewcommand{\enclname}{Anlage}
+\setkomavar{enclseparator}{: }
+%---------------------------------------------------------------------------
+% Seitenstil
+%\pagestyle{plain}%% keine Header in der Kopfzeile
+%---------------------------------------------------------------------------
+\begin{letter}{~}
+%---------------------------------------------------------------------------
+%\setkomavar{subject}{Halo}
+%---------------------------------------------------------------------------
+\opening{~}
+\begin{tabular}{r@{\extracolsep{2em}}p{8.3cm}}
+\multicolumn{2}{l}{\large\bf Bildungsgang}\\[+1mm]
+\hline\\[+1mm]
+Okt 2005 - heute		&Doktorand an der Humboldt Universität zu Berlin\\ 	
+					&im Fach Mathematik -- Schwerpunkt: Algebra, Mathematische Logik, Modelltheorie --
+					Verteidigung: voraussichtlich Anfang 2011\\[+3mm]%({\sl Betreuer: Prof. Dr. A. Baudisch})\\[+3mm]
+Sep 2008 - Okt 2008			&Forschungsaufenthalt an der {\em Université Lyon 1}, Inst. Camille
+						Jordan -- {\sl Lyon, France}\\[+3mm]
+Okt 1999 - Apr 2005			&Studium an der {\em Università degli Studi di Firenze} ({\sl Florenz, Italien}) %\\
+					-- Studiengang Mathematik, Abschlussprüfung:
+					Diplom ({\sl Laurea in Matematica}) --
+					Abschlussnote: 110/110 \emph{cum Laude}\\[+3mm]
+1994-1999			&Gymnasium {\sl Liceo Scientifico}, ({\sl Florenz, Italien})%
+\\[+10mm]
+%\end{tabular}
+%\newpage
+%\begin{tabular}{r@{\extracolsep{2em}}p{9cm}}
+\multicolumn{2}{l}{\large\bf Stellen}\\[+1mm]
+\hline\\[+1mm]
+Okt 2005 - Sep 2008 	& EU-Gastwissenschaftler an der HU Berlin im Rahmen des Marie Curie
+					FP6 Netzwerksprojekt MODNET\\[+3mm]
+Okt 2008 - Dez 2009 	& Wissenschaftlicher Mitarbeiter an der HU Berlin\\[+10mm]
+\end{tabular}
+\newpage
+\begin{tabular}{r@{\extracolsep{2em}}p{8cm}}
+\multicolumn{2}{l}{\large\bf Lehrtätigkeiten an der HUB}\\[+1mm]
+\hline\\[+1mm]
+WS 08/09	& Übungsleiter im Fach Algebra I\\
+SS 09		& Übungsleiter im Fach Gewöhnlichen Differentialgleichungen\\
+WS 09/10	& Übungsleiter im Fach Algebra II\\[+16mm]
+%\multicolumn{2}{l}{\large\bf Betriebssysteme, Programmiersprachen, IDEs}\\[+1mm]
+%\hline\\[+1mm]
+%Mac OS X ($\leq10.6$) 	&gute Kenntnisse\\
+%Unix/Linux, Windows			&friedlicher Umgang\\
+%\LaTeX \,``Typesetting" 	&erweiterte Kenntnisse\\
+%{\sl HTML, CSS}		&Grundkenntnisse\\
+%Objective-$C$, $C^{++}$ 	&Grundkenntnisse\\
+%XCode				&Grundkenntnisse\\
+\multicolumn{2}{l}{\bf Ausgew\"alte Konferenzen, Workshops u. Sommerschulen}\\[+1mm]
+\hline\\[+1mm]
+August 2004		&Perugia, S.M.I. Sommer Schule. %Prof. G.Alcober - Euskal Herriko Univ. Bilbao-\\
+				{\sl Group Actions. Classification of Finite Groups of some ``simple'' order.
+				Soluble and Nilpotent Groups}\\
+Dezember 2005	&Leeds, MODNET Sommer Schule. {\sl Elements of Stability Theory.
+				Intermediate Model Theory}\\
+April 2006			&Freiburg, MODNET Sommer Schule. {\sl Advanced Stability. Algebraic Geometry and Model Theory}\\
+Juni 2006			&Lyon, MODNET Training Workshop. {\sl Hrushowski Amalgamation and Fusion. Simple Theories}\\
+%Juni 2006			&Lyon, Logicum Lugdunensis. \url http://math.univ-lyon1.fr/logicum/logicumlugdunensis\\
+September 2006	&Oxford, MODNET Workshop in model theory\\
+November 2006	&Antalya, MODNET Mid-Term Conference.\\
+Januar 2007		&Oberwolfach, MFO Workshop on Model Theory of Groups.\\
+Juni 2007			&Camerino, MODNET Sommer Schule. {\sl Model Theory of Modules. Introduction to o-minimality. Stable Groups}\\
+September 2007	&Berlin, MODNET Training Workshop. {\sl Model Theory of Fields and Applications. Construction of o-minimal
+				structures}\\
+April 2008			&La Roche, MODNET Training Workshop. {\sl Motivic Integration. Model Theory of Valued Fields.
+				Interaction between Model Theory and Number Theory}\\
+Juni 2008			&Leeds, Around Classification Theory.\\
+Juli 2008			&Manchester, MODNET Summer School. {\sl Groups of finite Morley Rank. Finite Model Theory}\\[+5mm]
+\multicolumn{2}{l}{\bf Sprachen}\\[+1mm]
+\hline\\[+1mm]
+Italienisch & Muttersprache\\
+English & fliessend\\
+Deutsch & fliessend {\sl (Zeugnisse  A1.2, B2.2, C1 Deutsch als Fremdsprache -- HU Sprachenzentrum, Berlin)}\\
+Franz\"osisch & Grundkenntnisse
+\end{tabular}
+%\closing{}
+\vspace{3mm}
+
+\bigskip
+\begin{flushright}
+%\begin{minipage}{.5\textwidth}
+Andrea Amantini
+
+Berlin, den \today
+%\end{minipage}
+\end{flushright}
+
+%---------------------------------------------------------------------------
+\end{letter}
+\end{document}

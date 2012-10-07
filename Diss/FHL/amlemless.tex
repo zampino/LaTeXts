@@ -1,0 +1,156 @@
+\begin{lem}[Amalgamation Lemma]
+Let $A,B$ and $C$ in $\Klf$. If $B\dsu A$ and $B\dsu C$ then
+%Let $B=\gena{B_{1}}{C}$ and $B\dsu A$ then there exists a $D$ in
+%$\Klf$ such that $C\dsu D$ and $A=\gena{A_{1}}{D}$.
+exists $D\in\Klf$ such that $A\dsu D$ and $C\dsu D$ and $B$ is preserved
+by the strong embeddings.
+%Moreover if $B$ is $\delta_{3}$-strong in $C$ too, then also $A\dsu D$ holds.
+\end{lem}
+\begin{proof}
+Without loss of generality we can assume that $B\dsu A$ is a $\Klf$-minimal extension.
+
+We first construct a candidate $D$ in $\nla{3}$%=A\star_{B}C$
+, then
+we will prove that $D\in\Klf$ by a discussion of the several minimal extensions $A\quot B$
+which can occur. 
+
+If we denote with $A^{\prime}$, $B^{\prime}$ and $C^{\prime}$, respectively $\tr{2}A$, $\tr{2}B$ and
+$\tr{2}C$ then, after the definition of $\Klf$, we have $A^{\prime}\zso B^{\prime}\zsu C^{\prime}$.
+We build the free $\nla{2}$-amalgam $D^{\prime}=\fram{A^{\prime}}{B^{\prime}}{C^{\prime}}$ of $A^{\prime}$ and $C^{\prime}$ over $B^{\prime}$. Assume $D^{\prime}$ is in $\Kl^{2}$ then, because
+$B^{\prime}\zsu D^{\prime}$,
+we $\delta_{2}$-strongly embed $D^{\prime}$ in $\K^{2}$ over $B^{\prime}$,
+%we can find a copy of $D^{\prime}$ in 
+we keep calling $D^{\prime}$ the isomorphic image in the generic model of $T^{2}$.
+
+Consider $\ta D^{\prime}$ the $\ta$-closure of $D^{\prime}$ in $\K^{2}$,
+because both $A^{\prime}$ and $C^{\prime}$ are selfsufficient in $D^{\prime}$
+and $D^{\prime}\zsu\ta D^{\prime}$, we have that $A^{\prime}$ and $C^{\prime}$ are both $\delta_{2}$-strong
+in $\ta D^{\prime}$. Moreover $\ta$-closure implies
+\begin{labeq}{inter}
+B^{\prime}=\gena{B_{1}}{\ta D^{\prime}}=\gena{\abu}{\ta D^{\prime}}\cap\gena{\cbu}{\ta D^{\prime}}.
+\end{labeq}
+
+Now on account of Lemma \ref{bellemma},
+there exist two embeddings $j_{A}$ and $j_{C}$ of $\fr{3}\tr{2}A$ and $\fr{3}\tr{2}C$
+into $\fr{3}\ta D^{\prime}$ their images being $\gena{\abu}{\fr{3}\ta D^{\prime}}$ and $\gena{\cbu}
+{\fr{3}\ta D^{\prime}}$ respectively. From \pref{inter} and lemma \ref{bellemmino} instead, we get
+\begin{labeq}{freeint}
+\gena{B_{1}}{\fr{3}\ta D^{\prime}}=\gena{\abu}{\fr{3}\ta D^{\prime}}\cap\gena{\cbu}{\fr{3}\ta D^{\prime}}
+\end{labeq}
+here $B_{1}$, $\abu$ and $\cbu$ are identified with its images modulo $j_{A}$ and $j_{C}$. 
+
+We set $N^{3}(A)^{\bullet}=j_{A}(N^{3}(A))$ and $N^{3}(C)^{\bullet}=j_{C}(N^{3}(C))$.
+And we build
+$$D=\fr{3}\ta D^{\prime}\quot(N^{3}(A)^{\bullet}+N^{3}(C)^{\bullet}).$$
+As $N^{3}(A)^{\bullet}+N^{3}(C)^{\bullet}$ is an ideal consisting only of weight $3$ elements,
+$\fr{3}\tr{2}D=\fr{3}(\tr{2}\fr{3}\ta D^{\prime})%\simeq
+=\fr{3}\ta D^{\prime}$, hence we obtain $N^{3}(D)=N^{3}(A)^{\bullet}+N^{3}(C)^{\bullet}$.
+
+From \pref{freeint} we have that
+$$N^{3}(B)^{\bullet}:=j_{A}(N^{3}(B))=N^{3}(A)^{\bullet}\cap N^{3}(C)^{\bullet}=j_{C}(N^{3}(B))$$
+and the following compatibility equations
+\begin{labeq}{compa}
+N^{3}(A)^{\bullet}=N^{3}(D)\cap\gena{\abu}{\fr{3}\ta D^{\prime}}
+\end{labeq}and
+$$
+N^{3}(C)^{\bullet}=N^{3}(D)\cap\gena{\cbu}{\fr{3}\ta D^{\prime}}.
+$$
+
+So far, are $A$ and $C$ embeddable in $D$ via Lie Algebra monomorphisms,
+just regard $A\simeq\fr{3}\tr{2}A\quot N^{3}(A)$ and take the quotient of $j_{A}$:
+\begin{eqnarray}
+\map{\bar j _{A}}{&\fr{3}\tr{2}A\quot N^{3}(A)}{D}\\
+&\bar w\longmapsto \bar w
+\end{eqnarray}
+on account of \pref{compa} is $\bar j_{A}$ one-to-one, in particular its image is again
+$\gena{\abu}{D}=(\gena{\abu}{\fr{3}\ta D^{\prime}}+N^{3}(D))\quot N^{3}(D)$.\quad Do the same for $C$.
+
+\medskip
+We show next that if $B_{1}\dsu A_{1}$ then the embedding of $C$ into $D$ is $\delta_{3}$-strong.
+We have to prove $\delta_{3}E_{1}\geq\delta_{3}C_{1}$ for each $E_{1}\zsu\ta D_{1}$ such that
+$E_{1}\nni\cbu$ and $E_{1}$ $\ta$-closed.
+
+We first observe $\delta_{3}E_{1}\geq\delta_{3} E_{1}\cap D_{1}$. This is because $d_{2}E_{1}\geq
+d_{2}E_{1}\cap D_{1}$ and
+\begin{multline}\label{ntreonto}
+N^{3}(E_{1})=\\
+=N^{3}(D)\cap\gena{E_{1}}{\fr{3}\ta D^{\prime}}=
+(N^{3}(A)+N^{3}(C))\cap\gena{E_{1}}{\fr{3}\ta D^{\prime}}=\\
+=(N^{3}(A)\cap\gena{E_{1}}{\fr{3}\ta D^{\prime}})+N^{3}(C)=\\
+=(N^{3}(D)\cap\gena{A_{1}}{\fr{3}\ta D^{\prime}}\cap\gena{E_{1}}{\fr{3}\ta D^{\prime}})+N^{3}(C)=\\
+=(N^{3}(D)\cap\gena{A_{1}\cap E_{1}}{\fr{3}\ta D^{\prime}})+N^{3}(C)\inn\\
+\inn N^{3}(E_{1}\cap A_{1}+C_{1})\inn N^{3}(E_{1}\cap D_{1})
+\end{multline}
+Therefore we have to show $\delta_{3}E_{1}\cap D_{1}\geq\delta_{3}C_{1}$.
+
+As $E_{1}\cap D_{1}=C_{1}+(E_{1}\cap \abu)$ we finish once we show
+$\delta_{3}(E_{1}\cap D_{1}\quot C)=\delta_{3}(E_{1}\cap\abu\quot B)$ because
+%$E_{1}\cap \abu$ is a $\delta_{2}$ strong subspace of $\abu$ and 
+$B\dsu A$ and $\delta_{3}(E_{1}\cap \abu\quot B)\geq 0$.
+
+We have
+%$$\delta_{3}(E_{1}\cap D_{1}\quot C)
+$$\delta_{3}(E_{1}\cap D_{1})-\delta_{3}(C_{1})=
+d_{2}(E_{1}\cap D_{1}\quot C_{1})
+-\big(\dfp(N^{3}(E_{1}\cap D_{1}))-\dfp(N^{3}(C))\big).$$
+Everything behaves good for $d_{2}$, we have $d_{2}(E_{1}\cap D_{1})-d_{2}(C_{1})=
+d_{2}(E_{1}\cap\abu)-d_{2}B_{1}$. (\dots eigentlich stimmt das f`\"ur $\delta_{2}$ aber
+man kann approximieren \dots)
+
+To conclude we have to show
+$$N^{3}(E_{1}\cap\abu)\quot N^{3}(B)^{\bullet}\simeq
+N^{3}(C_{1}+(E_{1}\cap \abu))\quot N^{3}(C)^{\bullet}.$$
+Consider the map
+\begin{eqnarray*}
+N^{3}(E_{1}\cap \abu)\quot N^{3}(B)^{\bullet}&\longrightarrow&N^{3}(E_{1}\cap D_{1})\quot N^{3}(C)^{\bullet}\\
+\bar\eta&\longmapsto&\bar\eta\quad\quad\forall\eta\in N^{3}(E_{1}\cap\abu).
+\end{eqnarray*}
+Soundness is immediate. Moreover our map is injective because
+\begin{multline*}
+N^{3}(C)^{\bullet}\cap\gena{E_{1}\cap \abu}{\fr{3}\ta D^{\prime}}=\\
+=N^{3}(D)\cap\gena{\cbu}{\fr{3}\ta D^{\prime}}\cap\gena{E_{1}\cap \abu}{\fr{3}\ta D^{\prime}}=\\
+=N^{3}(D)\cap\gena{\abu\cap C_{1}}{\fr{3}\ta D^{\prime}}=N^{3}(B)^{\bullet}.
+\end{multline*}
+Here we used $\gena{\cbu}{\fr{3}\ta D^{\prime}}\cap\gena{E_{1}\cap\abu}{\fr{3}\ta D^{\prime}}=
+\gena{\cbu\cap\abu}{\fr{3}\ta D^{\prime}}$ because both $\cbu$ and $E_{1}\cap\abu$ are $\delta_{2}$ strong in $D_{1}$ and $\ta$ closed and because $\gena{\cbu}{\ta D^{\prime}}\cap\gena{E_{1}\cap\abu}{\ta D^{\prime}}=\gena{\bbu}{\ta D^{\prime}}$.
+
+To see that this map is onto use the arguments in \pref{ntreonto} again to get
+$$N^{3}(E_{1}\cap D_{1})=(
+N^{3}(D)\cap\gena{E_{1}\cap A_{1}}{\fr{3}\ta D^{\prime}})+N^{3}(C)^{\bullet}.$$
+%On the other hand, since again $\gena{\abu}{\ta D^{\prime}}\cap\gena{E_{1}}{\ta D^{\prime}}=\gena{E_{1}\cap\abu}{\ta D^{\prime}}$ we have
+%\begin{multline*}
+%N^{3}(E_{1})=N^{3}(D)\cap\gena{E_{1}}{\fr{3}\ta D^{\prime}}=\\
+%=(N^{3}(A)^{\bullet}+N^{3}(C)^{\bullet})\cap\gena{E_{1}}{\fr{3}\ta D^{\prime}}=\\
+%=(N^{3}(A)^{\bullet}\cap\gena{E_{1}}{\fr{3}\ta D^{\prime}})+N^{3}(C)^{\bullet}=\\
+%=(N^{3}(D)\cap\gena{E_{1}\cap A_{1}}{\fr{3}\ta D^{\prime}})+N^{3}(C)^{\bullet}
+%\end{multline*}
+%and this gives that our map is onto.
+
+We have shown that
+$$\dfp(N^{3}(E))-\dfp(N^{3}(C))=\dfp(N^{3}(E_{1}\cap\abu))-\dfp(N^{3}(B)^{\bullet})$$
+thus $C$ is $\delta_{3}$-strong embeddable in $D$.
+
+A completely analogous argument proves that $A$ is $\delta_{3}$-strong in $D$.
+%,
+%provided $B$ is a $\delta_{3}$-strong substructure in $C$.
+
+\smallskip
+We show that $D$ has $\sig{3}{2}$.
+
+It suffices to show $\delta_{3}H_{1}\geq2$ for each  $A_{1}\zsu\ta D_{1}$ of finite linear dimension. 
+
+Consider the relative $\ta$-closure $H_{1}^{+}$ of $H_{1}$ in $D$, then it holds
+$\gena{}{}\cap\gena{}{}=\gena{}{}$.
+
+By lemma \ref{} and lemma \ref{} we have
+$$
+\delta_{3}(H_{1}^{+}+C_{1})+\delta_{3}(H_{1}^{+}\cap C_{1})
+\leq\delta_{3}H_{1}^{+}+\delta_{3}C_{1}\leq\delta_{3}H_{1}^{+}+\delta_{3}(H_{1}^{+}+C_{1}).
+$$
+Now since $C_{1}\dsu\ta D_{1}$ and $C\in\Klf$, we conclude
+$\delta_{3}H_{1}\geq\delta_{3}H_{1}^{+}\geq\delta_{3}(H_{1}^{+}\cap C_{1})\geq2$.
+
+
+To conclude the proof we have to
+show that $\tr{2}D$ actually lies in $\Kl^{2}$ and provide axiom $\sig{3}{2}$ for $D$.
+\end{proof}

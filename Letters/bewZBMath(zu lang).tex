@@ -1,0 +1,233 @@
+%---------------------------------------------------------------------------
+\documentclass%%
+%---------------------------------------------------------------------------
+  [fontsize=10pt,german%%          Schriftgroesse
+%---------------------------------------------------------------------------
+% Satzspiegel
+   paper=a4,%%               Papierformat
+   enlargefirstpage=on,%%    Erste Seite anders
+   pagenumber=headright,%%   Seitenzahl oben mittig
+%---------------------------------------------------------------------------
+% Layout
+   headsepline=on,%%         Linie unter der Seitenzahl
+   parskip=off,%half,%%           Abstand zwischen Absaetzen
+%---------------------------------------------------------------------------
+% Briefkopf und Anschrift
+   fromalign=right,%%        Plazierung des Briefkopfs
+   fromphone=off,%%           Telefonnummer im Absender
+   fromrule=on,%aftername,%%           Linie im Absender (aftername, afteraddress)
+   fromfax=off,%%            Faxnummer
+   fromemail=on,%%          Emailadresse
+   fromurl=off,%%            Homepage
+   fromlogo=on,%%           Firmenlogo
+   addrfield=on,%%           Adressfeld fuer Fensterkuverts
+   backaddress=off,%%          ...und Absender im Fenster
+   subject=beforeopening,%%  Plazierung der Betreffzeile
+   locfield=narrow,%%        (narrow,wide) zusaetzliches Feld fuer Absender
+   foldmarks=off,%%           Faltmarken setzen
+   numericaldate=off,%%      Datum numerisch ausgeben
+   refline=narrow,%%         Geschaeftszeile im Satzspiegel
+%---------------------------------------------------------------------------
+% Formatierung
+   draft=off%%                Entwurfsmodus
+]{scrlttr2}
+\LoadLetterOption{myLetter}
+%---------------------------------------------------------------------------
+% Weitere Optionen
+\KOMAoptions{%%
+}
+%---------------------------------------------------------------------------
+\usepackage[english,ngerman]{babel}
+\usepackage[T1]{fontenc}
+\usepackage[latin1]{inputenc}
+\usepackage{url}
+%---------------------------------------------------------------------------
+% Fonts
+%\setkomafont{fromname}{\large}
+\setkomafont{fromaddress}{\small}%% statt \small
+\setkomafont{pagenumber}{\sffamily}
+\setkomafont{subject}{\mdseries}
+\setkomafont{backaddress}{\mdseries}
+%\usepackage{mathptmx}%% Schrift Times
+%\usepackage{mathpazo}%% Schrift Palatino
+%\setkomafont{fromname}{\LARGE}
+%---------------------------------------------------------------------------
+\begin{document}
+%---------------------------------------------------------------------------
+% Briefstil und Position des Briefkopfs
+%\LoadLetterOption{DIN} %% oder: DINmtext, SN, SNleft, KOMAold.
+\makeatletter
+\@addtoplength{toaddrvpos}{-5mm}
+\@addtoplength{refaftervskip}{5mm}
+\@addtoplength{refvpos}{-5mm}
+\@setplength{firstheadvpos}{10mm}
+\@setplength{firstheadwidth}{\paperwidth}
+\ifdim \useplength{toaddrhpos}>\z@
+  \@addtoplength[-2]{firstheadwidth}{\useplength{toaddrhpos}}
+\else
+  \@addtoplength[2]{firstheadwidth}{\useplength{toaddrhpos}}
+\fi
+\@setplength{foldmarkhpos}{6.5mm}
+\makeatother
+%-----------------------------------------------------------------------------
+%
+%????? Absender-----> defined in myLetter.lco for the ``Letters'' folder
+%                                               commands there are overridden by this file
+%
+%-------------------------------------------------------------------------------------------------
+%\setkomavar{fromname}{Absender Name}
+%\setkomavar{fromaddress}{ Straße\\12345 Ort.}
+%\setkomavar{fromphone}{+49 (0)30 3462 4345}
+\renewcommand{\phonename}{Telefon}
+%\setkomavar{fromemail}{absender.name@provider.de}
+\setkomavar{backaddressseparator}{, }
+%\setkomavar{signature}{(Name)}
+%\setkomavar{frombank}{}
+\setkomavar{location}{}
+%\setkomavar{location}{\\[8ex]\raggedleft{\footnotesize{\usekomavar{fromaddress}\\
+%      Telefon:\ usekomavar{fromphone}}}}%% Neben dem Adressfenster
+%---------------------------------------------------------------------------
+%\firsthead{Frei gestalteter Briefkopf}
+%---------------------------------------------------------------------------
+%\firstfoot{Fußzeile}
+%---------------------------------------------------------------------------
+% Geschaeftszeilenfelder
+%\setkomavar{place}{Ort}
+%\setkomavar{placeseparator}{, den }
+\setkomavar{date}{\today}
+%\setkomavar{yourmail}{1. 1. 2003}%% 'Ihr Schreiben...'
+%\setkomavar{yourref} {abcdefg}%%    'Ihr Zeichen...'
+%\setkomavar{myref}{}%%      Unser Zeichen
+%\setkomavar{invoice}{123}%% Rechnungsnummer
+%\setkomavar{phoneseparator}{}
+%---------------------------------------------------------------------------
+% Versendungsart
+%\setkomavar{specialmail}{Einschreiben mit Rückschein}
+%---------------------------------------------------------------------------
+% Anlage neu definieren
+\renewcommand{\enclname}{Anlage}
+\setkomavar{enclseparator}{: }
+%---------------------------------------------------------------------------
+% Seitenstil
+%\pagestyle{plain}%% keine Header in der Kopfzeile
+%---------------------------------------------------------------------------
+\begin{letter}{an
+Annette Lindemann
+
+Personalabteilung
+
+Fachinformationszentrum Karlsruhe\\
+Gesellschaft für wissenschaftlich-technische Information mbH\\[+1mm]
+
+Hermann-von-Helmholtz-Platz 1\\
+76344 Eggenstein-Leopoldshafen}
+%---------------------------------------------------------------------------
+\setkomavar{subject}{\bf Bewerbung als Fachredakteur des ZentralBlatt MATH, Abteilung Mathematik u. Informatik, Berlin}
+%---------------------------------------------------------------------------
+\opening{Sehr geehrte Frau Lindemann}
+Mein Name ist Andrea Amantini und ich möchte mich hiermit für die von Ihnen ausgeschriebene Stelle als
+Fachredakteur des ZentralBlatt MATH bewerben.
+
+Maine Allgemeine Kenntnisse und Leistungen in der mathematische Forschung sind erst aus meinem
+akademischen Bildungsgang zurückzuziehen:
+\begin{itemize}
+\item[>]abgeschlossener Diplomsstudium der Mathematik in Florenz, mit der Note 110/110 {\sl cum laude}.
+\item[>]Mathematischer Promotionsstudium an der Humboldt Universit\"at. Schwerpunkt Mathematische Logik/Modelltheorie.
+\end{itemize}
+Zum letztere, da ich am 8.~Dezember die Dissertation eingereicht habe,
+wird die Verteidigung und der Abschluss des Promotionsverfahrens voraussichtlich im Fr\"uhjahr 2011
+stattfinden.
+
+\smallskip
+Meine bisherigen Studien der Gruppentheorie (MSC 20F05, 20F18, 20F40) als Diplomand und Forschungen in
+der Modelltheorie, %(MSC 03Cxx),
+sind schon seit mindestens 7 Jahren Jahren der besondere Schwerpunkt meiner akademischen und beruflichen Entwicklung.
+
+Insbesondere habe ich mich mit Fragen aus der algebraischen und angewandte Modelltheorie, sowie aus
+der geometrischen Stabilitätstheorie für meine Dissertation beschäftigt (03C45, 03C60, 03C98, 20F05, 20F11, 20J05).
+
+%Grundlage der -- isbesondere algebraische -- Systeme
+Im Allgemeinen ist Modelltheorie eine Branche der Mathematische Logik, die eine Einsicht %-- aus einem axiomatischen Standpunkt --
+auf verschiedene Gebiete der Mathematik und deren axiomatischen Grundlagen bietet.
+Als Beispiel gelte, der modelltheoretische Beweis\footnote{} von E.~Hrushovski
+der %geometrischen
+Mordell-Lang Vermutung aus der algebraische Geometrie.
+
+Darüber hinaus beschäftig sich die Modelltheorie der geordnete Strukturen (03C64) mit Fragen aus topologischen und
+real-analytischen Felder. Andererseits beschäftigt  sich die sogenannte {\em endliche} Modelltheorie (03C13) --
+grob geschildert -- mit Fragen der Entscheidbarkeit und
+aus der Komplexitätstheorie (68Q15, 03D15).
+
+\medskip
+Aus meiner bisherige Erfahrung in der Forschung habe ich gelernt, wie es relevant sei, auf digitale
+Ressourcen, sowie traditionelle Zeitschriften, verlässlich und unkompliziert zugreifen zu k\"onnen.
+
+Man merkt die Wichtigkeit der Indizierung und (Retro-)Digitalisierung der wissenschaftlichen Dokumente, insbesondere beim recherchieren von ``alten'' Originaltexten.
+Dank der Database der
+Digitalisierungszentrum (GDZ) an der SUB Göttingen, z.B.~könnte ich eine Arbeit\footnote{} von
+W.~Magnus von 1940 in der {\em Zeitschrift für die reine und
+angewandte Mathematik} finden, welche der höchsten Bedeutung für meine Dissertation gewesen ist.
+Dasselbe gilt für einen Artikel\footnote{} auf Französisch von M.~Lazard des Jahres 1954, den ich auf
+dem NUMDAM gefunden habe.
+
+\medskip
+Ich interessiere mich an diese Stelle, weil
+ich engagiert beim kompetenten Verbreiten des Wissenschaftlichen Wissens dabei sein will. 
+Die Motivation dafür liegt -- neben der Spannung beim Recherchieren --
+auch bei meiner Zuneigung zur mathematischen Schrift als eleganter Kommunikationsform,
+und der Faszination für wissenschaftlichen Publikationswesen als Objekt in sich, seien es Bücher einer Bibliothek sowie
+pdf-texte einer elektronischen Verzeichnis.
+Ich erkenne dabei, zwischen den beiden Medien eine Kontinuität,
+die zukünftig weiterentwickelt werden muss und einer gegenseitige Unterstützung dient.
+
+\bigskip
+%Neben die oben genannten direkten Erfahrung mit der mathematischen Forschung
+Eine Zusammenfassung der Eigenschaften, die ich mitbringen werde, will ich hier unten auflisten:
+\begin{itemize}
+\item Expertise mit den verschiedensten {\em front-ends} elektronischer %Mathematischen
+Zeitschriften-Daten-banken bzw. Digitalisierter Bibliotheken: die ich für die Quelle meiner eigenen Forschung
+benutzt habe: u.a.~ZBMath, MR (MathSciNet) der AMS, JStor, arXiv.org, Google Scholar,
+Project Euclid, Science Direct usw. und daher meine Interesse,
+bei einer der weltweit wichtigen Datenbanken ``hinter den Kulissen'' arbeiten zu können.
+
+\item Aufmerksame Analyse der wissenschaftlichen Texten. In meiner Forschung habe ich mehrmals
+Fehler in veröffentlichten Artikeln gefunden:
+schon wehrend meiner Diplomarbeit über {\em Pseudo-Freien Lokal-nilpotenten Gruppen}\footnote{
+In \dots wird behauptet solche Gruppen seien torsionsfrei, was allgemein nicht stimmt.}, habe ich einen wichtigen Fehler
+im Originaltext entdeckt, unter dessen Koautoren, gilt S.~Shelah als einer der bedeutendsten zeitgenössischen
+Logiker. Dasselbe geschah mit einem Artikel\footnote{\dots} von meinem Betreuer Prof.~A.~Baudisch bezüglich eines Beweises
+der Amalgamation nilpotenter Lie Algebren.
+
+\item Erfahrung mit Lehre auf Hochschulniveau, die ich als wissenschaftlicher Mitarbeiter der Humboldt Universität geführt
+habe. Dabei bin ich 
+Herrn Dr.~W.~Kleinert sehr dankbar, mir Freihand gegeben zu haben, Spannende nicht-elementare
+Aspekte der Algebra, sowie der Kategorientheorie und der Homologie den Studenten beizubringen. 
+
+\item Erfahrungen in der netzwerk-orientierten europäischen Forschung durch den {\em Research Training Network}
+MODNET im Rahmen der Marie Curie-Maßnahme FP6 der Europäischen Kommission. Wehrend dieses Forschungsstipendiums
+habe ich vielfältige Aspekte der wissenschaftlichen Kooperation zwischen mathematischen Institute und Dozenten aus
+u.a.~Frankreich, England und Spanien kennen gelernt.
+
+\item Erweiterte Kenntnisse der \LaTeX~Auszeichnungssprache f\"ur die Komposition -- nicht unbedingt -- mathematischer Texten,
+in Zusammenhang mit dem Bib-\TeX~Literaturverzeichnis-Compiler. Erfahrung mit dem KOMA-script Paket.
+
+\item sicherer Umgang mit den üblichen elektronischen DV- und Internet-Softwares, sowie Erfahrungen mit einige Programmiersprachen.
+Die Bereitschaft, schnell und effektiv meine IT-Kenntnisse zu vertiefen, rund um der Optimierung der Datenbank und der
+Webauftritt vom ZBMath Archiv. 
+
+\end{itemize}
+Ich bin bereit, die Aufgaben die mir Herr Teschke telefonisch kurz geschildert hat
+(Auswahl und Indexierung der eingehenden Publikationen, Koordination der Gutachter, usw.)
+effizient, verantwortungsbewusst und ausführlich anzunehmen. 
+
+\smallskip
+Ich werde mich sehr freuen zum Vorstellungsgespräch eingeladen zu werden.
+\closing{Mit freundlichen Grüßen}
+%---------------------------------------------------------------------------
+\ps{PS: Wenn nötig, würde mein Doktorvater Prof.~Dr.~A.~Baudisch\footnote{erreichbar unter \url{baudisch@math.hu-berlin.de}}
+sich freuen einen mir betreffenden Empfehlungsschreiben Ihnen zu schicken.}
+%\encl{}
+%\cc{}
+%---------------------------------------------------------------------------
+\end{letter}
+\end{document}

@@ -1,0 +1,56 @@
+\documentclass[a4paper,11pt,german,english]{article}
+\usepackage{babel}
+\usepackage[latin1]{inputenc}
+\usepackage{amsmath,amsfonts,amssymb,amsthm}
+\usepackage{ModNet}
+\usepackage{FHL}
+\usepackage{pdfsync}
+%\usepackage[left=2cm,right=2cm]{geometry}
+%\usepackage{syntonly}
+%\usepackage[all]{xy}
+\linespread{1.3}
+%\usepackage[mathscr]{euscript}
+\title{Against Modularity}
+%\renewcommand{\thesection}{\arabic{section}} 
+%\setcounter{tocdepth}{3}
+%\syntaxonly
+%\includeonly{}
+\begin{document}
+\maketitle
+Consider the following spaces
+$M_{1}=\gen{u,\,h,\,h_{1},\,\dots,\,h_{4},\,d_{1},\,d_{2},\,e_{1},\,e_{2}}$ %\inn L_{1}$
+and
+$E_{1}=\gen{d_{1},\,d_{2},\,e_{1},\,e_{2},\,v,\,w,\,y}$. %\inn L_{1}$,
+Now let $L_{1}$, with $L_{1}=\gen{M_{1},\, E_{1}}$, generate the following nil-$2$ Algebra
+$$L:=\gen{L_{1}\mid [h,u]+[d_{1},d_{2}],\,[v,h]+[h_{3},h_{4}],\,[e_{1},e_{2}]-[w,y],\,
+[u,v]+[h_{1},h_{2}]+[w,y]}$$
+
+\smallskip
+We have $M_{1}\zso M_{1}\cap E_{1}\zsu E_{1}$ and $\gena{M_{1}}{L}\cap\gena{E_{1}}{L}=\gena{M_{1}\cap E_{1}}{L}$ since
+$N^{2}(L)\cap(\exs M_{1}+\exs E_{1})=N^{2}(M)+N^{2}(E)$.
+
+\smallskip
+On the other hand consider $\phi_{M}=[h_{1},h_{2},h]+[e_{1},e_{2},h]+[h_{3},h_{4},u]$
+and $\phi_{E}=[d_{2},d_{1},v]$ in $\fla{3}{M_{1}}$ and in $\fla{3}{E_{1}}$ respectively.
+
+Now since
+%\begin{multline}
+$$
+\phi_{M}-\phi_{E}=[[u,v]+[h_{1},h_{2}]+[e_{1},e_{2}] ,h] + [[v,h]+[h_{3},h_{4}],u] + [[h,u]+[d_{1},d_{2}],v]
+$$
+%\end{multline}
+we have that $\phi_{M}\equiv\phi_{E}\:(mod\,\J(L))$ but neither $\phi_{M}$ nor $\phi_{E}$ lies
+in $\fla{3}{M_{1}\cap E_{1}}$ modulo $\J(L)$, which means
+$\gena{M_{1}}{\fl{L}}\cap\gena{E_{1}}{\fl{L}}\neq\gena{M_{1}\cap E_{1}}{\fl{L}}$.
+
+\medskip
+{\bf Danger!!!:} Claim ``$M_{1}\cap A_{1}\zsu A_{1}$'' below {\em does not} hold.
+
+Now we fit $M$ and $E$ into a free amalgam, if we consider $A_{1}=
+\gena{L_{1}\non\gen{d_{1},d_{2}}}{L}$ hence $L_{1}=M_{1}\oplus_{M_{1}\cap A_{1}} A_{1}$ and
+$M_{1}\zso M_{1}\cap A_{1}\zsu A_{1}$.
+
+
+
+
+\end{document}

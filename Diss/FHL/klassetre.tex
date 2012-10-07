@@ -1,0 +1,40 @@
+Despite Remark \ref{nossummo} prevent us from plainly recasting the proof of Lemma \ref{amalsigma2} (and
+Lemma \ref{2trans}) for $\nla{3}$-objects,
+various attempts were made to prove that a non-negative lower bound for $\delta_{3}$ is preserved under the $\nla{3}$-amalgamation
+\pref{amalgatre}.
+
+The strategy is to search (locally) for a free composition at level of $\nla{2}$-algebras inside the $\nla{3}$-amalgam.
+%and the finite {\em test space} $E_{1}$
+This allows to apply Lemma \ref{moduliftlem} and hence obtain submodularity for $\ded^{M}$. The same procedure
+could help also to decide whether $\dsu{}$ is transitive.
+
+The above ideas will be discussed at the end of the section, but first we need to compare $\delta_{3}$ and $\ded^{M}$.
+
+\smallskip
+To this end we prove the following crucial result.
+\begin{cor}\label{deltaded}
+For any $M\in\nla{3}$ such that $M_{*}\in\Klt{2}$ and any finite $\nla{3}$-subalgebra $B\inn M$ %with $M=\gena{M_{1}}{L}$,
+we have $\ded^{M}(B)\leq\delta_{3}(B)$.
+\end{cor}
+The proof of the statement above relies on the following result, which will be proved after Lemma \ref{crocolemma} below.
+\begin{teo}\label{crocotheorem}
+Let $A\nni B$ be an extension of  finite $\nla{2}$-algebras, for $A$ in $\Kl{2}$. Assume $A=\ssc^{A}(B)$, then
+%$k_{B}^{A}:=\dfp(\ker\gam{B}{A})
+$\dfp(\ker(\gam{B}{A}))\leq-\delta_{2}(A\quot B)$.
+\end{teo}
+Remark that the above statement doesn't replace Proposition \ref{bellemma}.
+
+\begin{proofof}{Corollary \ref{deltaded}}
+Consider the map $\map{\gam{B}{M}}{\fl{B_{*}}}{\fl{M_{*}}}$ defined above.
+%and set $\dkerg{B}{M}=\dfp(\ker(\gam{B}{M}))$.
+
+Since $\pam{B}=\gam{B}{M}\,\pam{M}$ by Lemma \ref{gammap}, now $\gam{B}{M}$ maps
+$\ker(\pam{B})=\rt(B)$ onto $\ker(\pam{M})\cap\gam{B}{M}(\fl B)=\rt_{M}(B_{1})$
+with kernel $\ker(\gam{B}{M})\,(\inn\rt(B))$.
+
+Therefore $\dfp(\rt_{M}(B_{1}))=\dfp(\rt(B))-\dfp(\ker(\gam{B}{M}))$ and if $A_{1}$ is the self-sufficient closure
+of $B_{1}$ in $M_{*}$, then by Corollary \ref{corembel} and Remark \ref{samed2}, we have
+$\delta_{3}(B)-\ded^{M}(B)=\delta_{2}(B)-d_{2}^{M}(B)-\dfp(\ker(\gam{B}{M}))=\delta_{2}(B)-d_{2}^{A}(B)-\dfp(\ker(\gam{B}{A}))$.
+
+By theorem \ref{crocotheorem} $\delta_{2}(B)-d_{2}^{A}(B)-\dkerg{B}{A}\geq0$
+\end{proofof}

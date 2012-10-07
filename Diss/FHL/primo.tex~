@@ -1,0 +1,115 @@
+\chapter{Qvasidimensionen}
+\section{Definitions}
+Sei $M$ eine Menge, man definiert $\fp{M}=\{S\inn M\mid\card{S}<\infty\}$.
+\begin{dfn}
+Let $M$ be a set, a function $\map{\delta}{\fp{M}}{\omega}$
+is a \emph{quasidimension function} if she has the following properties:
+\begin{itemize}
+\punto{qd1}$\delta\vac=0$
+\punto{qd2} $\delta\{a\}\leq1$ for each $a\in M$
+\punto{qd3} \emph{$\delta$ is subadditive}
+\end{itemize}
+\end{dfn}
+A quasidimension function $\delta$ on $M$ is \emph{positive} if aside
+{\scriptsize(qd1)}, \dots, {\scriptsize(qd3)}, it has the property
+\begin{itemize}
+\punto{qd0}$\delta A\geq0$ for all $A\in\fp{M}$.
+\end{itemize}
+
+A positive quasidimension function $d$ is called a \emph{dimension
+function} if
+%also
+\begin{itemize}
+\punto{qd4}$d(A)\leq d(B)$ whenever $A\inn B$
+\end{itemize}
+holds.
+If $\delta$ is a positive quasidimensionfunction, we can obtain a dimension function if we set
+$$d(A)=\min\{\delta(C)\mid C\in\fp{M},\:C\nni A\}.$$
+
+\begin{dfn}A \emph{praegeometry} is a couple $(M,\cl)$ where $M$ is a set and $\map{\cl}{\fp{M}}{\fp{M}}$, such that
+\begin{itemize}
+\punto{cl1}$A\inn\cl A$ for each $A\in\fp{M}$
+\punto{cl2}$\cl\circ\cl=\cl$
+\punto{cl3}$\cl A\inn\cl B$ whenever $A\inn B$
+\punto{cl4}$\forall a,b\in M$ und jede $A\in\fp{M}$, wenn $a\in\cl(Ab)\non\cl(A)$, dann gilt $b\in\cl(Aa)$.
+\end{itemize}
+Such a map $\cl$ is a \emph{closure operator} over $M$.
+\end{dfn}
+Extend definition of closure to arbitrary sets of $M$.
+Definitions of \emph{closed set}, \emph{independent set}, \emph{basis}, \emph{dimension}.
+
+\smallskip
+Sei $d$ eine dimensionfunktion and $A\in\fp{M}$, if we define the set
+$$\cl_{d}(A)=\{b\in\M\mid d(Ab)=d(A)\}$$
+then $\cl_{d}$ is a closure operator over $M$. We give $\cl_{d}$ and its corresponding dimension agrees with the function $d$ upon the finite parts of $M$.
+%If $d$ was itself arising from a quasidimension function $\delta$
+%we write $\cl_{\delta}$ instead of $\cl_{d}$.
+
+\smallskip
+Definition of a closure \emph{extending} another, write $\cl_{1}\inn\cl_{2}$. It results $d_{1}\geq d_{2}$.
+
+If $\cl_{2}$ extends $\cl_{1}$ then for each
+$A\in\fp{M}$ we have
+$$
+d_{2}(\cle(A))\leq d_{2}(\cl_{2}(A))=d_{2}(A)\quad\text{and}\quad d_{2}(A)\leq d_{2}(\cl_{1}(A))
+$$
+in particular $d_{2}A=d_{2}(\cle(A))$, that is $d_{2}$ is determined by its value on $\cle$-closed sets.
+
+\medskip
+Sei jetzt $\cle$ ein absclu\ss-Operator and $\dim_{1}$ the dimension corresponding to the
+praegeometry $(M,\cle)$. Set
+$$\fp{M}_{1}=\{B\inn M\mid\cl_{1}(B)=B,\:\dim_{1}(B)<\infty\},$$
+we call $\fp{M}_{1}$ the set of \emph{finitely generated $\cle$-closed parts} of $M$.
+\begin{dfn}
+We call a map $\map{\delta}{\fp{M}_{1}}{\omega}$ a \emph{$\cle$-quasidimension} if the following properties hold:
+\begin{itemize}
+\punto{qd'1}$\delta\cle\vac=0$
+\punto{qd'2} $\delta\cle\{a\}\leq1$ for each $a\in M$
+\punto{qd'3}$\delta\cle(U\cup V)
++\delta(U\cap V)\leq\delta U+\delta V\quad\forall U,V\in\fpe{M}$
+\end{itemize}
+\end{dfn}
+
+Let $\delta_{2}$ be a $\cle$-quasidimension. Define
+$$\delta^{*}(B)=\min\{\delta(C)\mid C\in\fp{M}_{1},\,C\nni B\}$$
+and successively
+\begin{labeq}{didef}
+d_{2}(A)=\delta^{*}(\cle(A))\quad\text{for all}\,A\in\fp{M}.
+\end{labeq}
+(It can also be defined:
+$$d_{2}A=\min(\delta C\mid C\in\fpe{M},\:C\nni A)\quad).$$
+
+We will check that $d_{2}$ is a dimensionfunction, whose associated closure operator $\cl_{2}=\cl_{d_{2}}$
+is an extension of $\cl_{1}$.
+
+\section{Selfsufficient Spaces}
+\section{Minimal Extensions}
+In all of this section $\delta$ is a positive $\cle$-quasi-dimension on $M$, and $d$ the dimensionfunction
+from $\delta$ as defined in \pref{didef}.
+
+Let $A\in\fpe{M}$ and $b\in M$, then
+by subadditivity follows $\delta\cle(A,b)\leq\delta A+1$.
+Suppose now $A\in\fpe{M}$ is selfsufficient and $b$ in $M$, then we have
+$d(A,b)\leq\delta\cle(A,b)\leq\delta A+1=dA+1$.
+
+\begin{lem}\label{piuuno}
+Assume $A\in\fp{M}$, then for each $b$ in $M$, it holds $d(A,b)\leq dA+1$.
+\end{lem}
+\begin{proof}
+$d(A,b)\leq d(\ssc(A),b)\leq d(\ssc(A))+1=\delta(\ssc(A))+1=dA+1$.
+\end{proof}
+
+\medskip
+Let now $A,B\in\fpe{M}$ and assume $B$ is self-sufficient in $A$.
+We name $A\quot B$ a \emph{minimal extension} if for each $C\in\fpe{M}$
+such that $B\subsetneq C\subsetneq A$, $C$ is not slfsufficient in $A$.
+
+If $A\quot B$ is a minimal extension, then $\delta C>\delta A$ for each space $C$ properly between $B$
+and $A$.
+
+We write $\delta(A\quot B)$ for $\delta A-\delta B$.
+Assume $A\quot B$ is a minimal extension with $delta(A\quot B)>0$ and $A=\cle(B,a_{1},\dots a_{n})$,
+where the set $\{a_{i}\}$ is independent over $B$.
+It follows $\delta B<\delta A<\delta\cle(B,a_{1})$, and from lemma \pref{piuuno} we get $n=1$, or rather
+$A=\cle(B,a)$ for some $a$ in $M\non B$.
+\input{graal}

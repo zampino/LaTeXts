@@ -1,0 +1,48 @@
+\documentclass[english,german,11pt]{article}
+\usepackage{babel}
+\usepackage[latin1]{inputenc}
+\usepackage{amsmath,amsfonts,amssymb,amsthm}
+\usepackage{ModNet}
+\usepackage{FHL}
+\linespread{1.1}
+\usepackage{pdfsync}
+\title{Ein weiteres Beispiel}
+\author{}
+\date{}
+%\pagestyle{empty}
+\begin{document}
+\maketitle
+Man betrachtet die folgende Algebren $A,B$ und $M$ aus $\nla{3}$.
+$$B=\gen{x_{2},x_{3},x_{4},x_{5}}$$
+$$A=\gen{x_{1},x_{2},\dots,x_{5}:[x_{1},x_{2}]-[x_{3},x_{4}]}$$
+$$M=\gen{x_{2},x_{3},\dots,x_{6}:[x_{3},x_{4},x_{5}]-[x_{4},x_{5},x_{6}]}.$$
+
+Wobei die Kommutatoren \emph{einfach} sind (d.h. $[\,\:,\:,\:]=[[\,\:,\:],\:]$) und
+$[x_{3},x_{4},x_{5}]-[x_{4},x_{5},x_{6}]$ eine erlaubte Relation f\"ur $M$ ist.
+
+\smallskip
+Man sieht, da{\ss} $A\dso B\dsu M$. Dabei ist $A\quot B$ eine \emph{flache} Erweiterung
+($\delta_{2}(A\quot B)=\delta_{3}(A\quot B)=0$) und
+$M\quot B$ eine \emph{algebraische}.
+
+\smallskip
+Falls $L^{\prime}$ das freie Amalgam der auf Stufe $2$ abgeschnittenen Strukturen $A^{\prime},B^{\prime}$ und $M^{\prime}$ bezeichnet, gilt dann also $\fr{3}L^{\prime}=\fla{3}{x_{1},\dots,x_{6}}\quot\jei{L}$ wobei
+$$\jei{L}=\genid{[x_{1},x_{2}]-[x_{3},x_{4}]}{F^{3}}.$$
+
+Nun geh\"ort $\alpha=[x_{3},x_{4},x_{5}]-[x_{4},x_{5},x_{6}]$ zu $N^{3}(M)$, au{\ss}erdem
+$$\alpha\equiv[x_{1},x_{2},x_{5}]-[x_{4},x_{5},x_{6}]\quad(\text{mod}\:\jei{L}).$$
+Deshalb liegt $\alpha$ in $N^{3}(x_{1},x_{2},x_{4},x_{5},x_{6})$ aber {\sl nicht} in $N^{3}(x_{2},x_{4},x_{5},x_{6})$,
+wobei $\gen{x_{2},x_{4},x_{5},x_{6}}_{1}$ und $\gen{x_{1},x_{2},x_{4},x_{5},x_{6}}_{1}$ zwei
+$\delta_{2}$-starken Unterr\"aume von $L_{1}$ sind.
+
+Denn endlich gilt $N^{3}(A)=\triv$, ist zwar $N^{3}(L)\quot N^{3}(M)=\triv$, aber $N^{3}(x_{1},x_{2},x_{4},x_{5},x_{6})\quot N^{3}(x_{2},x_{4},x_{5},x_{6})\neq\triv$.
+
+\medskip
+The reason for this behaviour is that if $H_{1}$ denotes $\geno{x_{1},x_{2},x_{4},x_{5},x_{6}}$
+then even if $H_{1}\zsu L_{1}$ the equality
+$$
+\gena{M_{1}}{F_L}\cap\gena{H_{1}}{F_L}=\gena{M_{1}\cap H_{1}}{F_L}
+$$
+does not hold, because $[x_{3},x_{4},x_{5}]=[x_{1},x_{2},x_{5}]$ but both terms
+do not belongs to $\gena{M_{1}\cap H_{1}}{F_L}$.
+\end{document}

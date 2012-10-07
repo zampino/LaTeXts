@@ -1,0 +1,193 @@
+For the rest of the chapter we assume a prime $p$ has been fixed, greater than $3$.
+We will consider Lie algebras of $\nla{3}$.
+
+\smallskip
+For a chosen $M$ in $\nla{3}$ and any $\nla{3}$-subalgebra $A$ of $M$,
+the truncation $A_{*}$ of Section \ref{freelift}, is $\nla{2}$-isomorphic to $\gena{A_{1}}{M_{*}}$. These algebras will be identified in the
+sequel.
+
+This means, we can apply on $M_{1}$ the ``pregeometric machinery'' introduced in Chapter \ref{due},
+associated to $M_{*}$.
+With this purpose we rename by $\delta_{2}$, the nil-$2$ deficiency $\delta$ of Definition \ref{deficienzwei} and set, for finite subspaces
+$A_{1}$ of $M_{1}$
+$$\delta_{2}(A_{1})=\dfp(A_{1})-\rd(A_{*}).$$
+Following our previous convention, the same integer will be equal to $\delta_{2}(A)$ for ease of notation.
+
+On the same line, for any $\nla{3}$-extension $M$ of $N$, we will
+write $N\zsu[2]{}M$ if $N_{*}$ is self-sufficient in $M_{*}$ according to Definition \ref{2strong}.
+The same meaning is attributed to the expression $N_{1}\zsu[2]{}M_{1}$.
+
+Moreover, for a given $M$ in $\nla{3}$, we denote by $d_{2}^{M}$ the
+dimension function on $M_{1}$ obtained by the predimension $\delta_{2}$.
+
+\medskip
+On the other hand for an $\nla{3}$-algebra $A$, we have from \pref{morphipres} of Section \ref{maxrels} above,
+the following {\em lifted} presentation:
+\begin{labeq}{liftpres}
+\rt(A)\lto\fl{A_{*}}\stackrel{\pam{A}}{\lto}A
+\end{labeq}
+and in particular
+$$A\simeq_{\nla{3}}\frac{\fl{A_{*}}}{\rt(A)}=A_{*}\oplus\frac{(\fl{A_{*}})_{3}}{\rt(A)}.$$
+
+This yields a new integer invariant attached to $\nla{3}$-objects, defined in the following
+\begin{dfn}
+For a finitely generated $\nla{3}$-algebra $A$ we define the
+$\nla{3}$-deficiency as the integer
+\begin{labeq}{deltre}
+\delta_{3}(A)=\delta_{2}(A)-\dfp\left(\rt(A)\right).
+\end{labeq}
+%where $\rt(A)$ is the kernel of the canonical map $\map{\pam{A}}{\fl{A_{*}}}{A}$ defined in \pref{morphipres}.
+In particular $\delta_{3}(A)$ depends only of the quantifier-free $\Lan{3}$-diagram
+of $A$. As a consequence a possible lower bound to $\delta_{3}$ in $M_{1}$ is axiomatisable via $\Lan{3}$-sentences.
+\end{dfn}
+
+\smallskip
+In the scope of section \ref{schur}, if we compare \pref{deltre} above with \pref{LieDef} on page \pageref{LieDef},
+we obtain the same thing, just
+differently organised. In fact if we consider \pref{LieSchur} we get
+$$\dfp(H_{2}(A,\nla{3}))=\dfp(\rd(A_{*}))+\dfp(\rt(A)).$$
+
+\medskip
+This said, in view of a definition of self-sufficiency for $\nla{3}$-extensions, we need a different
+notion of predimension, which emulates the local property \pref{erredi} of $\rd$ and ease computations for a future
+notion of free $\nla{3}$-amalgam.
+
+The point here is that for an arbitrary $A\inn M$ like above, $\rt(A)$ is not in general a subspace of $\rt(M)$.
+
+\smallskip
+Take an $\nla{3}$-inclusion $i\colon H\inn M$, this means as usual $H=\gena{H_{1}}{M}$ for $H_{1}\inn M_{1}$ and consider
+the truncation to $\nla{2}$, $i_{*}\colon H_{*}\inn M_{*}$.
+We denote by $\gam{H}{M}$ the map described in \pref{gam}
+\begin{labeq}{gammalift}
+\lmap{\gam{H}{M}:=\frl(i_{*})}{\fl{H_{*}}}{\fl{M_{*}}}.
+\end{labeq}
+By \pref{liftbild} and \pref{kerfli}, %if $\kerg{H}{M}$ denotes the kernel of $\gam{H}{M}$,
+we have
+\begin{labeq}{immaker}
+\im(\gam{H}{M})=\gena{H_{1}}{\fl{M_{*}}}\quad\text{and}\quad%\kerg{H}{M}
+\ker(\gam{H}{M})=\frac{\fla{3}{H_{1}}\cap\J(M_{*})}{\J(H_{*})}
+\end{labeq}
+while by Proposition \ref{bellemma} we obtain for all $\nla{3}$-subalgebras $H\inn M$ as above
+\begin{cor}\label{corembel}
+If $H\zsu[2]{}M$ then $\map{\gam{H}{M}}{\fl{H_{*}}}{\fl{M_{*}}}$ is injective.
+\end{cor}
+
+We want also, the new presentation obtained in \pref{liftpres} to interact with subalgebras, that is
+\begin{lem}\label{gammap}
+For an $\nla{3}$-subalgebra $H$ of $M$, we obtain the following commutative diagram with exact rows.
+\begin{labeq}{liftpresmorph}
+\begin{split}
+\xymatrix@!C{
+\rt(H)\ar^{\gam{H}{M}}[d]\ar[r]&\fl{H_{*}}\ar^{\gam{H}{M}}[d]\ar^{\pam{H}}[r]&\extracolsep{3cm} H\ar^{i}[d]\\
+\rt(M)\ar[r]&\fl{M_{*}}\ar^{\pam{M}}[r]&\extracolsep{3cm}M}
+\end{split}
+\end{labeq}
+In particular $\ker(\gam{H}{M})\inn\rt(H)$.
+%\uwave{In general for a given $M$ we may consider the directed system $(\fl{H_{*}},\gam{H}{K}\mid H_{1}\inn K_{1}\inn M_{1})$.}
+\end{lem}
+\begin{proof}
+We show that the rightmost square in \pref{liftpresmorph} commutes. This follows by proposition \ref{morphifreelift}
+and the fact $(\gam{H}{M}\pam{M})\ast=\ast\,i_{*}=(\pam{H}i)\ast$ applied to the diagrams
+$$\xymatrix@C+7mm{
+\fl{H_{*}}\ar^{\ast}[d]\ar^{\gam{H}{M}\pam{M}}@<+3pt>[r]\ar_{\pam{H}i}@<-3pt>[r]&M\ar^{\ast}[d]\\
+H_{*}\ar_{i_{*}}[r]&M_{*}}$$
+\end{proof}
+
+This allows us to define a more {\em adaptive} deficiency, which depends
+of the embedding in the ambient structure $M$.
+\begin{dfn}\label{ded}
+Let $M$ be an $\nla{3}$-algebra. For any $H_{1}\inn M_{1}$. We set
+$$\rt_{M}(H)=\rt_{M}(H_{1})=\gam{H}{M}\left(\rt(H)\right)$$
+%as the space of the {\em relative relators} for $H$ in $M$.
+and define for finitely generated $H$% the {\em relative deficiency} as
+\begin{labeq}{dedef}
+\ded^{M}(H)=d^{M}_{2}(H_{1})-\dfp(\rt_{M}(H))
+\end{labeq}
+and for any $\nla{3}$-subalgebra $N$ of $M$ and finite $H_{1}\inn M_{1}$
+\begin{labeq}{reldedef}
+\ded^{M}(H/N)=d^{M}_{2}(H/N)-\dfp(\rt_{M}(H/N))
+\end{labeq}
+where
+$\rt_{M}(H/N)$ is the quotient $\Fp$-vector space $%\frac{
+\rt_{M}(N+H)/\rt_{M}(N)$.
+As before for $N+H$ is meant $\gena{N_{1}+H_{1}}{M}$ and in general any of the expressions above are allowed to carry
+indices $_{1}$. In fact as in the nil-$2$ case,
+we are searching for a notion of predimension -- and eventually a pregeometry -- which is concerned with sets from the {\em sort}
+$M_{1}$. 
+\end{dfn}
+\begin{rem}\label{vecchialenza}
+By \pref{immaker} and \pref{liftpresmorph} we have
+\begin{itemize}
+\item[1.]for $H_{1}\inn N_{1}\inn M_{1}$ we have
+\begin{labeq}{dedim}
+\rt_{M}(H)=\rt(M)\cap\im(\gam{H}{M})=\rt(M)\cap\gena{H_{1}}{\fl M}
+\end{labeq}
+\item[2.]since $\gam{H}{N}\gam{N}{M}=\gam{H}{M}$, $\rt_{N}(H_{1})$ maps {\em onto} $\rt_{M}(H_{1})$ via $\gam{N}{M}$. 
+\end{itemize}
+\end{rem}
+In particular we obtain a form of the local relators, which is a lot similar to $\rd_{M}(H)$ in \pref{erredi} of Chapter \ref{due}.
+
+\medskip
+Assume $A$ is a finite $\nla{3}$-subalgebra of $M$ with $A\zsu[2]{}M$, by Corollary \ref{corembel} above follows,
+that $\rt(A)\simeq_{\Fp}\rt_{M}(A)$ and hence, as $d_{2}^{M}(A)=\delta_{2}(A)$, we have $\delta_{3}(A)=\ded^{M}(A)$.
+In particular, by Lemma \ref{samed2} and Remark \ref{vecchialenza}.(2.)\,we have.
+\begin{lem}\label{sameded}
+For a given $\nla{3}$-algebra $M$, the integers $\ded^{M}(A)$ and $\delta_{3}(A)$ do coincide on all finitely generated $\nla{3}$-subalgebras $A$ of $M$ when $A_{*}$ is self-sufficient in $M_{*}$ with respect to $\delta_{2}$.
+
+Moreover $\ded^{M}$ coincides with $\ded^{N}$ on the subspaces of $N_{1}$, for all $\delta_{2}$-strong extensions $N\zsu[2]{}M$.
+\end{lem}
+In Section \ref{classetre} below we actually show that $\delta_{3}$ and $\ded$ are always comparable, in the direction
+$\ded^{M}\leq\delta_{3}$ for all $M$.
+
+\smallskip
+It is worth to mention here, that for a given $M$ and subspaces $H_{1}$, $K_{1}$ of $M_{1}$, it is not in general the case that
+\begin{labeq}{notmodular}
+\gena{H_{1}}{\fl M}\cap\gena{K_{1}}{\fl M}\quad\text{and}\quad\gena{H_{1}\cap K_{1}}{\fl M}
+\end{labeq}
+coincide.
+
+It is also not true in general
+that $\rt_{M}(H_{1})\cap\rt_{M}(K)$ equals $\rt_{M}(H_{1}\cap K_{1})$ and the analogous of {\em submodularity} \pref{submod}
+of Section \ref{sec:deltadue} for
+$\delta_{3}$ and $\ded$ may fail. In fact we have
+\begin{rem}\label{nossummo}
+$\ded^{M}$ and $\delta_{3}$ are not in general submodular.
+\end{rem}
+\begin{proof}
+Consider the $\nla{3}$-algebra given by the presentation $M=\gen{M_{1}\mid R}$, where $M_{1}$ is the vector space over $\Fp$ with
+basis $\{a,b_{1},\dots,b_{4},m_{1},m_{2}\}$ and $R$ is the ideal of $\fla{3}{M_{1}}$ generated by the relators
+\begin{gather}
+\begin{split}
+\rho=[a,b_{1}]-[b_{2},b_{3}]
+\end{split}\qquad
+\begin{split}
+\alpha=&[b_{2},b_{3},b_{4}]-[m_{1},m_{2},m_{2}],\\
+\beta=&[b_{2},b_{3},m_{1}]-[b_{4},m_{2},m_{2}].
+\end{split}
+\end{gather}
+In this algebra, $\J(M)$ is the ideal of $\fla{3}{M_{1}}$ generated by $\rho$.
+
+Set now $N_{1}$ the subspace of $M_{1}$ generated by $b_{1},\dots,b_{4},m_{1},m_{2}$ and $E_{1}=\genp{a,b_{1},b_{4},m_{1},
+m_{2}}$. We have $\alpha\equiv[a,b_{1},b_{4}]-[m_{1},m_{2},m_{2}]$ and $\beta\equiv[a,b_{1},m_{1}]-[b_{4},m_{2},m_{2}]$ modulo
+$\J(M)$, and hence $\bar\alpha\in\rt_{M}(E_{1})\non\rt_{M}(E_{1}\cap N_{1})$.
+
+As $\gen{N_{1},a}=M$, we have $d_{2}^{M}(E/N)=d_{2}^{M}(a/N)=\delta_{2}(a/N)=0$ while $d_{2}^{M}(E_{1}/E_{1}\cap N_{1})=
+\delta_{2}(E_{1}/E_{1}\cap N_{1})=1$. This means
+$$0=\ded^{M}(E/N)>\ded^{M}(E_{1}/E_{1}\cap N_{1})=-1$$
+and, as $E,N\zsu[2]{}M$, $\delta_{3}(E_{1}+N_{1})+\delta_{3}(E_{1}\cap N_{1})>\delta_{3}(E)+\delta_{3}(N)$.
+\end{proof}
+
+\medskip
+We now define self-sufficiency on extensions of $\nla{3}$-algebras.
+\begin{dfn}\label{trestrongness}
+We say that an $\nla{3}$-subalgebra $H$ of $M$ is self-sufficient and write $H\zsu[3]{}M$ if
+\begin{itemize}
+\item[-] $H\zsu[2]{}M$ and
+\item[-] $\ded^{M}(E\quot H)\geq0$ for all finite subspaces $E_{1}\inn M_{1}$.
+\end{itemize}
+By the first condition, and the following Lemma \ref{deltaded}, it is possible to express
+$H\dsu M$ in terms of $\delta_{3}$ as well\footnote{
+One defines of course $\delta_{3}(E/H)$ as $\delta_{2}(E/H)-\dfp(\rt(H+E)/\rt(H))$.}.
+For a finite $H$ -- say -- this property is
+actually part of the elementary type of $H$.
+\end{dfn}

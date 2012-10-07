@@ -1,0 +1,72 @@
+%\makeatletter
+\ProvidesPackage{FHLTitleDataNames}
+\RequirePackage{soul}[2003/11/17]
+\RequirePackage{setspace}
+\RequirePackage{enumitem}
+%\renewenvironment{titlepage}
+%{%
+% \if@twocolumn
+%   \@restonecoltrue\onecolumn
+% \else
+%   \@restonecolfalse\newpage
+% \fi
+% \thispagestyle{empty}%
+% \if@compatibility\setcounter{page}{0}\fi
+% \addmargin[-\oddsidemargin]{-\evensidemargin}%
+%}{%
+% \endaddmargin
+% \if@restonecol\twocolumn \else \newpage \fi
+%} 
+%??????data names??????
+\newcommand{\@authorprefix}{?}
+\newcommand{\authorprefix}[1]{\renewcommand{\@authorprefix}{#1}
+}
+\newcommand{\@authorfirst}{?}
+\newcommand{\authorfirst}[1]{\renewcommand{\@authorfirst}{#1}
+}
+\newcommand{\@authorlast}{?}
+\newcommand{\authorlast}[1]{\renewcommand{\@authorlast}{#1}
+}
+\newcommand{\@authorbornin}{?}
+\newcommand{\authorbornin}[1]{\renewcommand{\@authorbornin}{#1}
+}
+\newcommand{\@authorbornthe}{?}
+\newcommand{\authorbornthe}[1]{\renewcommand{\@authorbornthe}{#1}
+}
+\newcommand{\@disstitle}{?}
+\newcommand{\disstitle}[1]{\renewcommand{\@disstitle}{#1}
+}
+\newcommand{\@disssubj}{?}
+\newcommand{\disssubj}[1]{\renewcommand{\@disssubj}{#1}
+}
+\newcommand{\@president}{?}
+\newcommand{\president}[1]{\renewcommand{\@president}{#1}
+}
+\newcommand{\@dean}{?}
+\newcommand{\dean}[1]{\renewcommand{\@dean}{#1}
+}
+\newcommand{\@gutachtera}{?}
+\newcommand{\gutachtera}[1]{\renewcommand{\@gutachtera}{#1}
+}
+\newcommand{\@gutachterb}{?}
+\newcommand{\gutachterb}[1]{\renewcommand{\@gutachterb}{#1}
+}
+\newcommand{\@gutachterc}{?}
+\newcommand{\gutachterc}[1]{\renewcommand{\@gutachterc}{#1}
+}
+\newcommand{\@degree}{?}
+\newcommand{\degree}[1]{\renewcommand{\@degree}{#1}
+}
+\newcommand{\@degreesubj}{?}
+\newcommand{\degreesubj}[1]{\renewcommand{\@degreesubj}{#1}
+}
+\newcommand{\@faculty}{?}
+\newcommand{\faculty}[1]{\renewcommand{\@faculty}{#1}
+}
+\newcommand{\@university}{?}
+\newcommand{\university}[1]{\renewcommand{\@university}{#1}
+}
+\newcommand{\@dateexam}{?}
+\newcommand{\dateexam}[1]{\renewcommand{\@dateexam}{#1}
+}
+%\makeatother

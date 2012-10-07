@@ -1,0 +1,65 @@
+\documentclass[a4paper,11pt,german,english]{article}
+\usepackage{babel}
+\usepackage[latin1]{inputenc}
+\usepackage{amsmath,amsfonts,amssymb,amsthm}
+\usepackage{ModNet}
+\usepackage{FHL}
+%\usepackage{pdfsync}
+%\usepackage[left=2cm,right=2cm]{geometry}
+%\usepackage{syntonly}
+%\usepackage[all]{xy}
+\linespread{1.3}
+%\usepackage[mathscr]{euscript}
+\title{Yet another Example}
+%\renewcommand{\thesection}{\arabic{section}} 
+%\setcounter{tocdepth}{3}
+%\syntaxonly
+%\includeonly{}
+\begin{document}
+\maketitle
+I will slightly change our last discussed example.
+Consider the following Algebras in $\nla{3}$
+\begin{align*}
+M=&\gen{v,h_{1},u_{1},\,h,h_{2},u,u_{2}\mid[u,v]-[h_{1},h_{2}],[v,h]-[u_{1},u_{2}],[h_{2},h_{1},h]+[u_{2},u_{1},u]}\\[+1mm]
+A=&\gen{h,h_{2},u,u_{2},v_{1},\,v_{2}\mid[h,u]-[v_{1},v_{2}]}%,[h_{2},h_{1},h]+[u_{2},u_{1},u]}
+\end{align*}
+%{\sl If we think the weight $3$ relation
+%is illegal, we can enrich it with no harm for the rest.}
+
+Consider $B=\gena{h,h_{2},u,u_{2}}{M}
+\simeq\gena{h,h_{2},u,u_{2}}{A}$
+%\mid[h_{2},h_{1},h]+[u_{2},u_{1},u]}$
+
+as common subalgebra of both. We have even $M\dso B\dsu A$.
+
+\medskip
+Construct
+then as usual the amalgam $M \ast_{B} A=:D$.
+
+\smallskip
+As a result
+\begin{align*}
+&[\,[h,u]-[v_{1},v_{2}],v]+\\
++&[\,[u,v]-[h_{1},h_{2}],h]+\\
++&[\,[v,h]-[u_{1},u_{2}],u]=\\[+1mm]
+=&[v_{2},v_{1},v]-([h_{1},h_{2},h]+[u_{1},u_{2},u])\quad\text{is in}\;\J(D_{*})
+\end{align*}
+
+
+\smallskip
+Consider $E_{1}=\gen{h,u,v,v_{1},v_{2}}$. We see that this space satisfies
+$$\gen{E_{1}}_{2}\cap\gen{B_{1}}_{2}=\gen{E_{1}\cap B_{1}}_{2}.$$
+But nevertheless $\Phi:=\overline{[h_{1},h_{2},h]+[u_{1},u_{2},u]}$
+which is in $\gena{E_{1}}{F(D_{*})}\cap N_{3}(D)=N_{3}^{D}(E_{1})$, does not belong %to $N_{3}^{D}(E_{1}\cap M_{1})$ nor
+to $N_{3}^{A}(E_{1}\cap A_{1})$.
+
+\medskip
+In conclusion we cannot have
+%$$\dfp\left(N_{3}^{D}(E_{1})\quot N_{3}^{D}(E_{1}\cap M_{1})\right)\leq
+%\dfp\left(N_{3}^{D}(E_{1})\quot N_{3}^{D}(M_{1})\right)$$
+%and we don't have
+$$\dfp\left(N_{3}^{D}(E_{1})\quot N_{3}^{D}(E_{1}\cap M_{1})\right)\leq
+\dfp\left(N_{3}^{A}(E_{1}\cap A_{1})\quot N_{3}^{A}(E_{1}\cap B_{1})\right).$$
+
+
+\end{document}

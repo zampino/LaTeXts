@@ -1,0 +1,39 @@
+With the functor $\frl$ it is possible to isolate the {\em relevant maximal weight relators} in the sense of the following approach.
+
+\medskip
+Consider an object $M$ in $\nla{c}$ given by $M=\gen{M_{1}\mid R}$ where $R$ is a usual an homogeneous ideal
+of $\fla{c}{M_{1}}$, that is $R=R_{2}\oplus\cdots\oplus R_{c}$. Then $M_{*}$ may be presented in $\nla{c-1}$ as
+$\fla{c-1}{M_{1}}/(R_{2}+\dots+R_{c-1})$.
+
+%We overwrite the above notation and set $\J(M):=\J(M_{*})$.
+If we present $\frl(M_{*})=\fl{M_{*}}$ in $\nla{c}$ as $\gen{M_{1}\mid\J(M_{*})}$,
+then by definition $\J(M_{*})$ is contained in $R$.
+
+Denote by $\rc(M)$ the quotient $R/\J(M_{*})$, by $\pi_{\J}$ the canonical map modulo $\J(M_{*})$ and consider
+the following morphism of exact sequences. The rightmost square is in $\nla{c}$.
+\begin{labeq}{morphipres}
+\begin{split}
+\xymatrix@C-2mm{
+{\,R\,}\ar[r]\ar ^{\pi_{\J}}[d]&\fla{c}{M_{1}}\ar[r]\ar^{\pi_{\J}}[d]&M\ar@{=}[d]\\
+\rc(M)\ar[r]&\fl{M_{*}}\ar^{\pam{M}}[r]&M
+}
+\end{split}
+\end{labeq}
+where $\pam{M}$ is the natural map of $\fl{M_{*}}$ onto $M$ with kernel $\rc(M)$.
+
+Notice (cfr.\,Remark \ref{sangalgano} for instance) that
+$(\rc(M))_{i}=\triv$ for all $2\leq i<c$. In particular $M$ is $\nla{c}$-isomorphic to $\fl{M_{*}}/\rc(M)$. 
+
+Notice that the map $\pam{M}$ may also be obtained with Proposition \ref{morphifreelift} as $\widetilde{\id}_{M_{*}}$. As such,
+by \pref{commufree}, we have $\map{\pam{M}\ast=\ast\id_{M_{*}}}{\fl{M_{*}}}{M_{*}}$.
+
+\smallskip
+In this sense $\rc(M)$ isolates the {\em essential} relators of $M$ of maximal weight $c$. Those,
+which do not arise from relators $R_{i}$ in lower weight ($i<c$) reaching the weight $c$ by means of Lie brackets.
+
+In Section \ref{preditre}, we adopt the second row in diagram \pref{morphipres} above as a suitable presentation
+of $M$ to perform the amalgamation process.
+
+\medskip
+The philosophy behind this definition is the inductive strategy described %on page \pageref{indunil} of
+in the Introduction and will be tested in Section \ref{preditre} below, switching from $\nla{2}$ to $\nla{3}$.

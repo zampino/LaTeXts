@@ -1,0 +1,253 @@
+\section{Combinatorial Pregeometries}\label{qdim}
+If $M$ is a set, $\ps{M}$ denotes its powerset.
+To denote unions of sets, juxtaposition will almost everywhere replace the symbol $\cup$ in the sequel, so that
+$AB$ will mean $A\cup B$ and $Ab$ will be $A\cup\{b\}$ for all sets $A,B$ and elements $b$, of $M$.
+%\end{presection}
+
+%\cbstart
+%\begin{dfn}
+%A {\em closure operator}\mn{define a pregeometry directly!!!} $\cl$ on the set $M$, is a map
+%$\map{\cl}{\ps{M}}{\ps{M}}$ which satisfies the following properties
+%\begin{itemize}
+%\punto{cl1}$A\inn\cl(A)$ for all $A\in\ps{M}$
+%\punto{cl2}$\cl\circ\cl=\cl$
+%%\punto{cl3}$\cl A\inn\cl B$ whenever $A\inn B$
+%\punto{cl3}$\cl(B)\inn\cl(A)$ whenever $A\nni B$.
+%%\cl(A)$ is the union of all $\cl(A^{\prime})$, where the $A^{\prime}$ range over $\fp{M}$
+%\end{itemize}
+%
+%We say that the closure operator $\cl$ on $M$, has the {\em exchange property} if in addition
+%\begin{itemize} 
+%\punto{ex}For all $a,b\in M$ and all $A\in\ps{M}$, when $a\in\cl(Ab)\non\cl(A)$, then $b\in\cl(Aa)$
+%\end{itemize}
+%while $\cl$ is said a {\em finitary} closure operator if for all sets $A$ in $M$
+%\begin{itemize}
+%\punto{fin}$\cl(A)$ is the union of all $\cl(A^{\prime})$, where the $A^{\prime}$ range over the finite parts of $A$.
+%\end{itemize}
+%\end{dfn}
+%\cbend
+\begin{dfn}\label{pregdef}
+A \emph{pr{\ae}geometry} %(or a {\em combinatorial matroid})
+$(M,\cl)$ is a %couple $(M,\cl)$
+set $M$ endowed with a closure operator $\map{\cl}{\ps{M}}{\ps{M}}$ on $M$,
+which satisfies the {\em Steiniz exchange property}. This means the following properties are required of $\cl$:
+\begin{itemize}
+\punto{cl1}$A\inn\cl(A)$ for all $A\in\ps{M}$
+\punto{cl2}$\cl\circ\cl=\cl$
+\punto{fin}$\cl(A)$ is the union of all $\cl(B)$, where the $B$'s range over the finite parts of $A$.
+\punto{ex}For all $a,b\in M$ and all $A\in\ps{M}$, when $a\in\cl(Ab)\non\cl(A)$, then $b\in\cl(Aa)$
+\end{itemize}
+
+If in addition $\cl(\vac)=\vac$ and $\cl(a):=\cl(\{a\})=\{a\}$ for all singletons $a\in M$, we say
+that $(M,\cl)$ is a {\em geometry}. 
+\end{dfn}
+
+Note that (fin) alone implies monotonicity %(cl3)
+of the closure operator $\cl$. A {\em closed set} of $M$ is defined, as usual, as a fixed point of $\cl$.
+%Property (ex) is referred to as the {\em Steiniz exchange property}.
+%The approach of J.B. Goode in \cite{JBG} is rather to introduce a (family of) relations between elements
+%and finite sets
+%``$cis(x,\bar y)$'' of {\em ciscendency} to express ``$x\in\cl(\bar y)$'', satisfying
+%the above conditions. That context is actually the most (\dots) to the statement of lemma \ref{} below
+%
+%Again Goode refers these notions to be first considered by Van der Waerden and Krasner.
+
+\medskip
+From a pregeometry $(M,\cl)$ we obtain a geometry $(M_{*},\cl_{*})$ if we define $M_{*}$ as $(M\non\cl(\vac))/_{\sim}$
+for $a\sim b\iff\cl(a)=\cl(b)$, and $\cl_{*}(A/_{\sim})$ to be $\cl(A)/_{\sim}$.
+This procedure is exactly the way a projective space is obtained out of a vector space:
+each line is identified to a point.
+
+\medskip
+If $(M,\cl)$ is a pregeometry and $B$ a subset of $M$ we define its {\em localisation at $B$}
+as the pregeometry $(M,\cl_{B})$ given by $\cl_{B}(U):=\cl(BU)$ for all subsets $U\inn M$.
+
+\medskip
+We say that the subset $A$ of $M$ is {\em independent over} $B$
+(or $B$-{\em independent}) if $a\notin\cl_{B}(A\non\{a\})$ for all $a\in A$. 
+
+We say that a subset $C$ of $A\inn M$ is a {\em base for $A$ over $B$}, if it is independent over $B$ and $A\inn\cl_{B}(C)$.
+The definition of an independent set or of a base of a set are obtained if we put $B$ above to be the empty set.
+
+By the exchange property, given any set $A$, a maximal $B$-independent subset of $A$ is a base over $B$. Moreover
+all bases have the same cardinality\footnote{Exchange property is essentially needed to prove that {\em finite} bases have all the
+same size.}, which is defined as the {\em dimension of $A$ over $B$} and denoted
+with $\dim(A/B)$. This (ordinal) number satisfies the following additivity property
+\begin{labeq}{dimadd}
+\dim(AB)=\dim(B)+\dim(A/B)
+\end{labeq}
+for any sets $A$ and $B$.
+
+We may also say that a set $D$ is independent of $C$ over $B$ if $\dim(D/B)=\dim(D/CB)$.
+\begin{dfn}
+A pregeometry $(M,\cl)$ is {\em trivial} or {\em disintegrated} if for any sets $A,B\inn M$ we have $\cl(AB)=\cl(A)\cup\cl(B)$.
+
+We say that a pregeometry $(M,\cl)$ is {\em modular} if for all closed sets $A$ and $B$, we have
+$\dim(A/B)=\dim(A/A\cap B)$.
+
+A pregeometry $(M,\cl)$ is {\em locally modular} if the above equality is true whenever $\dim(A\cap B)>0$
+or equivalently if $(M,\cl_{\{a\}})$ is modular for all $a\in M$.
+%\uwave{for some finite set $A$ of $M$}.\mn{\bf check def!!}
+\end{dfn}
+Remark that a trivial pregeometry is always modular, and that a modular geometry is also
+locally modular. Moreover a pregeometry is modular exactly if any closed set $A$ is independent of any closed $B$
+over their intersection and also iff the following equality holds on finite-dimensional closed sets $A,B$
+\begin{labeq}{mod}
+\dim(AB)+\dim(A\cap B)=\dim(A)+dim(B).
+\end{labeq}
+%It follows that a pregeometry is locally modular exactly when condition \pref{mod}
+%is satisfied for all closed $A$ and $B$ with $\dim(A\cap B)>0$.
+
+It is routine to mention the following examples:
+\begin{itemize}
+\item[-]A vector space $V$ over a field $\cur$ is a pregeometry if we set $\cl(A)=\gen{A}_{\cur}$,
+the $\cur$-linear span of a subset $A$ in $V$. This is a non-trivial modular pregeometry.
+
+\item[-]If $\mathbb{A}$ is an affine space with underlying vector space $V$, the affine closure
+turns $\mathbb{A}$ into a non-modular, locally modular pregeometry.
+
+\item[-]Algebraic closure in an algebraically closed field (of large enough transcendence degree)
+gives rise to a non-locally modular pregeometry.
+\end{itemize}
+
+%\subsection{Zil'ber's Structural Conjecture}
+%--- MUTE-----Zilber Trichotomy
+%We recall that a complete first-order theory is called strongly minimal if Morley rank and degree of its
+%monstermodel $\mon$ are both equal to one. This translates to the fact that no definable set
+%can be infinite and co-infinite, in any elementary extension.
+%
+%The esential tool which reproves Morley categoricity results (rephrased in a pregeometric flavour
+%by Baldwin and Lachlan in \cite{blsms}) is the fact that, in strongly minimal structures, the
+%algebraic closure is a pregeometry. Strongly minimal structures are in particular $\aleph_{1}$-categorical,
+%and on the contrary uncountably categorical structures do always ``contain'' strongly minimal sets as
+%-- we maight say -- building blocks.
+%%Therefore it makes sense to classify a strongly minimal theory
+%%according to the pregeometry $(\mon,\acl)$.
+%
+%In \cite{hruabi} and \cite{jbg} it is recalled that the pregeometries attached to the strongly minimal sets definable in a $\aleph_{1}$-categorical structure, have (after localization) all isomorphic associated geometries. This {\em local} isomorphism type constitutes therefore an
+%invariant of such structures.
+%
+%Zilber's {\em trichotomy conjecture} -- formulated in \cite{} -- essentially assigned
+%to an $\aleph_{1}$-categorical theory $T$ one of the following geometries:\mn{Compare/Consult John B. Goode}
+%\begin{itemize}
+%\punto{1}A disintegrated geometry. No almost strongly minimal group is definable in $T$.
+%\punto{2}A non-trival modular geometry of a vector space. A rank-$1$ group is definable in $T$, but no infinite field does.
+%\punto{3}A non locally modular geometry. $T$ is not one-based and an infinite field is interpretable
+%in $T$.
+%\end{itemize}
+%
+%The conjecture was disproved by Hrushovski in \cite{hruabi} by means of a {\em new strongly minimal set}:
+%which has a non-locally modular geometry, but nevertheless does not interpret a field. Some detail
+%of this are given in section \ref{abi}.
+
+\subsection{Predimensions and associated Pregeometry Extensions}\label{pregextsec}
+We denote by $\fp{M}$ the set of the finite parts of $M$.
+\begin{dfn}\label{pregext}
+Assume $\cl$ and $\cl_{0}$ are closure operators which both turn $M$ into a pregeometry.
+We say that $\cl$ {\em extends} $\cl_{0}$ if for all $A\inn M$ we have $\cl_{0}(A)\inn\cl(A)$.
+
+We say that $(M,\cl)$ is a {\em geometry over} $\cl_{0}$, if $\cl$ extends $\cl_{0}$, if $\cl(\vac)=\cl_{0}(\vac)$
+and if $\cl(a)=\cl_{0}(a)$ for all $a\in M$. In the case $\cl_{0}$ is the identical closure ($\cl_{0}(A)=A$, for all $A\inn M$)
+$(M,\cl)$ is called a {\em geometry}.
+\end{dfn}
+
+If $\cl$ extends $\cl_{0}$ and $\dim$, $\dim_{0}$ denote the associated dimensions, then for each
+$A\in\fp{M}$ we have clearly $\dim_{0}(A)\geq\dim(A)$, moreover
+$$
+\dim(\cl_{0}(A))\leq\dim(\cl(A))=\dim(A)\quad\text{and}\quad\dim(A)\leq\dim(\cl_{0}(A)).
+$$
+In particular $\dim(A)=\dim(\cl_{0}(A))$, that is, $\dim$ is determined by its value on $\cl_{0}$-closed sets.
+
+\smallskip
+Let now $(M,\cl)$ be a pregeometry, %with dimension $d$, we
+we denote the set of \emph{finitely generated $\cl$-closed parts} of $M$ by
+$${\fp{M}}_{\cl}=\{B\inn M\mid B\,\text{is $\cl$-closed with $\dim(B)$ finite}\}.$$
+\begin{dfn}\label{clpred}
+We call a map $\map{\delta}{\fp{M}_{\cl}}{\N}$ a {\em predimension over $\cl$} or a \emph{$\cl$-predimension}
+on $M$ if the following holds:
+\begin{align}
+\tag{normalization}\qquad&\delta(\cl(\vac))=0\quad\text{and}\quad\delta(\cl(a))\leq1&\\[+2mm]
+\qquad&\delta(\cl(UV))\leq\delta(U)+\delta(V)-\delta(U\cap V)&\label{summo}
+%\intertext{for all $U,V\in\fpe{M}$.}
+\end{align}
+for all $a\in M$ and $U,V\in\fp{M}_{\cl}$. Compared to \pref{mod}, property \pref{summo} above is referred to as
+{\em submodularity}.
+
+A {\em predimension} on $M$ is, by definition, a $\cl$-predimension where $\cl$
+is the identical closure on $M$.%: $\cl(A)=A$, for all sets $A$. %$\cl=id_{\ps{M}}$.
+
+A predimension $d$ on $M$ which is {\em monotone}, that is $d(B)\leq d(A)$ for all finite $B\inn A$ in $\fp{M}$
+%\begin{itemize}
+%\punto{monotonicity}$d(B)\leq d(A)$ for all finite subsets $B\inn A$ of $M$
+%\end{itemize}
+is called a {\em dimension function} on $M$.
+\end{dfn}
+
+\medskip
+Assume $\delta$ is a $\cl$-predimension on $M$ and set, for all $A$ in $\fp{M}$
+%$$\delta^{*}(B)=\min\{\delta(C)\mid C\in\fp{M}_{1},\,C\nni B\}$$
+%and successively
+%\begin{labeq}{didef}
+%d_{2}(A)=\delta^{*}(\cle(A))\quad\text{for all}\,A\in\fp{M}.
+%\end{labeq}
+%(It can also be defined:
+\begin{labeq}{ddidelta}
+d(A):=\min(\delta(C)\mid C\in\fp{M}_{\cl},\:C\nni A).
+\end{labeq}
+With the above definition we still have $d(\vac)=0$ and $d(a)\leq1$ for all singleton $a$.
+Moreover for finite  $A,B$ in $M$ let us choose $\cl$-closed oversets $A^{\prime}\nni A$ and $B^{\prime}\nni B$
+%with minimal $\delta$, that is
+with $d(A)=\delta(A^{\prime})$ and $d(B)=\delta(B^{\prime})$.
+Since closed sets are closed under intersection, we have
+$$d(AB)+d(A\cap B)\leq\delta(\cl(A^{\prime}B^{\prime}))+\delta(A^{\prime}\cap B^{\prime})\leq d(A)+d(B),$$
+that is $d$ is a dimension function on $M$ after Definition \ref{clpred} above, and
+is called {\em the} dimension function {\em associated to} $\delta$.
+Also note that, in the definition of $d$, is crucial to require $\delta$ to be non-negative.
+
+The next lemma shows that $d$ is actually
+the dimension associated to a prescribed pregeometry.
+\begin{lem}\label{preg}
+Assume $d$ is the dimension function associated to a $\cl$-predimension $\delta$ on
+the set $M$ via \pref{ddidelta}.
+
+For any $A\in\fp{M}$ define $\cl_{d}(A)$ to be the set of all $b$ of $M$ such that $$d(Ab)=d(A).$$
+
+If we define $\cl_{d}$ on arbitrary sets in the natural way, that is by putting $\cl_{d}(A)=\bigcup\{\cl_{d}(F)\mid F\in\fp{A}\}$,
+then $(M,\cl_{d})$ is a pregeometry which extends $(M,\cl)$ and has dimension $d$.
+\end{lem}
+\begin{proof}
+It is enough to show properties (cl2) and (ex) holds for $\cl_{d}$ over finite sets, while (cl1) is clear.
+
+For (cl2) assume %then that each element $b$ of
+that a finite set $B$ is contained in %in the closure of a finite set
+$\cl_{d}(A)$ for some finite set $A\inn M$. That is $d(Ab)=d(A)$ for all $b$ in $B$.
+By induction on the cardinality of $B$, using submodularity \pref{summo}, it follows $d(BA)=d(A)$.
+
+We need to show that if an element $a$ is in $\cl_{d}(B)$ then it is in $\cl_{d}(A)$.
+Applying submodularity we have $d(aBA)\leq d(aB)+d(BA)-d(B)=d(BA)$. 
+
+We can conclude $d(aA)\leq d(aBA)\leq d(A)$ as desired. This gives $\cl_{d}(A)\nni \cl_{d}(\cl_{d}(A))$ and (cl2) follows.
+
+\smallskip
+To obtain the exchange property (ex), observe first that, as as a dimension-function, $d$ satisfies $d(Ab)\leq d(A)+1$, for any finite $A\inn M$.
+
+Assume $a\in\cl_{d}(A\,b)\non\cl_{d}(A)$, this means $d(A)<d(aA)\leq
+d(aAb)=d(Ab)\leq d(A)+1$. This forces $b$ to be in the closure of $Aa$.
+
+\smallskip
+That $\cl_{d}$ extends $\cl$ is readily seen, as $d(Ab)=d(A)$ for all $b\in\cl(A)$ by definition \pref{ddidelta}, for all $A\in\fp{M}$.
+
+And it is trivial to verify that $d(S)$ %=\dim(S)$
+is the $\cl_{d}$-dimension of $S$, for every set $S$ in $M$.
+%It remains to check that $d$ is actually the dimension of $\cl_{d}$. We have namely to
+%check that, for any finite $S$ in $M$, $d(S)$ coincide with the number of elements in a basis of $S$. Let $\{s_{1},\,\dots,\,s_{n}\}$ be such a basis. If $n=1$ then since $\{s_{1}\}$ is independent $d(s_{1})=1$, assume it is true of $n-1$.
+\end{proof}
+
+%We also remark that since the axioms for a predimension are universal (modulo $\cl$), the following 
+%
+%Assume $\delta$ is a $\cl$-predimension on the set $M$ and $d$
+%is the dimension function associated to $\delta$.
+%Assume $\cl^{\prime}$ is the pregeometry  on $M$ extending $\cl$ derived from $d$.
+%
+%If now $N$ is a $\cl$-closed subset of $M$, then the restriction of $\cl^{\prime}$ to $N$, $\res{\cl^{\prime}}{\ps{N}}$
+%coincide with the pregeometry obtained by the dimension function on $N$ associated to $\res{\delta}{\fp{N}_{1}}$.

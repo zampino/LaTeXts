@@ -1,0 +1,392 @@
+\begin{lem}[Asymmetric-Cripple Amalgam]
+Let $A,B\in\Kl$ and $M$ in $\Kl^{3}$. If $B=\gena{B_{1}}{M}$ is a subalgebra of $M$ and $B\dsu A$, % and $B\dsu C$ then
+%Let $B=\gena{B_{1}}{C}$ and $B\dsu A$ then there exists a $D$ in
+%$\Klf$ such that $C\dsu D$ and $A=\gena{A_{1}}{D}$.
+then there exists $L\in\nla{3}$ with the following properties
+%as well as
+%Lie monomorphisms $\map{e}{A}{D}$ and $\map{f}{C}{D}$
+%such that
+\begin{itemize}
+%\item[-]
+\item[{\rm(i)}]%=\gena{A_{1}}{L}$ and $
+$M\dsu L\nni A$ and $B$ is preserved in $L$ by both inclusions
+\item[{\rm(ii)}]$\tr{2}L\in\bar{\Kl}^{2}$ and $d_{2}L<\omega$
+\item[{\rm(iii)}]$L$ has $\sig{3}{2}$ and $\sig{3}{3}$.
+\end{itemize}
+\end{lem}
+
+\begin{proof}
+Without loss of generality we can assume that $B\dsu A$ is a $\Kl$-minimal extension and
+that the algebra $A$ is not realised in $M$ over $B$.
+
+%We start with a \emph{na\"{i}ve amalgamation} procedure {\bf (NAM)}, that yields an $\nla{3}$-algebra $L$
+%in which $A$ is contained as a subalgebra, $M$ figures as a $\delta_{3}$-strong substructure and
+%to which belong the following properties 
+
+%Secondly, a discussion on the different type of minimal extensions $A\quot B$
+%will provide axiom $\sig{3}{3}$ for $D$.
+
+%\begin{itemize}
+%\item[
+\bigskip
+%{\bf (NAM)} %]
+%If we denote with $A^{\prime}$, $B^{\prime}$ and $C^{\prime}$, respectively $\tr{2}A$, $\tr{2}B$ and
+%$\tr{2}C$ then, after the definition of $\Klf$, we have $A^{\prime}\zso B^{\prime}\zsu C^{\prime}$.
+According to the hypothesis the truncations $\tr{2}A$ and $\tr{2}B$ lies in $\Kl^{2}$, while
+$\tr{2}M\in\bar{\Kl}^{2}$.
+
+%and because by our assumptions assuming that $\tr{2}A$ is not realised in $\tr{2}M$,
+We construct the free $\nla{2}$-amalgam $\tr{2}M\star_{\tr{2}B}\tr{2}A=:\lda$ %lies still in $\bar{\Kl}^{2}$.
+recalling that
+$$
+L^{\downarrow}=\left(M_{1}\oplus_{B_{1}}A_{1}\right)\oplus
+\frac{\exs(M_{1}\oplus_{B_{1}}A_{1})}{N^{2}(M)+N^{2}(A)}.
+$$
+
+By our assumptions $\tr{2}M\nni\tr{2}B\zsu\tr{2}A$, hence $\tr{2}M\zsu L^{\downarrow}\nni\tr{2}A$. Moreover asymmetric amalgamation in $\nla{2}$ assures axiom $\sig{2}{2}$ to $\lda$. Approximating $M_{1}$ with finitely
+generated strong subspaces, we also obtain $d_{2}\lda=d_{2}M_{1}+d_{2}A_{1}-d_{2}B_{1}$, which is
+finite as $d_{2}M_{1}<\omega$. Set $L_{1}=M_{1}\oplus_{B_{1}}A_{1}=(\lda)_{1}$.
+
+We also have
+\begin{labeq}{inter}
+\tr{2}B=\gena{B_{1}}{\lda}=\gena{M_{1}}{\lda}\cap\gena{A_{1}}{\lda}.
+\end{labeq}
+
+\medskip
+%Suppose at this point that $\lda$ belongs to the class $\bar{\Kl}^{2}$, hence $\lda$ can be assumed to
+%be a $\delta_{2}$-strong
+%subspace of the rich $\Kl^{2}$-algebra $\K^{2}$. Therefore $\lda$ is a self-sufficient subalgebra
+%of a $\ta$-closed space $\ta\lda\zsu\K^{2}$.
+
+%We still have
+%Build the free $\nla{2}$-amalgam $D^{\prime}=\fram{A^{\prime}}{B^{\prime}}{C^{\prime}}$ of $A^{\prime}$ and $C^{\prime}$ over $B^{\prime}$. Assume $D^{\prime}$ is in $\Kl^{2}$ then, because
+%$B^{\prime}\zsu D^{\prime}$,
+%we $\delta_{2}$-strongly embed $D^{\prime}$ in $\K^{2}$ over $B^{\prime}$,
+%%we can find a copy of $D^{\prime}$ in 
+%we keep calling $D^{\prime}$ the isomorphic image in the generic model of $T^{2}$.
+
+%Consider $\ta D^{\prime}$ the $\ta$-closure of $D^{\prime}$ in $\K^{2}$,
+%because both $A^{\prime}$ and $C^{\prime}$ are selfsufficient in $D^{\prime}$
+%and $D^{\prime}\zsu\ta D^{\prime}$, we have that $A^{\prime}$ and $C^{\prime}$ are both $\delta_{2}$-strong
+%in $\ta D^{\prime}$. Moreover $\ta$-closure implies
+%\begin{labeq}{inter}
+%\tr{2}B=\gena{B_{1}}{\ta\lda}=\gena{M_{1}}{\ta\lda}\cap\gena{A_{1}}{\ta\lda}.
+%\end{labeq}
+
+Now as $\tr{2}M\zsu\lda$, on account of Lemma \ref{bellemma},
+there exists an embedding $j_{M}$ of $\fr{3}\tr{2}M$ %and $\fr{3}\tr{2}C$
+into $\fr{3}\lda$ with image $\gena{M_{1}}{\fr{3}\lda}$.
+
+\medskip
+The same does not hold for $\fr{3}\tr{2}A$, we therefore deform it a little to
+map it monomorphically into  $\fr{3}\lda$.
+
+%Some more lines must be spent on proving that $\fr{3}\tr{2}A$ embeds in $\fr{3}\lda$.
+%This is achieved once we show $\fr{3}\tr{2}\simeq\gena{A_{1}}{\fr{3}\lda}$, because
+%$\fr{3}\lda\simeq\gena{L_{1}}{\fr{3}\ta\lda}$.
+%To see this we use notations
+In what follows, we use terminology and definitions of section \ref{emblem} and lemma \ref{bellemma}.
+
+We choose an ordered base $X_{1}^{L}=\{X_{1}^{a}>X_{1}^{B}>X_{1}^{m}\}$ of $L_{1}$ where $X_{1}^{B}$ is a basis for $B_{1}$,
+$X_{1}^{A}=X_{1}^{a}X_{1}^{B}$ is a basis for $A_{1}$ and $X_{1}^{m}$ completes $X_{1}^{B}$ to a basis $X_{1}^{M}$ of $M_{1}$. Each of the three segments of $X_{1}^{L}$ is ordered arbitrarily.
+
+We consider the surjective map
+$\map{\lambda_{A}}{\fr{3}\tr{2}A}{\gena{A_{1}}{\fr{3}\lda}}$ as in \pref{lollipop}, where
+$\fr{3}\lda$ is presented by $\fla{3}{X_{1}^{L}}\quot\jei{L}$ and $\fr{3}\tr{2}A$ by $\fla{3}{X_{1}^{A}}\quot\jei{A}$.
+
+%To prove that $\lambda_{A}$ is an injection we have to show that
+We have $$\ker(\lambda_{A})=\frac{\fla{3}{X_{1}^{A}}\cap\jei{L}}{\jei{A}}%=\mathbf{0}
+$$
+moreover $\ker(\lambda_{A})$ is homogeneous of weight $3$.
+
+We note that
+\begin{labeq}{bulaba}
+\jei{L}_{3}=\gen{\jei{M}_{3},\,\jei{A}_{3},\,[\nu^{A},y],\,[\nu^{M},x]}_{+}^{\fla{3}{X_{1}^{L}}}
+\end{labeq}
+$$\text{where}\quad x\in X_{1}^{a},\,y\in X_{1}^{m},\,\nu^{A}\in N^{2}(A),\,\nu^{M}\in N^{2}(M)$$
+and we can assume both the $\nu^{A}$'s and the $\nu^{M}$'s to be independent over $\exs B_{1}$.
+
+Following the reasoning which led to expression \pref{basipre}, an element $w$ in $\ker(\lambda_{A})$
+%which is not zero
+may be written modulo $\jei{A}$ as
+\begin{labeq}{baluba}
+B_{A}=w=B^{M}+pB^{M}+B^{Ma}+pB^{aM}
+\end{labeq}
+where $B^{M}$, $pB^{M}$ are respectively sums of basic and prebasic commutators
+over $X_{1}^{B}X_{1}^{m}$ which cover the $\jei{M}$-part of $w$. $B^{Ma}$ is a sum of commutators
+arising from terms of type $[\nu^{M},x]$ in $w$, these are necessarily basic after the order of $X_{1}^{L}$
+we chose. $pB^{aM}$ denotes the sum of prebasic commutators obtained by the terms $[\nu^{A},y]$ of $\jei{L}$.
+$B_{A}$ is a linear combination of basic commutators over $X_{1}^{A}$ which write the word $w$
+as member of $\fla{3}{X_{1}^{A}}$.
+
+We transform the prebasic commutators in the right term of \pref{baluba} in basic ones,  by means of substitutions \pref{prebi}, thus we have
+$$B_{A}=B^{M}+B^{M}_{*}+B^{Ma}+B^{aM}_{*}$$
+where now both terms of the equality concern basic commutators over $X_{1}^{L}$.
+
+By uniqueness all
+the terms on the right which do not appear in $B_{A}$ must be cancelled by the sum.
+
+By the shape of the generators for $\jei{M}$ in \pref{bulaba}, we see that we fall in contradiction if
+some term of type $B^{Ma}$ or $pB^{aM}$ is present in \pref{baluba},
+because, after basic transformations, these cannot cancel each other, nor be cancelled by terms of $B^{M}+B_{*}^{M}$.
+
+As a consequence $B_{A}=w=B^{M}+pB^{M}\in\jei{M}$, and this forces $w$ to lay in
+$\fla{3}{X_{1}^{A}}\cap\fla{3}{X_{1}^{M}}=\fla{3}{X_{1}^{M}\cap X_{1}^{A}}=\fla{3}{X_{1}^{B}}$.
+
+We have
+\begin{labeq}{kerlam}
+K:=\ker(\lambda_{A})=\frac{(\jei{M}\cap
+\fla{3}{X_{1}^{B}})+\jei{A}}
+{\jei{A}}\inn\gena{B_{1}}{\fr{3}\tr{2}A}.
+\end{labeq}
+
+Now because $B_{1}\zsu A_{1}$, on account of lemma \ref{bellemma} we have $\jei{B}=\jei{A}\cap\fla{3}{X_{1}^{B}}$. Hence if we look at the analog of $\lambda_{A}$ for $B$ $\map{\lambda_{B}}{\fr{3}\tr{2}B}{\fr{3}\tr{2}M}$, it holds
+\begin{multline*}
+\ker\lambda_{B}=
+\frac{\jei{M}\cap\fla{3}{X_{1}^{B}}}{\jei{B}}=\\
+=\frac{\jei{M}\cap\fla{3}{X_{1}^{B}}}{\jei{A}\cap\fla{3}{X_{1}^{B}}}
+=\frac{\jei{M}\cap\fla{3}{X_{1}^{B}}}{\jei{A}\cap(\jei{M}\cap\fla{3}{X_{1}^{B}})}
+\simeq K
+\end{multline*}
+
+If we consider the quotient maps of $\lambda_{A}$ and $\lambda_{B}$ modulo $K$, and name them
+$\bar\lambda_{A}$ and $\bar\lambda_{B}$, we have the following injective commutative diagram:
+\begin{labeq}{pream}
+\xymatrix{
+&{\fr{3}\lda}&\\
+{\fr{3}\tr{2}M}\ar%@{^{(}->}
+[ur]^{j_{M}}&&{\fr{3}\tr{2}A\quot K}\ar%@{_{(}->}
+[ul]_{\bar\lambda_{A}}\\
+&{\fr{3}\tr{2}B\quot K}\ar%@{_{(}->}
+[ul]_{\bar\lambda_{B}}\ar%@{^{(}->}
+[ur]^{j_{B}}&}.\end{labeq}
+Now %by \pref{kerlam}
+we note $\jei{M}\cap\fla{3}{X_{1}^{B}}$ are relators for $B$, hence $K\inn N^{3}(B)\inn N^{3}(A)$.
+This allows us to write diagram \pref{pream} modulo $N^{3}(M)$, $N^{3}(B)\quot K$ and $N^{3}(A)\quot K$.
+We keep on calling $N^{3}(M)$, its image under $j_{M}$ and we set $N_{A}=\bar\lambda_{A}(N^{3}(A)\quot K)$.
+We get
+$$
+\xymatrix{
+&\frac{\fr{3}\lda}{N^{3}(M)+N_{A}}&\\
+{M}\ar[ur]^{\bar j_{M}}&&{A}\ar[ul]_{\bar{\bar\lambda}_{A}}\\
+&{B}\ar[ul]_{\bar{\bar\lambda}_{B}}\ar[ur]^{\bar j_{B}}&}
+$$
+%-----------------------------------------------------------------------------------------------------------------
+
+{\bf This was percented \dots\dots }
+\begin{flushright}
+Therefore $w$ is in $\jei{B}\inn\jei{A}$ as we desired.
+With similar arguments we can show that
+$\gena{B_{1}}{\fr{3}\lda}=\gena{M_{1}}{\fr{3}\lda}\cap\gena{A_{1}}{\fr{3}\lda}$,
+therefore
+and $\gena{\cbu}{\fr{3}\ta D^{\prime}}$ respectively.
+\bigskip
+Using similar arguments and \pref{inter}
+%and lemma \ref{bellemmino}, 
+we get
+\begin{labeq}{freeint}
+\gena{B_{1}}{\fr{3}\lda}=\gena{M_{1}}{\fr{3}\lda}\cap\gena{A_{1}}{\fr{3}\lda}.
+\end{labeq}
+here $B_{1}$, $\abu$ and $\cbu$ are identified with its images modulo $j_{A}$ and $j_{C}$. 
+
+With abuse in notation we keep calling respectively
+$N^{3}(M)$ and $N^{3}(A)$ the images of these ideals in $\fr{3}\lda$ under the
+maps $j_{M}$ and $j_{A}$.
+\end{flushright}
+%-----------------------------------------------------------------------------------------
+
+Now build the $\nla{3}$-algebra
+
+\bigskip
+Set
+$$L=\frac{\fr{3}\lda}{N^{3}(M)+N_{A}}.$$
+%$L$ is our candidate for the proof of Lemma.
+
+The maps $\bar j_{M}$ and $\bar{\bar{\lambda}}_{A}$ are one-to-one because
+$j_{M}^{-1}(N^{3}(M)^{j_{M}}+N_{A})=N^{3}(M)$ and similarly $\bar\lambda_{A}^{-1}(N^{3}(M)+N_{A})=N^{3}(A)\quot K$.
+This follows from $\gena{M_1}{\fr{3}\lda}\cap\gena{A_1}{\fr{3}\lda}=\gena{B_1}{\fr{3}\lda}$.
+
+As $N^{3}(M)+N_{A}$ is an ideal of $\fr{3}\lda$ consisting only of weight $3$ elements, we have
+$\fr{3}\tr{2}L=\fr{3}(\tr{2}\fr{3}\lda)=\fr{3}\lda$, hence we obtain that $N^{3}(M)+N_{A}$ is exactly
+$N^{3}(L)$ of definition \pref{3ker}.
+
+%With abuse, we set $N^{3}(B):=j_{M}(N^{3}(B))$ which, because
+%$$N^{3}(M)\cap\gena{B_{1}}{\fr{3}\tr{2}M}=N^{3}(B)=N^{3}(A)\cap\gena{B_{1}}{\fr{3}\tr{2}A}$$
+%%and because of lemma \ref{bellemmino},
+%is also equal to $j_{A}(N^{3}(B))$ and to $N^{3}(M)\cap N^{3}(A)$.
+
+The following compatibility equations also hold
+\begin{labeq}{compa}
+N^{3}(M)=N^{3}(L)\cap\gena{M_{1}}{\fr{3}\lda}
+\end{labeq}and
+$$
+N^{3}(A)=N^{3}(L)\cap\gena{A_{1}}{\fr{3}\lda}.
+$$
+
+%So far, are $M$ and $A$ embeddable in $L$ via Lie monomorphisms,
+%just regard for example $M\simeq\fr{3}\tr{2}M\quot N^{3}(M)$ and take the quotient of $j_{M}$:
+%\begin{eqnarray}
+%\map{\bar j _{M}}{&\fr{3}\tr{2}M\quot N^{3}(M)}{L}\\
+%&\bar w\longmapsto \bar w
+%\end{eqnarray}
+%on account of \pref{compa} is $\bar j_{M}$ one-to-one, in particular its image is again
+%$\gena{M_{1}}{L}=(\gena{M_{1}}{\fr{3}\ta\lda}+N^{3}(L))\quot N^{3}(L)$.
+
+%An embedding of $A$ in $L$ is constructed in the very same way.
+%-------------------------------------------------------------------------------------------------------------------
+
+\medskip
+We show next that
+%if $B_{1}\dsu A_{1}$
+the embedding of $M$ into $L$ is $\delta_{3}$-strong. In what follows the $N^{3}$-parts are calculated with
+respect of $L$.
+
+It suffices to prove $\delta_{3}E_{1}\geq\delta_{3}M_{1}$ for each $E_{1}\zsu L_{1}$ such that
+$E_{1}\nni M_{1}$.%and $E_{1}$ $$-closed.
+
+%We first observe $\delta_{3}E_{1}\geq\delta_{3}(E_{1}\cap D_{1})$. On one hand we have $d_{2}E_{1}\geq
+%d_{2}(E_{1}\cap D_{1})$. On the other hand,
+
+%and in particular $\gena{E_{1}}{\fr{3}\ta\lda}\cap\gena{A_{1}}{\fr{3}\ta\lda}=\gena{E_{1}\cap A_{1}}{\fr{3}\ta\lda}$.
+%Therefore
+%\begin{multline}\label{ntreonto}
+%N^{3}(E_{1})=\\
+%=N^{3}(L)\cap\gena{E_{1}}{\fr{3}\ta D^{\prime}}=
+%(N^{3}(A)+N^{3}(C))\cap\gena{E_{1}}{\fr{3}\ta D^{\prime}}=\\
+%=(N^{3}(A)\cap\gena{E_{1}}{\fr{3}\ta D^{\prime}})+N^{3}(C)=\\
+%=(N^{3}(L)\cap\gena{A_{1}}{\fr{3}\ta D^{\prime}}\cap\gena{E_{1}}{\fr{3}\ta D^{\prime}})+N^{3}(C)=\\
+%=(N^{3}(L)\cap\gena{A_{1}\cap E_{1}}{\fr{3}\ta D^{\prime}})+N^{3}(C)\inn\\
+%\inn N^{3}(E_{1}\cap A_{1}+M_{1})\inn N^{3}(E_{1}\cap L_{1})
+%\end{multline}
+%Therefore we have to show $\delta_{3}(E_{1}\cap L_{1})\geq\delta_{3}M_{1}$.
+
+%As $E_{1}\cap D_{1}=M_{1}+(E_{1}\cap \abu)$ w
+Because
+%$E_{1}\cap \abu$ is a $\delta_{2}$ strong subspace of $\abu$ and 
+$B\dsu A$, %and $\delta_{3}(E_{1}\cap \abu\quot B)\geq 0W
+we finish once we show
+$\delta_{3}E_{1}-\delta_{3}M\geq\delta_{3}(E_{1}\cap A_{1})-\delta_{3}B$.
+
+Approximating $E_{1}$ with a sequence of strong sets in $\lda$, on one side we have
+%$$\delta_{3}(E_{1}\cap D_{1}\quot C)
+%$$\delta_{3}(E_{1}\cap D_{1})-\delta_{3}(M_{1})=
+%d_{2}(E_{1}\cap D_{1}\quot M_{1})
+%-\big(\dfp(N^{3}(E_{1}\cap D_{1}))-\dfp(N^{3}(C))\big).$$
+%Everything behaves good for $d_{2}$, we have 
+$d_{2}E_{1}-d_{2}(M_{1})=d_{2}(E_{1}\cap A_{1})-d_{2}B_{1}$.
+%(\dots eigentlich stimmt das f`\"ur $\delta_{2}$ aber man kann approximieren \dots)
+
+%To conclude we have to show
+It remains to show that
+$$\dfp(N^{3}(E_{1})\quot N^{3}(M))\leq\dfp(N^{3}(E_{1}\cap A_{1})\quot N^{3}(B)).$$
+So assume $\Psi_{1},\dots,\Psi_{m}$ are in $N^{3}(E_{1})=N^{3}(L)\cap\gena{E_{1}}{\fr{3}\lda}$ independent
+over $\gena{M_{1}}{\fr{3}\lda}$. By definition of $N^{3}(L)$, for each $i$ we have
+$\Psi_{i}=\Psi_{i}^{M}+\Psi_{i}^{A}$, where $\Psi_{i}^{M}\in N^{3}(M)$ and $\Psi_{i}^{A}\in N^{3}(A)$.
+
+Now we see that, because $\lda$ is the free amalgam of $\tr{2}M$ and $\tr{2}A$ and $E_{1}\nni M_{1}$,
+it holds $\gena{E_{1}}{\lda}\cap\gena{A_{1}}{\lda}=\gena{E_{1}\cap A_{1}}{\lda}$,
+therefore $$\gena{E_{1}}{\fr{3}\lda}\cap\gena{A_{1}}{\fr{3}\lda}=\gena{E_{1}\cap A_{1}}{\fr{3}\lda}.$$
+%and in particular $N^{3}(E_{1}\cap A_{1})=N^{3}(E_{1})\cap N^{3}(A_{1})$.
+
+In our case then it follows that the set $\{\Psi_{i}^{A}\}_{i=1}^{m}$ lies in $N^{3}(E_{1}\cap A_{1})$ and it is easy
+to see that it is independent
+over $\gena{B_{1}}{\fr{3}\lda}$. This gives the desired inequality and proves $M_{1}\dsu L_{1}$. 
+
+%Consider the map
+%\begin{eqnarray*}
+%N^{3}(E_{1}\cap \abu)\quot N^{3}(B)^{\bullet}&\longrightarrow&N^{3}(E_{1}\cap D_{1})\quot N^{3}(C)^{\bullet}\\
+%\bar\eta&\longmapsto&\bar\eta\quad\quad\forall\eta\in N^{3}(E_{1}\cap\abu).
+%\end{eqnarray*}
+%Soundness is immediate. Moreover our map is injective because
+%\begin{multline*}
+%N^{3}(C)^{\bullet}\cap\gena{E_{1}\cap \abu}{\fr{3}\ta D^{\prime}}=\\
+%=N^{3}(D)\cap\gena{\cbu}{\fr{3}\ta D^{\prime}}\cap\gena{E_{1}\cap \abu}{\fr{3}\ta D^{\prime}}=\\
+%=N^{3}(D)\cap\gena{\abu\cap C_{1}}{\fr{3}\ta D^{\prime}}=N^{3}(B)^{\bullet}.
+%\end{multline*}
+%Here we used $\gena{\cbu}{\fr{3}\ta D^{\prime}}\cap\gena{E_{1}\cap\abu}{\fr{3}\ta D^{\prime}}=
+%\gena{\cbu\cap\abu}{\fr{3}\ta D^{\prime}}$ because both $\cbu$ and $E_{1}\cap\abu$ are $\delta_{2}$ strong in $D_{1}$ and $\ta$ closed and because $\gena{\cbu}{\ta D^{\prime}}\cap\gena{E_{1}\cap\abu}{\ta D^{\prime}}=\gena{\bbu}{\ta D^{\prime}}$.
+
+%To see that this map is onto use the arguments in \pref{ntreonto} again to get
+%$$N^{3}(E_{1}\cap D_{1})=(
+%N^{3}(D)\cap\gena{E_{1}\cap A_{1}}{\fr{3}\ta D^{\prime}})+N^{3}(C)^{\bullet}.$$
+%On the other hand, since again $\gena{\abu}{\ta D^{\prime}}\cap\gena{E_{1}}{\ta D^{\prime}}=\gena{E_{1}\cap\abu}{\ta D^{\prime}}$ we have
+%\begin{multline*}
+%N^{3}(E_{1})=N^{3}(D)\cap\gena{E_{1}}{\fr{3}\ta D^{\prime}}=\\
+%=(N^{3}(A)^{\bullet}+N^{3}(C)^{\bullet})\cap\gena{E_{1}}{\fr{3}\ta D^{\prime}}=\\
+%=(N^{3}(A)^{\bullet}\cap\gena{E_{1}}{\fr{3}\ta D^{\prime}})+N^{3}(C)^{\bullet}=\\
+%=(N^{3}(D)\cap\gena{E_{1}\cap A_{1}}{\fr{3}\ta D^{\prime}})+N^{3}(C)^{\bullet}
+%\end{multline*}
+%and this gives that our map is onto.
+
+%We have shown that
+%$$\dfp(N^{3}(E))-\dfp(N^{3}(C))=\dfp(N^{3}(E_{1}\cap\abu))-\dfp(N^{3}(B)^{\bullet})$$
+%thus $C$ is $\delta_{3}$-strong embeddable in $D$.
+
+%A completely analogous argument proves that $A$ is $\delta_{3}$-strong in $D$.
+%%\end{itemize}
+
+\medskip
+We show that $L$ has $\sig{3}{2}$.
+It suffices to show $\delta_{3}H_{1}\geq2$ for each  $H_{1}\zsu L_{1}$ of finite linear dimension. 
+
+Consider the relative $\ta$-closure $H_{1}^{+}$ of $H_{1}$ in $L_{1}$, then because $M_{1}$ is
+$\ta$-closed, it holds
+$\gena{H_{1}^{+}}{\lda}\cap\gena{M_{1}}{\lda}=\gena{H_{1}^{+}\cap M_{1}}{\lda}$.
+
+Now by lemma \ref{presubatre} and since $M_{1}\dsu L_{1}$, we have
+$$
+\delta_{3}(H_{1}^{+}+M_{1})+\delta_{3}(H_{1}^{+}\cap M_{1})
+\leq\delta_{3}H_{1}^{+}+\delta_{3}M_{1}\leq\delta_{3}H_{1}^{+}+\delta_{3}(H_{1}^{+}+M_{1}).
+$$
+Now as $M\in\Kl^{was\dots}$, we conclude
+$\delta_{3}H_{1}\geq\delta_{3}H_{1}^{+}\geq\delta_{3}(H_{1}^{+}\cap M_{1})\geq2$.
+
+\bigskip
+%So far we have exhibited an $L\in\nla{3}$
+To conclude the proof we have to provide axiom $\sig{3}{3}$ for $L$
+and show that $\tr{2}L=\lda$ lies in $\Kl^{2}$, that is $\lda$ must satisfy axiom $\sig{2}{3}$.
+
+This is done discussing the kind of minmal extension $A\quot B$ which can actually occur.
+We recall here axiom $\sig{3}{3}$
+$$(\sig{3}{3})\quad(\forall z,\,P_{2}(z))(\forall x,y,\,P_{1}(x)\wedge P_{1}(y))([z,x]=[z,y]\,\rightarrow
+%\textsl{``$x$ lin.{}depends on $y$''}
+\:x=y)$$
+and note that, because both $M$ and $A$ satisfy $\sig{3}{3}$ the only case for it to fail in $L$ is in which
+there exist elements $e\in A_{1}\non B_{1}$ and $m\in M_{1}\non B_{1}$ and $0\neq\beta\in B_{2}$ such
+that
+\begin{labeq}{sigtre}
+[\beta,m]=[\beta,e]\in B_{3}.
+\end{labeq}
+
+\begin{itemize}
+\item[-]\emph{Algebraic extension.}
+%(the only case in which the axiom could fail)
+Assume $\sig{3}{3}$ fails in $L$, then there exists $\Phi\in\gena{B_{1}}{\fr{3}\tr{2}A}$ such that  $\Phi-[\beta,e]\in N^{3}(A)$
+for $e\in A_{1}\non B_{1}$.
+
+It follows $\delta_{3}(e\quot B_{1})=0$ and $d_{2}(e\quot B_{1})=1$ so
+$\gen{B_{1},e}\zsu A_{1}$ and by minimality $A_{1}=\gen{B_{1},e}_{1}$.
+$N^{3}(A)=\gena{N^{3}(B),\Phi-[\beta,e]}{\fr{3}\tr{2}A}$.
+
+Moreover \pref{sigtre} implies that we can realise $A$ in $M$ over $B$.
+This is forbidden by our hypothesis.  
+
+We can also prove $\tr{2}A$ is free minimal over $\tr{2}B$ and $\lda\in\bar{\Kl}^{2}$.
+
+\item[-]\emph{Free extension.} Assume $\delta_{3}(A\quot B)>0$ it follows $d_{2}A>d_{2}B$ and
+$\tr{2}A$ is free minimal over $\tr{2}B$, therefore $\lda$ is
+of the desired kind. We have $A_{1}=\gen{B_{1},e}_{1}$ and $N^{3}(A)=N^{3}(B)$, hence
+$\sig{3}{3}$ holds in $L$ for $[\beta,e]\notin B_{3}$ for all $\beta$ and $e\in A_{1}\non
+B_{1}$.
+
+\item[-]\emph{Prealgebraic extension.} We are in the case $\delta_{3}(A\quot B)=0$ but 
+%$\tr{2}A_{1}$ is not realised in $\tr{2}M$
+$\delta_{3}(e\quot B_{1})>0$ for each $e\in A_{1}\non B_{1}$; in particular $\sig{3}{3}$ cannot
+fail in $L$ and $\delta_{2}(e\quot B_{1})>0$ for all $e\in A_{1}\non B_{1}$.
+
+This assures that $\lda\sat\sig{2}{3}$ therefore $\lda\in\bar{\Kl}^{2}$.
+As we've seen axiom $\sig{3}{3}$ does not fail in this case in $L$.
+\end{itemize}
+This concludes the proof as there's no other case to consider.
+
+\end{proof}

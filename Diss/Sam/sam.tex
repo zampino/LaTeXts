@@ -1,0 +1,40 @@
+\documentclass[english,german,11pt]{article}
+\usepackage{babel}
+\usepackage[latin1]{inputenc}
+\usepackage{amsmath,amsfonts,amssymb,amsthm}
+\usepackage{ModNet}
+\usepackage{FHL}
+%\usepackage{syntonly}
+%\usepackage[all]{xy}
+\title{Ein Beispiel}
+\author{}
+\date{}
+%\abstract{Bubbo}
+%\pagestyle{empty}
+%\pagenumbering{1}
+\begin{document}
+\maketitle
+Man betrachtet die folgende Algebren $A,B$ und $M$ aus $\nla{3}$.
+$$B=\gen{x_{2},x_{3},x_{4},x_{5}:[x_{2},x_{3}]-[x_{4},x_{5}]}$$
+$$A=\gen{x_{1},x_{2},\dots,x_{5}:[x_{1},x_{2}]-[x_{3},x_{4}],\,[x_{2},x_{3}]-[x_{4},x_{5}]}$$
+$$M=\gen{x_{2},x_{3},\dots,x_{6}:[x_{2},x_{3}]-[x_{4},x_{5}],\,[x_{2},x_{3},x_{4}]-[x_{3},x_{4},x_{6}]}.$$
+
+Wobei die Kommutatoren \emph{einfach} sind (d.h. $[\,\:,\:,\:]=[[\,\:,\:],\:]$) und
+$[x_{2},x_{3},x_{4}]-[x_{3},x_{4},x_{6}]$ eine erlaubte Relation, die in $N^{3}(M)$ liegt, ist.
+
+\smallskip
+Man sieht leicht, da{\ss} $A\dso B\dsu M$. Dabei ist $A\quot B$ eine \emph{flache} Erweiterung
+($\delta_{2}(A\quot B)=\delta_{3}(A\quot B)=0$) und
+$M\quot B$ eine \emph{algebraische}.
+
+\smallskip
+Falls $L^{\prime}$ das freie Amalgam der auf Stufe $2$ abgeschnittenen Strukturen $A^{\prime},B^{\prime}$ und $M^{\prime}$ bezeichnet, gilt dann also $\fr{3}L^{\prime}=\fla{3}{x_{1},\dots,x_{6}}\quot\jei{L}$ wobei
+$$\jei{L}=\genid{[x_{2},x_{3}]-[x_{4},x_{5}],\,[x_{1},x_{2}]-[x_{3},x_{4}]}{F^{3}}.$$
+
+Nun geh\"ort $\alpha=[x_{2},x_{3},x_{4}]-[x_{3},x_{4},x_{6}]$ zu $N^{3}(M)$. Ferner hat man, modulo $\jei{L}$
+$$\alpha=[x_{4},x_{5},x_{4}]-[x_{3},x_{4},x_{6}]=[x_{4},x_{5},x_{4}]-[x_{1},x_{2},x_{6}].$$
+Deshalb liegt $\alpha$ in $N^{3}(x_{1},x_{2},x_{4},x_{5},x_{6})$ aber nicht in $N^{3}(x_{2},x_{4},x_{5},x_{6})$.
+
+Schliesslich, da $N^{3}(A)=\triv$ ist, gilt zwar $N^{3}(L)\quot N^{3}(M)=\triv$, aber $N^{3}(x_{1},x_{2},x_{4},x_{5},x_{6})\quot N^{3}(x_{2},x_{4},x_{5},x_{6})\neq\triv$.
+\pagestyle{empty}
+\end{document}

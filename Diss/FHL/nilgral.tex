@@ -1,0 +1,745 @@
+We collect in this section some facts and notations from group theory and Lie algebras. We give a picture
+of the {\em Magnus-Lazard} correspondence between groups and Lie rings.
+
+\medskip
+We refer to the (group) word $\gamma_{k}(x_{1},\dots,x_{k})$ as the {\em left-normed} or {\em simple} group commutator of length $k$
+\begin{labeq}{simplecomm}
+[x_{1},\dots,x_{k}]=[[[\dots[[x_{1},x_{2}],x_{3}],\dots],x_{k-1}],x_{k}]
+\end{labeq}
+where $\gamma_{1}(x)=x$ and $\gamma_{2}(x_{1},x_{2})$ is $[x_{1},x_{2}]=x_{1}^{-1}x_{1}^{x_{2}}=x_{1}^{-1}x_{2}^{-1}x_{1}x_{2}$.
+We will not formally distinguish between group commutators and Lie brackets in the sequel.
+
+For any group $G$, with $\gamma_{k}(G)$ we denote the verbal subgroup of $G$ determined by $\gamma_{k}$,
+that is $\gen{[g_{1},\dots,g_{k}]\mid g_{i}\in G}$. The subgroups $(\gamma_{k}(G))_{k<\omega}$ forms the so called
+{\em lower central series} of $G$, the most rapidly descending central series of $G$
+
+Recall that in general a (descending) central series in the group $G$, is a chain $(H^{i})_{1\leq i<\omega}$
+of subgroups of $G$ such that $H^{i}\nni H^{i+1}$, $H^{1}=G$ and $[H^{i},G]\inn H^{i+1}$.
+
+We dually define the {\em upper central series} $(\zeta_{k}(G))_{k<\omega}$, where each
+subgroup $\zeta_{k}(G)$ can be defined as the set $\{g\mid [g,h_{1},\dots,h_{k}]=1,\forall h_{i}\in G\}$ for all $k<\omega$.
+For these, and related notions we refer to $\cite{khk,rob}$.
+
+%Moreover
+%if $S$ is a system of generators for $G$, then the $k^{th}$-term of the lower central series is
+%the normal closure of all $\gamma_{k}$
+%\begin{labeq}{commugen}
+%\gamma_{k}(G)=\gen{\gamma_{k}(s_{1},\dots,s_{k})\mid s_{i}\in S}^{G}
+%\end{labeq}
+
+We denote by $\ngb{c}{}$ the variety defined by the word $\gamma_{c+1}$: the class of groups $G$
+with $\gamma_{c+1}(G)=1$. These are by definition all groups of {\em nilpotency class} (at most) $c$.
+We have $\ngb{c}{}\inn\ngb{c+1}{}$ for all $c<\omega$, and we may call for short {\em nil-$c$} groups, the objects of $\ngb{c}{}$.
+
+If $p$ is a prime, by $\ngb{c}{p}$ we denote the variety defined by the words $\gamma_{c+1}(\bar x)$ and $x^{p}$, this is the
+class of all nilpotent groups of class $c$ and of bounded exponent $p$. 
+
+\smallskip
+The lower central series, is in particular a {\em Lazard series}, that is a decreasing chain $(H^{n})_{n<\omega}$ of
+subgroups in $G$, with
+$H^{1}=G$ and $[H^{i},H^{j}]\sg H^{i+j}$ for all $i,j<\omega$. The properties we are going to state for
+the lower central series, also hold for Lazard series in general. Any Lazard series is a central series.
+
+%For simplicity $G^{n}$ will denote $\gamma_{n}(G)$ for any group $G$ in what follows. %,$(G^{n})$ is a Lazard series.
+%If we define $\wg(g)\in\N\cup\{\infty\}$ to be the
+%supremum of the set $\{n<\omega\mid g\in G^{n}\}$\footnote{we may assume that the series $(G^{n}$) is {\sl séparante (fr.)}
+%that is $\cap_{n<\infty} G^{n}=1$. In the definition of $L^{G}$ below,
+%we have $L^{G}=L^{\overline{G}}$ if $\overline{G}$ is $G/{\cap_{n<\omega}G^{n}}$}. for all group elements $g$ of $G$, then we obtain an {\em integral filtration} on $G$ in the sense of \cite{ser}. We set by definition $G^{\infty}$ to be
+%$\bigcap_{n<\infty}G^{n}$.
+%
+\medskip
+For any group $G$ and all $k<\omega$, set for short $G^{k}$ to be $\gamma_{k}(G)$ in the sequel.
+The series $G=G^{1}\og G^{2}\og\dots\og G^{k}\og\dots$ gives rise to a Lie ring associated to the group. This
+will be discussed below, following \cite[\S3.2]{khk} or the first chapter of \cite{laz}.
+\begin{rem}
+Let $x,y,z$ be elements of the group $G$. % and take a maximal $n<\omega$ %=\wg(x)+\wg(y)+\wg(z)+1$,
+%to be highest ordinal in $\omega\cup\{\omega\}$,
+%such that any element among $x,y$ or $z$ belongs to $G^{\alpha}$. Here
+%and below, by $G^{\omega}$ and $G^{\omega+1}$ is meant $\bigcap\{G^{k}\mid k<\omega\}$.
+%ThenThere exists an $n<\omega$, such that
+The following well known identities hold:
+\begin{align}
+[x,y]=[y,x]&^{-1}\label{commin}\\
+[xy,z]=[x,z][x,z,y][y,z]&\label{commbil}\\
+[x,y,z^{x}][y,z,x^{y}][z,x,y^{z}]&=1\tag{Witt's identity}
+\end{align}
+\end{rem}
+
+Now for all $i<\omega$ consider the sections
+\begin{equation}
+%{L^{G}}_{\!i}=
+\gr_{i}G:=G^{i}/G^{i+1}\quad\text{and define}\quad\gr(G)
+:=\bigoplus_{0\leq i<\omega}\!%{L^{G}}_{\!i}
+\gr_{i}G\tag{$\gr$}
+\end{equation}
+where $\gr_{0}G\defeq\triv$.
+
+The above remarks and \pref{commbil} provide $\gr(G)$ with a natural ring structure $(\gr(G),+,[\,\,,\,],\triv)$ where
+the sum is the componentwise quotient group operation (written additively) and the product is induced by the group commutator:
+$$[\boldsymbol{u},\boldsymbol{v}]=\sum_{k}\left(\sum_{i+j=k}\overline{[u_{i},v_{j}]}\right)\quad\text{for $\boldsymbol{u}=(\bar u_{i})$ and
+$\boldsymbol{v}=(\bar v_{i})$}.$$
+
+Now Witt's identity and \pref{commin} above turn $\gr(G)$ into a non-associative,
+anti-commutative ($[a,b]=-[b,a]$ for all $a,b$) ring in which the {\em Jacobi identity}
+\begin{labeq}{jacob}
+J(a,b,c)\defeq[[a,b],c]+[[b,c],a]+[[c,a],b]=0
+\end{labeq}
+holds for all $a,b,c$ in $L$. That is $\gr(G)$ is a {\em Lie ring} (a Lie $\Z$-algebra) according to the
+next definition. Notice that $\gr(G)\simeq\gr(G/\cap_{n<\omega}G^{n})$.
+
+\begin{dfn*}
+If $\cur$ is a commutative unitary ring, a {\em Lie algebra $L$ over $\cur$} or
+a Lie $\cur$-algebra is a $\cur$-module
+endowed with a $~k$-bilinear map $[\,\,,\,]$ which factorises through $\exs L$, that is $[a,a]=0$
+for all $a$ in $L$, and such that the Jacobi identity $J(a,b,c)=\triv$ is satisfied for all $a,b,c$ in $L$.
+\end{dfn*}
+
+For a subset $S$ of a Lie $\cur$-algebra $L$ we denote by $\gen{S}$ or $\gena{S}{L}$ the subalgebra
+generated by $S$ in $L$ while $\gen{S}_{\cur}$ denotes the $\cur$-submodule of $L$ generated by $S$.
+The product $[S,T]$ of subsets $S$ and $T$ of $L$ is $\genp{[s,t]\mid s\in S,t\in T}$,
+while the ideal generated in $L$ by $S$ is denoted by $\genid{S}{}$. This is -- by means of anti-commutativity and repeated applications
+of the Jacobi identity -- also $\gen{S,[S,L],[S,L,L],\dots}_{\cur}$.
+
+Exactly like for groups, we define the terms of the lower central series $\gamma_{n}(L)$ of $L$ recursively as $[\gamma_{n-1}(L),L]$ for
+all $n<\omega$ where $\gamma_{1}(L)=L$. These builds a decreasing chain of ideals of $L$ and
+$\gamma_{n}(L)=\gen{\gamma_{n}(s_{1},\dots,s_{n})\mid s_{i}\in L}_{\cur}$. The definition
+for the upper central terms $\zeta_{n}(L)$ is exactly the same defined above.
+
+\smallskip
+We say that $L$ is {\em nilpotent of class} (at most) $c$, if $\gamma_{c+1}(L)=\triv$.
+
+\smallskip
+If a Lie $\cur$-algebra $L$ is generated by a set $S$, then an inductive argument on Jacobi identities shows, that $L$ is generated
+as a $\cur$-module, by all the {\em simple monomials} with entries in $S$, that is by left-normed products $[s_{1},\dots,s_{k}]$
+like \pref{simplecomm} of {\em weight} $k$, for all $k<\omega$. In particular $\gamma_{n}(L)$ is the ideal generated by all simple monomials of length $n$ in elements of $S$ or the $\cur$-module generated by monomials of weight $\geq n$.
+%%\footnote{for the $S$-weight to be well defined one should also
+%%require for all $s\in S$, $s\notin\gen{S\non\{s\}}$.}
+%%
+%%We recursively define {\em monomials of $S$-weight $n$} as follows. Put $\wg_{S}(\triv)=0$ and
+%%$\wg_{S}(s)=1$ for all $s\in S$. Assume all monomials $m$ of $S$-weight less than $n$ are defined and identified
+%%by writing $\wg_{S}(m)=k$ for some $k<n$. Then an element $m$ of $L$ is of $S$-weight $n$ -- short $\wg_{S}(m)=n$ -- if
+%%$w=[a,b]$ for $a,b$ monomials of $S$-weight less than $n$ such that $\wg_{S}(a)+\wg_{S}(b)=n$.
+%%
+%%We denote by $L_{S,i}$, the submodule
+%$\gen{a\in L\mid\wg_{S}(a)=i}_{\cur}$ and call it the {\em homogeneous submodule of $S$-weight $i$}.
+%%\end{dfn}
+%Remark that in general $L_{S,i}\cap\sum_{j\neq i}L_{S,j}$ may not be trivial and $\wg_{S}$ may not be a function,
+%this is however the case for free Lie algebras and for the object of the class $\nla{c}$  below.
+%We call an ideal $R$ of $L$ {\em homogeneous} (in $S$) if $R=\sum_{i}(R\cap L_{S,i})$.
+%\begin{rem}
+%For a generating system $S$ of $L$ we have $L=\sum_{i<\omega}L_{S,i}$ and $\gamma_{n}(L)=\sum_{i\geq n}L_{S,i}$.
+%\end{rem}
+
+
+\begin{rem}\label{gradigroup}
+For any group $G$, $\gr(G)$ is generated as a ring, by the {\em abelianised} group $G_\textit{ab}$: the quotient
+of $G$ modulo $G^{\prime}=\gamma_{2}(G)$. This follows by the natural
+surjective map of $\otimes_{\Z}^{n}G_{ab}$ onto $\gr_{n}G$ (see \cite[\S2]{khk}) induced by the group commutator.
+
+In particular $\gr(G)$ is a {\em graded algebra}: it is the direct sum of its homogeneous submodules $\gr_{i}G$
+{\em of weight $i$ in $G_{ab}$} and $[\gr_{i}G,\gr_{k}G]\inn\gr_{i+k}G$ for all $i,k$.
+
+If $G$ is a member of $\ngb{c}{p}$, the Lie ring $\gr(G)$ carries a natural
+Lie $\Fp$-algebra structure which is nilpotent of class $c$.
+\end{rem}
+
+
+
+
+\subsubsection*{Free Algebras and basic commutators}
+For the following definitions we follow \cite{ser} and \cite{bah}.
+
+\smallskip
+For any set $X$, the {\em free magma} $(\mathcal{M}(X),\cdot\,)$ is -- roughly speaking --
+the image of $X$ under the free functor $\mathcal{M}$ from {\em sets} to the category
+%the free object in the {\em category}
+of all structures which interpret
+%a signature consisting of constants $X$ and
+a binary operation.
+
+%inductively defined as the disjoint union over $n<\omega$, of all the
+%$$\mathcal{M}_{n}(X):=\amalg_{p+q=n}\mathcal{M}_{p}(X)\times\mathcal{M}_{q}(X)$$
+%where $\mathcal{M}_{1}(X)=X$. In this way we obtain the natural binary operation
+%\begin{align*}
+%\mathcal{M}(X)\times\mathcal{M}(X)&\longmapsto\mathcal{M}(X)\\
+%u,v&\longmapsto(u,v)=:u\cdot v
+%\end{align*}
+
+The elements of $\mathcal{M}(X)$ which are referred to as {\em non-associative words over $X$}
+are the disjoint union of $\omega$ subsets $\mathcal{M}_{n}(X)$, each one collecting the {\em words of weight} or {\em length} $n$, for $n\geq1$ (cfr.\,\cite[\S2]{bbk}). We have $\mathcal{M}_{1}(X)=X$ and the product $\cdot$ maps $\mathcal{M}_{i}(X)\times\mathcal{M}_{k}(X)$
+into $\mathcal{M}_{i+k}(X)$.
+
+\smallskip
+Define the {\em free $\cur$-algebra on $X$} as the free $\cur$-module $\mathcal{F}=\mathcal{F}(X,\cur)$ with
+basis $\mathcal{M}(X)$ and with a $\cur$-bilinear multiplication $\cdot$ extended from the product on $\mathcal{M}(X)$,
+which in particular makes $(\mathcal{F},\cdot,\triv)$ a non-associative ring without unit, such that
+$(ta)\cdot b=t(a\cdot b)=a\cdot tb$, for all $t\in\cur$ and all $a,b$ from $\mathcal{F}$.
+
+$\mathcal{M}(X)$ induces a natural grading on $\mathcal{F}$ given by $\mathcal{F}=\bigoplus_{n<\omega}\mathcal{F}_{n}$ for
+$\mathcal{F}_{n}:=\gen{\mathcal{M}_{n}(X)}_{\cur}$.
+Each element $a$ of $\mathcal{F}$ is henceforth expressible in a unique manner as a finite sum $\sum a_{n}$, where
+$a_{n}\in\mathcal{F}_{n}$ are called the {\em homogeneous components} of $a$.
+
+\smallskip
+Let now $\mathcal{A}$ and $\mathcal{B}$ be the ideals of $\mathcal{F}$ respectively generated by the
+sets $\{(u\cdot v)\cdot w-u\cdot(v\cdot w)\mid u,v,w\in\mathcal{F}\}$ and $\{u\cdot u, J(u,v,w)\mid u,v,w\in\mathcal{F}\}$
+where $J$ is the homogeneous term associated to the Jacobi identity \pref{jacob}.
+We define
+$$A^{+}(X,\cur)=\mathcal{F}(X,\cur)/\mathcal{A}\quad\text{and}\quad L(X,\cur)=\mathcal{F}(X,\cur)/\mathcal{B}$$
+as respectively the {\em free associative} and the {\em free Lie} algebra {\em on $X$ over $\cur$}.
+
+In \cite[2.1]{bah} is proved, that both $\mathcal{A}$ and $\mathcal{B}$ are {\em homogeneous ideals},
+that means $\mathcal{A}=\sum_{i}\mathcal{A}\cap\mathcal{F}_{i}$ and $\mathcal{B}=\sum_{i}\mathcal{B}\cap\mathcal{F}_{i}$.
+
+It follows $A^{+}(X,\cur)$ and $L(X,\cur)$ inherit from $\mathcal{F}$ the grading:
+\begin{labeq}{gradal}
+A^{+}(X,\cur)=\bigoplus_{i\geq1}\mathcal{F}_{i}/\mathcal{A}\cap\mathcal{F}_{i}\quad\text{and}\quad
+L(X,\cur)=\bigoplus_{i\geq1}\mathcal{F}_{i}/\mathcal{A}\cap\mathcal{F}_{i}.
+\end{labeq}
+
+We denote  by $A_{i}=A_{i}(X,\cur)$ and $L_{i}=L_{i}(X,\cur)$ %, for $1\leq i<\omega$
+the $\cur$-submodules in the grading above, and call them {\em homogeneous submodules} of weight $i$.
+
+$A_{i}$ and $L_{i}$ are generated by monomials of weight $i$:
+the images in $A^{+}$ and $L$ of words in $\mathcal{M}_{i}(X)$.
+It is customary to speak of {\em degree} $i$ for the elements of $A_{i}(X,\cur)$ instead of weight.
+\begin{rem}\label{asslie}
+Any Lie $\cur$-algebra $M$ is the image of a free Lie algebra $L(X,\cur)$ for some $X$.
+Moreover any associative
+algebra $A$ is endowed with a product $[a,b]=ab-ba$ which turns $(A,+,[\,\,,\,])$ into a Lie algebra.
+As a consequence, there exists a natural Lie $\cur$-algebra homomorphism $\epsilon$ of $L(X,\cur)$ onto the Lie subalgebra
+of $A(X,\cur)$ generated by $X$ such that $\epsilon\colon x\mto x$ for all $x\in X$.
+\end{rem}
+
+\medskip
+Whether for the $\cur$-module $A(X,\cur)$ a $\cur$-basis is provided by all ordered products over $X$, for $L(X,\cur)$ we recur
+to the so called basic monomials, also called {\em Hall's Families}. In the groups context the very same definition applies to {\em basic
+commutators}.
+\begin{dfn}[Basic Monomials]\label{basicommutators}
+We inductively construct a linearly ordered set of Lie monomials $\mathscr{B}=\bigcup_{n\geq1}\mathscr{B}_{n}$,
+where each $\mathscr{B}_{n}\inn L_{n}(X,\cur)$ will be called the set of {\em basic} monomials of weight $n$.
+
+Let $\mathscr{B}_{1}$ coincide with some linear order on $X$.
+
+Assume a set of {\em basic monomials} $\mathscr{B}_{<n}=\bigcup_{i<n}\mathscr{B}_{k}$ {\em of weight less than $n$} has been defined and totally
+ordered, by choosing a linear ordering for each $\mathscr{B}_{k}$ and following the rule: $a>b$ holds whenever
+the weight of $a$ is greater than the weight of $b$. %, for all $a,b\in\mathscr{B}_{<n}$.
+
+Now consider any pair of monomials $u,v$ in $\mathscr{B}_{<n}$, the sum of whose weights is $n$.
+% equals the sum of their %$\wgt(u)+\wgt(v)=n$
+Then the product $[u,v]$ is a {\em basic monomials of weight} $n$ and lays in $\mathscr{B}_{n}$ if both of the
+following conditions are satisfied:
+\begin{itemize}
+\item[-]$u>v$,
+\item[-]if $u=[z,w]$ for $z,w\in\mathscr{B}_{<n}$, then $w\leq v$.
+\end{itemize}
+\end{dfn}
+
+The following result is referred to as {\em Hall's Basis Theorem}.\footnote{Although ambiguous, the name doesn't harm
+the fatherhood of both Philip and Marshall.
+
+To the former, one attributes the so called {\em collecting process} (see \cite{mhall}), from which Definition \ref{basicommutators} arise.
+It is an algorithm to stepwise transform a group word into an ordered expression of basic commutators.
+In \cite{mhalll}, Marshall Hall describes a collecting process in the context of Lie rings but claims the same results to hold
+for Lie algebras over any field.
+
+The proof in \cite{bah} -- attributed to A.{}I.\,Shirshov -- holds for arbitrary commutative rings.}
+\begin{teo}[{\cite{mhalll},\cite[Theorem 2.2.1]{bah}}]\label{hallstheor} 
+Let $\mathscr{B}$ a set of basis commutators on $X$ in $L=L(X,\cur)$. Then $L$ is a free $\cur$-module with
+basis $\mathscr{B}$.
+
+In particular each homogeneous submodule $L_{n}(X,\cur)$ is free, with basis $\mathscr{B}_{n}$ for all $n\geq1$. 
+\end{teo}
+For a clear account of the group theoretical analogous around Hall's Theorem and the {\em collecting process}
+we refer to \cite{khk}.
+
+As a corollary to the above theorem in \cite{bah} we find
+\begin{fact}\label{ellea}
+The canonical Lie morphism $\epsilon$ of Remark \ref{asslie}
+mapping $L(X,\cur)$ into $A(X,\cur)$ is a Lie algebra embedding.
+\end{fact}
+The above $\epsilon$, coincide with the canonical map of a Lie algebra $L$ in its
+{\em universal envelope} $U(L)$ (see also \cite{ser}), this is always an embedding provided
+$L$ is a free $\cur$-module.
+
+The following fact will also be needed.
+\begin{fact}[{\cite[Lemma 2.3.3]{bah}}]\label{basisgen}
+Let $L$ be the free Lie algebra $L(X,\cur)$ over the set $X$. If $\mathcal{B}$ is a basis
+for the free $\cur$-submodule $\gen{X}_{\cur}=L_{1}(X,\cur)=\mathcal{F}_{1}(X,\cur)$ of $L$, then $L(\mathcal{B},\cur)=L$.
+\end{fact}
+
+\bigskip
+We introduce below the class of nilpotent Lie algebras, which are to be associated a notion of Hrushowski predimension
+in Chapters \ref{due}  and \ref{tre}. 
+We show that these structures isolate exactly those algebras which arise from $\ngb{c}{p}$-groups as images under the
+functor $\gr$.
+
+\begin{dfn}\label{lcp}
+For a prime number $p$ and a positive integer $c$, we define by $\nla{c}$ the class of all $c$-nilpotent (graded)
+Lie algebras $M$ over the $p$-element field $\Fp$, which satisfy the following properties:
+\begin{enumerate}
+\item there are $\Fp$-subspaces $M_{i}$ for $1\leq i\leq c$  with $M=M_{1}\oplus\dots\oplus M_{c}$,
+\item$[M_{i},M_{j}]\inn M_{i+j}$ for all $i,j$ ($M_{k}$ is defined to be $\triv$ for $k>c$),
+\item\label{genero}$M=\gen{M_{1}}$
+\end{enumerate}
+\end{dfn}
+\begin{rem}
+The whole {\em grading} $(M_{i})_{i<\omega}$ depends indeed only on the {\em choice} for the space $M_{1}$: by property $3.$
+above each subspace $M_{i}$ is the $\Fp$-subspace of $M$ generated by simple monomials of weight $i$ in the elements from
+(a $\Fp$-basis of) $M_{1}$.
+\end{rem}
+
+\smallskip
+Lie subalgebras of an $\nla{c}$-algebra $M$ are not always again $\nla{c}$-objects,
+we hence {\em define} an $\nla{c}$-subalgebra $H$ of $M$, if $H=\gena{H_{1}}{M}$ for some $\Fp$-subspace
+$H_{1}$ of $M_{1}$.
+By an $\nla{c}$-morphisms we mean a graded homomorphism of Lie algebras. That is, if $\map{\phi}{M}{N}$ for $M,N\in\nla{c}$, then
+$\phi(M_{i})\inn N_{i}$ for all $i$.
+
+\begin{rem*}
+As observed above, we get a correspondence
+\begin{labeq}{grafu}
+\map{\gr}{\ngb{c}{p}}{\nla{c}}
+\end{labeq}
+where, if $G\in\ngb{c}{p}$ and $M$ denotes $\gr(G)$, $G_{\it ab}$ corresponds to $M_{1}$ of Definition \ref{lcp}.
+Since the terms of the lower central series are fully invariant, the map above is a functor provided we allow
+Lie morphisms in general. Group homomorphisms may have non-graded images under $\gr$.
+
+In the next section, it will be shown however that $\gr$ is onto of the respective objects.
+\end{rem*}
+
+\smallskip
+For a first-order treatment of $\nla{c}$ we choose the signature $\Lan{c}$ consisting of
+ring symbols $\triv$, $+$ and $[\,\,,\,]$, of the scalar functions from $\Fp$ %\mn{\bf Redundant nach Ziegler (?)}
+and of predicates $P_{i}$ which are interpreted by the grading ($P_{i}(M)=M_{i}$).
+Notice that $\nla{c}$ is not an elementary $\Lan{c}$-class. Property \ref{genero}.\,(as opposed to 1.\,and 2.) of Definition \ref{lcp}
+cannot be expressed at the first order in $\Lan{c}$ unless a bound to the length of sums in $M$ is given.
+
+\medskip
+By the previous discussion, for any set $X$, the {\em free $c$-nilpotent Lie $\Fp$-algebra over $X$}, which we define as
+$$\fla{c}{X}:=L(X,\Fp)/\gamma_{c+1}(L(X,\Fp))$$ is an object of $\nla{c}$.
+This is for $L(X,\Fp)$ is a graded Lie algebra and $\gamma_{c+1}(L(X,\Fp))$ is an homogeneous ideal which is equal to $\sum_{i>c}L_{i}(X,\Fp)$.
+
+Similarly, for any object $M$ of $\nla{c}$, $\gamma_{i}(M)=\sum_{j\geq i}M_{j}$.
+
+\medskip
+As a corollary to Hall's Theorem above we get (cfr.\,\cite[Corollary 2.7.3]{khk})
+\begin{fact}\label{ubc}
+For any given set $\mathscr{B}$ of basic monomials over $X$, % in $L(X,\Fp)$,
+denote by $\mathscr{B}_{\!{\sss\leq} c}$
+the set of elements in $\mathscr{B}$ of weight not greater than $c$. Then $\mathscr{B}_{\!{\sss \leq} c}$ is
+a $\Fp$-basis of $\fla{c}{X}$ and in particular
+every element $w$ of $\fla{c}{X}$ admits a unique linear combination
+\begin{gather*}\label{BC}\tag{\sf BC}
+\left.\begin{split}
+w=\sum_{b \in\mathscr{B}_{\leq c}} s_{b}{b}\quad\text{with ${b}$ in $\mathscr{B}_{\leq c}$ and non-trivial $s_{b}\in\Fp$}
+\end{split}\right.
+\end{gather*}
+\end{fact}
+\begin{dfn}\label{supp}
+If $\mathscr{B}_{\leq c}$ and $\fla{c}{X}$ are as above, we define the {\em support} of an element $w\in\fla{c}{X}$,
+as the minimal subset $\supp(w)$ of $X$, for which each basic monomial $b$ in the sum \pref{BC} above, carries entries from
+$\supp(w)$ according to Definition \ref{basicommutators}. We may specify the set over which $\mathscr{B}$ is constructed,
+by writing $\supp_{X}(w)$. 
+
+If a basic monomial $b\in\mathscr{B}$, has support in a subset $Y$ of $X$, we refer to
+$b$ also as a monomial {\em over $Y$}, or shortly, as a basic $Y$-monomial.
+\end{dfn}
+
+\begin{rem}
+With Fact \ref{basisgen} and Remark \ref{asslie}, $L^{c}(\,\cdot\,)$ may be seen as a free functor of
+$\Fp$-vector spaces into $\nla{c}$-algebras, adjoint to the predicate $P_{1}$ of $\Lan{c}$:
+for any $\Fp$-vector space $V$ and $\nla{c}$-algebras $M$, we have -- with the obvious maps -- a bijection
+\begin{labeq}{freeadjoint}
+\Hom_{\Fp}(V,P_{1}(M))\to\Hom_{\nla{c}}(\fla{c}{V},M).
+\end{labeq}
+\end{rem}
+
+\smallskip
+In particular any object $M$ of $\nla{c}$ is the quotient of $\fla{c}{M_{1}}$ modulo an homogeneous ideal. In the above notations
+$R=\sum_{i\leq c}L_{i}(M_{1},\Fp)\cap R$ with $M_{1}\cap R=\triv$. We will write $R=R_{2}+\dots+R_{c}$.
+
+Since the subspace $M_{1}$ is intrinsic to the structure $M$, the choice of the relators ideal $R$ may be regarded
+as canonically associated to $M$.
+
+By a {\em $\nla{c}$-presentation} of $M$ we denote both the expression
+$M=\gen{M_{1}\mid R}$ and the associated exact sequence
+\begin{labeq}{pres}
+R\lto\fla{c}{M_{1}}\stackrel{\epsilon_{M}}{\lto}M
+\end{labeq}
+
+On the other hand, to any homogeneous ideal $R$ of $L=\fla{c}{X}$, the quotient $L/R$ is an object of $\nla{c}$.
+
+We say that $M$ is finitely generated if $M_{1}$ has finite $\Fp$-dimension, hence exactly if $M_{1}$ (and $M$) is finite.
+Note that in the category $\nla{c}$ the notion of {\em finitely presented} (that is $M_{1}$ and $R$ are
+finite dimensional) coincide with being finitely generated. The same holds in general for nilpotent groups.
+
+\medskip
+As a result of Definition \ref{lcp}, morphisms among objects of $\nla{c}$ aren't richer than those among their generating $\Fp$-vector spaces.
+%Let $M$ and $N$ be presented from $\fla{c}{M_{1}}$ and $\fla{c}{N_{1}}$
+%by means of epimorphisms $\epsilon_{M}$ and $\epsilon_{N}$ respectively as in \pref{pres}.
+%
+%Assume an $\nla{c}$-morphism $\phi$ of $M$ into $N$ is given.
+%
+%If $\phi_{1}$ denotes the restriction of $\phi$ to the subspace $M_{1}$ with image in $N_{1}$, then
+%we may assume that $\map{\phi_{1}}{M_{1}}{\fla{c}{N_{1}}}$. Now apply \pref{freeadjoint} to $\phi_{1}$
+%to get a morphism $\map{\widehat\phi}{\fla{c}{M_{1}}}{\fla{c}{N_{1}}}$. It is clear that the following holds.
+
+\begin{lem}\label{commufreeno}
+For any $M$ and $N$ in $\nla{c}$,
+%once two presentations $\gen{M_{1}\mid R_{M}}$ and $\gen{N_{1}\mid R_{N}}$ as above are chosen,
+to any $\nla{c}$-morphism $\phi$ of $M$ to $N$, there is a unique $\widehat\phi\in\Hom_{\nla{c}}(\fla{c}{M_{1}},\fla{c}{N_{1}})$
+%As $\phi$ and $\phi_{1}\epsilon_{N}$ coincide on $M_{1}$ and $\phi_{1}=\iota_{M}\widehat\phi$,
+which makes the square below commute
+\begin{labeq}{commufresco}
+\begin{split}
+\xymatrix{
+\fla{c}{M_1}\ar[r]^{\widehat\phi}\ar[d]^{\epsilon_{M}}&\fla{c}{N_{1}}\ar[d]^{\epsilon_{N}}\\
+M\ar[r]^{\phi}&N
+}
+\end{split}
+\end{labeq}
+\end{lem}
+
+\subsection*{Relations between the $\ngb{c}{p}$-free  group and the free $\nla{c}$-algebra}
+%We will describe two ways by which is possible to recover a group from a given Lie algebra,
+%the first method, which is more group theoretical furnishes a functor $\mathscr{G}$ of $\nla{c}$
+%to $\ngb{c}{p}$ %``{inverse}'' to $\gr$
+%such that for all groups $G$ in $\ngb{c}{}$ gives $\mathscr{G}(\gr(G))=G$ and $\gr(\mathscr{G}(L))=L$ for all
+%nilpotent Lie rings $L$. 
+%
+%The second process uses more {\em topological} Campbell Hausdorff formula to
+%equip a Lie ring with a a group structure, which in the nilpotent case allows a model theoretical interpretation
+%of groups in Lie rings.
+
+Before we prove that \pref{grafu} is onto, we first establish a correspondence between the free objects in the
+classes $\nla{c}$ and $\ngb{c}{p}$.
+
+\smallskip
+Let $A^{+}(X)$ be the free associative algebra $A^{+}(X,\Fp)$ over $\Fp$ defined above. We add a
+multiplicative unit -- and hence {\em elements of zero degree} -- by defining
+$A(X)$ to be $\Fp\oplus A^{+}(X)$ and extending addition and multiplication in the natural way.
+$A(X)$ inherits the grading \pref{gradal} and we set $A_{0}(X)=\Fp$.
+
+Let $A^{c}(X)$ be the quotient algebra of $A(X)$ modulo the ideal $\sum_{i>c}A_{i}(X)$,
+that is the {\em free} unitary associative nilpotent algebra of class $c$. In particular
+$$A^{c}(X)\simeq A_{0}(X)\oplus A_{1}(X)\oplus\cdots\oplus A_{c}(X).$$
+
+Let now $F_{p}(X)$ denote the free group of exponent $p$ on the set $X$, then
+$F_{p}^{c}(X):=F_{p}(X)/\gamma_{c+1}
+(F_{p}(X))$ is the free group in $\ngb{c}{p}$.
+
+\smallskip
+Now assume $c<p$, since $(1+x)^{p}=1+x^{p}=1$ in $A^{c}(X)$, one can extend the map $X\ni x\mapsto1+x$ to a group homomorphism
+$\phi$ of $F_{p}(X)$ onto the subgroup $\gen{1+x\mid x\in X}$
+of the units of $A^{c}(X)$ (the multiplicative inverse of $1+a$ being $1-a+a^{2}-a^{3}+\cdots+(-1)^{c-1}a^{c-1}$).
+
+\smallskip
+If we put together \cite{witt},\cite{mag37},\cite{mag},\cite[Lemma 11.2.2]{mhall} and \cite[Theorem 6.3]{ser}, we find that
+the nucleus of $\phi$ coincides with $\gamma_{c+1}(F_{p}(X))$ and the following facts hold.
+\begin{fact}%[{\cite{witt},\cite{mag},\cite[Lemma 11.2.2]{mhall}}]
+%\label{lambda}
+If we assume $c<p$ we have an injective group homomorphism $\phi$ of $F_{p}^{c}(X)$ into the units of $A^{c}(X)$
+extending $x\mto1+x$ for $x\in X$.
+
+For all words $w$ of $F_{p}^{c}(X)$ we set
+$$\phi\colon w\longmapsto 1+\lambda(w)+W$$
+where $\lambda(w)$ is the %$n^{\text{th}}$
+homogeneous component $\phi(w)_{n}\in A_{n}(X)$ of $\phi(w)$ of minimal positive degree $n\leq c$ such that
+%to be preceded by zero components only. That is if $$\phi(w)=1+\phi(w)_{1}+\cdots+\phi(w)_{c}
+%\quad\text{with $\phi(w)_{i}$ in $A_{i}(X)$}$$ then
+$\phi(w)_{1}=\dots=\phi(w)_{n-1}=\triv$ and $W$ is a sum of components of higher degree.
+We also say that $n$ is the {\em weight} of $w$ and write $\wg(w)=n$. $\lambda(w)$ is called the {\em leading term} of $\phi(w)$ and
+has the properties:
+\begin{itemize}
+\item[-]$\lambda(gh)$ is $\lambda(g)$ or $\lambda(h)$ according to which among $g$ and $h$ has lower weight.
+If $g$ and $h$ have the same weight and $\lambda(g)+\lambda(h)\neq\triv$, then $\lambda(gh)=\lambda(g)+\lambda(h)$.
+\item[-]$\lambda(g^{-1})=-\lambda(g)$.
+\item[-]If $[\lambda(g),\lambda(h)]\neq\triv$, then $\lambda([g,h])=[\lambda(g),\lambda(h)]$.
+%The weight of  $[g,h]$ is not smaller than $\wg(g)+\wg(h)$.
+$\wg([g,h])\geq\wg(g)+\wg(h)$ and if $[\lambda(g),\lambda(h)]=\triv$, then $\wg(g)=\wg(h)$ and $\lambda(g^{h})=\lambda(g)$.
+\item[-]$\gamma_{i}(F^{c}_{p}(X))$ coincides with the set of all $g$ in $F^{c}_{p}(X)$ with $\wg(g)\geq i$.
+\end{itemize}
+Here above, $[\lambda(g),\lambda(h)]$ denotes the Lie product $\lambda(g)\lambda(h)-\lambda(h)\lambda(g)$
+in the associative algebra $A^{c}(X)$.
+\end{fact}
+If $\epsilon$ is the canonical embedding of Fact \ref{ellea}, since we have $\epsilon(\gamma_{k}(L(X)))=
+\epsilon(L(X))\cap\sum_{i\geq k}A_{i}(X)$ for all $1\leq k$, $\epsilon$ factorises to a Lie monomorphism
+of the free nilpotent Lie algebra $L^{c}(X)$ into $A^{c}(X)$, hence we identify
+$\fla{c}{X}$ with the Lie subalgebra generated by $X$ in $A^{c}(X)$.
+
+By the above facts we obtain a map
+\begin{labeq}{lambda}
+\map{\lambda}{F^{c}_{p}(X)}{L^{c}(X)}
+\end{labeq}
+which gives rise to a well defined {\em injective} $\nla{c}$-morphism
+\begin{align}\label{barlambda}
+\notag\lmap{\bar\lambda}{\gr(F^{c}_{p}(X))}{&\fla{c}{X}}\\
+\notag\sum\bar u_{i}\lmto &\sum\lambda(u_{i})
+\end{align}
+which maps $X$ identically onto $X$.
+
+Since on the contrary, $\gr(F^{c}_{p}(X))$ is the image of an epimorphism of $\fla{c}{X}$ which extends the identity on $X$,
+it follows
+\begin{rem}\label{barlambdarem}
+$\gr(F^{c}_{p}(X))$ and $\fla{c}{X}$ are $\nla{c}$-isomorphic via $\bar\lambda$.
+\end{rem}
+
+Notice that the condition $p>c$ is necessary. We have for instance, in $F_{p}(X)$, that Engel elements $[x,y,\dots,y]$ of length $p$
+are congruent to $1$ modulo $\gamma_{p+1}(F_{p}(X))$ for all $x,y$ (cfr.{\,}\cite[Theorem 2.8.11]{khk}).
+%On this theme, one should also consult \cite[IV.6]{ser}, \cite{mag37} and \cite{mag}.
+%By the fact above follows that $\phi(\gamma_{c+1}(F_{p}(X)))=1$ and hence we may factorise $\phi$ to a group
+%homomorphism
+%$$\map{\phi}{F_{p}^{c}(X)}{A^{c}(X)^{*}}.$$
+%Moreover, we still have a well defined map $\lambda\colon\bar w\mapsto\lambda(w)$ for all $\bar w=\gamma_{c+1}(F_{p}(X))w$ in
+%$F_{p}^{c}(X)$.
+%
+%\smallskip
+%Now for $1\leq n\leq c+1$ %for $1\leq n\leq c+1$
+%%let ${\mathfrak m}_{n}$ be the ideal $\sum_{i\geq n}A^{c}_{i}(X)$. And
+%%$\lambda(g)\in\sum_{i\geq n} A_{i}(X)$.
+%Fact \ref{lambda} above implies $H^{n}$ are subgroups of $F^{c}_{p}(X)$ with $[H^{i},H^{j}]\inn H^{i+j}$ for all $i+j\leq c+1$,
+%%and $H^{c}=1$,
+%that is, if we set $H^{i}=\{1\}$ for all $i>c+1$, then $(H^{i})_{i<\omega}$ is a Lazar series, as defined above. %of length $c$.
+%This is in particular a central series and hence $\gamma_{i}(F^{c}_{p}(X))\inn H^{i}$.
+%
+%If we assume $p>c$ then the same arguments used in a theorem of \cite{ser} which is proved in characteristic $0$,
+%applies to our means:
+%\begin{fact}[{\cite[Theorem 6.3]{ser}}]\label{serreth} If $p>c$, then in the above notations we have
+%$$H^{i}=\gamma_{i}(F^{c}_{p}(X))$$
+%for all $i$.
+%\end{fact}
+%\uwave{The assumption on $p$ is needed, to prevent that commutators of length $p$ to be trivial}. See on this purpose \cite[\S3.3]{khk}. 
+%
+%
+%It follows in particular $\ker(\phi)=H^{c+1}=\gamma_{c+1}(F^{c}_{p})=1$.
+%%Let $\mathcal{H}$ be the Lie ring obtained from the Lazard series $(H^{i})$ as in $(\gr)$ above.
+%%We have in particular a canonical map of $\gr(F^{c}_{p}(X))$ into $\mathcal{H}$ and the map $\phi$ above
+%%is a monomorphism.
+%
+%\smallskip
+%Now by means of $\lambda$ with facts \ref{lambda} and \ref{serreth} we obtain for all $i$, a $\Fp$-linear monomorphism
+%$\lambda_{i}$ of the $\Fp$-vector space $H^{i}/H^{i+1}$ into
+%$A_{i}(X)$, given by $\lambda_{i}\colon\bar w\mapsto\lambda(w)$. This
+%gives rise to a Lie homomorphism $\tilde\lambda$ of $\gr F_{p}^{c}(X)$ into the Lie subring of $A^{c}(X)$ generated by $X$.
+%
+%Now since $\gr F_{p}^{c}(X)$ is generated by the image of $X$ modulo $H^{2}$ and is a nilpotent
+%Lie algebra of class $c$, there is a Lie epimorphism $\eta$
+%of $L^{c}(X)$ onto $\gr F_{p}^{c}(X)$. Since the image of $X$ under the composition
+%$$L^{c}(X)\stackrel{\eta}{\longrightarrow}\gr F_{p}^{c}(X)\stackrel{\tilde\lambda}{\longrightarrow}A^{c}(X)$$
+%coincide with that of $\map{\epsilon}{L^{c}(X)}{A^{c}(X)}$ above, one obtains $\eta\tilde\lambda=\epsilon$ and hence
+%the following
+%\begin{fact}\label{lambdiso}
+%$\gr F_{p}^{c}(X)$ is $\nla{c}$-isomorphic as a Lie $\Fp$-algebra with $L^{c}(X)$, and maps via $\tilde\lambda$ isomorphically onto the Lie subring of $A^{c}(X)$ generated by $X$.
+%
+%Moreover $\tilde\lambda$ maps $H^{i}/H^{i+1}$ $\Fp$-isomorphically over $L_{i}(X)$.
+%\end{fact}
+\subsubsection{Retrieving groups from $\nla{c}$-algebras}\label{algegruppi}
+Let $M$ be a Lie algebra of $\nla{c}$ with $p>c$. As observed above $M$ is isomorphic to the quotient $\fla{c}{X}/R$,
+where $X$ is a $\Fp$-basis of $M_{1}$ and $R$ is a homogeneous ideal of $\fla{c}{X}$.
+
+The idea is to associate $M$ to a quotient of $F^{c}_{p}(X)$: we need to find a suitable normal subgroup.
+Consider the map \pref{lambda} above and define
+$$N=\left\{w\in F_{ p}^{c}(X)\mid\lambda(w)\in R\right\}$$
+then by Fact \ref{lambda}, as $\lambda(hg^{-1})$ equals $\lambda(h)$ or $-\lambda(g)$ or
+again $\lambda(h)-\lambda(g)$, $N$ is a subgroup of $F_{p}^{c}(X)$.
+
+Moreover, the same fact implies that for all $g$ in $N$ and all $x$ in $X$, %$\lambda(g^{x})=
+either $\lambda(g^{x})=\lambda(g)$ or $\lambda([g,x])=[\lambda(g),x]$ is in the ideal $R$. This yields that $N$ is a normal subgroup
+of $F_{p}^{c}(X)$. Hence the quotient $F_{p}^{c}(X)/N$ which we denote by $\mathscr{G}(M)$,
+is a group in the variety $\ngb{c}{p}$.
+
+\medskip
+We can now prove the following somewhat dual result to \cite[I.]{mag}.
+\begin{prop}\label{pr:gruppozzo}
+Let $p$ be a prime number greater than $c$.
+With the above definition and Lemma \ref{commufreeno}, the map $M\mto\mathscr{G}(M)$
+is a functor of $\nla{c}$ into $\ngb{c}{p}$-groups
+such that $\gr(\mathscr{G}(M))\simeq_{\nla{c}}M$ for all $M$ in $\nla{c}$.
+
+For a fixed $M$ in $\nla{c}$, then $\nla{c}$-subalgebras (ideals) of $M$ correspond -- via $\lambda$ --
+to subgroups (normal subgroups) of $\mathscr{G}(M)$.
+%and all groups $H$ of $\ngb{c}{p}$ with $\gr(H)=M$ are epimorphic image of $\mathscr{G}(M)$. 
+\end{prop}
+\begin{proof}
+Assume $M=\gen{M_{1}\mid R}$ and $X$ is a $\Fp$-basis of $M_{1}$. Put $F=F_{p}^{c}(X)$ and
+let $G=\mathscr{G}(M)$ be the quotient of $F$ modulo the subgroup $N$ defined above.
+
+Since $R$ is a homogeneous ideal and $R=R_{2}+\dots+R_{c}$, then $M_{n}\simeq_{\Fp}L_{n}(X)/R_{n}$, for all $n\leq c$ and if $F^{n}$ denotes $\gamma_{n}(F)$
+then, as abelian groups
+$$%\begin{labeq}{gammapres}
+\gr_{n}G=\gamma_{n}(G)/\gamma_{n+1}(G)\simeq F^{n}/F^{n+1}(F^{n}\cap N)\simeq\frac{\gr_{n}F}{F^{n+1}(F^{n}\cap N)/F^{n+1}}.
+$$%\end{labeq}
+On the other hand, Remark \ref{barlambdarem} and the definition of $N$ imply that the $\Fp$-isomorphism $\map{\bar\lambda}
+{F^{n}/F^{n+1}}{L_{n}(X)}$ maps $F^{n+1}(F^{n}\cap N)/F^{n+1}$ exactly onto $R_{n}$.
+It follows $M_{n}$ is isomorphic to $\gamma_{n}(G)/\gamma_{n+1}(G)$ as a $\Fp$-vector space, for all $n$.
+Moreover, since %the Lie algebra structure on $\gr(G)$ is given by the quotient of $\gr(F)\simeq L^{c}(X)$ modulo
+$\sum_{n} F^{n+1}(F^{n}\cap N)/F^{n+1}$ is an ideal of $\gr(F)\simeq L^{c}(X)$, then $\gr(G)$ is $\nla{c}$-isomorphic to $M$.
+
+The remaining statements directly descend from the construction of $\mathscr{G}(M)$.
+\end{proof}
+\subsubsection{The Baker-Hausdorff Formula}
+There is a second and more classical way to reconstruct groups from Lie algebras, which has a topological-analytical approach.
+In our nilpotent context, this yields a more effective model-theoretical interpretation of the aforementioned correspondence.
+To describe this method, we have to restart from the original Witt's {\em Treue Darstellung} \cite{witt} in characteristic zero.
+
+\medskip
+We mention here that a filtration $({\mathfrak g}_{i})_{i<\omega}$ of a $\cur$-algebra ${\mathfrak g}$ is a decreasing series of ideals
+${\mathfrak g}_{i}$ with ${\mathfrak g}_{i}\cdot{\mathfrak g}_{j}\inn{\mathfrak g}_{i+j}$. 
+
+In fact the lower central series $(\gamma_{k}(L))_{k}$ of a Lie algebra $L$ constitutes an example of (central) filtration.
+We say that ${\mathfrak g}$ is {\em separated} with respect to the filtration $({\mathfrak g}_{i})$ if $\bigcap{\mathfrak g}_{i}=\triv$.
+A separating filtration induces an Hausdorff (T$_{2}$) topology on ${\mathfrak g}$. We refer to \cite{bbk,laz} for
+these notions.
+
+\medskip
+Consider the Magnuss algebra (\cite[\S5.1]{bbk}) $\widehat{A}=\widehat{A}(X,\Q)$
+over the rationals.
+This is the topological completion of the free associative unitary $\Q$-algebra
+$$A=A(X,\Q)=\Q\cdot\!1\oplus A^{+}(X,\Q)$$ with respect to the
+topology induced by the natural degree-filtration.
+
+Elements of $\widehat{A}$ are noncommutative formal power series in the {\em indeterminates} $X$ and coefficients in $\Q$:
+$$a=\sum_{i<\omega}a_{i}\qquad\text{for $a_{i}\in A_{i}(X,\Q)$, $a_{0}\in\Q$}.$$
+
+As $L(X,\Q)$ is identified with the Lie subalgebra of $A(X,\Q)$ generated by $X$,
+we define the elements of $\widehat{L}$ as the formal series $\sum_{i\geq1}b_{i}$ of $\widehat{A}$
+with each homogeneous component $b_{i}$ belonging to $L_{i}(X,\Q)$.
+
+If ${\mathfrak m}$ denotes the ideal $\sum_{i\geq1}A_{i}(X)$ of $\widehat{A}$, then $1+{\mathfrak m}$ is a  multiplicative group.
+We obtain the continuos bijections (cfr.\cite[IV.7]{ser})
+\begin{align*}
+\lmap{\exp}{{\mathfrak m} &}{ 1+{\mathfrak m} }&\lmap{\log}{1+{\mathfrak m}&}{{\mathfrak m}}\\
+a&\longmapsto\sum_{i\geq0}\frac{a^{i}}{i!}&1+b&\longmapsto\sum_{i\geq1}(-1)^{i+1}\frac{b^{i}}{i}
+\end{align*}
+with the usual properties $\log(\exp a)=a$ and $\exp(\log(1+b))=1+b$.
+%and also if $[a,b]=\triv$ then $\exp(a+b)=exp(a)\exp(b)$. Also $\widehat{L}\inn{\mathfrak m}$ of course.
+
+\begin{fact}[{\cite[1.IV.7]{ser}\cite[Theorem 6.1,1]{bah}}]\label{expelle}
+In the above notations,
+$\exp(\widehat{L})$ is a multiplicative subgroup of $1+{\mathfrak m}$.
+
+Moreover if $\epsilon$ denotes the homomorphism of the free group $F(X)$
+on $X$ into $1+{\mathfrak m}$ which extends $x\mapsto\exp(x)$ for all $x$ in $X$,
+then $\epsilon\log$ is a goup monomorphism of $F(X)$ into $(\widehat{L},\circ)$
+where $\circ$ is the group law on $\widehat{L}$ given by
+$$\xi\circ\eta=\log(\exp(\xi)\exp(\eta))$$
+for all $\xi,\eta\in\widehat{L}$.
+\end{fact}
+
+\begin{teo}[{\cite[Proposition 6.2.1]{bah}},{\cite[Proposition \S5.4]{bbk},{\cite[{\sc Th\'eor\`eme 4.2}]{laz}}}]\label{faikaha}
+Let now $X$ be the set $\{x,y\}$ the element of $\widehat{A}(x,y,\Q)$, then in the previous notation, we have
+\begin{labeq}{hausdseries}
+x\circ y=:\mathsf{H}(x,y)=\sum_{i=1}^{\infty}t_{i}\mathsf{h}_{i}(x,y)
+\end{labeq}
+where $\mathsf{h}_{i}(x,y)$ is a homogeneous term in $L_{i}(\{x,y\},\Z)$ of total weight $i$ in $x$ and $y$ and $t_{i}\in\Q$.
+
+For any complete, separated, filtered Lie Algebra ${\mathfrak g}$ with filtration $({\mathfrak g}_{\alpha})$, over a characteristic zero
+field $\cur$, the map
+\begin{align}\label{hausdgroup}
+\lmap{\circ}{&{\mathfrak g}\times{\mathfrak g}}{{\mathfrak g}}\\
+%\intertext{defined by}
+&(a,b)\longmapsto\mathsf{H}(a,b)\tag*{}
+\end{align}
+induces a {\em group structure} on ${\mathfrak g}$ compatible with the topology and such that
+\begin{itemize}
+\item[-]the neutral element of $({\mathfrak g},\circ)$ is the additive zero $\triv$ and for any element $m$, the $\circ$-inverse $m^{-1}$ of
+$m$ coincides with the additive inverse $-m$. Moreover %$m\circ\triv=m=\triv\circ m$
+%\item[-]$m\circ-m=\triv=-m\circ m$
+%\item[-]
+the $n${\sl -th} power $a^{n}$ in $\circ$ of any element $a$ of ${\mathfrak g}$ is $n\cdot a$ for all $n\in\Z$
+
+\item[-]the {\em group commutator} $[l,m]$ built from the group operation $\circ$
+equals the Lie product $[l,m]$ in ${\mathfrak g}$ modulo the ideal ${\mathfrak g}_{\alpha+1}$ provided
+$l$ or $m$ is in ${\mathfrak g}_{\alpha}$.
+
+\item[-]the chain $({\mathfrak g}_{\alpha})$ becomes a central series of $({\mathfrak g},\circ)$. The quotient group operation induced by $\circ$ on ${\mathfrak g}_{\alpha}/{\mathfrak g}_{\alpha+1}$ coincides with the abelian structure of the quotient algebras.
+\end{itemize}
+\end{teo}
+For an explicit calculation of the terms $s_{i}\mathsf{h}_{i}(x,y)$ in \pref{hausdseries} one may see
+\cite[IV.8]{ser}. A first segment of $\xi\circ\eta$ is given by
+\begin{labeq}{hausdexpl}
+\xi\circ\eta=\xi+\eta+\frac{1}{2}[\xi,\eta]-\frac{1}{12}([\xi,\eta,\eta]+[\eta,\xi,\xi])+\cdots
+\end{labeq}
+
+\medskip
+Now the crucial fact which allows us to apply the above machinery to $\Fp$-algebras in $\nla{c}$ for $p>c$,
+is the following observation.
+\begin{fact}[\cite{mag,laz}]\label{modp}
+Let $\Q_{c}$ denote the subring of $\Q$ which consists of all quotients $r/s$ for coprime $r,s$ such that
+if a prime $q$ divides $s$, then $q\leq c$.
+In \pref{hausdgroup} above we have $t_{i}\in \Q_{i}$ for all $i<\omega$.
+\end{fact}
+Notice that, since $p>c$ as a $\Fp$-vector space any object $M$ in $\nla{c}$ carries
+a $\Q_{c}$-algebra structure, simply letting $r/s\cdot m$=$\bar r\bar{s}^{-1}m$ where
+$\bar r$ and $\bar s$ denote $r$ and $s$ modulo $p$.
+
+As observed in \cite{bbk}, to a {\em finite} central filtration
+%in an algebra ${\mathfrak g}$ over $\cur$ as above, then ${\mathfrak g}$ 
+automatically corresponds a complete and separated (discrete) topology. This is the case for nilpotent algebras.
+In particular Theorem \ref{faikaha} and Fact \ref{modp} yield (cfr.{\,}\cite[Theorem II,4.2]{laz}):
+\begin{cor}\label{co:grupphausdorff}
+For $p>c$, considering the lower central filtration on $\nla{c}$-algebras, we obtain
+\begin{align}
+\lmap{G}{\nla{c}&}{\ngb{c}{p}}\label{haugrp}\\
+M&\longmapsto G(M)=(M,\circ,\triv)\notag
+\end{align}
+By Theorem \ref{faikaha} and by the definition of $\nla{c}$, for each such algebra $M$,
+since $M=\gen{M_{1}}$ we have $\gr(G(M))=M$. Moreover for any $\nla{c}$-extension $M\nni N$,
+the corresponding groups $G=G(M)$ and $H=G(N)$ satisfy $\gamma_{k}(H)=\gamma_{k}(G)\cap H$.
+In particular $\gr(H)$ is an $\nla{c}$-subalgebra of $\gr(G)$.
+\end{cor}
+
+\medskip
+\begin{cor}\label{co:interp}
+For any $\nla{c}$-algebra $M$, the group $G(M)$ is {\em definably interpretable} {\rm(\cite[p.{}24]{mar})} in the $\Lan{c}$-structure $M$.
+\end{cor}
+\begin{rem}\label{baucond}
+In Lemma 3.1 of \cite{bad}, a different approach is described, to reconstruct a group law from a class
+of $\Fp$-vector spaces, identifiable with our $\nla{2}$.
+That is motivated by the following instance of the collecting process, peculiar of nilpotency class $2$.
+
+Let $G$ be a $\ngb{2}{p}$-group and assume a subset $\{a_{\alpha}\mid \alpha<\kappa\}\inn G$ has been chosen, which -- modulo $G^{\prime}$ --
+is a base of the $\Fp$-vector space $G_{ab}$. Then, any element $g$
+of $G$ writes in a unique way as a product $g=\prod_{\alpha}a_{\alpha}^{r_{\alpha}}x$ for some $x\in G^{\prime}$ and (with the
+due precautions) $r_{\alpha}\in\Fp$. %$r_{\alpha}<p$.
+
+ As $G^{\prime}\inn Z(G)$, if $h=\prod_{\alpha}a_{\alpha}^{s_{\alpha}}y$, then
+$gh=\prod_{\alpha}a_{\alpha}^{r_{\alpha}+s_{\alpha}}\prod_{\alpha>\beta}[a_{\alpha},a_{\beta}]^{r_{\alpha}s_{\beta}}xy$.
+
+This yields %another way to define
+a group operation $\bullet$ on $\gr(G)$ defined as follows:\footnote{This is not the Hausdorff formula \pref{hausdexpl},
+\pref{hausdseries}. To obtain it
+one has to replace $r_{\alpha}s_{\beta}$ with $\dfrac{1}{2}(r_{\alpha}s_{\beta}-r_{\beta}s_{\alpha})$ in the last summand.}
+$$ %\begin{labeq}{bullo}
+\left(\sideset{}{_{\alpha}}\sum r_{\alpha}\bar a_{\alpha}+x\right)\bullet\left(\sideset{}{_{\alpha}}\sum r_{\alpha}\bar a_{\alpha}+y\right)=
+\sideset{}{_{\alpha}}\sum(r_{\alpha}+s_{\alpha})\bar a_{\alpha}+x+y+\sideset{}{_{\alpha>\beta}}\sum r_{\alpha}s_{\beta}[a_{\alpha},a_{\beta}]
+$$ %\end{labeq}
+The peculiarity of this setting, is now the fact that $(\gr(G),\bullet)$ is now isomorphic-- as a group -- to $G$. If we
+define $\bullet$ on arbitrary $\nla{2}$-algebras, we obtain a 1-1 correspondence of $\ngb{2}{p}$ with $\nla{2}$ at level of objects.
+
+\medskip
+In addition, Baudisch works in the subclass ${\mathfrak G}=\{G\in\ngb{2}{p}\mid G^{\prime}=Z(G)\}$. For if $H\sg G$ and both
+$H,G\in{\mathfrak G}$, then we have an $\nla{2}$-inclusion of $\gr(H)$ into $\gr(G)$.
+This is because, the condition in ${\mathfrak G}$ implies $H^{\prime}=G^{\prime}\cap H$ and hence $H_{ab}$ embeds as a vector space
+into $G_{ab}$.
+
+The class ${\mathfrak G}$ allows therefore to switch between groups and algebras in a clean way when we manipulate
+group embeddings in the Fra\"iss\'e construction.
+
+On the other hand since $Z(G)$ -- like every term of the upper central series -- is a definable set in the pure group language,
+properties of $\gr(G)$ may be described at the first order with the signature of groups only.
+
+\smallskip
+In Chapter \ref{due} we re-obtain this property for $\nla{2}$-algebras $M$, by imposing $2$-generated $\nla{2}$-subalgebras to be free.
+\end{rem}
+
+\smallskip
+If we consider the analogous property in $\ngb{c}{p}$, namely
+\begin{labeq}{gammazeta}
+\zeta_{k}(G)=\gamma_{c+1-k}(G)\quad\text{for $G\in\ngb{c}{p}$},
+\end{labeq}
+then the group-algebra correspondences introduced so far, like $\gr$ and -- reversely -- Proposition \ref{pr:gruppozzo} and \pref{haugrp},
+all preserve this feature from $G$ to $M$ and vice-versa: \pref{gammazeta} holds iff
+$\zeta_{k}(M)=\gamma_{c+1-k}(M)$ for $M\in\ngb{c}{p}$. Note that in both cases the class $c$ condition, always imply
+the inclusion $\zeta_{k}(\,\cdot\,)\nni\gamma_{c+1-k}(\,\cdot\,)$.

@@ -1,0 +1,120 @@
+\newcommand{\sm}[1]{\scriptstyle{#1}}
+\newcommand{\ssm}[1]{\scriptscriptstyle{#1}}
+\newcommand{\pref}[1]{(\ref{#1})}
+%\makeatletter
+\newcommand{\punto}[1]{\item[\textnormal{%\scriptsize
+(#1)}]}
+%pacchetto di comandi all'avanguardia
+\newcommand{\vac}{\varnothing}
+\newcommand{\M}{\mathcal{M}}
+\newcommand{\N}{\mathcal{N}}
+\newcommand{\B}{\mathcal{B}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+%\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\la}{\lambda}
+\newcommand{\al}{\alpha}
+\newcommand{\ga}[1]{\Gamma^{#1}(X)}
+%
+\newcommand{\map}[3]{#1\colon #2\longrightarrow #3}
+\newcommand{\res}[2]{{#1}_{|_{#2}}}
+%
+\newcommand{\tp}[2]{\type(#1\quot #2)}
+\newcommand{\ssp}[2]{S_{#1}(#2)}
+\newcommand{\psix}[2]{\psi(\bar #1,\bar #2)}
+\newcommand{\phix}[2]{\phi(\bar #1,\bar #2)}
+\newcommand{\chix}[2]{\chi(\bar #1,\bar #2)}
+\newcommand{\chii}[1]{\chi_{i}(\bar #1)}
+\newcommand{\cb}[1]{\CB_{#1}}
+\newcommand{\mr}[1]{\MR_{#1}}
+\newcommand{\md}[1]{\deg_{#1}}
+\newcommand{\sem}{\preccurlyeq}
+%
+\newcommand{\OP}[1]{\text{(OP)}_{#1}}
+\newcommand{\IP}[1]{\text{(IP)}_{#1}}
+\newcommand{\inn}{\subseteq}
+\newcommand{\nni}{\supseteq}
+\newcommand{\non}{\setminus}
+\newcommand{\lqq}{\lq\lq}
+\newcommand{\rqq}{\rq\rq}
+%
+\newcommand{\oms}{\omega\text{-stable}}
+\newcommand{\La}{\mathcal{L}}
+\newcommand{\sat}{\models}
+\newcommand{\seq}[2]{(\bar #1_i)_{i<{#2}}}
+\newcommand{\card}[1]{\lvert #1\rvert}
+\newcommand{\sg}{\leqslant}
+\newcommand{\og}{\geqslant}
+\newcommand{\cmu}[2]{[{#1},{#2}]}
+\newcommand{\gen}[1]{\langle{#1}\rangle}
+\newcommand{\dsg}{\underset{\text{\tiny def}}{\leqslant}}
+\newcommand{\dog}{\underset{\text{\tiny def}}{\geqslant}}
+\newcommand{\quot}{\slash}
+\newcommand{\idx}[2]{[#1\colon #2]}
+\newcommand{\nsg}{\unlhd}
+\newcommand{\nog}{\trianglerighteq}
+\DeclareMathOperator{\fix}{Fix}
+%
+\newcommand{\lowsmile}{\raisebox{-.5ex}{$\smile$}}
+\DeclareMathOperator{\Lowsmile}{\lowsmile}
+\DeclareMathOperator{\acl}{acl}
+\DeclareMathOperator{\dcl}{dcl}
+\newcommand{\ind}{\ensuremath{\mathaccent\mid{\Lowsmile}}}
+\newcommand{\dind}{\ind^{\!\! d}}
+\newcommand{\find}{\ind^{\!\! f}}
+%\newcommand{\midd}{\mid^{d}}
+\newcommand{\mon}{\mathfrak{C}}
+\newcommand{\D}{\mathcal{D}}
+%>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+%\theoremstyle{plain}
+\theoremstyle{definition}
+\newtheorem{dfn}{Definition}[section]
+%\theoremstyle{plain}
+\newtheorem*{dfn*}{Definition}
+%
+\theoremstyle{plain}
+\newtheorem{teo}[dfn]{Theorem}
+\newtheorem*{teo*}{Theorem}
+%\theoremstyle{proposition}
+\newtheorem{prop}[dfn]{Proposition}
+\newtheorem*{prop*}{Proposition}
+\newtheorem{lem}[dfn]{Lemma}
+\newtheorem*{lem*}{Lemma}
+\newtheorem{cor}[dfn]{Corollary}
+\newtheorem*{cor*}{Corollary}
+\theoremstyle{remark}
+\newtheorem*{rem}{Remark}
+%\newtheorem*{exs}{Exercise}
+\newtheorem*{exms}{Examples}
+%
+\newenvironment{labeq}[1]{\begin{equation}\label{#1}}{\end{equation}}
+\DeclareMathOperator{\im}{Im}
+\DeclareMathOperator{\Ker}{Ker}
+\DeclareMathOperator{\fth}{th}
+\DeclareMathOperator{\type}{tp}
+\DeclareMathOperator{\FSym}{FSym}
+\DeclareMathOperator{\supp}{supp}
+\DeclareMathOperator{\spn}{Span}
+\DeclareMathOperator{\id}{id}
+\DeclareMathOperator{\gal}{Gal}
+\DeclareMathOperator{\cha}{char}
+%\DeclareMathOperator{\deg}{\deg}
+\DeclareMathOperator{\CB}{CB}
+\DeclareMathOperator{\MR}{MR}
+\DeclareMathOperator{\aut}{Aut}
+%
+\renewenvironment{proof}{\smallskip\indent\textit{Proof.}}{\begin{flushright}
+$\square$\end{flushright}}
+%
+\newenvironment{proofle}{\smallskip\indent\textit{Proof of Lemma.}}{\begin{flushright}
+$\square$\end{flushright}}
+%
+\newcommand{\claim}[1]{\begin{description}
+\item[Claim]{#1}
+\end{description}}
+\newcommand{\xsubsection}[1]{\subsection*{#1}
+\addcontentsline{toc}{subsection}{#1}}
+%\RequirePackage{color}
+\newcommand{\tojoris}[1]{\textsl{\color{red} #1}}
+%\makeatother

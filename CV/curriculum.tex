@@ -1,0 +1,259 @@
+%---------------------------------------------------------------------------
+\documentclass%%
+%---------------------------------------------------------------------------
+  [fontsize=10pt,%%          Schriftgroesse
+%---------------------------------------------------------------------------
+% Satzspiegel
+   paper=a4,%%               Papierformat
+   enlargefirstpage=on,%%    Erste Seite anders
+   pagenumber=headright,%%   Seitenzahl oben mittig
+%---------------------------------------------------------------------------
+% Layout
+   headsepline=off,%%         Linie unter der Seitenzahl
+   parskip=off,%%           Abstand zwischen Absaetzen
+%---------------------------------------------------------------------------
+% Briefkopf und Anschrift
+   fromalign=right,%%        Plazierung des Briefkopfs
+   fromphone=off,%%           Telefonnummer im Absender
+   fromrule=aftername,%%           Linie im Absender (aftername, afteraddress)
+   fromfax=off,%%            Faxnummer
+   fromemail=on,%%          Emailadresse
+   fromurl=off,%%            Homepage
+   fromlogo=off,%%           Firmenlogo
+   addrfield=off,%%           Adressfeld fuer Fensterkuverts
+   backaddress=off,%%          ...und Absender im Fenster
+   subject=beforeopening,%%  Plazierung der Betreffzeile
+   locfield=wide,%%        (narrow,wide) zusaetzliches Feld fuer Absender
+   foldmarks=off,%%           Faltmarken setzen
+   numericaldate=off,%%      Datum numerisch ausgeben
+   refline=wide,%%         Geschaeftszeile im Satzspiegel
+%---------------------------------------------------------------------------
+% Formatierung
+   draft=off%%                Entwurfsmodus
+]{scrlttr2}
+\LoadLetterOption{myLetter}
+\linespread{1.07}
+%---------------------------------------------------------------------------
+% Weitere Optionen
+\KOMAoptions{%%
+}
+%---------------------------------------------------------------------------
+\usepackage{multirow}
+\usepackage{graphicx}
+\usepackage[english]{babel}
+\usepackage[T1]{fontenc}
+\usepackage[latin1]{inputenc}
+\usepackage{url}
+\newcommand{\tilda}{{\raise.17ex\hbox{$\scriptstyle\sim$}}}
+%---------------------------------------------------------------------------
+% Fonts
+\setkomafont{title}{\huge\rmfamily}
+%\setkomafont{fromname}{\large}
+\setkomafont{fromaddress}{\small}%% statt \small
+\setkomafont{pagenumber}{\sffamily}
+\setkomafont{subject}{\mdseries}
+\setkomafont{backaddress}{\mdseries}
+%\usepackage{mathptmx}%% Schrift Times
+%\usepackage{mathpazo}%% Schrift Palatino
+%\setkomafont{fromname}{\LARGE}
+%---------------------------------------------------------------------------
+\addtolength{\textheight}{6\baselineskip}
+\usepackage[backref,pdftex,hidelinks=true]{hyperref}
+\begin{document}
+%---------------------------------------------------------------------------
+% Briefstil und Position des Briefkopfs
+%\LoadLetterOption{DIN} %% oder: DINmtext, SN, SNleft, KOMAold.
+\makeatletter
+\@setplength{locwidth}{\textwidth}
+\@addtoplength{locvpos}{30mm}
+\@addtoplength{lochpos}{5cm}
+\@addtoplength{refvpos}{-2mm}%-\baselineskip}%-.5\baselineskip}
+\@setplength{firstheadvpos}{10mm}
+\@setplength{firstheadwidth}{\paperwidth}
+\ifdim \useplength{toaddrhpos}>\z@
+  \@addtoplength[-2]{firstheadwidth}{\useplength{toaddrhpos}}
+\else
+  \@addtoplength[2]{firstheadwidth}{\useplength{toaddrhpos}}
+\fi
+\@setplength{foldmarkhpos}{6.5mm}
+\makeatother
+%-----------------------------------------------------------------------------
+%
+%????? Absender-----> defined in myLetter.lco for the ``Letters'' folder
+%                                               commands there are overridden by this file
+%
+%------------------DATI PERSONALI (overwrites .lco File) -------------------------------------------------------------------------------
+\setkomavar{title}{\bf Curriculum Vit\ae}
+%\setkomavar{fromname}{Absender Name}
+%\setkomavar{fromaddress}{ Straße\\12345 Ort.}
+%\setkomavar{fromphone}{+49 (0)30 3462 4345}
+%\renewcommand{\phonename}{Telefon}
+\setkomavar{fromemail}{amantini.andrea@gmail.com}
+\setkomavar{backaddressseparator}{, }
+\setkomavar{signature}{\raggedright\usekomavar{fromname}\\[+2mm]Berlin, \today}
+%\setkomavar{frombank}{}
+%\setkomavar{location}{}
+\setkomavar{location}{%\\[8ex]
+\raggedright{
+\begin{tabular}{r@{\extracolsep{.5em}}p{6cm}@{ }l}
+&&\\%[+1mm]
+						&&\multirow{10}{\textwidth}{\includegraphics[width=4.5cm]%
+						%10\baselineskip
+						{bewphotos/%__METTI LA FOTO QUI SOTTO !!!!
+						%lanAve%
+						%pissero2-crop%-low%
+						baruDEFlow%
+						%bewph1%
+						%cvPhoto2-alta%
+						} }\\[-3mm]
+%						&&\\					
+%						&&\\
+%						&&\\
+%Name:
+	 					& {\large\bf Andrea Amantini}, PhD\\[+\baselineskip]
+birthplace, -day: 			& Florence (Italy), 28/01/1980\\[+1mm]
+citizenship: 				& italian\\[+1mm]
+%civil status:				&ledig\\[+1mm]
+address:					& Lausitzerstra{\ss}e 37, 10999 Berlin\\[+1mm]
+Email:					& \usekomavar{fromemail}\\[+1mm]
+%(alt.~E-Mail:				&amantini.andrea@gmail.com)
+%telephone:						& +49 (0)30 3462 4345\\[+1mm]
+%mobile:						& +49 (0)176 2829 7792\\[+1mm]
+%&\\[+15mm]
+\end{tabular}
+}%
+%}%
+}%% Neben dem Adressfenster
+%---------------------------------------------------------------------------
+%\firsthead{Frei gestalteter Briefkopf}
+%---------------------------------------------------------------------------
+\firstfoot{\begin{center}
+\rule{\textwidth}{.5pt}
+{\small Andrea Amantini | \usekomavar{fromaddress} | \usekomavar{fromphone} | \usekomavar{fromemail}}
+\end{center}}
+%---------------------------------------------------------------------------
+% Geschaeftszeilenfelder
+%\setkomavar{place}{Ort}
+%\setkomavar{placeseparator}{, den }
+\setkomavar{date}{}
+%\setkomavar{yourmail}{1. 1. 2003}%% 'Ihr Schreiben...'
+%\setkomavar{yourref} {abcdefg}%%    'Ihr Zeichen...'
+%\setkomavar{myref}{}%%      Unser Zeichen
+%\setkomavar{invoice}{123}%% Rechnungsnummer
+%\setkomavar{phoneseparator}{}
+%---------------------------------------------------------------------------
+% Versendungsart
+%\setkomavar{specialmail}{Einschreiben mit Rückschein}
+%---------------------------------------------------------------------------
+% Anlage neu definieren
+\renewcommand{\enclname}{Anlage}
+\setkomavar{enclseparator}{: }
+%---------------------------------------------------------------------------
+% Seitenstil
+%\pagestyle{plain}%% keine Header in der Kopfzeile
+%---------------------------------------------------------------------------
+\begin{letter}{~}
+%---------------------------------------------------------------------------
+%\setkomavar{subject}{Halo}
+%---------------------------------------------------------------------------
+\opening{~}
+\begin{tabular}{r@{\extracolsep{2em}}p{87mm}}
+\multicolumn{2}{l}{\large\bf Education}\\[+1mm]
+\hline\\[+1mm]
+Oct 2005 - Jun 2011		&PhD student in Mathematics at the {\sl Humboldt Universität zu Berlin}. 	
+					Focus: Algebra, Mathematical Logic, Model Theory -- Dissertation title:
+					{\em Hrushovski predimensions on nilpotent Lie algebras}, submitted 8/12/2010 --
+					defended: 30/05/2011 {\sl cum laude}\\[+3mm]%({\sl Betreuer: Prof. Dr. A. Baudisch})\\[+3mm]
+Sep 2008 - Oct 2008			&research secondment at {\em Université Lyon 1}, Inst.~Camille
+						Jordan -- {\sl Lyon, France}\\[+3mm]
+Oct 2005 - Sep 2008		&member of the Research Training Network %und -Stipendium
+					MODNET (\url{www.logique.jussieu.fr/modnet/Home})
+					supported by the Marie Curie action FP6 of the European Commission\\[+3mm]
+Oct 1999 - Apr 2005			&undergraduate student in Mathematics at the {\em Università degli Studi di Firenze} ({\sl Florence, Italy})
+					 with final exam ({\sl Laurea in Matematica}): 110/110 \emph{cum Laude}\\[+3mm]
+1994-1999			&Gymnasium {\sl Liceo Scientifico}, ({\sl Florence, Italy})%
+\\[+10mm]
+%\end{tabular}
+%\newpage
+%\begin{tabular}{r@{\extracolsep{2em}}p{9cm}}
+\multicolumn{2}{l}{\large\bf Positions}\\[+1mm]
+\hline\\[+1mm]
+Dec 2011 - present		& Trainee Web Development under Ruby on Rails at D3Volute ( \href{http://devolute.org}{\tt devolute.org} )\\[+3mm]
+Oct 2008 - Dec 2009 	& Research Assistant at the Humboldt University, Berlin\\[+3mm]
+Oct 2005 - Sep 2008 	& EU Guest Research Assistant at the Humboldt University, Berlin in the scope of the Marie\,Curie Research Grant
+					and Network Project MODNET
+\end{tabular}
+\newpage
+\begin{tabular}{r@{\extracolsep{2em}}p{87mm}}
+%\multicolumn{2}{l}{\large\bf Teaching Experience}\\[+1mm]
+%\hline\\[+1mm]
+%WS 08/09	&assistant Lecturer to Algebra I\\[+1mm]
+%SoSe 09		& assistant Lecturer to ODE course%reader: Dr.~L.~Recke
+%														\\[+1mm]
+%WS 09/10	& assistant Lecturer to Algebra II (BMS Basic Course Commutative Algebra)% -- Dozent: Dr. W.~Kleinert
+%																	\\[+10mm]
+\multicolumn{2}{l}{\large\bf Ongoing Projects as Developer (Sep 2010 to present)}\\[+1mm]
+\hline\\[+1mm]
+
+RawNews		&Python development for Plone CMS at Raw Visuals ltd.\\
+			&(\href{http://raw-news.net}{\tt http://raw-news.net}). A web application
+			with server-side video transcoding capabilities. The Supervised Zeo instances are load-balanced via HAProxy, cached with Varnish and served with Nginx. The development environment is set up through {\em build-out}.\\[+2mm]
+Labirinto Theater 		&Web-design und maintenance\\
+					&\href{http://www.labirintotheater.com}{\tt (www.labirintotheater.com)}.\\[+2mm]
+Presentation Scripting		&	JQuery, CSS und MathJax based beamer script for text and \LaTeX~presentations\\
+&								(\href{http://github.com/zampino/jsBeamer}{\tt github.com/zampino/jsBeamer}).\\[+10mm]
+
+\multicolumn{2}{l}{\large\bf OS's, Programming Languages, IDEs, SCMs}\\[+1mm]
+\hline\\[+1mm]
+Mac OS X				 	&good expertise\\[+1mm]
+Linux/unix CLI \& shell		&intermediate expertise\\[+2mm]
+X(HT)ML, Javascript 		&{\raisebox{-1.3ex}{intermediate expertise}}\\
+(jQuery, Modernizr), CSS		&\\[+2mm]
+Php, MySQL				&basic knowledge\\[+2mm]
+Python, Ruby+Rails, $C^{++}$		 	&basic knowledge\\[+2mm]
+Eclipse, XCode				&basic knowledge\\[+2mm]
+Git, Mercurial				&basic knowledge\\[+8mm]
+																	
+\multicolumn{2}{l}{\large\bf Language Proficiency}\\[+1mm]
+\hline\\[+1mm]
+Italian & mother-language\\[+1mm]
+English & fluent\\[+1mm]
+Deutsch & fluent (C1 {\em Deutsch als Fremdsprache})\\[+1mm]
+French & basic knowledge\\[+6mm]
+
+%\multicolumn{2}{l}{\large\bf Zusammenfassung der Dissertation}\\[+1mm]
+%\hline
+%\end{tabular}
+%
+%\bigskip
+%\begin{minipage}{.95\textwidth}
+%In meiner Doktorarbeit wird das Fra\"iss\'e-Hrushowskis Amalgamationsverfahren in Zusammenhang
+%mit nilpotenten graduierten Lie Algebren \"uber einem endlichen K\"orper untersucht.
+%Die (Pr\"a-)Dimensionen die in der Konstruktion auftauchen sind mit der gruppentheoretischen Invariante der {\em Defizienz}
+%zu vergleichen, welche auf homologische Methoden zur\"uckgef\"uhrt werden kann.
+%
+%Darüber hinaus wird die Magnus-Lazardsche Korrespondenz zwischen den oben genannten Lie Algebren
+%und nilpotenten Gruppen von Primzahl-Exponenten beschrieben.
+%%Dabei werden solche Gruppen durch die Baker-Haussdorfsche Formel
+%%in den entsprechenden Algebren definierbar interpretiert.
+%%Es wird eine $\omega$-stabile Lie Algebra von Nilpotenzklasse 2 und Morleyrang $\omega\cdot2$ erhalten, indem
+%%man eine {\em unkollabierte} Version der von Baudisch konstruierten {\em new uncountably categorical group} betrachtet.
+%%Diese wird genau analysiert. Unter anderem wird die Unabh\"angigkeitsrelation des Nicht-Gabelns durch die
+%%Konfiguration des freien Amalgams charakterisiert.
+%
+%\indent
+%Ziel dieser Arbeit ist eine Erweiterung auf h\"oheren Nilpotenzklassen der von Baudisch
+%konstruierten nil-2 Gruppe von primen Exponenten. Daf\"ur werden -- mittels eines induktiven Ansatzes
+%-- die Grundlagen entwickelt, um neue Pr\"adimensionen f\"ur
+%Lie Algebren der Nilpotenzklassen gr\"o\ss er als zwei zu schaffen.
+%\end{minipage}
+\end{tabular}
+
+\bigskip
+\begin{flushright}
+Andrea Amantini
+
+Berlin, \today
+\end{flushright}
+\end{letter}
+\end{document}

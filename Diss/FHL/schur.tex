@@ -1,0 +1,154 @@
+In this section we see how the second homology of a finitely presented group or Lie algebra, together with the first
+lower central section, entirely captures the relevant informations expressible in terms of generators and relations.
+
+The objects we illustrate below present strong similarities with those defined in the second and especially the third
+chapter. The last were developed independently from appealing to homology.
+
+We refer to the book \cite{hilsta} for the basic facts concerning group homology.
+
+\medskip
+A {\em finitely presented} group $G$ is $(n,r)$-presented, if it admits a presentation
+with $n$ generators and $r$ relators. The {\em deficiency} of $G$ is defined as
+$$\mathrm{def}(G)=\max(n-r\mid G\,\,\text{is $(n, r)$-presented}).$$
+
+%\cbstart
+%In a nilpotent setting\mn{maybe just as footnote}, the \sout{{\em finitely presentation} property} -- which is closed under extensions -- is
+%equivalent to being finitely generated. On the other hand in a Fra\"iss\'e construction, the starting structures
+%are always finitely generated.
+%\cbend
+
+It is possible to estimate the deficiency of a finitely presented group $G$ in terms of the {\em Schur multiplicator}
+$H_{2}(G)=H_{2}(G,\Z)$, the second homology group of $G$ with integer coefficients.
+The following result, in \cite[14.1.5]{rob}, is attributed to Philip Hall.
+
+If $A$ is a finitely generated abelian group, we denote by $\mathit{rk}(A)$ the rank of $A$ and $d(A)$ the minimal number of
+elements required to generate $A$. %For any group $G_{ab}$ is $G/G^{\prime}$.
+\begin{fact}
+If $G$ is a finitely presented group, then $H_{2}(G)$ is finitely generated. Moreover
+\begin{labeq}{defi}
+\mathrm{def}(G)\leq\mathit{rk}(G_{ab})-d(H_{2}(G)).
+\end{labeq}
+\end{fact}
+
+{\em Hopf's formula} (\cite{hopf}) expresses $H_{2}(G)$ in terms of any presentation of the group $G$:
+%very close to our definitions in Chapter \ref{tre}:
+\begin{labeq}{hopf}
+H_{2}(G)=\frac{F^{\prime}\!\cap R}{[F,R\,]}
+\end{labeq}
+provided $R\to F\to G$ presents $G$.
+
+Hopf's formula was later recognised independently by Stallings (\cite{stall}) and Stammbach (\cite{stam},\cite[\S8]{hilsta}) to stem from the {\em 5-term} Homology sequence 
+\begin{labeq}{5term}
+H_{2}(E)\to H_{2}(Q)\to N/[E,N]\to E_{ab}\to Q_{ab}\to\triv
+\end{labeq}
+associated to any short exact sequence $N\to E\to Q$, by applying \pref{5term}
+to a presentation $R\to F\to G$ of the group $G$. Now \pref{hopf} follows by the fact $H_{2}(F)=\triv$.
+
+\medskip
+%The 5-term sequence above finds a corresponding sequence when we specialise to
+%a group variety $\mathcal{V}$ (cfr.{}\cite[]{stahom}). In particular for a subvariety  of ${\mathfrak B}_{p}$, the groups
+%with exponent $p$ we can use  homology with coefficients in $\Z/p\Z$ and obtain.
+We can specialise -- with Stammbach's \cite[\S III]{stahom} -- the 5-term sequence above to a group variety $\mathcal{V}$, obtaining
+a notion of schur multiplier $H_{2}(G;\mathcal{V},B)$ relative to $\mathcal{V}$ for any $G$-module $B$ and group $G\in\mathcal{V}$.
+With this technique, an Hopf formula in terms of $\mathcal{V}$-presentations is achieved. %(cfr.{}\cite[\S III,(2.10)]{stahom}).
+On the other hand Stallings (\cite[Theorem 2.1]{stall}) points out how group homology with coefficients in $\Z/p\Z$,
+is connected to a {\em $p$-exponent modification\footnote{
+the group words $\gamma_{k}(\bar x)$, which define the lower central series are replaced by $\gamma_{k}(\bar x)y^{p}$. In a group
+of exponent $p$ we reobtain the old series.}} of the lower central series. 
+
+Inspired by the results cited above, similar features concerning finitely presented
+$\ngb{c}{p}$-groups may be derived. Note that in general a finitely generated nilpotent group is also
+finitely presented, being this property closed under extensions of groups.
+\begin{lem}\label{pdeficienza}
+%Let $\mathcal{V}$ be an exponent $p$ variety of groups.
+We say that $G\in\ngb{c}{p}$ is $(n,r)$-{\em presented in} $\ngb{c}{p}$
+if it admits a presentation by the $n$-generated $\ngb{c}{p}$-free group $F$ modulo a normal subgroup $R$, which
+is the normal closure of $r$ elements of $F$.
+
+If ${\rm def}_{\ngb{c}{p}}(G)=max(n-r\mid G\text{ is $(n,r)$-presented in $\ngb{c}{p}$})$, then this number exists finite
+and we have
+\begin{labeq}{vardefi}
+{\rm def}_{\ngb{c}{p}}(G)\leq\dfp(G_{ab})-\dfp(H_{2}(G;\ngb{c}{p}))
+\end{labeq}
+where $H_{2}(G;\ngb{c}{p})$ is {\em defined} as the %leftmost
+kernel of the natural map $\phi$ in the exact sequence of $\Fp$-vector spaces
+\begin{labeq}{varschur}
+%\triv\to H_{2}^{\ngb{c}{p}}(G,\Fp)\to
+R/[F,R]\stackrel{\phi\:}{\lto}F_{\sl a{}b}\to F/RF^{\prime}\to\triv
+%\defeq\ker\left(    \right)
+\end{labeq}
+where $R\to F\to G$ is {\em any finite} $\ngb{c}{p}$-presentation of $G$.
+\end{lem}
+\begin{rem*}
+By \pref{varschur} we have
+$$H_{2}(G;\ngb{c}{p})=\frac{F^{\prime}\!\cap R}{[F,R\,]}$$
+and by \cite[\S III.1,2]{stahom} this group does not depend of the chosen $\ngb{c}{p}$-presentation.
+\end{rem*}
+\begin{proofof}{Lemma \ref{pdeficienza}}
+Assume the group $G$ is $(n,r)$-presented in $\ngb{c}{p}$ by $F$ modulo $R$.
+
+Since $F$ is the $n$-generated $\ngb{c}{p}$-free group, we have $\dfp(F_{ab})=n$.
+%Moreover $\dfp(R/[F,R])\leq r$, $G_{ab}$ is $F/RF^{\prime}$ and all terms of \pref{varschur} are $\Fp$-vectorspaces.
+%\pref{vardefi} easily follows with some dimension calculus
+Exactness in \pref{varschur} now yields $n-r\leq\dfp(F_{\sl ab})-\dfp(R/[F,R])=
+\dfp(G_{ab})-\dfp(H_{2}(G;\ngb{c}{p}))$.
+\end{proofof}
+We list some facts to underline the strength of these concepts.
+\begin{fact*}[{\cite[Theorem 6.5]{stall}}]
+Let $G$ be a $\ngb{c}{p}$-group with $H_{2}(G;\ngb{c}{p})=\triv$ and $(x_{i})_{i\in I}$ a set of elements in $G$ whose images in
+$G_{ab}$ are $\Fp$-linearly independent. Then the $x_{i}'s$ generate a $\ngb{c}{p}$-free subgroup of $G$.
+\end{fact*}
+
+\begin{fact*}[\cite{stall,stam}]
+Let $\phi$ be a group homomorphism of $G$ in $K$, if $\phi$
+induces an isomorphism of $G_{ab}$ to $K_{ab}$ and an epimorphism
+$\phi_{*}$ of $H_{2}(G)$ onto $H_{2}(K)$, then $\phi$ induces
+isomorphisms of $G\quot\gamma_{i}(G)$ to $K\quot\gamma_{i}(K)$ for all
+$i<\omega$.
+
+In particular if $G$ and $K$ are nilpotent, they are isomorphic.
+\end{fact*}
+
+A finitely presented group is called {\em efficient} if equality holds in \pref{defi} and $\mathcal{V}$-efficient
+if the same equality holds for the corresponding $\mathcal{V}$-deficiency.
+\begin{fact*}[{\cite[Theorem 6.5]{stahom}}]
+Let $G$ be a group in $\mathcal{V}$, given by a finite $\mathcal{V}$-presentation.
+Then there exists an efficient group $K\in\mathcal{V}$ and a surjective homomorphism
+$\map{f}{K}{G}$ which induces an isomorphism $\map{f_{i}}{K/\gamma_{i}(K)}{G/\gamma_{i}(G)}$ for every $i\geq1$.
+
+In particular $\ngb{c}{p}$-groups are $\ngb{c}{p}$-efficient: equality in \pref{vardefi} holds!
+\end{fact*}
+
+\medskip
+The objects and facts reported above apply, in the very same fashion, to Lie algebras. One may check \cite{staknu} or
+\cite[\S VII]{hilsta}.
+
+In particular for a presentation $\mathfrak{r}\to\mathfrak{f}\to\mathfrak{g}$, the second integral homology group of ${\mathfrak g}$
+is given by $$H_{2}(\mathfrak{g})=\mathfrak{f}^{\prime}\cap\mathfrak{r}\quot[\mathfrak{f},\mathfrak{r}]$$
+
+As before, we find the analogous notion related to our special class of Lie algebras $\nla{c}$ over $\Fp$.
+In particular for $M=\gen{M_{1}\mid R}$ in 
+%Note that if ${\mathfrak g}$ belongs to our graded category
+$\nla{c}$, as $R$ is contained in the {\em commutator algebra} $(\fla{c}{M_{1}})^{\prime}=\gamma_{2}(\fla{c}{M_{1}})$,
+we find
+\begin{labeq}{LieSchur}
+H_{2}(M,\nla{c})=\frac{R}{[R,L]}
+\end{labeq}
+where $L$ denotes $\fla{c}{M_{1}}$.
+
+Of course we can define -- as in Lemma \ref{pdeficienza} -- the corresponding
+notion ${\rm def}_{\nla{c}}$ of $\nla{c}$-deficiency for finitely generated algebras $M$.
+We may as well speak of {\em efficient $\nla{c}$-algebras} and in particular, we have 
+\begin{labeq}{LieDef}
+{\rm def}_{\nla{c}}(M)=\dfp(M_{1})-\dfp(H_{2}(M,\nla{c})).
+\end{labeq}
+In our case recall that the ideal $R$ is homogeneous and $R=R_{2}\oplus\dots\oplus R_{c}$.
+Roughly speaking the group $R/[L,R]$ mods out for all $i\leq c$, the relators $R_{i}$ of
+weight $i$ of the redundant terms: the elements of $R_{i}$ which arise as brackets $[r^{\prime},x_{1},\dots,x_{i-k}]$,
+for relators of {\em lower weight} $r^{\prime}\in R_{k}$.
+
+In section \ref{freelift} of Chapter \ref{tre} we will encounter exactly this {\em shifting} phenomenon.
+
+\medskip
+It is worth to note that the above notions interact with free products with amalgamated subgroup. This is connected with
+the Mayer-Vietoris sequence (cfr.{\,}\cite[\S II.6]{stahom}).

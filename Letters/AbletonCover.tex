@@ -1,0 +1,165 @@
+%---------------------------------------------------------------------------
+\documentclass%%
+%---------------------------------------------------------------------------
+  [fontsize=12pt,english,%german,%%          Schriftgroesse
+%---------------------------------------------------------------------------
+% Satzspiegel
+   DIV=9,
+   paper=a4,%%               Papierformat
+   enlargefirstpage=on,%%    Erste Seite anders
+   pagenumber=headright,%%   Seitenzahl oben mittig
+%---------------------------------------------------------------------------
+% Layout
+   headsepline=on,%%         Linie unter der Seitenzahl
+   parskip=off,%half,%%           Abstand zwischen Absaetzen
+%---------------------------------------------------------------------------
+% Briefkopf und Anschrift
+   fromalign=right,%%        Plazierung des Briefkopfs
+   fromphone=off,%%           Telefonnummer im Absender
+   fromrule=aftername,%%           Linie im Absender (aftername, afteraddress)
+   fromfax=off,%%            Faxnummer
+   fromemail=on,%%          Emailadresse
+   fromurl=off,%%            Homepage
+   fromlogo=on,%%           Firmenlogo
+   addrfield=on,%%           Adressfeld fuer Fensterkuverts
+   backaddress=off,%%          ...und Absender im Fenster
+   subject=beforeopening,%%  Plazierung der Betreffzeile
+   locfield=narrow,%%        (narrow,wide) zusaetzliches Feld fuer Absender
+   foldmarks=off,%%           Faltmarken setzen
+   numericaldate=off,%%      Datum numerisch ausgeben
+   refline=narrow,%%         Geschaeftszeile im Satzspiegel
+%---------------------------------------------------------------------------
+% Formatierung
+   draft=off%%                Entwurfsmodus
+]{scrlttr2}
+\LoadLetterOption{myLetter}
+%---------------------------------------------------------------------------
+% Weitere Optionen
+\KOMAoptions{%%
+}
+%---------------------------------------------------------------------------
+\usepackage[ngerman]{babel}
+\usepackage[T1]{fontenc}
+\usepackage[latin1]{inputenc}
+\usepackage{url}
+\usepackage{xcolor}
+\newcommand{\tilda}{{\raise.17ex\hbox{$\scriptstyle\sim$}}}
+
+
+%---------------------------------------------------------------------------
+% Fonts
+%\setkomafont{fromname}{\large}
+\setkomafont{fromaddress}{\small}%% statt \small
+\setkomafont{pagenumber}{\sffamily}
+\setkomafont{subject}{\mdseries}
+\setkomafont{backaddress}{\mdseries}
+%\usepackage{mathptmx}%% Schrift Times
+%\usepackage{mathpazo}%% Schrift Palatino
+%\setkomafont{fromname}{\LARGE}
+%---------------------------------------------------------------------------
+\usepackage[backref,pdftex,hidelinks=true]{hyperref}
+\begin{document}
+%---------------------------------------------------------------------------
+% Briefstil und Position des Briefkopfs
+%\LoadLetterOption{DIN} %% oder: DINmtext, SN, SNleft, KOMAold.
+\makeatletter
+\@addtoplength{toaddrvpos}{-25mm}
+\@addtoplength{refaftervskip}{-3mm}
+\@addtoplength{refvpos}{-35mm}
+\@setplength{firstheadvpos}{7mm}
+\@setplength{firstheadwidth}{\paperwidth}
+\ifdim \useplength{toaddrhpos}>\z@
+  \@addtoplength[-2]{firstheadwidth}{\useplength{toaddrhpos}}
+\else
+  \@addtoplength[2]{firstheadwidth}{\useplength{toaddrhpos}}
+\fi
+\@setplength{foldmarkhpos}{6.5mm}
+\makeatother
+%-----------------------------------------------------------------------------
+%
+%????? Absender-----> defined in myLetter.lco for the ``Letters'' folder
+%                                               commands there are overridden by this file
+%
+%-------------------------------------------------------------------------------------------------
+%\setkomavar{fromname}{Absender Name}
+%\setkomavar{fromaddress}{ Straße\\12345 Ort.}
+%\setkomavar{fromphone}{+49 (0)30 3462 4345}
+\renewcommand{\phonename}{Telefon}
+\setkomavar{fromemail}{amantini.andrea@gmail.com}%
+%@math.hu-berlin.de}
+\setkomavar{backaddressseparator}{ ::: }
+%\setkomavar{signature}{(Name)}
+%\setkomavar{frombank}{}
+\setkomavar{location}{}
+%\setkomavar{location}{\\[8ex]\raggedleft{\footnotesize{\usekomavar{fromaddress}\\
+%      Telefon:\ usekomavar{fromphone}}}}%% Neben dem Adressfenster
+%---------------------------------------------------------------------------
+\firsthead{\center\raggedleft\textcolor[HTML]{262626}{Andrea Amantini\\[-2mm]
+\rule{\textwidth}{.5pt}
+\usekomavar{fromaddress}\\
+\usekomavar{fromemail}}
+}
+%---------------------------------------------------------------------------
+\firstfoot{
+\begin{flushright}
+{\scriptsize\sl powered by: \LaTeX - KOMA Pacakge}
+\end{flushright}
+\begin{center}
+~\\[-13.5mm]
+\textcolor[HTML]{696969}{\rule{\textwidth}{.5pt}
+\small{Andrea Amantini | \usekomavar{fromaddress} | \usekomavar{fromphone} | \usekomavar{fromemail}}}
+\end{center}}
+%---------------------------------------------------------------------------
+% Geschaeftszeilenfelder
+%\setkomavar{place}{Ort}
+%\setkomavar{placeseparator}{, den }
+\setkomavar{date}{\today}
+%\setkomavar{yourmail}{1. 1. 2003}%% 'Ihr Schreiben...'
+%\setkomavar{yourref} {abcdefg}%%    'Ihr Zeichen...'
+%\setkomavar{myref}{}%%      Unser Zeichen
+%\setkomavar{invoice}{123}%% Rechnungsnummer
+%\setkomavar{phoneseparator}{}
+%---------------------------------------------------------------------------
+% Versendungsart
+%\setkomavar{specialmail}{Einschreiben mit Rückschein}
+%---------------------------------------------------------------------------
+% Anlage neu definieren
+\renewcommand{\enclname}{Anlage}
+\setkomavar{enclseparator}{: }
+%---------------------------------------------------------------------------
+% Seitenstil
+%\pagestyle{plain}%% keine Header in der Kopfzeile
+%---------------------------------------------------------------------------
+\begin{letter}{ {\bf \textcolor[HTML]{64B400}{Ableton}}\\
+{\bf Software Engineering team}}
+%---------------------------------------------------------------------------
+\setkomavar{subject}{\bf Trainee Software Engineer}
+%---------------------------------------------------------------------------
+\opening{Dear SE Team}
+I was very happy to know that Ableton is open to unconventional-career-path applications
+and that the Developers Team offer a coaching program.
+
+Fresh of my doctorate in mathematics, I'd like to re-invest my logical background
+to learn and work with complex object oriented programming.
+Via synctactic analyse, comprehend and extend a complex system..
+
+I strongly believe, an intensive {\em hands-on} training will
+fill-up in a short period my missing 
+
+I have a primary understanding of the core concepts behind object orientation
+and a knowledge of the syntactical 
+and interested in more advanced features,
+like template oriented developement \dots basic syntax of low-level languages like $C^{++}$ or Objective-$C$.
+
+\medskip
+I am not scared to start in a pre-Junior position, and am eager to face
+new and complex problems, for -- as my experience with programming so far shows --
+only with solving practical tasks I can extend my skills of a language.
+
+I am looking forward to receiving any feed-back, along with
+the first programming tasks mentioned in the call.
+
+\medskip
+\closing{Kind Regards}
+\end{letter}
+\end{document}

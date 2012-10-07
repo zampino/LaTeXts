@@ -1,0 +1,72 @@
+\makeatletter
+\begin{titlepage}
+\hoffset = 7mm
+%\addtolength{\oddsidemargin}{-5mm}
+\addtolength{\textheight}{5cm}
+%\addtolength{\oddsidemargin}{-3mm}
+%\@restonecolfalse \if@twocolumn \@restonecoltrue\onecolumn
+% \else \newpage \fi \thispagestyle{empty}
+%\@restonecoltrue
+\begin{spacing}{1}
+%% Settings .....................
+\newlength{\parindentbak}
+  \setlength{\parindentbak}{\parindent}
+\newlength{\parskipbak}
+  \setlength{\parskipbak}{\parskip}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{\baselineskip}
+%????????????????
+\thispagestyle{empty}
+\Large
+\begin{center}
+{\huge\sc\@disstitle}
+
+\so{\sc Dissertation}
+
+zur Erlangung des akademischen Grades
+
+\@degree\\
+im Fach\\
+\@degreesubj
+\end{center}
+\vspace{2\parskip}
+eingereicht an der\\
+\@faculty\\
+der \@university
+
+von\\
+{\mdseries\@authorprefix\,\@authorfirst\,\@authorlast}\\
+{\normalsize \@authorbornin, \@authorbornthe}\\
+%\end{center}
+
+\vfill
+\large%\normalsize
+Pr\"asident der \@university:\\[+1mm]
+{\large\@president}
+
+Dekan der \@faculty:\\[+1mm]
+{\large\@dean}
+
+Gutachter:
+\begin{enumerate}[%
+leftmargin=*,%
+widest=3,%
+align=left,%
+%nolistsep%
+]
+%\addtolength{\itemsep}{-0.5\baselineskip}
+\item{\large \@gutachtera}
+\item{\large \@gutachterb}
+\item{\large \@gutachterc}
+\end{enumerate}
+\nopagebreak[4]
+Tag der m\"undlichen Pr\"ufung: {\large\@dateexam}
+%????restore lengths????????????
+\setlength{\parindent}{\parindentbak}
+\setlength{\parskip}{\parskipbak}
+\end{spacing}
+\end{titlepage}
+\makeatother
+\newpage
+\thispagestyle{empty}
+\cleardoublepage

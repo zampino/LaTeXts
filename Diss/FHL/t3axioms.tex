@@ -1,0 +1,104 @@
+Now $\Kl{3}$ are nil-$3$ graded algebras $M$ with $\ta$-closed nil-$2$ quotient $M_{*}$,
+the usual axioms, as well as the property\\[+1mm]
+$\sig{3}{2}^{\prime}$:\quad $\forall x\in M_{1}\non\geno{a}\;\gena{a,x}{M}\dsu M$\\[+2mm]
+which is equivalent, if we add axioms saying that such $a,x$ always generate
+a nil-$3$ free algebra, to require relative delta $\ded^{M}$ not smaller than $2$ on subspaces of $M_{1}$ which contains such couples $a,x$.
+
+\medskip
+As usual we start from the amalgam $L=\ftr{L_{*}}\quot {N_{M}+N_{A}}$ of $M\dso B\inn A$
+in $\Kl{3}$ where $L_{*}$ is the free amalgam in $\Kl{2}$ of $M_{*}\zso B_{*}\inn A_{*}$.
+Hence we have $M\dsu L \nni A$. {\em Note that $L_{*}$ is still not $\ta$-closed.}
+
+\medskip
+We have to prove $\sig{3}{2}^{\prime}$ for $L$. So choose a finite $E_{1}$ in $L_{1}$ which
+without loss of generality may be assumed $2$-selfsufficient in $L_{1}$.
+
+\smallskip
+{\bf 1.{\,}Case:} $E_{1}$ is {\em moderate}, that is $E_{1}=\geno{E_{1}\cap M_{1},E_{1}\cap A_{1}}$. Moreover we assume $E_{1}\cap M_{1}$ contains an element $x$ independent
+over $a$.\footnote{the somehow trivial case $E_{1}\cap M_{1}=\geno{a}$ must be dealt with separately}
+Set $C_{1}:=M_{1}+E_{1}$, so that $C_{1}=\geno{M_{1},E_{1}\cap A_{1}}$.
+
+Since $M_{1}\dsu L_{1}$ and $C_{1}$ is finite over $M_{1}$, there exists a {\em finite basis}
+$(\phi_{i})_{i<n}$ for $N^{2}(C)$ over $N^{2}(M)$.
+
+Now for each $i<n$ there exists
+\begin{itemize}
+\item $\phi^{m}_{i}\in\exs M_{1}$
+\item $\phi^{a}_{i}\in\exs E_{1}\cap A_{1}$ {\bf [Note:] THIS IS WRONG. WHAT FOLLOWS IS NONSENSE}
+\item $\nu_{M}\in N^{2}(M)$
+\item $\nu_{A}\in N^{2}(A)$
+\end{itemize}
+such that $\phi_{i}=\phi^{m}_{i}+\phi^{a}_{i}=\nu_{M}+\nu_{A}$.
+
+Set as usual
+$I:=\phi^{m}_{i}-\nu_{M}=\nu_{A}-\phi^{a}_{i}\in\exs B_{1}$ which we resolve
+as $I=[a,b_{i}]$ for some $b_{i}$ in $B_{1}$. Finally set $E_{1}^{+}=\geno{E_{1},b_{i}\,:
+i<n}$ and define $\tilde\phi ^{m}_{i}:=\phi^{m}_{i}-[a,b_{i}]\in N^{2}(M_{1})$ and
+$\tilde\phi ^{a}_{i}:=\phi^{a}_{i}+[a,b_{i}]\in N^{2}(E_{1}\cap A_{1},b_{i})$. Hence $\phi_{i}=\tilde\phi ^{m}_{i}+\tilde\phi ^{a}_{i}$ as well.
+
+\medskip
+Since $E\zsu{} L$,  for each $b_{i}$ which is independent over $E_{1}$,
+the correspondent relation $\tilde\phi ^{a}_{i}$ generates $N^{2}(E_{1},b_{i})$ over
+$N^{2}(E_{1})$. By choosing carefully the $b_{i}$'s, we can assume $\delta_{2}(E^{+})=
+\delta_{2}(E)$.
+
+\medskip
+Note $C_{1}=M_{1}+E_{1}^{+}$ and we have $N^{2}(C)=\gen{N^{2}(M),\,\phi_{i}\,:i<n}=\gen{N^{2}(M),\,\tilde\phi ^{a}_{i}\,:i<n}$. From this follows
+$$N^{2}(C)=N^{2}(M)+N^{2}(E^{+})$$
+which implies $C_{*}=\gena{C_{1}}{L_{*}}$ is a free amalgam of $M_{*}$ and $E^{+}_{*}$.
+
+In particular
+$\gena{M_{1}\cap E_{1}^{+}}{\fl{C}}=\gena{M_{1}}{\fl{C}}\cap\gena{E_{1}^{+}}{\fl{C}}$
+where $\fl{C}$ is the free lift of $C_{*}$.
+
+\medskip
+This means we can apply subadditivity for $\ded^{C}$ for $E^{+}$ over $M$
+and obtain
+$$\ded^{C}(E_{1})\geq\ded^{C}(E_{1}^{+})\geq\ded^{C}(E_{1}^{+}\cap M_{1})+\ded^{C}(E_{1}^{+}\quot M_{1}).$$
+
+Since $E_{1}$ is $2$-strong in $L_{1}$ and hence in $C_{1}$, then $\ded^{L}(E_{1})=\delta_{3}(E)=\ded^{C}(E_{1})$. On the other hand, since $E^{+}$ is $2$-strong, $E_{1}^{+}\cap M_{1}$ is $2$-strong in $M_{1}$ and this yields $\ded^{C}(E_{1}^{+}\cap M_{1})=\ded^{M}(E_{1}^{+}\cap M_{1})\geq2$ as $M\in\Kl{3}$.
+
+\medskip
+We can conclude that $\ded^{L}(E_{1})\geq2$ iff $\ded^{C}(E_{1}^{+}\quot M_{1})\geq0$.
+This follows from the general fact (this is to be proven) that if a space $M$ is $3$-strong
+in $L$, then $M$ is $3$-strong in any $C$ with $M\inn C\inn L$.
+
+In this special case we have to show $\ded^{C}(E_{1}^{+}\quot M_{1})\geq\ded^{L}(E_{1}^{+}\quot M_{1})$ and conclude with $M\dsu L$. Here we may observe
+$\ded^{C}(E_{1}^{+}\quot M_{1})-\ded^{L}(E_{1}^{+}\quot M_{1})=
+d_{2}^{C}(C_{1})-d_{2}^{L}(C_{1})-\left[  \dfp(N^{3}(C))-\dfp(N^{3}_{L}(C_{1}))  \right]$.
+
+This is exactly  Krocodile Lemma for {\em infinite} spaces. On one hand 
+$d_{2}^{L}(C_{1})\leq d_{2}^{C}(C_{1})=d_{2}^{C}(C_{1}\quot M_{1})+d_{2}^{C}(M_{1})$
+is finite, but the point here could be that $N^{3}(C)$ has infinite dimension, which
+should contradict $M_{1}\dsu L_{1}$ or even the fact that both $N^{3}(A)$ and $N^{3}(M)$
+are finite.
+
+If the difference above makes sense, we could deal with it by applying
+Krocodile to an increasing sequence ${C_{1}}^{i}$ of finite, $2$-strong spaces ${C_{1}}^{i}\zsu{} C_{1}$ with $\delta_{2}({C_{1}}^{i})=d_{2}^{C}(C_{1})$ for all $i$ and such that ${C_{1}}^{i}\nearrow C_{1}$.
+
+\bigskip
+{\bf 2.{}\,Case:}
+$E_{1}$ is {\em immoderate} that is $E_{1}=\geno{E_{1}\cap M_{1},E_{1}\cap A_{1},\mathcal{U+V}}$
+where $\mathcal{U+V}=\{u_{i}+v_{i}\}$ for $u_{i}$ independent in $M_{1}$ over $E_{1}\cap M_{1}$.
+
+\smallskip
+Some remarks for this case:
+\begin{itemize}
+\item Now $C_{1}:=M_{1}+E_{1}=\geno{M_{1},E_{1}\cap A_{1},\mathcal{V}}$
+and we may observe\\
+$E_{1}\cap A_{1}+\geno{\mathcal{V}}=\geno{E_{1},\mathcal{V}}\cap
+A_{1}$.
+\item $\geno{E_{1},\mathcal{V}}$ may be interpreted as a \emph{moderation} of $E_{1}$,
+since $\geno{E_{1},\mathcal{V}}=\geno{E_{1}\cap M_{1},\mathcal{U},E_{1}\cap A_{1},\mathcal{V}}$. If $\delta_{2}(E_{1},\mathcal{V})=\delta_{2}(E_{1})$ then we can use the {\bf 1.{}\,Case}
+on $\geno{E_{1},\mathcal{V}}\nni E_{1}$. But this may actually not be the case, since
+we have no control of $N^{2}(E_{1},\mathcal{V})$ over $N^{2}(E_{1})$. We only
+know $\dfp(\geno{E_{1},\mathcal{V}})=\dfp E_{1}+\card{\mathcal{V}}$.
+
+\item If we proceed as in the first case, we get for a basis $\phi_{i}$ of $N^{2}(C)$ over
+$N^{2}(M)$ that $\phi_{i}=\phi_{i}^{m}+\phi_{i}^{a}$ with $\phi_{i}^{a}\in\exs \geno{E_{1},\mathcal{V}}\cap A_{1}$. Hence an analogous definition of $\tilde\phi _{i}^{a}$ would
+imply $C$ is a free amalgam of $M$ and $\geno{E_{1},\mathcal{V}}^{+}$.
+
+\item If we could write $\phi_{i}$ above into $\phi_{i}=\phi_{i}^{m}-w(\bar u)+
+\phi_{i}^{a}+w(\bar u)$ for some term $w(\bar u)\in\exs\geno{B_{1},\mathcal{U}}$ such that
+$\phi_{i}^{a}+w(\bar u)=\psi_{i}^{a}+w(\bar u + \bar v)$ is in $\exs E_{1}$ would maybe help.
+\end{itemize}

@@ -1,0 +1,192 @@
+%---------------------------------------------------------------------------
+\documentclass%%
+%---------------------------------------------------------------------------
+  [fontsize=11pt,german,%%          Schriftgroesse
+%---------------------------------------------------------------------------
+% Satzspiegel
+   DIV=9,
+   paper=a4,%%               Papierformat
+   enlargefirstpage=on,%%    Erste Seite anders
+   pagenumber=headright,%%   Seitenzahl oben mittig
+%---------------------------------------------------------------------------
+% Layout
+   headsepline=on,%%         Linie unter der Seitenzahl
+   parskip=off,%half,%%           Abstand zwischen Absaetzen
+%---------------------------------------------------------------------------
+% Briefkopf und Anschrift
+   fromalign=right,%%        Plazierung des Briefkopfs
+   fromphone=off,%%           Telefonnummer im Absender
+   fromrule=aftername,%%           Linie im Absender (aftername, afteraddress)
+   fromfax=off,%%            Faxnummer
+   fromemail=on,%%          Emailadresse
+   fromurl=off,%%            Homepage
+   fromlogo=on,%%           Firmenlogo
+   addrfield=on,%%           Adressfeld fuer Fensterkuverts
+   backaddress=off,%%          ...und Absender im Fenster
+   subject=beforeopening,%%  Plazierung der Betreffzeile
+   locfield=narrow,%%        (narrow,wide) zusaetzliches Feld fuer Absender
+   foldmarks=off,%%           Faltmarken setzen
+   numericaldate=off,%%      Datum numerisch ausgeben
+   refline=narrow,%%         Geschaeftszeile im Satzspiegel
+%---------------------------------------------------------------------------
+% Formatierung
+   draft=off%%                Entwurfsmodus
+]{scrlttr2}
+\LoadLetterOption{myLetter}
+%---------------------------------------------------------------------------
+% Weitere Optionen
+\KOMAoptions{%%
+}
+%---------------------------------------------------------------------------
+\usepackage[ngerman]{babel}
+\usepackage[T1]{fontenc}
+\usepackage[latin1]{inputenc}
+\usepackage{url}
+\usepackage{xcolor}
+\newcommand{\tilda}{{\raise.17ex\hbox{$\scriptstyle\sim$}}}
+
+
+%---------------------------------------------------------------------------
+% Fonts
+%\setkomafont{fromname}{\large}
+\setkomafont{fromaddress}{\small}%% statt \small
+\setkomafont{pagenumber}{\sffamily}
+\setkomafont{subject}{\mdseries}
+\setkomafont{backaddress}{\mdseries}
+%\usepackage{mathptmx}%% Schrift Times
+%\usepackage{mathpazo}%% Schrift Palatino
+%\setkomafont{fromname}{\LARGE}
+%---------------------------------------------------------------------------
+\usepackage[backref,pdftex,hidelinks=true]{hyperref}
+\begin{document}
+%---------------------------------------------------------------------------
+% Briefstil und Position des Briefkopfs
+%\LoadLetterOption{DIN} %% oder: DINmtext, SN, SNleft, KOMAold.
+\makeatletter
+\@addtoplength{toaddrvpos}{-25mm}
+\@addtoplength{refaftervskip}{-3mm}
+\@addtoplength{refvpos}{-35mm}
+\@setplength{firstheadvpos}{7mm}
+\@setplength{firstheadwidth}{\paperwidth}
+\ifdim \useplength{toaddrhpos}>\z@
+  \@addtoplength[-2]{firstheadwidth}{\useplength{toaddrhpos}}
+\else
+  \@addtoplength[2]{firstheadwidth}{\useplength{toaddrhpos}}
+\fi
+\@setplength{foldmarkhpos}{6.5mm}
+\makeatother
+%-----------------------------------------------------------------------------
+%
+%????? Absender-----> defined in myLetter.lco for the ``Letters'' folder
+%                                               commands there are overridden by this file
+%
+%-------------------------------------------------------------------------------------------------
+%\setkomavar{fromname}{Absender Name}
+%\setkomavar{fromaddress}{ Straße\\12345 Ort.}
+%\setkomavar{fromphone}{+49 (0)30 3462 4345}
+\renewcommand{\phonename}{Telefon}
+\setkomavar{fromemail}{amantini%.andrea@%gmail.com}%
+@math.hu-berlin.de}
+\setkomavar{backaddressseparator}{, }
+%\setkomavar{signature}{(Name)}
+%\setkomavar{frombank}{}
+\setkomavar{location}{}
+%\setkomavar{location}{\\[8ex]\raggedleft{\footnotesize{\usekomavar{fromaddress}\\
+%      Telefon:\ usekomavar{fromphone}}}}%% Neben dem Adressfenster
+%---------------------------------------------------------------------------
+\firsthead{\center\raggedleft\textcolor[HTML]{262626}{Andrea Amantini\\[-2mm]
+\rule{\textwidth}{.5pt}
+\usekomavar{fromaddress}\\
+\usekomavar{fromemail}}
+}
+%---------------------------------------------------------------------------
+\firstfoot{\begin{center}
+\textcolor[HTML]{696969}{\rule{\textwidth}{.5pt}
+\small{Andrea Amantini | \usekomavar{fromaddress} | \usekomavar{fromphone} | \usekomavar{fromemail}}}
+\end{center}}
+%---------------------------------------------------------------------------
+% Geschaeftszeilenfelder
+%\setkomavar{place}{Ort}
+%\setkomavar{placeseparator}{, den }
+\setkomavar{date}{\today}
+%\setkomavar{yourmail}{1. 1. 2003}%% 'Ihr Schreiben...'
+%\setkomavar{yourref} {abcdefg}%%    'Ihr Zeichen...'
+%\setkomavar{myref}{}%%      Unser Zeichen
+%\setkomavar{invoice}{123}%% Rechnungsnummer
+%\setkomavar{phoneseparator}{}
+%---------------------------------------------------------------------------
+% Versendungsart
+%\setkomavar{specialmail}{Einschreiben mit Rückschein}
+%---------------------------------------------------------------------------
+% Anlage neu definieren
+\renewcommand{\enclname}{Anlage}
+\setkomavar{enclseparator}{: }
+%---------------------------------------------------------------------------
+% Seitenstil
+%\pagestyle{plain}%% keine Header in der Kopfzeile
+%---------------------------------------------------------------------------
+\begin{letter}{\bf Konrad-Zuse-Zentrum für Informationstechnik Berlin\\Bereich Diskrete Mathematik\\Takustr. 7, 14195 Berlin-Dahlem.}
+%---------------------------------------------------------------------------
+\setkomavar{subject}{\bf Bewerbung als Wissenschaftlicher Angestellter
+im Projekt ``Informationstechnische Werkzeuge für Museen'' - Kennziffer: WA 12/11}
+%---------------------------------------------------------------------------
+\opening{Sehr geehrte Damen und Herren,}
+hiermit bewerbe ich mich als Wissenschaftlicher Angestellter
+zur Mitarbeit im Projekt ``Informationstechnische Werkzeuge für Museen''.
+
+\medskip
+Aus meinem Diplom- und Promotionstudium der Mathematik -- mit den
+Schwerpunkten Algebra
+bzw. Mathematische Logik -- habe ich gelernt, komplex strukturierte Systeme durch rigorose syntaktische Konsistenz sowie kreatives Denken
+zu analysieren, verstehen und erweitern.
+
+Die auf der Seite des Projektes geschilderte Aufgaben, Standards und
+Institutionen, sowie die informationstechnologische Verwaltung und Vermittlung musealer
+Metadaten und Wissensinhalte haben mein Interesse stark geweckt.
+
+Als persönliche Weiterentwicklung würde ich
+die Möglichkeit einer engagierten Zusammenarbeit 
+mit den bedeutendsten kulturellen Partnern
+Berlins und Deutschlands 
+und die Spezialisierung in semantischen Webtechnologien
+für das museale Umfeld sehr schätzen.
+
+\medskip
+Neben dem Interesse an einer intensiven Einarbeitung
+wird meine Bewerbung durch folgende Erfahrungen und Kompetenzen
+unterstützt:
+\begin{itemize}
+\item Erfahrung mit diversen objektorientierten Sprachen
+in Zusammenhang mit Web-anwendungen und CMS:
+\begin{itemize}
+\item Erfahrung mit {\em Buildout} Befehlszeile-gesteuerter Entwicklung unter Python
+für die Erweiterung des Plone CMS -- zur Zeit bei der Unterstützung der Platform
+RawNews (siehe \href{}{http://dev.raw-news.net}). 
+
+\item Entwicklung unter dem PhP + MySQL basierten CMS Wordpress.
+Design und Pflege der Webseite \href{}{www.labirintotheater.com}.
+\end{itemize}
+
+\item Webdesign durch XHTML und CSS zur
+Erstellung benutzerfreundlicher Web-applikationen
+(siehe meine Webseite \href{http://www.math.hu-berlin.de/~amantini}{www.math.hu-berlin.de/\tilda amantini}).
+Erfahrung mit Javascript und der Bibliothek JQuery für ein effizientes {\em traversing} des DOMs und eine dynamische
+Steuerung des CSS.
+Interesse an den neuesten Webstandards wie HTML5 und CSS3.
+
+\item Kenntnisse der elementaren SQL Syntaktische Regeln (mySQL) und Konzepte zum scripting relationaler Datenbanken. 
+Ableitung relationaler Tabellen aus ER-Modellen. Anfangskenntnisse objektorientierter Datenbanken, hauptsächlich
+in Verbindung mit den pythonischen Zope und Zeo.
+
+\item Kommandozeile-betrieb und essentielle Serververwaltung unter Unix Systeme, insbesondere Debian Linux.
+Erweiterte Kenntnisse des Mac OS X und Windows.
+
+\item Ausgeprägte Kommunikations- und Teamfähigkeit aus einer mehrjährigen netzwerkorientierten Forschungserfahrung im
+durch die EU-Kommission geforderten Marie Curie {\em Research Training Network} MODNET.\\
+Flie\ss ende Sprachkenntnisse in Italienisch, Englisch und Deutsch -- schriftlich und wörtlich.
+\end{itemize}
+
+\closing{Mit freundlichen Grüßen,}
+
+\end{letter}
+\end{document}

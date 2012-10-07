@@ -1,0 +1,141 @@
+%---------------------------------------------------------------------------
+\documentclass%%
+%---------------------------------------------------------------------------
+  [fontsize=12pt,%%          Schriftgroesse
+%---------------------------------------------------------------------------
+% Satzspiegel
+   paper=a4,%%               Papierformat
+   enlargefirstpage=on,%%    Erste Seite anders
+   pagenumber=headright,%%   Seitenzahl oben mittig
+%---------------------------------------------------------------------------
+% Layout
+   headsepline=on,%%         Linie unter der Seitenzahl
+   parskip=half,%%           Abstand zwischen Absaetzen
+%---------------------------------------------------------------------------
+% Briefkopf und Anschrift
+   fromalign=right,%%        Plazierung des Briefkopfs
+   fromphone=on,%%           Telefonnummer im Absender
+   fromrule=aftername,%%           Linie im Absender (aftername, afteraddress)
+   fromfax=off,%%            Faxnummer
+   fromemail=on,%%          Emailadresse
+   fromurl=off,%%            Homepage
+   fromlogo=on,%%           Firmenlogo
+   addrfield=on,%%           Adressfeld fuer Fensterkuverts
+   backaddress=on,%%          ...und Absender im Fenster
+   subject=beforeopening,%%  Plazierung der Betreffzeile
+   locfield=narrow,%%        (narrow,wide) zusaetzliches Feld fuer Absender
+   foldmarks=on,%%           Faltmarken setzen
+   numericaldate=off,%%      Datum numerisch ausgeben
+   refline=narrow,%%         Geschaeftszeile im Satzspiegel
+   %---------------------------------------------------------------------------
+% Formatierung
+   draft=off%%                Entwurfsmodus
+]{scrlttr2}
+\LoadLetterOption{myLetter}
+%---------------------------------------------------------------------------
+% Weitere Optionen
+\KOMAoptions{%%
+}
+%---------------------------------------------------------------------------
+\usepackage{german}
+\usepackage[T1]{fontenc}
+\usepackage[latin1]{inputenc}
+\usepackage{url}
+%---------------------------------------------------------------------------
+% Fonts
+\setkomafont{fromname}{\bfseries\large}%\sffamily
+\setkomafont{fromaddress}{}%\sffamily}%% statt \small
+\setkomafont{pagenumber}{\sffamily}
+\setkomafont{subject}{\mdseries}
+\setkomafont{backaddress}{\mdseries}
+%\usepackage{mathptmx}%% Schrift Times
+%\usepackage{mathpazo}%% Schrift Palatino
+%\setkomafont{fromname}{\LARGE}
+%---------------------------------------------------------------------------
+\begin{document}
+%---------------------------------------------------------------------------
+% Briefstil und Position des Briefkopfs
+%\LoadLetterOption{DIN} %% oder: DINmtext, SN, SNleft, KOMAold.
+\makeatletter
+\@setplength{firstheadvpos}{20mm}
+\@setplength{firstheadwidth}{\paperwidth}
+\ifdim \useplength{toaddrhpos}>\z@
+  \@addtoplength[-2]{firstheadwidth}{\useplength{toaddrhpos}}
+\else
+  \@addtoplength[2]{firstheadwidth}{\useplength{toaddrhpos}}
+\fi
+\@setplength{foldmarkhpos}{6.5mm}
+\makeatother
+%-----------------------------------------------------------------------------
+%
+%????? Absender-----> defined in myLetter.lco for the ``Letters'' folder
+%                                               commands there are overridden by this file
+%
+%-------------------------------------------------------------------------------------------------
+%\setkomavar{fromname}{Absender Name}
+%\setkomavar{fromaddress}{ Straße\\12345 Ort.}
+%\setkomavar{fromphone}{+49 (0)30 3462 4345}
+\renewcommand{\phonename}{Telefon}
+%\setkomavar{fromemail}{absender.name@provider.de}
+\setkomavar{backaddressseparator}{, }
+%\setkomavar{signature}{(Name)}
+%\setkomavar{frombank}{}
+\setkomavar{location}{}
+%\setkomavar{location}{\\[8ex]\raggedleft{\footnotesize{\usekomavar{fromaddress}\\
+%      Telefon:\ usekomavar{fromphone}}}}%% Neben dem Adressfenster
+%---------------------------------------------------------------------------
+%\firsthead{Frei gestalteter Briefkopf}
+%---------------------------------------------------------------------------
+%\firstfoot{Fußzeile}
+%---------------------------------------------------------------------------
+% Geschaeftszeilenfelder
+%\setkomavar{place}{Ort}
+%\setkomavar{placeseparator}{, den }
+\setkomavar{date}{\today}
+%\setkomavar{yourmail}{1. 1. 2003}%% 'Ihr Schreiben...'
+%\setkomavar{yourref} {abcdefg}%%    'Ihr Zeichen...'
+%\setkomavar{myref}{}%%      Unser Zeichen
+%\setkomavar{invoice}{123}%% Rechnungsnummer
+%\setkomavar{phoneseparator}{}
+%---------------------------------------------------------------------------
+% Versendungsart
+%\setkomavar{specialmail}{Einschreiben mit Rückschein}
+%---------------------------------------------------------------------------
+% Anlage neu definieren
+\renewcommand{\enclname}{Anlage}
+\setkomavar{enclseparator}{: }
+%---------------------------------------------------------------------------
+% Seitenstil
+%\pagestyle{plain}%% keine Header in der Kopfzeile
+%---------------------------------------------------------------------------
+\begin{letter}{Empfängername\\Empfängerstraße\\PLZ Ort}
+%---------------------------------------------------------------------------
+\setkomavar{subject}{Betreff}
+%---------------------------------------------------------------------------
+\opening{Sehr geehrte Frau / Sehr geehrter Herr ?
+[wenn möglich, immer den Ansprechpartner mit Namen nennen]
+Sehr geehrte Damen und Herren,
+[wenn kein Ansprechpartner bekannt ist, wählen Sie die anonyme Ansprache]}
+Mit großem Interesse habe ich Ihre Anzeige [Nummer/Position/Unternehmen, wie online angegeben, nennen] auf monster.de gelesen und stelle mich Ihnen hiermit als [Position] vor / und bewerbe mich hiermit auf die gebotene Stelle.
+
+[Jetzt nennen Sie Ihren (angestrebten) Abschluss und geben einen kurzen Überblick über Ihren akademischen / ausbildungsbezogenen Werdegang]
+
+Voraussichtlich im nächsten Monat werde ich mein Studium der [Fachrichtung] mit den Schwerpunkten [Schwerpunkte] erfolgreich beenden. Meine Diplomarbeit/Master-Arbeit/Bachelor-Abschlussarbeit/etc. habe ich über das Thema [Thema nennen, insbesondere wenn es zur aktuellen Position passt] verfasst, so dass ich bereits fundierte und sehr aktuelle Einblicke in den Bereich/das Gebiet/etc. [Bereich nennen] mitbringe.
+
+[Nun empfiehlt es sich, Ihre weiteren Qualitäten hervorzuheben/darzulegen, etwa:]
+In mehreren Praktika habe ich außerdem erste Berufserfahrung erworben. Hervorzuheben ist dabei meine Tätigkeit als [Tätigkeit/Position] bei [Firma], sowie mein Auslandspraktikum im Bereich [Bereich] bei der US-amerikanischen/französischen/chinesischen/etc. Niederlassung der [Firma]. Hierdurch habe ich meine interkulturellen Kenntnisse vertieft und erfolgreich in verschiedenen Teams zum Gesamterfolg beigetragen. Meine Englischkenntnisse habe ich in diesem Rahmen angewendet und auch fachbezogen verfeinert.
+
+[Jetzt legen Sie zur Abrundung dar warum Sie sich gerade für das Unternehmen in der Anzeige interessieren ? äußern Sie ggf. die Bereitschaft, auch ins Ausland zu gehen, etc.]
+Die [Zielfirma] ist mir bereits durch einschlägige Marktbeobachtung/mein Studium bekannt. Sehr gerne verstärke ich Ihr Team im Bereich [Bereich], weil ich mich mit dem Produkt/der Serviceleistung [Produkt/Leistung] absolut identifiziere und in der Aufgabe eine attraktive Herausforderung für mich sehe. 
+
+Daher freue ich mich über eine Einladung zu einem persönlichen Gespräch, für das ich Ihnen zeitnah zur Verfügung stehe. Mein frühestmöglicher Eintrittstermin ist voraussichtlich der [Datum], meine Gehaltsvorstellung liegt bei [wenn Nennung erbeten wird].
+
+Gerne höre ich von Ihnen.
+\closing{Mit freundlichen Grüßen,}
+%---------------------------------------------------------------------------
+%\ps{PS:}
+%\encl{}
+%\cc{}
+%---------------------------------------------------------------------------
+\end{letter}
+\end{document}

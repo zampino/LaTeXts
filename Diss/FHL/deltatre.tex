@@ -1,0 +1,502 @@
+\section{A Construction? of $\delta_{3}$}
+Remember that for each $n<\omega$, any $A\in\nla{n}$ is of the form
+$A=\gena{A_{1}}{A}=\oplus_{i\leq n}A_{i}$.
+Now for all $M\in\nla{n}$ we define with abuse $\tr{2}M=M\quot M^{3}\simeq{M}_{1}\oplus{M}_{2}$.
+The monolinear part $M_{1}=({\tr{2}M})_{1}$ can be once more endowed with a quasidimension function
+$\map{\delta_{2}}{\fpe{M}}{\Z}$
+considering relations from $N^{2}(\tr{2}M)\inn_{\sm{id}}{M}_{2}$. As usual
+$\fpe{M}$ denotes the collection of all finite dimensional subspaces of $M_{1}$.
+%, coincides with $\fpe{\tr{2}M}$.
+
+Again the notion of \emph{strong spaces} with respect to $\delta _{2}$ is well defined.
+The dimension function $d_{2}$, obtained from $\delta_{2}$, gives rise to the pr\"{a}geometry
+$(M_{1},\cl_{2})$, where $\cl_{2}=\cl_{d_{2}}$.
+%For any $M\in\nla{n}$, we define
+%\tojoris{$\fsz{M}$ as the family of all the vector $\Fp$-subspaces $H_{1}$ of $M_{1}$
+%for which $d_{1}(H_{1})<\omega$ and such that $H_{1}\zsu M_{1}$.}
+
+\medskip
+%Let $T_{2}$ be the elementary theory of the limit structure $\mathfrak{C}_{2}$ of the class $\mathcal{K}_{2}$.
+%Let $\fhlim{3}$ be the class of structures $M$ of $\nla{3}$ such that $\tr{2}M\models T_{2}$.
+%\smallskip
+For each algebra $M$ in $\nla{3}$ let $\map{\pi}{\fr{3}\tr{2}M}{M}$ be the canonical map as in \pref{communo} above,
+$\pi$ is defined by
+$\bar w\;(\mathit{mod}\:\jei{\tr{2}M})\longmapsto\bar w \;({mod}\:R)$. Where $M=\fla{3}{X_{1}}\quot R$.
+Then define $N^{3}(M)=\ker\pi$, we have $N^{3}(M)\inn(\fr{3}\tr{2}M)_{3}$.
+
+Let now $H=\gena{H_{1}}{M}$ be a subalgebra of $M\in\nla{3}$ and assume
+$H_{1}\zsu M_{1}$ as defined above.
+%$\tr{2}H$ is a selfsufficient substructure in $\tr{2}M$.
+%we will confuse equality with isomorphismand write 
+we have $\fr{3}\tr{2}H\simeq\gena{H_{1}}{\fr{3}\tr{2}M}$.
+
+For $H\inn M\in\nla{3}$ such that $H=\gena{H_{1}}{M}$ and
+$H_{1}\zsu M_{1}$, we define
+$$N^{3}(H_{1})=N^{3}(M)\cap\gena{H_{1}}{\fr{3}\tr{2}M}.$$%=N^{3}(M)\cap\fr{3}\tr{2}H
+
+Because $H_{1}$ is selfsufficient in $M_{1}$ and $\tr{2}\gena{H_{1}}{M}=\gena{H_{1}}{\tr{2}M}$,
+on account of Lemma \ref{bellemma},
+$N^{3}(H_{1})$ will be isomorphic with the kernel of the
+canonical projection $\map{\pi^{H}}{\fr{3}\tr{2}H}{H}$. If no confusion arises
+this ideal will be also denoted $N^{3}(H)$.
+%in this situation our definition does not depend on $M$, but only on the linear part $H_{1}$.
+%\medskip
+%is a $\cl_{2}$-closed space.}
+%If $H_{1}\in\fpz{M}$ then it is also $d_{2}H_{1}<\omega$.
+
+\smallskip
+For any $M$ in $\nla{3}$ we define a new map
+$$\map{\delta_{3}}{\fpe{M}}{\Z}$$
+by means of
+\begin{labeq}{deltatre}
+\delta_{3}H_{1}=d_{2}H_{1}-\dim_{\Fp}(N^{3}(\ssc_{2}H_{1}))\quad\forall H_{1}\in\fpe{M}
+\end{labeq}
+%Here of course $H=\gena{H_{1}}{M}$, %when this is clear from the context
+%as this will be almost everywhere the case
+If $H=\gena{H_{1}}{M}$ we will often write simply $\delta_{3}H$ instead of $\delta_{3}H_{1}$.
+
+%The definition of $\delta_{3}$ does make sense because a $\clz$-space is a $\delta_{2}$-strong space, as we proved in \ref{Kapzwei}, moreover
+As the structures in argument of $\delta_{3}$ are of finite character, $\dfp(N^{3}(H))$ is an integer.
+
+The definition of $\delta_{3}$ depends only on $H_{1}$. This means that if $M\inn L\in\nla{3}$ and $M_{1}\zsu L_{1}$ and we define respectively 
+$\delta_{3}^{M}$ and $\delta_{3}^{L}$ as above,
+%its values on $\fpe{M}\inn\fpe{L}$ will coincide with those
+%of $\map{\delta_{3}}{\fpe{M}}{\Z}$
+then ${\delta_{3}^{L}}_{|_{\fpe{M}}}\!=\delta_{3}^{M}$
+because $\fr{3}\tr{2}M\simeq\gena{M_{1}}{\fr{3}\tr{2}L}$ and
+$N^{3}(M)\simeq\gena{M_{1}}{\fr{3}\tr{2}L}\cap N^{3}(L)$.
+
+Therefore working with strong $\delta_{2}$-extensions there won't be need to specify
+each time which $\delta_{3}$ we are referring to.
+
+\medskip
+For general $M\in\nla{3}$, $\delta_{3}$ will \emph{not} be a $\cl_{1}$ (nor a $\cl_{2}$) quasidimension function
+on $M_{1}$.
+We have however $\delta_{3}(\ssc_{2}(H_{1},m))\leq\delta_{3}(H)+1.$
+
+Subadditivity holds only in special cases, as the next Lemma shows.
+%As done in the $2$-nilpotent case, when $U$ and $V$ are subalgebras of $M\in\nla{3}$,
+%with $U+V$ we refer to$\gena{U_{1}+V_{1}}{M}$.
+\begin{lem}\label{presubatre}
+Let $M\in\nla{3}$ and $U_{1}$, $V_{1}$ are $\delta_{2}$-strong spaces in $M_{1}$ such that
+%$\tr{2}U\cap\tr{2}V=\gena{U_{1}\cap V_{1}}{\tr{2}M}$, then
+$\gena{U_{1}}{\tr{2}M}\cap\gena{V_{1}}{\tr{2}M}=\gena{U_{1}\cap V_{1}}{\tr{2}M}$.
+We have
+$$\delta_3\left(\ssc_{2}(U_{1}+V_{1})\right)+\delta_{3}(U_{1}\cap V_{1})\leq\delta_{3}U+\delta_{3}V.$$
+\end{lem}
+\begin{proof}
+%As $\delta_{2}$ is a $\cle$-quasidimension, on one hand we have
+%$$\delta_2(U+V)+\delta_{2}(U\cap V)\leq\delta_{2}U+\delta_{2}V.$$
+As $d_{2}$ is a dimensionfunction and $\clz$ extends $\cle$, on one hand we have
+$$d_{2}(U_{1}+V_{1})=d_{2}(\cle(U_{1}\cup V_{1}))=
+d_{2}(U_{1}\cup V_{1})\leq
+d_{2}U+d_{2}V-d_{2}(U\cap V).$$
+Since $\delta_{3}(U+V)=d_{2}(U+V)-\dfp(N^{3}(U+V))$ we only have to show
+$$\dfp(N^{3}(\ssc_{2}(U_{1}+V_{1}))\geq\dfp(N^{3}(U))+\dfp(N^{3}(V))-\dfp(N^{3}(U\cap V)).$$
+Let $W=\fr{3}\tr{2}M$ and $N^{3}=N^{3}(M)$, we have
+%\begin{multline*}
+%N^{3}(\ssc_{2}(U+V))\nni
+%N^{3}((U+V)=
+$$
+N^{3}\cap\gena{\ssc_{2}(U_{1}+V_{1})}{W}\supseteq
+%N^{3}\cap\left({\gena{U_{1}+V_{1}}{W}}\right)_{3}\supseteq\\
+%\supseteqN^{3}\cap\left({\gena{U_{1}}{W}}_{3}+{\gena{V_{1}}{W}}_{3}\right)\supseteq
+N^{3}\cap\left(\gena{U_{1}}{W}\right)+N^{3}\cap\left(\gena{V_{1}}{W}\right).
+$$
+%\end{multline*}
+The previous inclusion, has to be regarded as
+between vector spaces in the weight $3$ part of $W$.
+Our assumptions and Lemma \pref{bellemmino} now imply
+$\gena{U_{1}}{W}\cap\gena{V_{1}}{W}=\gena{U_{1}\cap V_{1}}{W}$, therefore
+\begin{multline*}
+\dfp(N^{3}(\ssc_{2}(U_{1}+V_{1})))\geq\dfp(N^{3}\cap\gena{U_{1}}{W}+N^{3}\cap\gena{V_{1}}{W})=\\
+=\dfp(N^{3}\cap\gena{U_{1}}{W})+\dfp(N^{3}\cap\gena{V_{1}}{W})-\dfp(\gena{U_{1}}{W}\cap\gena{V_{1}}{W}
+\cap N^{3})\geq\\
+\geq\dfp(N^{3}(U))+\dfp(N^{3}(V))-\dfp(N^{3}(U\cap V)).
+\end{multline*}
+This concludes the proof.
+\end{proof}
+%In what follows we make the ground hypothesis that \tojoris{$\fpz{\fhlim{2}}$ is (upward) directed,}
+%although it seems not too sound.
+%\bigskip
+ %Define now $\mathcal{K}_{3}=\{A\in\nla{3}\mid\tr{2}A\in\fpz{\mathfrak{C}_{2}},\,\delta_{3}H\geq0\;\forall H\in
+%\fpz{A}\}$. In particular for each $M\in\Kl^{3,\dots}$, we have $\tr{2}M\in\Kl^{2,\dots}$.
+%We observe that $\mathcal{K}_{3}^{\prime}$ and $\mathcal{K}_{3}$ are related by the following
+%\begin{lem}
+%Assume $M\in\mathcal{K}_{3}^{\prime}$ then $\fpz{M}\inn\mathcal{K}_{3}$.
+%\end{lem}
+%We use now the properties of the 2-nilpotent limit to prove that 2-spaces in $\fhlim{2}$ have
+%nice intersections.
+%\begin{lem}
+%Assume $U_{1},V_{1}\in\fpz{\fhlim{2}}$
+%and $U=\gena{U_{1}}{\fhlim{2}}$, $V=\gena{V_{1}}{\fhlim{2}}$ then $U\cap V=\gena{U_{1}\cap V_{1}}{\fhlim{2}}$.
+%\end{lem}
+% 
+%Consider now $M\in\Kl^{3,\dots}$ and $\map{\delta_{3}}{\fpz{M}}{\mathbb{N}}$.
+%We want to prove that $\delta_{3}$ is a $\clz$-quasidimension, to do so
+%we have to show (qd'1), \dots , (qd'3) are true on such structures $M$.
+%So we start proving $\delta_{3}\clz(\vac)=0$. We have that $\clz(\vac)=(0)$ because if $a$ is a nontrivial
+%element of $M_{1}$ which lays in $\clz(\vac)\nni\cle(\vac)=(0)$ then we'd have $d_{2}(0)=
+%d_{2}(0,a)=d_{2}(a)=1$, which is nonsense as obviously $\delta_{2}(0)=0$.
+%%$\tr{2}M\models T_{2}$ and so each space of the form
+%%$\gen{a}_{1}$ is $2$-strong for each element $a\in M_{1}$; in particular $d_{2}(0)=\delta_{2}(0)=0$.
+%Then by computation $\delta_{3}(0)=0$ and so we get (qd'1).
+%\smallskip
+%To prove (qd'2) we must find $\delta_{3}\clz(a)\leq1$ for each $a\in M_{1}$.
+%In general for an arbitrary subset $X$ of $M_{1}$,
+%if $\dim_{2}X=\dim_{2}\clz(X)<\omega$, then $d_{2}X=d_{2}\clz(X)$ as $d_{2}$ and $\dim_{2}$ do agree on finite
+%dimensional sets in the sense of the $\clz$-praegeometry.
+%In our case $\dim_{2}(a)=1$ so $d_{2}\clz(a)=d_{2}(a)$.
+%%As $\tr{2}M\models T_{2}$ it follows that each space of the form $\gen{a}_{1}$ is $2$-strong,
+%%for each element
+%%$a\in M_{1}$, but this implies $d_{2}(a)=\delta_{2}(a)\leq1$.
+%We conclude $\delta_{3}\clz(a)=d_{2}(a)-\dfp(N^{3}(a))=\delta_{2}(a)-\dfp(N^{3}(a))\leq1$.
+%\smallskip
+%Finally, also (qd'3) holds. Let $U,V\in\fpz{M}$ .
+%Since $M\in\Kl^{3,\dots}$, on account of the previous lemma, we first have $\tr{2}U\cap\tr{2}V=\gena{U_{1}\cap V_{1}}{\tr{2}M}$.
+%We then observe that $\omega>\dim_{2}(U\cup V)=\dim_{2}(\clz(U\cup V))$,
+%%a consequence the values of $d_{2}$ and $\dim_{2}$ agrees on both the sets $U\cup V$ and $\clz(U\cup V)$.
+%therefore $d_{2}\clz(U\cup V)=d_{2}(U\cup V)=d_{2}\cle(U\cup V)=d_{2}(U+V)$.
+%%$d_{2}\clz(U\cup V)=\dim_{2}(\clz(U\cup V))=\dim_{2}(U\cup V)=d_{2}(U\cup V)$. Therefore we have
+%On the other hand $N^{3}(U+V)=N^{3}(\cle(U_{1}\cup V_{1}))\inn N^{3}(\clz(U_{1}\cup V_{1}))$.
+%At the end we have
+%\begin{multline*}
+%\delta_{3}\clz(U\cup V)=d_{2}\clz(U_{1}\cup V_{1})-\dfp(N^{3}(\clz(U_{1}\cup V_{1})))\leq\\
+%\leq d_{2}(U+V)-\dfp(N^{3}(U+V))=\delta_{3}(U+V).
+%\end{multline*}
+%Now applying Lemma \pref{presubatre} we get
+%$\delta_{3}\cl_{2}(U\cup V)+\delta_{3}(U\cap V)\leq\delta_{3}U+\delta_{3}V$ as we wanted.
+%We have indeed proved the following
+%\begin{cor}
+%$\delta_{3}$ is a $\clz$-quasidimensionfunction, provided $M$ belongs to $\mathcal{K}_{3}$.
+%\end{cor}
+
+\begin{dfn}
+Let $M\in\nla{3}$ a finite dimensional $H_{1}\inn M_{1}$ is a $\delta_{3}$-strong substructure of $M_{1}$
+if
+\begin{itemize}
+\item[-]$H_{1}\zsu M_{1}$
+\item[-]for any $C_{1}\in\fpe{M}$ such that $C_{1}\nni H_{1}$ we have $\delta_{3}H_{1}\leq\delta_{3}C_{1}$.
+\end{itemize}
+We write ambiguously $H_{1}\dsu M_{1}$ or $H\dsu M$, provided $H=\gena{H_{1}}{M}$.
+\end{dfn}
+%and $\delta_{3}$-strong embedding.
+
+We define minimal $\delta_{3}$-extensions.
+N\"{a}mlich, $B\dsu A$ is a minimal extension if for each $H_{1}\zsu A_{1}$ such that
+$A_{1}\supsetneq H_{1}\supsetneq B_{1}$, we have $\delta_{3}A<\delta_{3}H$.
+
+We write $\delta_{3}(a\quot B)$ to denote $\delta_{3}\gen{B_{1},a}-\delta_{3}B$ where $a,B_{1}\inn M_{1}$.
+
+\medskip
+In what follows we amalgamate objects of a subclass $\Kl^{\dots}$ of $\nla{3}$ with respect to $\delta_{3}$
+strong embeddings.
+Let $$\K^{\dots}=\left\{A=\gen{A_{1}}\in\nla{3}\mid\tr{2}A\in\Kl^{2,\dots},\;(\triv)\dsu A,\;A\sat(\iota)_{3}\right\}$$
+with
+%Objects of $\Kl^{3,\dots}$ will be algebras $A=\gen{A_{1}}\in\nla{3}$ such that
+%$A_{1}$ can be identified with a strong, finite dimensional subspace of the limit $\fhlim{2}$, moreover we require
+%$\tr{2}A\simeq\gena{A_{1}}{\fhlim{2}}$ with $A_{1}\zsu{\fhlim{2}}_{1}$ and $(\triv)\dsu A$ and $A\sat(\iota)_{3}$.
+$$(\iota)_{3}\colon\quad(\forall x,\,P_{1}(x))(\forall y,\,P_{2}(y))([x,y]\neq 0).$$
+As $\delta_{3}(\triv)=0$, with $(\triv)\dsu A$ we mean that $\delta_{3}H_{1}\geq0$ for each $H_{1}\in\fpe{A}$.
+
+%Note that for each $M\in\Kl^{3,\dots}$, we have $\tr{2}M\in\Kl^{2,\dots}$.
+Remember that $\Kl^{2,\dots}$ is the class of $2$-nilpotent finitely generated
+Lie Algebras with a non negative $\delta_{2}$
+on the subspaces and which satisfy
+$(\iota)_{2}$ where
+$$(\iota)_{2}\colon\quad(\forall x,\,P_{1}(x))(\forall y,\,P_{1}(y))([x,y]= 0)\rightarrow
+(\textsl{$x$ lin.{}depends on $y$}).$$
+
+\begin{lem}
+Let $A,B,C$ be $\Kl^{3,\dots}$-structures, such that $A\dso B\dsu C$, where $A\quot B$ is a minimal extension,
+then there exists $D\in\Kl^{3,\dots}$ da{\ss} alles amalgamiert.
+\end{lem}
+\begin{proof}
+%From the axioms for $\Kl^{3,\dots}$ we have $B=\gena{B_{1}}{A}$, in particular $\tr{2}B=\gena{B_{1}}{\tr{2}A}$.
+%So we can assume that $B_{1}\zsu A_{1}\zsu{\fhlim{2}}_{1}$ and $\tr{2}B\simeq\gena{B_{1}}{\fhlim{2}}$.
+%The same is done with $C$, so $B=\gena{B_{1}}{\fhlim{2}}$ for some $B_{1}\zsu C_{1}$.
+We start describing a \emph{na\"{i}ve amalgamation} procedure which first freely amalgamates at level 2, and then raises the structure to a free amalgam in weight 3.
+We call it {\bf (NAM)} and it will be recalled in the rest of the proof when suitable ground hypotheses are attained.
+
+If we denote with $A^{\prime}$, $B^{\prime}$ and $C^{\prime}$, respectively $\tr{2}A$, $\tr{2}B$ and
+$\tr{2}C$ then
+%$A^{\prime}$ and $C^{\prime}$ two algebras
+%in $\Kl^{2,\dots}$ isomorphic to $\gena{A_{1}}{\fhlim{2}}$ and $\gena{C_{1}}{\fhlim{2}}$ respectively.
+%We can say 
+we have $A^{\prime}\zso B^{\prime}\zsu C^{\prime}$.
+We build the free amalgam $D^{\prime}=\fram{A^{\prime}}{B^{\prime}}{C^{\prime}}$ of $A^{\prime}$ and $C^{\prime}$ over $B^{\prime}$ following the construction in Chapter $2$.
+\begin{description}
+\item[(NAM)]Assume that $D^{\prime}$ is in $\Kl^{2,\dots}$.
+%Now, because $\fhlim{2}\zso B^{\prime}\zsu D^{\prime}\in\Kl^{2,\dots}$ and
+%$\fhlim{2}$ is \emph{reich} with respect to strong embeddings,
+%we can strong embed $D^{\prime}$ in $\fhlim{2}$ over $B^{\prime}$.
+%With abusive notation we name $\abu$, $\cbu$ and $\dbu$, the monolinear parts in the embedded
+%amalgam $D^{\prime}$, no new names for the images in $\fhlim{2}$.
+%So far we have $B_{1}$ strong inside both $\abu$ and $\cbu$, these two strong in $\dbu$ and this last
+%strong in ${\fhlim{2}}_{1}$ (here strong is strong substructure).
+As $B$ coincides both with $\gena{B_{1}}{A}$ and $\gena{B_{1}}{C}$, then $\gena{B_{1}}{A^{\prime}}=B^{\prime}=
+\gena{B_{1}}{C^{\prime}}$;
+therefore this setting implies $B_{1}=\abu\cap\cbu$ in $D^{\prime}$ and
+\begin{labeq}{inter}
+B^{\prime}=\gena{B_{1}}{D^{\prime}}=\gena{\abu}{D^{\prime}}\cap\gena{\cbu}{D^{\prime}}.
+\end{labeq}
+Now because both $A^{\prime}$ and $C^{\prime}$ are selfsufficient in $D^{\prime}$,
+on account of Lemma \pref{bellemma},
+there exist two embeddings $j_{A}$ and $j_{C}$ of $\fr{3}\tr{2}A$ and $\fr{3}\tr{2}C$
+into $\fr{3}D^{\prime}$ their images being $\gena{\abu}{\fr{3}D^{\prime}}$ and $\gena{\cbu}
+{\fr{3}D^{\prime}}$ respectively. From \pref{inter} and lemma \ref{bellemmino} instead, we get
+\begin{labeq}{freeint}
+\gena{B_{1}}{\fr{3}D^{\prime}}=\gena{\abu}{\fr{3}D^{\prime}}\cap\gena{\cbu}{\fr{3}D^{\prime}}
+\end{labeq}
+here $B_{1}$, $\abu$ and $\cbu$ are identified with its images modulo $j_{A}$ and $j_{C}$. 
+
+We set $N^{3}(A)^{\bullet}=j_{A}(N^{3}(A))$ and $N^{3}(C)^{\bullet}=j_{C}(N^{3}(C))$.
+And we build
+$$D=\fr{3}D^{\prime}\quot N^{3}(A)^{\bullet}+N^{3}(C)^{\bullet}.$$
+As $N^{3}(A)^{\bullet}+N^{3}(C)^{\bullet}$ is an ideal consisting only of weight $3$ elements,
+$\fr{3}\tr{2}D=\fr{3}(\tr{2}\fr{3}D^{\prime})%\simeq
+=\fr{3}D^{\prime}$, hence we obtain $N^{3}(D)=N^{3}(A)^{\bullet}+N^{3}(C)^{\bullet}$.
+
+From \pref{freeint} we have that
+$$N^{3}(B)^{\bullet}:=j_{A}(N^{3}(B))=N^{3}(A)^{\bullet}\cap N^{3}(C)^{\bullet}=j_{C}(N^{3}(B))$$
+and the following compatibility equations
+\begin{labeq}{compa}
+N^{3}(A)^{\bullet}=N^{3}(D)\cap\gena{\abu}{\fr{3}D^{\prime}}
+\end{labeq}and
+$$
+N^{3}(C)^{\bullet}=N^{3}(D)\cap\gena{\cbu}{\fr{3}D^{\prime}}.
+$$
+
+So far, are $A$ and $C$ embeddable in $D$ via Lie Algebra monomorphisms,
+just regard $A\simeq\fr{3}\tr{2}A\quot N^{3}(A)$ and take the quotient of $j_{A}$:
+\begin{eqnarray}
+\map{\bar j _{A}}{&\fr{3}\tr{2}A\quot N^{3}(A)}{D}\\
+&\bar w\longmapsto \bar w
+\end{eqnarray}
+on account of \pref{compa} is $\bar j_{A}$ one-to-one, in particular its image is again
+$\gena{\abu}{D}=(\gena{\abu}{\fr{3}D^{\prime}}+N^{3}(D))\quot N^{3}(D)$.\quad Do the same for $C$.
+
+Next we show that these are $\delta_{3}$-strong embeddings.
+
+We test it for $C$. From the definition of $\delta_{3}$ it is sufficient to prove $\delta_{3}C_{1}\leq\delta_{3}E_{1}$
+for each $E_{1}\zsu\dbu$ such that $E_{1}\nni\cbu$.
+As $E_{1}=C_{1}+(E_{1}\cap \abu)$ we finish once we show
+$\delta_{3}(E\quot C)=\delta_{3}(E_{1}\cap\abu\quot B)$ because
+%$E_{1}\cap \abu$ is a $\delta_{2}$ strong subspace of $\abu$ and 
+$B\dsu A$ and $\delta_{3}(E_{1}\cap \abu\quot B)\geq 0$.
+
+We have
+$$\delta_{3}(E\quot C)=\delta_{3}(E_{1})-\delta_{3}(C_{1})=d_{2}(E_{1}\quot C_{1})
+-\big(\dfp(N^{3}(E))-\dfp(N^{3}(C))\big).$$
+Now as $\tr{2}D=D^{\prime}$, in the $2$ amalgam everything behaves good for $\delta_{2}$,
+and we have $d_{2}(E_{1})-d_{2}(C_{1})=\delta_{2}(E_{1})-\delta_{2}(C_{1})=\delta_{2}(E_{1}\cap\abu\quot
+B_{1})$, we've already seen this in chapter $2$.
+
+To conclude we have to show
+$$N^{3}(E_{1}\cap \abu)\quot N^{3}(B)^{\bullet}\simeq
+N^{3}(C_{1}+(E_{1}\cap \abu))\quot N^{3}(C)^{\bullet}.$$
+Consider the map
+\begin{eqnarray*}
+N^{3}(E_{1}\cap \abu)\quot N^{3}(B)^{\bullet}&\longrightarrow&N^{3}(E_{1})\quot N^{3}(C)^{\bullet}\\
+\bar\eta&\longmapsto&\bar\eta\quad\quad\forall\eta\in N^{3}(E_{1}\cap\abu).
+\end{eqnarray*}
+Soundness is immediate. Moreover our map is injective because
+\begin{multline*}
+N^{3}(C)^{\bullet}\cap\gena{E_{1}\cap \abu}{\fr{3}D^{\prime}}=\\
+=N^{3}(D)\cap\gena{\cbu}{\fr{3}D^{\prime}}\cap\gena{E_{1}\cap \abu}{\fr{3}D^{\prime}}=\\
+=N^{3}(D)\cap\gena{\abu\cap C_{1}}{\fr{3}D^{\prime}}=N^{3}(B)^{\bullet}.
+\end{multline*}
+Here we used $\gena{\cbu}{\fr{3}D^{\prime}}\cap\gena{E_{1}\cap\abu}{\fr{3}D^{\prime}}=
+\gena{\cbu\cap\abu}{\fr{3}D^{\prime}}$ because both $\cbu$ and $E_{1}\cap\abu$ are $\delta_{2}$ strong in $D_{1}$ and because $\gena{\cbu}{D^{\prime}}\cap\gena{E_{1}\cap\abu}{D^{\prime}}=\gena{\bbu}{D^{\prime}}$.
+
+On the other hand, since again $\gena{\abu}{D^{\prime}}\cap\gena{E_{1}}{D^{\prime}}=\gena{E_{1}\cap\abu}{D^{\prime}}$ we have
+\begin{multline*}
+N^{3}(E_{1})=N^{3}(D)\cap\gena{E_{1}}{\fr{3}D^{\prime}}=\\
+=(N^{3}(A)^{\bullet}+N^{3}(C)^{\bullet})\cap\gena{E_{1}}{\fr{3}D^{\prime}}=\\
+=(N^{3}(A)^{\bullet}\cap\gena{E_{1}}{\fr{3}D^{\prime}})+N^{3}(C)^{\bullet}=\\
+=(N^{3}(D)\cap\gena{E_{1}\cap A_{1}}{\fr{3}D^{\prime}})+N^{3}(C)^{\bullet}
+\end{multline*}
+and this gives that our map is onto.
+
+We see now that $\dfp(N^{3}(E))-\dfp(N^{3}(C))=\dfp(N^{3}(E_{1}\cap\abu))-\dfp(N^{3}(B)^{\bullet})$.
+We have shown that $C$ is $\delta_{3}$-strong embeddable in $D$.
+
+A completely analogous argument proves that $A$ can be found in $D$ as a $\delta_{3}$ strong structure.
+
+Now to prove $(\triv)\dsu D_{1}$ we pick an arbitrary $E_{1}\zsu D_{1}$, since
+$\gena{\abu}{D^{\prime}}\cap\gena{E_{1}}{D^{\prime}}=\gena{E_{1}\cap\abu}{D^{\prime}}$,
+in this case we can apply Lemma \ref{presubatre} and find
+\begin{multline*}
+\delta_{3}\ssc_{2}(A_{1}+E_{1})+\delta_{3}(A_{1}\cap E_{1})\leq\\
+\leq\delta_{3}A+\delta_{3}E\leq\delta_{3}\ssc_{2}(A_{1}+E_{1})+\delta_{3}E.
+\end{multline*}
+We used $\delta_{3}A\leq\delta_{3}\ssc_{2}(A_{1}+E_{1})$ because $A\dsu D$.
+
+As $E_{1}\cap A_{1}\zsu A_{1}$ und $A\in\Kl^{3,\dots}$, it follows $0\leq\delta_{3}(E_{1}\cap A_{1})\leq\delta_{3}E$.
+
+So far we have constructed a $D\in\nla{3}$ such that $A\dsu D\dso C$ (up to $\delta_{3}$-strong
+embedding) with $\tr{2}D\in\Kl^{2,\dots}$ and
+$\delta_{3}$ is non negative on the $\delta_{2}$-strong subspaces of $D_{1}$.
+\end{description}
+
+We proceed with a discussion of minimal $\delta_{3}$ extensions, in order to decide whether or not a {\bf (NAM)}
+construction is possible, and whether it leads to a structure $D$ which lays in $\Kl^{3,\dots}$.
+We will actually provide axiom $(\iota)_{3}$ for the amalgam $D$.
+
+Assume $A_{1}\quot B_{1}$ is minimal with respect to $\delta_{3}$,
+then only the following cases can occur:
+\begin{itemize}
+\item$\delta_{3}(A\quot B)>0$ (\emph{free minimal extension})
+\item%$\delta_{3}(A\quot B)=0$ and 
+$A\quot B$ is a \emph{divisor extension}:\\
+there exists an element $a\in A_{1}\non B_{1}$ such that\end{itemize}
+$$ %\begin{labeq}{dreidiv}
+\text{($3$-div.)}\quad
+(\exists\beta,\,P_{2}(\beta))\:\beta\in\gena{a,B_{1}}{\fr{3}\tr{2}A}\;\exists\Phi\in\gena{B_{1}}{\fr{3}\tr{2}A}\:\left([a,\beta]-\Phi\,\in N^{3}(A)\right).
+%\end{labeq}
+$$\begin{itemize}
+%\item$\delta_{3}(A\quot B)=0$ and $\exists\alpha\in A_{2}$ such that
+%($3$-div.{}-II)\quad\dots{\sl to be defined}
+
+\item$\delta_{3}(A\quot B)=0$ and no ($3$-div.) divisor (\emph{pr\"{a}algebraic extension}).
+\end{itemize}
+
+Assume first $A_{1}\quot B_{1}$ is free minimal. %and $\delta_{3}(A\quot B)>0$.
+Then we claim $d_{2}A=d_{2}B+1$ and $A_{1}\quot B_{1}$ is also $\delta_{2}$ minimal.
+
+We must however have $d_{2}A>d_{2}B$, assume $d_{2}A>d_{2}B+1$, then there exist an element $a\in A_{1}$,
+such that $A_{1}\supsetneq\ssc_{2}(B_{1},a)\supsetneq B_{1}$. Now from minimality it follows
+$\delta_{3}\ssc_{2}(B_{1},a)>\delta_{3}A>\delta_{3}B$. But for each $a\in A_{1}$ we have $\delta_{3}\ssc_{2}
+(B_{1},a)\leq\delta_{3}B+1$. And this cannot happen.
+In particular it follows $\delta_{3}A=\delta_{3}B+1$ and $\dfp(N^{3}(A))=\dfp(N^{3}(B))$.
+
+Now if there exists $A_{1}\supsetneq H_{1}\supsetneq B_{1}$ with $A_{1}\zso H_{1}$, since
+$N^{3}(A)=N^{3}(B)$, then $\delta_{3}H$ is either equal to $\delta_{3}A$ or to $\delta_{3}B$. In both cases
+that is against minimality. This proves minimality of $A_{1}$ over $B_{1}$ with respect to $\delta_{2}$,
+therefore $A_{1}=\gen{B_{1},a}$ for some $a$ in $A_{1}$ free from $B_{1}$.
+
+In this case the free amalgam of $\tr{2}A$ and $\tr{2}C$ over $\tr{2}B$ gives an element of $\Kl^{2,\dots}$ and
+applying {\bf (NAM)} we obtain a structure $D$ which has still $(\iota)_{3}$ since $N^{3}(D)=N^{3}(C)^{\bullet}$.
+Thus $D$ is in $\Kl^{3,\dots}$ and amalgamates $A$ and $C$ over $B$.
+
+\medskip
+Assume now $A_{1}\quot B_{1}$ is a divisor $\delta_{3}$-extension and suppose ($3$-div.) holds for an
+element $a\in A_{1}\non B_{1}$.
+By definition of ($3$-div.) there exists a weight $2$ element $\beta\in\gena{B_{1},a}{\fr{3}\tr{2}A}$ and a linear combination of weight $3$ commutators
+$\Phi\in\gena{B_{1}}{\fr{3}\tr{2}A}$ such that $[a,\beta]-\Phi\,\in N^{3}(A)$.
+
+Since $B\dsu A$ and $\dfp(N^{3}(\ssc_{2}(a,B_{1})))\geq\dfp(N^{3}(B))+1$,
+we obtain $\delta_{3}(a\quot B_{1})=0$ and $d_{2}(a\quot B_{1})=1$.
+
+By $\delta_{3}$-minimality we conclude
+that $A_{1}=\ssc_{2}(B_{1},a)$ and $N^{3}(A)$ is generated
+in $\fr{3}\tr{2}A$ by $N^{3}(B)$ and $[a,\beta]-\Phi$.
+
+On the other hand, we can show that if there is $a$ in $A_{1}\non B_{1}$ such that $\delta_{3}(a\quot B)=0$
+and $d_{2}(a\quot B)=1$ then $a$ satisfies ($3$-div.).
+%Now we show that $A_{1}\quot B_{1}$ is also a $\delta_{2}$ minimal extension, were indeed $H_{1}$ a $\delta_{2}$ strong proper refinement,
+%\emph{then $\delta_{2}H_{1}=d_{2}A$ if and only if $H\ni a$.}\\
+%({\bf Note}: if this argument does not hold, we can use again \pref{cloclo} and freely
+%amalgamate anyway).
+%So if $d_{2}H_{1}=d_{2}A$ then $[a,\beta]-\Phi\,\in N^{3}(H)$ and $\delta_{3}H=\delta_{3}A$.
+%Analogously if $d_{2}H_{1}=d_{2}B$, $\delta_{3}H=\delta_{3}B$.
+%In both cases we found a contradiction to $\delta_{3}$ minimality.
+
+We prove next $\gen{B_{1},a}\zsu A_{1}$.
+Let then $H_{1}$ be an arbitrary subspace of $A_{1}$ containing both $B_{1}$ and $a$,
+if we compare $\delta_{3}H_{1}$ and $\delta_{3}A$,
+since $N^{3}(\ssc_{2}H_{1})=N^{3}(A)$, then
+$d_{2}H=d_{2}A$.
+So $\delta_{2}\gen{B_{1},a}\leq\delta_{2}B_{1}+1=d_{2}A_{1}=d_{2}H_{1}\leq\delta_{2}H_{1}$.
+
+As a result $A_{1}=\gen{B_{1},a}$ is $\delta_{2}$-free (miniimal) over $B_{1}$, therefore it can be with $C_{1}$
+freely amalgamated in $\Kl^{2,\dots}$ over $B_{1}$.
+Now if $a$ is not realised in $C$ over $B$ we can apply {\bf (NAM)} and conclude.
+
+Otherwise, there exists a $c\in C_{1}\non B_{1}$ such that $[c,\beta^{\prime}]-\Phi\,\in N^{3}(C)$
+where $\beta^{\prime}$ is obtained replacing $c$ in all occurrences of $a$ appearing in the
+commutators which form $\beta$. Here $\Phi$ must be regarded as an element of $\gena{B_{1}}{\fr{3}\tr{2}C}$.
+Since $\delta_{3}(c\quot B_{1})=0$ again, we have $d_{2}(c\quot B_{1})=1$ and
+$c$ results free from $B_{1}$ with respect to weight $2$ relations.
+It follows, we can map $a$ to $c$ fixing $B_{1}$, and obtain a Lie morphism of $A$ into $C$.
+We take $C$ therefore, as the desired amalgam, in order to keep axiom $(\iota)_{3}$.
+
+\medskip
+Assume now $A\quot B$ is a minimal prealgebric $\delta_{3}$ extension.
+
+%We treat two subcases:\begin{itemize}
+%\item[-](Pr\"{a}al.{}I) for all $a\in A_{1}\non B_{1}$, $\delta_{3}(a\quot B)>0$
+%\item[-](Pr\"{a}al.{}II) there exists an element $a\in  A_{1}\non B_{1}$ such that $\delta_{3}(a\quot B)=0$
+
+%({\bf Note}: there's no need to discuss case (Pr\"{a}al.{}II) if $\delta_{3}(a\quot B)=0$ and $d_{2}(a\quot B)=1$ are \"{a}quivalent to $a\sat$($3$-div.). This seems to be obstructed by
+%an eventual inequality between $\ssc_{2}(B,a)$ and $\gen{B_{1},a}$ unless we show
+%$A\quot B$ is also $\delta_{2}$ minimal).
+%\end{itemize}
+As we are in presence of no $3$-divisor,
+we have only to assure that the level $2$ admits a free amalgamation which leads to
+an object in $\Kl^{2,\dots}$, afterwards we proceed applying {\bf (NAM)} to get a structure
+$D$ which of course has $(\iota)_{3}$, and therefore belongs to $\Kl^{3,\dots}$.
+%\smallskip
+%Assume first (Pr\"{a}al.{}I).\\
+
+Assume first $d_{2}A=d_{2}B$. Since $\delta_{3}A=\delta_{3}B$, we have $N^{3}(A)$=$N^{3}(B)$.
+It follows $A_{1}$ is a minimal $\delta_{2}$ extension of $B_{1}$, because a strong proper refinement of it
+would produce a $\delta_{3}$ strong refinement strictly between $B_{1}$ and $A_{1}$.
+
+Is $A_{1}\quot B_{1}$ a prealgebraic $\delta_{2}$ extension or a divisor extension ($2$-div.{}),
+which is not realized in $C_{1}$, then proceed applying {\bf (NAM)}.
+If it is a $\delta_{2}$ divisor extension, $A_{1}=\gen{B_{1},a}$ for some $a\in A_{1}$ and there is a morphism over $B_{1}$ mapping $a$ to some $c\in C_{1}$, then, because $A=\gena{B_{1},a}{A}$, the
+weight $3$ structure of $A$ can be reconstructed in $C_{3}$, by means of commutators
+with occurrences of $c$. So $A$ is realized in $C$ over $B$.
+
+%If $A_{1}\supsetneq H_{1}\supsetneq B_{1}$ and $A_{1}\zso H_{1}$, then by minimality in
+%$\delta_{3}$ we get $\delta_{3}H>\delta_{3}A=\delta_{3}B$, so $d_{2}(H\quot B)>\dfp(N^{3}(H))-\dfp(N^{3}(B))\geq 0$, therefore $\delta_{2}H_{1}>\delta_{2}A_{1}$ and $A_{1}\quot B_{1}$ is minimal as a $\delta_{2}$
+%extension too.
+
+Assume then $d_{2}A>d_{2}B$. 
+In this case $\delta_{3}(A\quot B)=0$ assures that
+\begin{labeq}{cloclo}
+B_{1}=\cl_{2}(B_{1})\cap A_{1}
+\end{labeq}
+in fact this is equivalent to $d_{2}H>d_{2}B$, for each $\delta_{2}$-strong proper refinement $H$ of $A_{1}\quot B_{1}$. If we consider such an $H$ then by minimality $\delta_{3}H>\delta_{3}A=\delta_{3}B$, so $d_{2}(H\quot B)>\dfp(N^{3}(H))-\dfp(N^{3}(B))\geq 0$.
+
+%We induce on $m=d_{2}(A\quot B)$ that $\tr{2}A$ and $\tr{2}A$, when freely amalgamated
+%over $\tr{2}A$, give still an object of $\Kl^{2,\dots}$.
+%Let $m=1$, if $A\quot B$ is minimal it's easy,
+%if not we split $A_{1}\quot B_{1}$ with a first minimal $\delta_{2}$-extension, $F_{1}
+%\quot B_{1}$, then $F$ must be of free type over $B_{1}$. This also implies
+%It follows there's no divisor $a\in A_{1}$ over $B_{1}$
+
+On account of \pref{cloclo}, we have
+$\delta_{2}(a\quot B_{1})>0$ for each $a\in A_{1}\non B_{1}$, therefore
+no element $a$ of $A_{1}\non B_{1}$ can be a divisor in $B$. We remind that this means,
+there's no $\beta\in\exs B_{1}$ such that $[a,b]-\beta\,\in N^{2}(B)$ for some $b\in B_{1}$.
+In particular no element of $a$ can be realised in $C_{1}$ over $B_{1}$.
+%$A_{1}$ may be joint to $F_{1}$ via a chain of minimal extensions none of which is frei.
+This leads to conclude $\fram{A}{B}{C}$ is in $\Kl^{2,\dots}$, we can now apply {\bf (NAM)} as desired.\\
+({\bf Note}: if it is somehow too ambitious to consider the entire $A_{1}\quot B_{1}$ we can
+adopt an inductive argument on $m=d_{2}(A_{1}\quot B_{1})$, so we can split the extension in
+$A\quot B^{*}$ and $B^{*}\quot B$, wobei $B^{*}=\clz(F_{1})\cap A_{1}$ where $F_{1}$ is
+a minimal (frei!) extension of $B_{1}$ in $A_{1}$. Naturally $d_{2}(B\quot B^{*})=1$).
+%>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+%같같같같같같같같같같같같같같같같같같같같같같같같같같같같같같같같같같같같같같같같같같같같같같같같같
+%--------------------WE NEED THIS IF WE DON'T USE (PREAL II)-------------------------------------
+%.............................................................................................................................................
+%We proceed on induction (?) on $m=d_{2}A-d_{2}B$.
+%It remain to discuss the divisor case (cases?).
+%So assume there is an $a\in A_{1}\non B_{1}$ such that 
+%Assume then (pr\"{a}al.{}II).\\
+%This gives first $A_{1}=\ssc_{2}(B_{1},a)$.
+%Then if $d_{2}A=d_{2}B$ we have that $A_{1}\quot B_{1}$ is a minimal
+%$\delta_{2}$-extension. Is $A_{1}\quot B_{1}$ a prealgebraic $\delta_{2}$ extension or a divisor extension ($2$-div.{}),
+%which is not realized in $C_{1}$, then proceed applying {\bf (NAM)}.
+
+%If it is a $\delta_{2}$ divisor extension, $A_{1}=\gen{B_{1},a}$ for some $a\in A_{1}$ and there is a morphism over $B_{1}$ mapping $a$ to some $c\in C_{1}$, then, because $A=\gena{B_{1},a}{A}$, the weight $3$ structure of $A$ can be reconstructed in $C_{3}$, by means of commutators
+%with occurrences of $c$. So $A$ is realized in $C$ over $B$.
+
+%Assume now $d_{2}(A)=d_{2}(B)+1$, then as before we have $B_{1}=\cl_{2}(B_{1})\cap A_{1}$.
+%We conclude, as before, applying {\bf(NAM)}.
+%Bislang hoffe ich, Fall ($3$-div.{}-II) \"{u}berhaupt unm\"{o}glich sei!
+
+This concludes the proof, as there's no other case to be considered.
+\end{proof}

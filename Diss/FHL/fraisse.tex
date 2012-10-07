@@ -1,0 +1,74 @@
+We refer to a {\em Fra\"iss\'e amalgamation construction} in general as the technique introduced by Roland Fra\"iss\'e in \cite{fra}
+to recover universal-homogeneous structures from a prescribed class of finite ones. We follow the treatment
+of Ziegler-Tent \cite{zietent} for the countable setting. One may also check \cite{bs} for similar constructions in arbitrary cardinality.
+
+The original results of \cite{fra} are stated in a relational language, but they remain true in the following wider context.
+
+\medskip
+Let $\La$ be a countable language; if we say embedding below, we mean $\La$-embedding.
+Given a class $\mathcal{K}$ of finitely generated $\La$-structures which is closed under isomorphisms,
+we define the following properties for $\Kl{}$:
+\begin{itemize}
+\punto{HP} For each object $A$ in $\Kl{}$ and substructure $B\inn A$, we have $B\in\Kl{}$ (Hereditary Property).
+\punto{JEP} Given any two objects $B$ and $C$, there exists
+$A$ in $\Kl{}$ which embeds $B$ and $C$ (Joint Embedding Property).
+\punto{AP} For all $D\in\Kl{}$ and embeddings $\emb{\beta}{D}{B}$ and
+$\emb{\gamma}{D}{C}$ there exists an object $A$ of $\Kl{}$ and embeddings $\emb{b}{B}{A}$ and $\emb{c}{C}{A}$
+such that $\beta b=\gamma c$ (Amalgamation Property).
+\end{itemize}
+Remark that (JEP) does not follow in general by Amalgamation, as provided by the class of (finite) fields without a
+specified characteristic.
+
+Given an $\La$-structure $M$ we define {\em the age of} %l'\^{a}ge} of
+$M$, denoted $\age(M)$ to be the class of all finitely generated $\La$-structures which are isomorphic to a substructure of $M$.
+Define $\widetilde{\Kl{}}$ to be the class of all $\La$-structures whose age is contained in $\Kl{}$.
+
+For a given $M$, $\age(M)$ satisfies of course (HP) and (JEP), while for $\age(M)$ to have (AP)
+it is necessary to require $M$ is {\em strongly homogeneous}. How much, is explained by the next definition and facts.
+\begin{dfn}\label{ricca}
+An $\La$-structure $M$ is said {\em $\Kl{}$-rich}
+if $\age(M)=\Kl{}$ and 
+for any embedding $\emb{\beta}{B}{A}$ of $\Kl{}$-objects $A$ and $B$, if $b$ is an embedding of
+$B$ into $M$ then there exists an embedding $\emb{a}{A}{M}$ such that $\beta a=b$.
+\end{dfn}
+
+For the proof of the following result we refer to \cite[Theorem 13.4]{zietent}.
+\begin{fact}[Fra\"iss\'e Limits]\label{fraissteo}
+Let $\Kl{}$ be a denumerable class of $\La$-structures for a countable language $\La$ which is closed under isomorphism, then
+\begin{itemize}
+\punto{i}there exists a countable $\Kl{}$-rich $\La$-structure $M$ in $\widetilde{\Kl{}}$ iff
+$\Kl{}$ satisfies \rm{(HP), (JEP)} and {\rm (AP)}.
+
+\punto{ii}Any two countable $\Kl{}$-rich structures are isomorphic. More generally, any two $\Kl{}$-rich structures
+are $\La_{\infty,\omega}$-equivalent, that is, they can be matched up by an infinite back and forth correspondence.
+\end{itemize}
+\end{fact}
+The isomorphism type of the countable rich structure is called the {\em Fra\"iss\'e limit} of the class $\Kl{}$.
+
+The class $\widetilde{\Kl{}}$ is not in general elementary.
+The classical first examples of this construction are
+the class of finite linear orders, which has $(\Q,<)$ as Fra\"iss\'e limit and
+the class of finite undirected graphs, of which the Random Graph is the limit.
+
+\medskip
+Let now a denumerable class $\Kl{}$ be given, of finitely generated $\La$-structures, for a countable language $\La$.
+Assume $\zsu{}$ is a binary relation among objects of $\Kl{}$, which is contained in the $\La$-embedding relation
+and which is invariant under $\La$-isomorphisms.
+
+\begin{rem}\label{ModiFra}
+Suppose $(\Kl{},\zsu{})$ is a partial order and the properties (JEP) and (AP) are true of $\Kl{}$ with $\zsu{}$
+replacing $\La$-embeddings, while (HP) holds in the original fashion.
+Then Fact \ref{fraissteo} applies to this situation: there exists a countable structure $\K$ in $\Klt{}$, which is rich with respect to $\zsu{}$.
+With this we mean just $\beta$, $b$ and $a$ are to be replaced with $\zsu{}$-embeddings in
+Definition \ref{ricca}.
+%Moreover we have to redefine $\age(\K)$ as the class of all finitely generated $\Kl{}$-structures, which $\zsu{}$-embeds into $\K$.
+
+We may write in this case that $\K$ is the Fra\"iss\'e limit {\em of} $(\Kl{},\zsu{})$.
+\end{rem}
+
+Hrushovski's construction relies on the above modification.
+As described in the Introduction, the ``ab Initio'' example substitutes embeddings among relations
+with {\em pre-dimensionally strong} embeddings.
+
+In Secton \ref{amalga2}, we describe a similar approach: Lie algebra embeddings are replaced by a suitable
+stronger notion.
